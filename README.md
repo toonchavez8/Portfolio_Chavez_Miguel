@@ -28,11 +28,11 @@ This GitHub repository contains a portfolio project created using only HTML, CSS
 ### 01 Wireframe y estructura del proyecto
 
 - [x] Generar Wireframe
-- [ ] Crear 5 archivos HTML para cada sección del sitio web, aplicar entre estos los enlaces relativos y escribir con etiquetas semánticas. Deberás incluir:
-- [ ] Una lista no ordenada con el menú principal del sitio web con los nombres de cada una de las secciones y replicarlo en las mismas.
-        - [ ] Un formulario en la página de contacto.
+- [x] Crear 5 archivos HTML para cada sección del sitio web, aplicar entre estos los enlaces relativos y escribir con etiquetas semánticas. Deberás incluir:
+- [x] Una lista no ordenada con el menú principal del sitio web con los nombres de cada una de las secciones y replicarlo en las mismas.
+        - [x] Un formulario en la página de contacto.
         - [x] Un footer y replicarlo en todos tus html.
-        - [ ] Etiquetas multimedia como img e iframes.
+        - [x] Etiquetas multimedia como img e iframes.
 
 ---
 
