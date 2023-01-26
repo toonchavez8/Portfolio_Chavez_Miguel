@@ -33,6 +33,8 @@
 	--fs-72: 4.5rem;
 	--fs-80: 5rem;
 	--fs-96: 6rem;
+
+	transition: all 0.2s ease-in-out;
 }
 
 /* Css Reset */
@@ -75,38 +77,11 @@ picture {
 
 /* Global Debuging to remove */
 
-body,
-main {
-	border: 2px dashed red;
-}
-
-body > * {
-	border: 1px dashed green;
-}
-
-body > * > * {
-	border: 1px dashed blue;
-}
-
-body > * > * > * {
-	border: 1px dashed yellow;
-}
-
-body > * > * > * > * {
-	border: 1px dashed purple;
-}
-
-body > * > * > * > * > * {
-	border: 1px dashed orange;
-}
-
-body > * > * > * > * > * > * {
-	border: 1px dashed pink;
-}
-
 /* Header Block */
 .header {
 	text-align: right;
+	border-bottom: 1px solid rgb(207, 216, 220, 0.5);
+	text-transform: capitalize;
 }
 
 /* Header - Logo Container Element */
@@ -124,8 +99,6 @@ body > * > * > * > * > * > * {
 /* Header - Nav - List Element */
 .header__nav__list {
 	width: 100%;
-	overflow: auto;
-	white-space: nowrap;
 }
 
 /* Header - Nav - List - Item - Link Element */
@@ -136,27 +109,191 @@ body > * > * > * > * > * > * {
 	display: block;
 	padding: 0.8rem 2rem;
 	text-align: center;
+	border-radius: 0.5rem;
 }
 
+.header__nav__list__item__link:hover {
+	background-color: rgb(187, 224, 246, 0.2);
+}
+
+.header__nav__list__item__link:active {
+	background-color: rgb(187, 224, 246, 0.5);
+}
+
+.active {
+	background-color: rgb(187, 224, 246, 0.2);
+	border-radius: 0.5rem;
+}
 /* footer grid */
 
 .footer {
-	text-align: center;
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-	grid-template-rows: repeat(2, auto);
+	display: block;
+	width: 100%;
+	text-align: justify;
+	border-top: 1px solid rgb(207, 216, 220, 0.5);
+}
+
+.footer__nav {
+	margin-right: auto;
+	width: calc(100% - 75%);
+}
+.footer__nav,
+.footer__nav li {
+	display: inline-block;
+}
+
+.footer__nav li {
+	padding: 0.5rem 1rem;
+}
+
+.footer__Social {
+	display: inline-block;
+	width: calc(100% - 75%);
+	text-align: right;
+}
+.footer__Social li {
+	display: inline-block;
+	padding: 0.5rem 1rem;
 }
 
 .footer__copyright--container {
-	grid-column: 1 / -1;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
 }
 
 .footer__copyright--container__link {
-	font-size: var(--fs-12);
+	display: inline-block;
+	width: 100%;
+}
+.footer__copyright--container__link--img {
+	display: inline-block;
+	width: 100%;
+	max-width: 1.5rem;
 }
 
-.footer__copyright--container__link--img {
-	width: 1rem;
-	height: 1rem;
+/* wip container */
+.wip_container {
+	position: relative;
+	text-align: center;
+	height: calc(100vh - 10rem);
+	width: 100%;
+}
+
+.wip_container_tittle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	font-size: 4rem;
+}
+
+.wip_container_tittle span {
+	display: block;
+	font-size: 1.5rem;
+}
+
+.wip_container__blurs {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	z-index: -5;
+}
+
+/* contact page */
+
+.contact__section {
+	display: block;
+	padding: 2rem 5rem;
+	text-align: center;
+}
+
+.contact__section_title {
+	font-size: 2rem;
+}
+
+.contact__section_title p {
+	font-size: 1.5rem;
+	margin-left: 20rem;
+}
+
+.contact__section_article {
+	display: inline-block;
+	padding: 2rem;
+	max-width: 50rem;
+	margin-top: 2rem;
+	position: relative;
+}
+
+.Whatsapp_Link {
+	display: inline-block;
+	width: 100%;
+	max-width: 5rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 0.5px solid rgb(207, 216, 220, 0.5);
+	box-shadow: inset 0 0 0 0.5px rgb(207, 216, 220, 0.5),
+		0 0 0 0.5px rgb(207, 216, 220, 0.5);
+	position: absolute;
+	top: 10%;
+	left: 0;
+	transform: translate(-90%, 0%);
+}
+
+.whatsapp_Link--img {
+	display: block;
+	width: 100%;
+}
+/* form styling */
+
+.contact__form {
+	display: inline-block;
+	width: 100%;
+	max-width: 50rem;
+	padding-block: 2rem;
+	padding-inline: 1rem;
+	margin-block: 1rem;
+
+	border: 0.5px solid rgb(207, 216, 220, 0.5);
+	box-shadow: inset 0 0 0 0.5px rgb(207, 216, 220, 0.5),
+		0 0 0 0.5px rgb(207, 216, 220, 0.5);
+	border-radius: 0.5rem;
+}
+.contact__form input,
+.contact__form textarea {
+	display: inline-block;
+	width: calc(100% - 5rem);
+	padding: 0.8rem 1rem;
+	margin: 0.5rem 0;
+	border: 0.5px solid rgb(207, 216, 220, 0.5);
+	box-shadow: inset 0 0 0 0.5px rgb(207, 216, 220, 0.5),
+		0 0 0 0.5px rgb(207, 216, 220, 0.5);
+	border-radius: 0.5rem;
+}
+
+.contact__form textarea {
+	height: 10rem;
+}
+
+.contact__form label {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+.contact__form button {
+	display: inline-block;
+	font-size: 1rem;
+	width: calc(100% - 5rem);
+	padding: 1rem;
+	margin: 0.5rem 0;
+	border: 0.5px solid rgb(207, 216, 220, 0.5);
+	box-shadow: inset 0 0 0 0.5px rgb(207, 216, 220, 0.5),
+		0 0 0 0.5px rgb(207, 216, 220, 0.5);
+	border-radius: 0.5rem;
+	background-color: #333;
+	color: #fff;
 }

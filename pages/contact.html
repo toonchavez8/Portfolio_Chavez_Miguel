@@ -26,33 +26,36 @@
                         class="header__nav__list__item__link">projects</a></li>
                 <li class="header__nav__list__item"><a href="./services.html"
                         class="header__nav__list__item__link">services</a></li>
-                <li class="header__nav__list__item"><a href="./contact.html"
+                <li class="header__nav__list__item active"><a href="./contact.html"
                         class="header__nav__list__item__link">contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="contact__main">
 
-        <section>
-            <div>
+        <section class="contact__section">
+            <div class="contact__section_title">
                 <h1>Connect with Me</h1>
                 <p>Let's Bring Your Vision to Life</p>
             </div>
 
-            <article>
-                <p>Welcome to my contact page! I'm excited to hear about your project ideas and answer any questions you
+            <article class="contact__section_article">
+                <p class="contact__section_article--P">Welcome to my contact page! I'm excited to hear about your
+                    project ideas and answer any questions you
                     may have. My goal is to provide you with the best possible service and bring your vision to life.
                 </p>
 
-                <h2>Feel free to reach out to me via email or whatsapp. I look forward to hearing from you!</h2>
+                <h2 class="contact__section_article--Whatsapp">Feel free to reach out to me via email or whatsapp. I
+                    look forward to hearing from you!</h2>
 
                 <!-- whatsapp link to +52 3335996909 -->
-                <a href="https://wa.me/523335996909">
-                    <img src="https://img.icons8.com/color/512/whatsapp.png" alt="whatsapp icon">
-                    whatsapp</a>
+                <a href="https://wa.me/523335996909" class="Whatsapp_Link">
+                    <img src="https://img.icons8.com/color/512/whatsapp.png" alt="whatsapp icon"
+                        class="whatsapp_Link--img">
+                </a>
 
 
-                <form action="mailto:toonchavez8@gmail.com" method="post" enctype="text/plain">
+                <form action="mailto:toonchavez8@gmail.com" method="post" enctype="text/plain" class="contact__form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name"><br><br>
 
@@ -65,7 +68,7 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message"></textarea><br><br>
 
-                    <input type="submit" value="Send">
+                    <button>submit</button>
                 </form>
 
 
@@ -75,22 +78,10 @@
 
 
     </main>
-    <footer>
-        <small>
-            <a href="https://github.com/toonchavez8/15-Scrimba_ReacFacts">
-                ©2023 by toonchavez
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon" />
-            </a>
+    <footer class="footer">
 
-            <p>
-                <!-- built with hml css and js -->
-                Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
-                    href="https://www.w3schools.com/css/">CSS</a>
-                and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
-            </p>
-        </small>
 
-        <nav>
+        <nav class="footer__nav">
             <ul>
                 <li><a href="../index.html">home</a></li>
                 <li><a href="./about.html">about</a></li>
@@ -100,7 +91,7 @@
             </ul>
         </nav>
 
-        <div>
+        <div class="footer__Social">
             <ul>
                 <li><a href="https://www.facebook.com/Toonchavez/">facebook</a></li>
                 <li><a href="https://www.instagram.com/toonchavez/">instagram</a></li>
@@ -108,8 +99,25 @@
                 <li><a href="https://www.linkedin.com/in/toonchavez8">linkedin</a></li>
             </ul>
         </div>
+
+        <small class="footer__copyright--container">
+            <p class="footer__builtwith">
+                <!-- built with hml css and js -->
+                Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
+                    href="https://www.w3schools.com/css/">CSS</a>
+                and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
+            </p>
+            <a href="https://github.com/toonchavez8" class="footer__copyright--container__link">
+                ©2023 by toonchavez
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon"
+                    class="footer__copyright--container__link--img" />
+            </a>
+
+
+        </small>
     </footer>
 
 </body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </html>
