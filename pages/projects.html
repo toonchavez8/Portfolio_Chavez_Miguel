@@ -10,45 +10,44 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <a href="../index.html">
-                <img src="../assets/Logo--Dark.png" alt="logo" />
+    <header class="header">
+        <div class="header__logo-container">
+            <a href="../index.html" class="header__logo-container__link">
+                <img src="../assets/Logo--Dark.png" alt="logo" class="header__logo-container__link__img" />
             </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">home</a></li>
-                <li><a href="./about.html">about</a></li>
-                <li><a href="./projects.html">projects</a></li>
-                <li><a href="./services.html">services</a></li>
-                <li><a href="./contact.html">contact</a></li>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__list__item"><a href="../index.html"
+                        class="header__nav__list__item__link">home</a></li>
+                <li class="header__nav__list__item"><a href="./about.html"
+                        class="header__nav__list__item__link">about</a></li>
+                <li class="header__nav__list__item"><a href="./projects.html"
+                        class="header__nav__list__item__link active">projects</a></li>
+                <li class="header__nav__list__item "><a href="./services.html"
+                        class="header__nav__list__item__link  ">services</a></li>
+                <li class="header__nav__list__item"><a href="./contact.html"
+                        class="header__nav__list__item__link">contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
-        <h1>
-            projects coming soon
-        </h1>
+        <section class="wip_container">
+            <h1 class="wip_container_tittle">
+                You've reached the projects page... buuut its not done yet
+
+                <span>sorry </span>
+            </h1>
+            <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_blnro6zs.json"
+                background="transparent" speed="1" loop autoplay class="wip_container__blurs"></lottie-player>
+        </section>
 
     </main>
-    <footer>
-        <small>
-            <a href="https://github.com/toonchavez8/15-Scrimba_ReacFacts">
-                ©2023 by toonchavez
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon" />
-            </a>
+    <footer class="footer">
 
-            <p>
-                <!-- built with hml css and js -->
-                Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
-                    href="https://www.w3schools.com/css/">CSS</a>
-                and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
-            </p>
-        </small>
 
-        <nav>
+        <nav class="footer__nav">
             <ul>
                 <li><a href="../index.html">home</a></li>
                 <li><a href="./about.html">about</a></li>
@@ -58,7 +57,7 @@
             </ul>
         </nav>
 
-        <div>
+        <div class="footer__Social">
             <ul>
                 <li><a href="https://www.facebook.com/Toonchavez/">facebook</a></li>
                 <li><a href="https://www.instagram.com/toonchavez/">instagram</a></li>
@@ -66,8 +65,25 @@
                 <li><a href="https://www.linkedin.com/in/toonchavez8">linkedin</a></li>
             </ul>
         </div>
+
+        <small class="footer__copyright--container">
+            <p class="footer__builtwith">
+                <!-- built with hml css and js -->
+                Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
+                    href="https://www.w3schools.com/css/">CSS</a>
+                and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
+            </p>
+            <a href="https://github.com/toonchavez8" class="footer__copyright--container__link">
+                ©2023 by toonchavez
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon"
+                    class="footer__copyright--container__link--img" />
+            </a>
+
+
+        </small>
     </footer>
 
 </body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </html>
