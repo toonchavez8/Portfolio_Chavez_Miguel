@@ -6,31 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toonchavez</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__logo-container">
-            <a href="./index.html" class="header__logo-container__link">
-                <img src="./assets/Logo--Dark.png" alt="logo" class="header__logo-container__link__img" />
-            </a>
-        </div>
-        <nav class="header__nav">
-            <ul class="header__nav__list">
-                <li class="header__nav__list__item"><a href="index.html" class="header__nav__list__item__link">home</a>
-                </li>
-                <li class="header__nav__list__item"><a href="./pages/about.html"
-                        class="header__nav__list__item__link">about</a></li>
-                <li class="header__nav__list__item"><a href="./pages/projects.html"
-                        class="header__nav__list__item__link">projects</a></li>
-                <li class="header__nav__list__item"><a href="./pages/services.html"
-                        class="header__nav__list__item__link">services</a></li>
-                <li class="header__nav__list__item"><a href="./pages/contact.html"
-                        class="header__nav__list__item__link">contact</a></li>
-            </ul>
+    <header>
+        <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="logo-container | navbar-brand " href="#">
+                    <img class="logo | img-fluid" src="./assets/Logo--Dark.png" alt="toonchavez logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
+
+
+
     <main>
 
 
@@ -87,5 +104,10 @@
 
 </body>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- bootsrap script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 
 </html>
