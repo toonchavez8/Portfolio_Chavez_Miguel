@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <!-- own css -->
     <link rel="stylesheet" href="./css/style.css">
 
 
@@ -27,8 +28,8 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse  flex-row-reverse  " id="navbarNav">
-                    <ul class="navbar-nav wsg-400 text-uppercase ff-poppins fw-200 fs-16">
+                <div class="collapse navbar-collapse  flex-row-reverse  " id="navbarNav w-100">
+                    <ul class=" navbar-nav wsg-400 text-uppercase ff-poppins fw-200 fs-16 ">
                         <li class="nav-item ">
                             <a class="nav-link active ev-400 fw-400" aria-current="page" href="./index.html">Home</a>
                         </li>
@@ -56,18 +57,34 @@
 
     <main>
 
-        <section class="container ">
+        <section class="container-fluid  d-flex position-relative ">
             <figure class=" position-relative">
-                <div class="hero-glass"></div>
-                <canvas id="canvas3d" class="m-4">
 
+                <canvas id="canvas3d" class="m-4">
                 </canvas>
                 <a class="logo" href="https://spline.design"></a>
             </figure>
 
-            <article>
-
+            <article class="container  d-flex flex-column m-auto p-5 gap-4">
+                <div class="">
+                    <h1 class="fs-64">I’m Miguel <span class="ev-400 fw-200 fst-italic text-capitalize"
+                            id="typeOnText"></span></h1>
+                    <p class="hero-subheading | fs-20 fw-400 wsg-500 text-body">I'm a multi-talented developer,
+                        filmmaker, cook, and motion designer. Follow my journey as I juggle all my passions and see what
+                        I'm capable of!</p>
+                </div>
+                <div class="d-flex gap-5 ">
+                    <a href="./pages/projects.html" class="px-5 mx-4"><button
+                            class="btn-glass-primary | btn text-capitalize fs-20 fw-400 px-4 ev-400 ">projects</button></a>
+                    <a href="./pages/contact.html" class="px-5 mx-4"><button
+                            class=" btn-glass-secondary | btn text-capitalize fs-20 px-4 rb-400 ">contact
+                            me</button></a>
+                </div>
             </article>
+
+            <div class="bg-element | ff-inter fw-800">
+                &#60;Hi /&#62;
+            </div>
         </section>
 
 

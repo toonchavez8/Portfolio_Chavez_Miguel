@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;600;700;900&family=Poppins:wght@200;300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;600;700;800;900&family=Poppins:wght@200;300;400;500;700;800&display=swap");
 
 * {
 	margin: 0;
@@ -19,6 +19,7 @@
 	--fw-500: 500;
 	--fw-600: 600;
 	--fw-700: 700;
+	--fw-800: 800;
 	--fw-900: 900;
 
 	--fs-12: 0.75rem;
@@ -619,6 +620,10 @@ canvas {
 	max-width: 16rem;
 }
 
+.navbar-nav {
+	gap: 1rem;
+}
+
 /* end of Navigation */
 
 /* footer grid */
@@ -704,28 +709,131 @@ canvas {
 
 /* home page */
 
-.hero-glass {
-	position: absolute;
-	width: 264px;
-	height: 280px;
-	left: 0px;
-	top: 0px;
-	transform: translate(100%, 75%);
+#typeOnText::before {
+	content: "-";
+	font-style: normal;
+	color: var(--light---electric-violet--400);
+}
+#typeOnText::after {
+	content: "|";
+	font-style: normal;
+	animation: blink 0.7s infinite;
+	padding-left: 1rem;
+	color: var(--light---electric-violet--200);
+}
 
+.hero-subheading {
+	max-width: 50rem;
+}
+.cursor {
+	display: inline-block;
+	animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	from,
+	to {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.btn-glass-primary {
 	background: radial-gradient(
-			97.57% 210.75% at 0.9% 2.98%,
-			rgba(177, 180, 185, 0.4) 0%,
-			rgba(255, 255, 255, 0) 100%
-		)
-		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-	backdrop-filter: blur(21px);
-	/* Note: backdrop-filter has minimal browser support */
-
-	border-radius: 16px;
+		97.57% 210.75% at 0.9% 2.98%,
+		rgba(126, 50, 165, 0.2) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
 
 	border: 2px solid;
-	border-color: rgba(255, 255, 255, 0.18);
-	z-index: 2;
+
+	border-image-source: linear-gradient(
+			114.55deg,
+			rgba(126, 50, 165, 0.9) 2.13%,
+			rgba(255, 255, 255, 0) 98.14%
+		),
+		radial-gradient(
+			97.09% 224.61% at 1.38% 96.94%,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(216, 216, 216, 0.54) 100%
+		);
+
+	backdrop-filter: blur(6px);
+
+	border-radius: 8px;
+}
+
+.btn-glass-secondary {
+	background: radial-gradient(
+		97.57% 210.75% at 0.9% 2.98%,
+		rgb(110, 151, 235, 0.2) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+
+	border: 2px solid;
+
+	backdrop-filter: blur(6px);
+
+	border-radius: 8px;
+}
+
+.bg-element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-style: italic;
+	transform: translate(-18%, -15%);
+	z-index: -1;
+
+	font-size: 35rem;
+
+	border-image-source: linear-gradient(
+			114.55deg,
+			rgba(126, 50, 165, 0.9) 2.13%,
+			rgba(32, 5, 46, 0) 98.14%
+		),
+		radial-gradient(
+				97.09% 224.61% at 1.38% 96.94%,
+				rgba(216, 216, 216, 0) 0%,
+				rgba(216, 216, 216, 0.54) 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+		radial-gradient(
+				97.57% 210.75% at 0.9% 2.98%,
+				rgba(216, 216, 216, 0) 0%,
+				rgba(216, 216, 216, 0.05) 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+	/* Glass/BG Element 02 */
+
+	background: linear-gradient(
+		80deg,
+		rgba(48, 110, 232, 1) 0%,
+		rgba(131, 168, 241, 1) 27%,
+		rgba(214, 226, 250, 1) 61%,
+		rgba(29, 66, 139, 1) 100%
+	);
+
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: var(--grays--000-white);
+	-webkit-text-stroke: 6px transparent;
+
+	opacity: 0.6;
+
+	animation: scroll 20s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translate(-30%, -15%);
+	}
+	100% {
+		transform: translate(0%, -15%);
+	}
 }
 
 /* contact page */
