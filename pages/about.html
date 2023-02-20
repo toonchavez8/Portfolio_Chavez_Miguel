@@ -6,87 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toonchavez</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
-
-    <body>
-        <header class="header">
-            <div class="header__logo-container">
-                <a href="../index.html" class="header__logo-container__link">
-                    <img src="../assets/Logo--Dark.png" alt="logo" class="header__logo-container__link__img" />
+<body class="body-container">
+    <header>
+        <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
+            <div class="container-fluid ">
+                <a class="logo-container | navbar-brand " href="#">
+                    <img class="logo | img-fluid" src="../assets/Logo--Dark.png" alt="toonchavez logo">
                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  flex-row-reverse  " id="navbarNav">
+                    <ul class="navbar-nav wsg-400 text-uppercase ff-poppins fw-200 fs-16">
+                        <li class="nav-item ">
+                            <a class="nav-link " href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active ev-400 fw-400" aria-current="page" href="./about.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./projects.html">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./services.html">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <nav class="header__nav" aria-label="nav">
-                <ul class="header__nav__list">
-                    <li class="header__nav__list__item"><a href="../index.html"
-                            class="header__nav__list__item__link">home</a></li>
-                    <li class="header__nav__list__item active"><a href="./about.html"
-                            class="header__nav__list__item__link">about</a></li>
-                    <li class="header__nav__list__item"><a href="./projects.html"
-                            class="header__nav__list__item__link">projects</a></li>
-                    <li class="header__nav__list__item"><a href="./services.html"
-                            class="header__nav__list__item__link">services</a></li>
-                    <li class="header__nav__list__item"><a href="./contact.html"
-                            class="header__nav__list__item__link ">contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        </nav>
+    </header>
 
-        <main>
+    <main>
 
-            <section class="wip_container">
-                <h1 class="wip_container_tittle">
-                    Heres where the about page will be... but its not done yet
-                    <span>sorry </span>
-                </h1>
-                <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_blnro6zs.json"
-                    background="transparent" speed="1" loop autoplay class="wip_container__blurs"></lottie-player>
-            </section>
+        <section class="wip_container">
+            <h1 class="wip_container_tittle">
+                Heres where the about page will be... but its not done yet
+                <span>sorry </span>
+            </h1>
+            <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_blnro6zs.json"
+                background="transparent" speed="1" loop autoplay class="wip_container__blurs"></lottie-player>
+        </section>
 
 
-        </main>
-        <footer class="footer">
+    </main>
+    <footer class="footer">
 
 
-            <nav class="footer__nav" aria-label="footer">
-                <ul>
-                    <li><a href="../index.html">home</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./projects.html">projects</a></li>
-                    <li><a href="./services.html">services</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
+        <nav class="footer__nav" aria-label="footer">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./projects.html">projects</a></li>
+                <li><a href="./services.html">services</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+        </nav>
 
-            <div class="footer__Social">
-                <ul>
-                    <li><a href="https://www.facebook.com/Toonchavez/">facebook</a></li>
-                    <li><a href="https://www.instagram.com/toonchavez/">instagram</a></li>
-                    <li><a href="https://www.twitter.com/toonchavez8">twitter</a></li>
-                    <li><a href="https://www.linkedin.com/in/toonchavez8">linkedin</a></li>
-                </ul>
-            </div>
+        <div class="footer__Social">
+            <ul>
+                <li><a href="https://www.facebook.com/Toonchavez/">facebook</a></li>
+                <li><a href="https://www.instagram.com/toonchavez/">instagram</a></li>
+                <li><a href="https://www.twitter.com/toonchavez8">twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/toonchavez8">linkedin</a></li>
+            </ul>
+        </div>
 
-            <small class="footer__copyright--container">
-                <p class="footer__builtwith">
-                    <!-- built with hml css and js -->
-                    Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
-                        href="https://www.w3schools.com/css/">CSS</a>
-                    and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
-                </p>
-                <a href="https://github.com/toonchavez8" class="footer__copyright--container__link">
-                    ©2023 by toonchavez
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon"
-                        class="footer__copyright--container__link--img" />
-                </a>
+        <small class="footer__copyright--container">
+            <p class="footer__builtwith">
+                <!-- built with hml css and js -->
+                Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
+                    href="https://www.w3schools.com/css/">CSS</a>
+                and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
+            </p>
+            <a href="https://github.com/toonchavez8" class="footer__copyright--container__link">
+                ©2023 by toonchavez
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon"
+                    class="footer__copyright--container__link--img" />
+            </a>
 
 
-            </small>
-        </footer>
+        </small>
+    </footer>
 
-    </body>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- bootsrap script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 
 </html>

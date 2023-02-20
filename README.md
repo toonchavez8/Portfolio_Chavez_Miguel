@@ -40,3 +40,22 @@ This GitHub repository contains a portfolio project created using only HTML, CSS
 
 - [x] Aplicar con CSS las propiedades vistas hasta el momento para modificar textos, encabezados, img, colores, background y box modeling a un archivo HTML de la actividad n 01 "Wireframe y estructura del proyecto".
 - [x] Ejemplo: modificar el valor de los items de la lista para que estén ubicados de manera horizontal en nuestro index.
+
+### 03 Aplicando Grids y Flexbox
+
+- [ ] Generar que el index y una página más a elección de nuestro proyecto sea totalmente responsive utilizando grids para el layout, flexbox para los componentes y box modeling para terminar de acomodar los elementos. Es necesaria la utilización de media queries.
+
+**Recomendaciones:**
+
+- En el html, generar estructura de grid-contenedor-padre e grid-item-hijo para poder trabajar desde el CSS con grid-area.
+- Dentro de esos grid-item-hijo deberemos agregar etiquetas para generar los componentes (ej: nav - footer - content - etc) a los cuales acomodaremos aplicando flexbox.
+- Si es necesario, aplicamos box modeling para terminar de acomodar y generar nuestro layout completo para la vista desktop.
+- Deberás repetir este proceso pero dentro de una media querie mobile
+
+### 04 Aplicando Bootstrap
+
+- A partir del diseño hecho y los conocimientos adquiridos de bootstrap, generar todo el sitio (cinco páginas) que demuestre el uso correcto del mismo. Después, cargar todo a GitHub.
+
+**Recomendaciones:**
+
+- Incluye HTML completo con respectivo linkeos de CSS y JS para poder hacer uso del framework y generar un layout responsive.

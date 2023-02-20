@@ -12,12 +12,14 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/style.css">
+
+
 </head>
 
-<body>
+<body class="body-container">
     <header>
         <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
-            <div class="container-fluid d-flex justify-content-between">
+            <div class="container-fluid ">
                 <a class="logo-container | navbar-brand " href="#">
                     <img class="logo | img-fluid" src="./assets/Logo--Dark.png" alt="toonchavez logo">
                 </a>
@@ -25,19 +27,23 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <div class="collapse navbar-collapse  flex-row-reverse  " id="navbarNav">
+                    <ul class="navbar-nav wsg-400 text-uppercase ff-poppins fw-200 fs-16">
+                        <li class="nav-item ">
+                            <a class="nav-link active ev-400 fw-400" aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="./pages/about.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/projects.html">projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="./pages/services.html">services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <a class="nav-link" href="./pages/contact.html">contact</a>
                         </li>
                     </ul>
                 </div>
@@ -50,23 +56,27 @@
 
     <main>
 
+        <section class="container ">
+            <figure class=" position-relative">
+                <div class="hero-glass"></div>
+                <canvas id="canvas3d" class="m-4">
 
-        <section class="wip_container">
-            <h1 class="wip_container_tittle">
-                You've reached the home page... buuut its not done yet
+                </canvas>
+                <a class="logo" href="https://spline.design"></a>
+            </figure>
 
-                <span>sorry </span>
-            </h1>
-            <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_blnro6zs.json"
-                background="transparent" speed="1" loop autoplay class="wip_container__blurs"></lottie-player>
+            <article>
+
+            </article>
         </section>
+
 
 
     </main>
     <footer class="footer">
 
 
-        <nav class="footer__nav">
+        <nav class="footer__nav" aria-label="footer">
             <ul>
                 <li><a href="index.html">home</a></li>
                 <li><a href="./pages/about.html">about</a></li>
@@ -102,12 +112,26 @@
         </small>
     </footer>
 
-</body>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<!-- bootsrap script -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+    <!-- lottie player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- bootsrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- splinetool -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+          {
+            "imports": {
+              "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.220/build/runtime.js"
+            }
+          }
+        </script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
 
 </html>
