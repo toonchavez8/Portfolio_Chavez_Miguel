@@ -6,29 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toonchavez</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link rel="stylesheet" href="..../css/style.css">
 </head>
 
-<body>
-    <header class="header">
-        <div class="header__logo-container">
-            <a href="../index.html" class="header__logo-container__link">
-                <img src="../assets/Logo--Dark.png" alt="logo" class="header__logo-container__link__img" />
-            </a>
-        </div>
-        <nav class="header__nav">
-            <ul class="header__nav__list">
-                <li class="header__nav__list__item"><a href="../index.html"
-                        class="header__nav__list__item__link">home</a></li>
-                <li class="header__nav__list__item"><a href="./about.html"
-                        class="header__nav__list__item__link">about</a></li>
-                <li class="header__nav__list__item"><a href="./projects.html"
-                        class="header__nav__list__item__link">projects</a></li>
-                <li class="header__nav__list__item"><a href="./services.html"
-                        class="header__nav__list__item__link">services</a></li>
-                <li class="header__nav__list__item"><a href="./contact.html"
-                        class="header__nav__list__item__link">contact</a></li>
-            </ul>
+<body class="body-container">
+    <header>
+        <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
+            <div class="container-fluid ">
+                <a class="logo-container | navbar-brand " href="#">
+                    <img class="logo | img-fluid" src="../assets/Logo--Dark.png" alt="toonchavez logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  flex-row-reverse  " id="navbarNav">
+                    <ul class="navbar-nav wsg-400 text-uppercase ff-poppins fw-200 fs-16">
+                        <li class="nav-item ">
+                            <a class="nav-link " href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./projects.html">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./services.html">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -38,11 +55,12 @@
         </h1>
 
     </main>
-    <footer class="footer">
+    <footer class=" footer | container-fluid d-grid row-cols-2 gap-3 py-2">
 
 
-        <nav class="footer__nav">
-            <ul>
+        <nav class="footer-nav w-100 fs-18 " aria-label="footer">
+            <ul
+                class="footer-list | fs-18 wsg-300 text-capitalize fw-200 d-flex flex-grow-1 gap-5 flex-lg-wrap  w-100 mb-0">
                 <li><a href="../index.html">home</a></li>
                 <li><a href="./about.html">about</a></li>
                 <li><a href="./projects.html">projects</a></li>
@@ -51,26 +69,26 @@
             </ul>
         </nav>
 
-        <div class="footer__Social">
-            <ul>
-                <li><a href="https://www.facebook.com/Toonchavez/">facebook</a></li>
-                <li><a href="https://www.instagram.com/toonchavez/">instagram</a></li>
-                <li><a href="https://www.twitter.com/toonchavez8">twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/toonchavez8">linkedin</a></li>
+        <div class="footer-Social | fs-18 ff-poppins text-capitalize  wsg-300  fw-200 w-100 ">
+            <ul class="d-flex gap-5 justify-content-end mb-0">
+                <li><a href="https://www.facebook.com/Toonchavez/" target="_blank">facebook</a></li>
+                <li><a href="https://www.instagram.com/toonchavez/" target="_blank">instagram</a></li>
+                <li><a href="https://www.twitter.com/toonchavez8" target="_blank">twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/toonchavez8" target="_blank">linkedin</a></li>
             </ul>
         </div>
 
-        <small class="footer__copyright--container">
-            <p class="footer__builtwith">
+        <small class="built-with | text-center d-flex justify-content-center align-items-center flex-column">
+            <p class="fs-16 wsg-400">
                 <!-- built with hml css and js -->
                 Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
                     href="https://www.w3schools.com/css/">CSS</a>
                 and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
             </p>
-            <a href="https://github.com/toonchavez8" class="footer__copyright--container__link">
+            <a href="https://github.com/toonchavez8" class="built-with-box |  w-100 wsg-200">
                 ©2023 by toonchavez
                 <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon"
-                    class="footer__copyright--container__link--img" />
+                    class="built-with-img | img-fluid " />
             </a>
 
 
@@ -79,5 +97,10 @@
 
 </body>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- bootsrap script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 
 </html>
