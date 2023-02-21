@@ -43,7 +43,7 @@ This GitHub repository contains a portfolio project created using only HTML, CSS
 
 ### 03 Aplicando Grids y Flexbox
 
-- [ ] Generar que el index y una página más a elección de nuestro proyecto sea totalmente responsive utilizando grids para el layout, flexbox para los componentes y box modeling para terminar de acomodar los elementos. Es necesaria la utilización de media queries.
+- [x] Generar que el index y una página más a elección de nuestro proyecto sea totalmente responsive utilizando grids para el layout, flexbox para los componentes y box modeling para terminar de acomodar los elementos. Es necesaria la utilización de media queries.
 
 **Recomendaciones:**
 
