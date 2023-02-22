@@ -629,9 +629,6 @@ canvas {
 /* footer grid */
 
 .footer {
-	display: grid;
-	grid-template-columns: repeat(2, auto);
-	grid-template-rows: repeat(2, auto);
 	border-top: 1px solid var(--grays--100-wood-smoke-gray);
 }
 
@@ -642,8 +639,8 @@ canvas {
 }
 
 .built-with-box {
-	max-width: 10rem;
 	flex-direction: row-reverse;
+	gap: 1rem;
 }
 
 .footer-Social ul li:hover,
@@ -655,7 +652,7 @@ canvas {
 }
 
 .built-with-img {
-	max-width: 2rem;
+	max-width: 1.5rem;
 	max-height: 2rem;
 	aspect-ratio: 1 / 1;
 }
@@ -772,7 +769,7 @@ canvas {
 	transform: translate(-18%, -15%);
 	z-index: -1;
 
-	font-size: 35rem;
+	font-size: calc(20rem + 5vw);
 
 	border-image-source: linear-gradient(
 			114.55deg,
@@ -948,35 +945,10 @@ canvas {
 		font-size: 0.2rem;
 	}
 
-	.footer {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas: "nav" "social", "built" "built";
-		border: 1px solid red;
-	}
-
-	.built-with {
-		justify-self: center;
-		grid-area: "built";
-	}
-
-	.footer-nav,
-	.footer-Social {
-		max-width: 480px !important;
-	}
-
-	.footer-nav {
-		grid-area: "nav";
-	}
-
-	.footer-Social {
-		grid-area: "social";
-	}
 	.footer-list,
 	.footer-Social ul {
 		flex-direction: column;
 		gap: 0.5rem !important;
-		max-width: fit-content;
 	}
 
 	/* end of footer */
