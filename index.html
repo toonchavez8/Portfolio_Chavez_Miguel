@@ -18,17 +18,17 @@
 </head>
 
 <body class="body-container">
-    <header>
-        <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
+    <header class="">
+        <nav class="navbar navbar-expand-lg align-content-center" aria-label="navigation">
             <div class="container-fluid ">
-                <a class="logo-container  navbar-brand " href="#">
+                <a class="logo-container  navbar-brand" href="#">
                     <img class="logo | img-fluid" src="./assets/Logo--Dark.png" alt="toonchavez logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse  flex-row-reverse  " id="navbarNav w-100">
+                <div class="collapse navbar-collapse  flex-row-reverse " id="navbarNav">
                     <ul class=" navbar-nav wsg-400 text-uppercase ff-poppins fw-200 fs-16 ">
                         <li class="nav-item ">
                             <a class="nav-link active ev-400 fw-400" aria-current="page" href="./index.html">Home</a>
@@ -56,15 +56,15 @@
 
 
     <main>
-
-        <section class=" hero-section | container-fluid  d-flex position-relative ">
-            <figure class="Canvas-box">
-                <canvas id="canvas3d" class=" m-4 container">
+        <section
+            class=" hero-section | container-fluid  d-flex position-relative flex-lg-row flex-md-column-reverse flex-sm-column justify-content-sm-center align-items-sm-center ">
+            <figure class=" ">
+                <canvas id="canvas3d" class=" ratio ratio-1x1">
                 </canvas>
             </figure>
 
-            <article class=" hero-main | container  d-flex flex-column m-auto p-5 gap-4">
-                <div class="">
+            <article class=" hero-main |   container-fluid  d-flex flex-column  py-5 gap-4">
+                <div class="container-fluid">
                     <h1 class="fs-64">I’m Miguel <span class="ev-400 fw-200 fst-italic text-capitalize"
                             id="typeOnText"></span></h1>
                     <p class="hero-subheading | fs-20 fw-400 wsg-500 text-body">I'm a multi-talented developer,
@@ -88,54 +88,58 @@
 
 
     </main>
-    <footer class=" footer | container-fluid d-grid row-cols-2 gap-3 py-2">
-
-
-        <nav class="footer-nav w-100 fs-18 " aria-label="footer">
-            <ul
-                class="footer-list | fs-18 wsg-300 text-capitalize fw-200 d-flex flex-grow-1 gap-5 flex-lg-wrap  w-100 mb-0">
-                <li><a href="index.html">home</a></li>
-                <li><a href="./pages/about.html">about</a></li>
-                <li><a href="./pages/projects.html">projects</a></li>
-                <li><a href="./pages/services.html">services</a></li>
-                <li><a href="./pages/contact.html">contact</a></li>
-            </ul>
-        </nav>
-
-        <div class="footer-Social | fs-18 ff-poppins text-capitalize  wsg-300  fw-200 w-100 ">
-            <ul class="d-flex gap-5 justify-content-end mb-0">
-                <li><a href="https://www.facebook.com/Toonchavez/" target="_blank">facebook</a></li>
-                <li><a href="https://www.instagram.com/toonchavez/" target="_blank">instagram</a></li>
-                <li><a href="https://www.twitter.com/toonchavez8" target="_blank">twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/toonchavez8" target="_blank">linkedin</a></li>
-            </ul>
+    <footer class="footer container-fluid py-3 ">
+        <div class=" justify-content-between align-items-center   flex-sm-row col row  ">
+            <div class=" col-md-6 mb-3 mb-md-0 text-center text-md-start  ">
+                <nav class=" footer-nav" aria-label="footer">
+                    <ul class="footer-list wsg-400 text-capitalize fw-200 d-flex gap-5 flex-lg-wrap 
+                        justify-content-lg-start 
+                        justify-content-center justify-content-md-start mb-0 ">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="./pages/about.html">about</a></li>
+                        <li><a href="./pages/projects.html">projects</a></li>
+                        <li><a href="./pages/services.html">services</a></li>
+                        <li><a href="./pages/contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-6 text-center text-md-center  ">
+                <div class="footer-Social  text-capitalize wsg-400 fw-200 ">
+                    <ul class="d-flex  gap-5 justify-content-lg-end justify-content-md-center mb-0  justify-content-sm-center
+                        justify-content-center
+                        ">
+                        <li><a href="https://www.facebook.com/Toonchavez/" target="_blank">facebook</a></li>
+                        <li><a href="https://www.instagram.com/toonchavez/" target="_blank">instagram</a></li>
+                        <li><a href="https://www.twitter.com/toonchavez8" target="_blank">twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/toonchavez8" target="_blank">linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <small class="built-with | text-center d-flex justify-content-center align-items-center flex-column">
-            <p class="fs-16 wsg-400">
+        <small
+            class=" mt-3 text-center  built-with d-flex flex-column justify-content-center align-items-center w-100 py-1">
+            <p class="mb-0 fs-16 wsg-400 pb-1">
                 <!-- built with hml css and js -->
-                Built with <a href="https://www.w3schools.com/html/">HTML</a> and <a
-                    href="https://www.w3schools.com/css/">CSS</a>
-                and <a href="https://www.w3schools.com/js/">JS</a> soon to be included
+                Built with <a href="https://www.w3schools.com/html/">HTML</a>, <a
+                    href="https://www.w3schools.com/css/">CSS</a>, and <a href="https://www.w3schools.com/js/">JS</a>
+                soon to be included.
             </p>
-            <a href="https://github.com/toonchavez8" class="built-with-box | fs-16 w-100 wsg-200">
-                ©2023 by toonchavez
+            <a href="https://github.com/toonchavez8"
+                class="built-with-box d-flex align-items-center text-decoration-none ">
+                <span class=" fs-16 wsg-200">©2023 by toonchavez</span>
                 <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon"
-                    class="built-with-img | img-fluid " />
+                    class="built-with-img img-fluid " />
             </a>
-
-
         </small>
     </footer>
+
+
 
 
     <!-- lottie player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-    <!-- bootsrap script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 
     <!-- splinetool -->
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
@@ -146,6 +150,14 @@
             }
           }
         </script>
+
+    <!-- bootsrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
     <script type="module" src="./js/main.js"></script>
 </body>
 
