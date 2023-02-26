@@ -61,3 +61,5 @@ function typeOn() {
 }
 
 typeOn(); // Call the typeOn function to start the animation
+
+// Create a new function to allow the user to ho
