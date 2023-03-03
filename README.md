@@ -22,6 +22,8 @@ This GitHub repository contains a portfolio project created using only HTML, CSS
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
+- Sass
 
 ## Actividades
 
