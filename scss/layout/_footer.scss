@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+/* footer grid */
+
+.footer {
+	border-top: 1px solid $grays--100-wood-smoke-gray;
+}
+
+.built-with {
+	width: auto;
+	height: auto;
+	grid-column: span 2;
+}
+
+.built-with-box {
+	flex-direction: row-reverse;
+	gap: 1rem;
+}
+
+.footer-Social,
+.footer-list {
+	li a {
+		transition: all 0.1s ease-in-out;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		color: $light---electric-violet--500 !important;
+	}
+}
+
+.built-with-img {
+	max-width: 1.5rem;
+	max-height: 2rem;
+	aspect-ratio: 1 / 1;
+}

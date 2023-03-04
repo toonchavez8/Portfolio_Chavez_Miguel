@@ -4,8 +4,10 @@
   "description": "Portfolio project developed using HTML, CSS, and JavaScript, showcasing web design skills including layout, typography, and responsive design. Created as part of a web design course at CoderHouse with class ID 51270",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive",
-    "start": "nodemon -e scss -x \"npm run sass\""
+    "sass": "sass --watch scss:css",
+    "sassbuild": "sass --no-source-map --style=compressed scss:css",
+    "start": "nodemon -e scss,html  -x \"npm run sass\"",
+    "build": "npm run sassbuild"
     
   },
   "repository": {
