@@ -63,3 +63,26 @@ function typeOn() {
 typeOn(); // Call the typeOn function to start the animation
 
 // Create a new function to allow the user to ho
+
+const $carouselItems = $(".carousel .carousel-item");
+
+$carouselItems.each(function () {
+	const minPerSlide = 3;
+	const $next = $(this).next().length
+		? $(this).next()
+		: $(this).siblings(":first");
+
+	$next.children(":first-child").clone().appendTo($(this));
+
+	let slidesRemaining = minPerSlide - 1;
+	while (slidesRemaining > 0) {
+		$next.next().length
+			? $next.next().children(":first-child").clone().appendTo($(this))
+			: $(this)
+					.siblings(":first")
+					.children(":first-child")
+					.clone()
+					.appendTo($(this));
+		slidesRemaining--;
+	}
+});
