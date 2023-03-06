@@ -1,0 +1,73 @@
+/* /* /* Media Quiries /* /*  */
+
+/* Mobile */
+
+@media screen and (max-width: 30rem) {
+	/* footer */
+
+	.fs-64 {
+		font-size: 2rem;
+	}
+	.fs-56 {
+		font-size: 1.5rem;
+	}
+	.fs-48 {
+		font-size: 1.2rem;
+	}
+	.fs-40 {
+		font-size: 1rem;
+	}
+	.fs-32 {
+		font-size: 0.8rem;
+	}
+	.fs-20 {
+		font-size: 0.875rem;
+	}
+	.fs-16 {
+		font-size: 0.75rem;
+	}
+	.fs-8 {
+		font-size: 0.2rem;
+	}
+
+	.footer-list,
+	.footer-Social ul {
+		flex-direction: column;
+		gap: 0.5rem !important;
+	}
+
+	/* end of footer */
+
+	/* home page  */
+	.hero-section {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.canvas-box,
+	#canvas3d {
+		display: none !important;
+	}
+
+	.bg-element {
+		font-size: 13rem;
+		width: 750px;
+	}
+
+	.hero-main {
+		display: flex;
+		flex-direction: column;
+		max-width: 480px;
+	}
+
+	.btn-section {
+		gap: 1rem !important;
+	}
+
+	.btn-section a {
+		padding: 0 !important;
+	}
+}
+
+/* /* end Media Quiries  /*  */

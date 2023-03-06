@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+
+/* Navigation */
+
+header {
+	border-bottom: 1px solid;
+	border-image: linear-gradient(
+			to right,
+			$light---electric-violet--400,
+			$light---royal-blue--400
+		)
+		1;
+	background-color: transparent !important;
+}
+
+.logo-container {
+	max-width: 12rem;
+}
+
+.navbar-nav {
+	gap: 1rem;
+}
