@@ -248,7 +248,6 @@
 }
 .Skewed-BG {
 	position: relative;
-	isolation: isolate;
 
 	&::before {
 		content: "";
@@ -313,6 +312,10 @@
 	}
 }
 
+.skill-p {
+	max-width: 60rem;
+}
+
 .card-mw {
 	max-width: 20rem !important;
 	width: fit-content !important;
@@ -350,4 +353,11 @@
 			}
 		}
 	}
+}
+
+.work-logo {
+	max-width: 150px;
+	filter: invert(1);
+	aspect-ratio: 1/1;
+	object-fit: contain;
 }

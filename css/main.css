@@ -534,6 +534,79 @@ header {
   aspect-ratio: 1/1;
 }
 
+.lines {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 300%;
+  margin: auto;
+  width: 100vw;
+  opacity: 0.5;
+  z-index: -2;
+  transform: rotate(-90deg);
+}
+@media (max-width: 45rem) {
+  .lines {
+    transform: rotate(0deg);
+  }
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgb(236, 209, 250);
+  overflow: hidden;
+  z-index: -2;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgb(63, 10, 92) 0%, rgb(177, 72, 235) 75%, rgb(158, 26, 230) 100%);
+  animation: drop 16s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  box-shadow: 0 0 10px rgb(63, 10, 92), 0 0 20px rgb(63, 10, 92), 0 0 40px rgb(63, 10, 92), 0 0 80px rgb(63, 10, 92), 0 0 160px rgb(63, 10, 92);
+}
+.line:nth-child(1) {
+  margin-left: -5%;
+}
+@media screen and (max-width: 45rem) {
+  .line:nth-child(1) {
+    margin-left: 26%;
+  }
+}
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 5%;
+}
+@media screen and (max-width: 45rem) {
+  .line:nth-child(3) {
+    margin-left: -30%;
+  }
+}
+.line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
 /* home page */
 .hero-section {
   flex-direction: column;
@@ -697,7 +770,6 @@ header {
 
 .Skewed-BG {
   position: relative;
-  isolation: isolate;
 }
 .Skewed-BG::before {
   content: "";
@@ -748,6 +820,10 @@ header {
     transform: translateX(-25%) !important;
   }
 }
+.skill-p {
+  max-width: 60rem;
+}
+
 .card-mw {
   max-width: 20rem !important;
   width: fit-content !important;
@@ -780,6 +856,13 @@ header {
 }
 .card-mw .glass-card .img-box img:hover {
   transform: scale(1.05);
+}
+
+.work-logo {
+  max-width: 150px;
+  filter: invert(1);
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
 .body-container {
