@@ -611,6 +611,13 @@ header {
 .hero-section {
   flex-direction: column;
 }
+.hero-section figure {
+  border: 1px solid red;
+}
+.hero-section figure canvas {
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 35rem) {
   .hero-section {
     text-align: center;
@@ -863,6 +870,10 @@ header {
   filter: invert(1);
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+
+.recent-crtns-p {
+  max-width: 60rem;
 }
 
 .body-container {
