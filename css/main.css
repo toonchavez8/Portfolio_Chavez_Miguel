@@ -493,9 +493,9 @@ header {
   border-image: linear-gradient(to right, rgb(158, 26, 230), rgb(48, 110, 232)) 1;
   background-color: transparent !important;
 }
-
-.logo-container {
+header .logo-container {
   max-width: 12rem;
+  color: rgb(161, 173, 230) !important;
 }
 
 .navbar-nav {
@@ -610,6 +610,14 @@ header {
 /* home page */
 .hero-section {
   flex-direction: column;
+}
+.hero-section figure {
+  width: 100%;
+  height: 30rem;
+}
+.hero-section figure canvas {
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 35rem) {
   .hero-section {
@@ -863,6 +871,10 @@ header {
   filter: invert(1);
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+
+.recent-crtns-p {
+  max-width: 60rem;
 }
 
 .body-container {
