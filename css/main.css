@@ -612,7 +612,7 @@ header .logo-container {
   flex-direction: column;
 }
 .hero-section figure {
-  border: 1px solid red;
+  width: 100%;
 }
 .hero-section figure canvas {
   width: 100%;
