@@ -613,6 +613,7 @@ header .logo-container {
 }
 .hero-section figure {
   width: 100%;
+  height: 30rem;
 }
 .hero-section figure canvas {
   width: 100%;
