@@ -493,9 +493,9 @@ header {
   border-image: linear-gradient(to right, rgb(158, 26, 230), rgb(48, 110, 232)) 1;
   background-color: transparent !important;
 }
-
-.logo-container {
+header .logo-container {
   max-width: 12rem;
+  color: rgb(161, 173, 230) !important;
 }
 
 .navbar-nav {
