@@ -873,8 +873,60 @@ header .logo-container {
   object-fit: contain;
 }
 
+.temp {
+  background-color: #000;
+  color: #fff;
+}
+
+.Career-Section .img-box {
+  border-radius: 0.5rem;
+  margin: 2rem;
+  max-width: 22rem;
+  overflow: hidden;
+}
+.Career-Section .img-box img {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 0.5rem;
+  max-width: 40rem;
+}
+.Career-Section .img-box img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 30rem) and (max-width: 80rem) {
+  .Career-Section {
+    gap: 2rem;
+    justify-content: space-around;
+    padding-inline: 1rem;
+  }
+}
+@media (min-width: 80.1rem) {
+  .Career-Section {
+    gap: 2rem;
+    justify-content: space-around;
+    padding-inline: calc(50% - 40rem);
+  }
+}
 .recent-crtns-p {
   max-width: 60rem;
+}
+
+.project-section {
+  max-width: calc(100% - 5rem);
+  margin: 0 auto;
+}
+@media (max-width: 35rem) {
+  .project-section figure {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .project-section figure article {
+    width: 100%;
+  }
 }
 
 .body-container {
