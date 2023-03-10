@@ -778,7 +778,6 @@ header .logo-container {
 
 .Skewed-BG {
   position: relative;
-  overflow-x: hidden;
 }
 .Skewed-BG::before {
   content: "";
