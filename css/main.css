@@ -451,6 +451,8 @@
   background-color: rgb(236, 209, 250) !important;
 }
 
+/* end of color classes */
+/* start of mixins for dark theme*/
 /* Css Reset */
 h1,
 h2,
@@ -778,6 +780,7 @@ header .logo-container {
 
 .Skewed-BG {
   position: relative;
+  overflow-x: hidden;
 }
 .Skewed-BG::before {
   content: "";
@@ -793,39 +796,19 @@ header .logo-container {
 }
 
 @media (max-width: 768px) {
-  .carousel-inner .carousel-item > article {
+  .Skewed-BG {
+    background: linear-gradient(90deg, rgba(161, 173, 230, 0.2) 0%, rgb(255, 255, 255) 90%);
+  }
+  .Skewed-BG::before {
     display: none;
   }
-  .carousel-inner .carousel-item > article:first-child {
-    display: block;
-  }
 }
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-start,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-}
-
-/* display 4 */
-@media (min-width: 768px) {
-  .carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next,
-.carousel-item-next:not(.carousel-item-start) {
-    transform: translateX(25%) !important;
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+  .Skewed-BG {
+    background: linear-gradient(90deg, rgb(26, 6, 28) 0%, rgb(4, 6, 15) 90%);
   }
-  .carousel-inner .carousel-item-left.active,
-.active.carousel-item-start,
-.carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-25%) !important;
-  }
-  .carousel-item-next.carousel-item-start,
-.active.carousel-item-end {
-    transform: translateX(0) !important;
-  }
-  .carousel-inner .carousel-item-prev,
-.carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-25%) !important;
+  .Skewed-BG::before {
+    display: none;
   }
 }
 .skill-p {
@@ -844,7 +827,7 @@ header .logo-container {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   transition: all 0.3s ease-in-out;
-  border: 3px solid rgba(255, 255, 255, 0.3); /* This is a fallback for older browsers */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* This is a fallback for older browsers */
 }
 .card-mw .glass-card:hover {
   transform: scale(1.02);
@@ -871,6 +854,15 @@ header .logo-container {
   filter: invert(1);
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+
+.skills-badges > * {
+  transition: all 0.3s ease-in-out;
+  caret-color: transparent;
+}
+.skills-badges > *:hover {
+  transform: scale(1.05);
+  caret-color: transparent;
 }
 
 .temp {
@@ -911,6 +903,19 @@ header .logo-container {
     padding-inline: calc(50% - 40rem);
   }
 }
+.whatsapp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(25%, -100%);
+  max-width: 5rem;
+}
+@media (max-width: 35rem) {
+  .whatsapp .whatsapp {
+    display: block;
+  }
+}
+
 .recent-crtns-p {
   max-width: 60rem;
 }
@@ -929,6 +934,25 @@ header .logo-container {
   }
 }
 
+.services-card .card {
+  transition: all 0.5s ease;
+  aspect-ratio: 1/1.5;
+}
+.services-card .card:hover {
+  scale: 1.05;
+}
+.services-card .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .services-card .card {
+    aspect-ratio: 1/1;
+    text-align: center;
+  }
+}
 .body-container {
   min-height: 100vh;
   min-height: 100dvh;
@@ -948,6 +972,92 @@ header .logo-container {
 }
 .debug-3 {
   border: 1px solid yellow;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Global color classes */
+  .c-white-bg {
+    background-color: rgb(4, 6, 15) !important;
+  }
+  .c-white {
+    color: rgb(244, 245, 246) !important;
+  }
+  .wsg-700 {
+    color: rgb(244, 245, 246) !important;
+  }
+  .wsg-600 {
+    color: rgb(143, 147, 154) !important;
+  }
+  .wsg-500 {
+    color: rgb(177, 180, 185) !important;
+  }
+  .wsg-400 {
+    color: rgb(244, 245, 246) !important;
+  }
+  .rb-200 {
+    color: rgb(48, 110, 232) !important;
+  }
+  .ev-200 {
+    color: rgb(158, 26, 230) !important;
+  }
+  .nav-link {
+    color: rgb(177, 180, 185);
+    transition: all 0.5s ease !important;
+  }
+  .nav-link:hover {
+    color: rgb(48, 110, 232);
+    text-shadow: 0 0 0.625rem rgb(48, 110, 232), 0 0 1.25rem rgb(172, 197, 246);
+    box-shadow: 0 0.0625rem 0 rgb(48, 110, 232);
+  }
+  .active {
+    transition: all 0.5s ease;
+  }
+  .active:hover {
+    text-shadow: 0 0 0.625rem rgb(158, 26, 230), 0 0 1.25rem rgb(158, 26, 230);
+    box-shadow: 0 0.0625rem 0 rgb(158, 26, 230);
+  }
+  .bg-element {
+    -webkit-text-fill-color: rgb(4, 6, 15);
+  }
+  .Skewed-BG::before {
+    background: linear-gradient(125deg, rgb(26, 6, 28) 0%, rgb(4, 6, 15) 80%);
+  }
+  .card-mw .glass-card {
+    background: rgba(32, 34, 43, 0.5);
+  }
+  .line {
+    background: rgb(12, 18, 45);
+  }
+  .work-exp .card {
+    background: rgb(12, 18, 45);
+    transition: all 0.5s ease;
+  }
+  .work-exp .card:hover {
+    background: rgb(20, 30, 75);
+  }
+  a {
+    color: rgb(48, 110, 232);
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    color: rgb(158, 26, 230);
+  }
+  .built-with-img {
+    filter: invert(1);
+  }
+  .services-card .card {
+    background: rgb(8, 12, 30);
+    border: 1px solid rgb(12, 18, 45);
+  }
+  .services-card .card:hover {
+    background: rgb(20, 30, 75);
+  }
+  .logo {
+    filter: invert(1);
+  }
+  .work-logo {
+    filter: invert(0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

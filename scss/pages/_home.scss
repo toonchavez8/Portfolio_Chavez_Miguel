@@ -257,6 +257,7 @@
 }
 .Skewed-BG {
 	position: relative;
+	overflow-x: hidden;
 
 	&::before {
 		content: "";
@@ -280,44 +281,30 @@
 }
 
 @media (max-width: 768px) {
-	.carousel-inner .carousel-item > article {
-		display: none;
-	}
-	.carousel-inner .carousel-item > article:first-child {
-		display: block;
+	.Skewed-BG {
+		background: linear-gradient(
+			90deg,
+			rgba(161, 173, 230, 0.2) 0%,
+			$grays--000-white 90%
+		);
+
+		&::before {
+			display: none;
+		}
 	}
 }
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-start,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-	display: flex;
-	// transition-duration: 10s;
-}
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+	.Skewed-BG {
+		background: linear-gradient(
+			90deg,
+			$dark---valentino-purple--800 0%,
+			$dark---bunting-blue--900 90%
+		);
 
-/* display 4 */
-@media (min-width: 768px) {
-	.carousel-inner .carousel-item-right.active,
-	.carousel-inner .carousel-item-next,
-	.carousel-item-next:not(.carousel-item-start) {
-		transform: translateX(25%) !important;
-	}
-
-	.carousel-inner .carousel-item-left.active,
-	.active.carousel-item-start,
-	.carousel-item-prev:not(.carousel-item-end) {
-		transform: translateX(-25%) !important;
-	}
-
-	.carousel-item-next.carousel-item-start,
-	.active.carousel-item-end {
-		transform: translateX(0) !important;
-	}
-
-	.carousel-inner .carousel-item-prev,
-	.carousel-item-prev:not(.carousel-item-end) {
-		transform: translateX(-25%) !important;
+		&::before {
+			display: none;
+		}
 	}
 }
 
@@ -337,7 +324,7 @@
 		backdrop-filter: blur(6px);
 		-webkit-backdrop-filter: blur(6px);
 		transition: all 0.3s ease-in-out;
-		border: 3px solid rgba(255, 255, 255, 0.3); /* This is a fallback for older browsers */
+		border: 1px solid rgba(255, 255, 255, 0.3); /* This is a fallback for older browsers */
 
 		&:hover {
 			transform: scale(1.02);
@@ -369,4 +356,16 @@
 	filter: invert(1);
 	aspect-ratio: 1/1;
 	object-fit: contain;
+}
+
+.skills-badges {
+	> * {
+		transition: all 0.3s ease-in-out;
+		caret-color: transparent;
+	}
+
+	> *:hover {
+		transform: scale(1.05);
+		caret-color: transparent;
+	}
 }
