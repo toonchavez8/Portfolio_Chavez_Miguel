@@ -8,7 +8,6 @@
     "sassbuild": "sass --no-source-map --style=compressed scss:css",
     "start": "nodemon -e scss,html  -x \"npm run sass\"",
     "build": "npm run sassbuild"
-    
   },
   "repository": {
     "type": "git",
@@ -43,5 +42,8 @@
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "sass": "^1.59.3"
   }
 }
