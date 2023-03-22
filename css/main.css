@@ -1045,12 +1045,23 @@ header .logo-container {
   .built-with-img {
     filter: invert(1);
   }
+  .services-card {
+    display: flex;
+  }
   .services-card .card {
     background: rgb(8, 12, 30);
     border: 1px solid rgb(12, 18, 45);
+    transition: all 0.5s ease;
   }
   .services-card .card:hover {
     background: rgb(20, 30, 75);
+  }
+  .services-card .card .card-body .card-subtitle {
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+  .services-card .card .card-body .card-subtitle:hover {
+    color: rgb(158, 26, 230) !important;
   }
   .logo {
     filter: invert(1);

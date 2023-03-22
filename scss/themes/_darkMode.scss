@@ -112,12 +112,26 @@
 	}
 
 	.services-card {
+		display: flex;
+
 		.card {
 			background: $dark---bunting-blue--800;
 			border: 1px solid $dark---bunting-blue--700;
+			transition: all 0.5s ease;
 
 			&:hover {
 				background: $dark---bunting-blue--500;
+			}
+
+			.card-body {
+				.card-subtitle {
+					text-align: center;
+					transition: all 0.5s ease;
+
+					&:hover {
+						color: $light---electric-violet--400 !important;
+					}
+				}
 			}
 		}
 	}

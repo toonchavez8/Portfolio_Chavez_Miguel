@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toonchavez</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../css/main.css">
 
     <!-- meta description of this  page -->
     <meta name="description" content="toonchavez is a freelance web developer, UI/UX designer, and digital artist.">
@@ -18,10 +12,22 @@
 
     <!-- meta keywords of this page -->
     <meta name="keywords" content="web developer, web design, web development, web design and development, React, React.js, ReactJS, React.js developer, ReactJS developer, React.js, portfolio, front end developer, front end development, front end, front-end dev, MERN, MERN stack,
-        MERN stack developer ">
+    MERN stack developer ">
+
+    <title>toonchavez</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- own css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+
 </head>
 
-<body class="body-container c-white-bg wsg-600 ">
+<body class="body-container  c-white-bg wsg-700">
+    <!-- header -->
     <header>
         <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
             <div class="container-fluid ">
@@ -37,8 +43,8 @@
                         <li class="nav-item ">
                             <a class="nav-link " href="../index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about.html">about</a>
+                        <li class="nav-item ">
+                            <a class="nav-link active ev-400 fw-400" aria-current="page" href="./about.html">about</a>
                         </li>
 
                         <li class="nav-item">
@@ -48,69 +54,47 @@
                             <a class="nav-link" href="./services.html">services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active ev-400 fw-400" aria-current="page"
-                                href="./contact.html">contact</a>
+                            <a class="nav-link" href="./contact.html">contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="">
 
-        <section class="container-fluid mt-5 mb-5">
-            <div class="container">
-                <div class="row pt-2">
-                    <div class="col-12 ff-poppins">
-                        <h1 class="text-center me-5 pe-5  rb-400 ">Connect with Me</h1>
-                        <p class="text-center ms-5 ps-5 fs-20 rbSW-600">Let's Bring Your Vision to Life</p>
-                    </div>
-                </div>
-                <div class="container d-flex flex-column align-items-lg-center justify-content-lg-center ">
-                    <div class="row mt-5  position-relative">
-                        <h2 class=" fs-20 fw-200 rb-100 text-center">Feel free to reach out to me via email or WhatsApp.
-                        </h2>
+    <!-- main -->
 
-                        <a href="https://wa.me/523335996909" class=" whatsapp |  col-2  ">
-                            <img src="https://img.icons8.com/color/512/whatsapp.png" alt="WhatsApp icon"
-                                class="img-fluid">
-                        </a>
+    <main>
 
-                    </div>
-                    <div class="col-lg-6 ">
-                        <form action="mailto:toonchavez8@gmail.com" method="post" enctype="text/plain">
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" class="form-control">
-                            </div>
+        <section class="container  py-5">
 
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" class="form-control">
-                            </div>
+            <div class="d-flex justify-content-center">
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_kcsr6fcp.json"
+                    background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                    autoplay></lottie-player>
+            </div>
+            <h1 class="ff-poppins fs-48 ev-400 text-center">Whoops!</h1>
 
-                            <div class="form-group">
-                                <label for="subject">Subject:</label>
-                                <input type="text" id="subject" name="subject" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="message" class="form-control"></textarea>
-                            </div>
-
-                            <button type="submit"
-                                class=" btn-glass-secondary | mt-4 align-self-center btn text-capitalize fs-20 py- 4px-4 rb-400 ">contact
-                                me</button></a>
-                        </form>
-                    </div>
+            <p class="wsg-300 text-center">Sorry, looks like we messed up but the page you are looking for does not
+                exist. <br> heres a link to the
+                <a href="../index.html" class="fs-20 text-capitalize">home page</a> or you can use
+                the
+                navigation bar to
+                find what you
+                are looking
+                for.
+            </p>
 
 
-                </div>
 
+
+
+        </section>
 
 
     </main>
+
+    <!-- footer -->
 
     <footer class="footer container-fluid py-3 ">
         <div class=" justify-content-between align-items-center   flex-sm-row col row  ">
@@ -158,13 +142,14 @@
         </small>
     </footer>
 
-
 </body>
-
 
 <!-- bootsrap script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+
+<!-- lottie script -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </html>
