@@ -1,74 +1,119 @@
-const BTNSTART = document.getElementById("quizStart");
-
-// create a function to provide discount based on number of services
-function addServices() {
-	// declare variables
-	let services = 0;
-	const QUESTIONS = prompt("How many services would you like to book?");
-
-	// convert the user's response to a number
-	let responseServices = parseInt(QUESTIONS);
-
-	console.log("You requested" + " " + responseServices + " " + "services.");
-
-	//  if statement to check if the user has entered a number
-	if (
-		responseServices == 0 ||
-		responseServices == null ||
-		responseServices == "" ||
-		isNaN(responseServices)
-	) {
-		alert("You must add at least one service to get a price");
-		console.warn("You must add at least one service to get a price.");
-	}
-
-	// create switch statement to provide a discount based on number of services
-	if (responseServices > 4) {
-		alert("You can only book 4 services at a time.");
-		console.warn("You can only book 4 services at a time.");
-	} else if (responseServices >= 1 && responseServices <= 5) {
-		switch (responseServices) {
-			case 1:
-				services = responseServices * 100;
-				alert("Your total is $" + services);
-				console.log("Your total is $" + services);
-				break;
-			case 2:
-				services = responseServices * (100 * 0.9);
-				alert("You're getting a 10% discount for ording a second service!");
-				alert("Your total is $" + services);
-				console.log(
-					"You're getting a 10% discount for ording a second service!"
-				);
-				console.log("Your total is $" + services);
-				break;
-			case 3:
-				services = responseServices * (100 * 0.8);
-				alert("You're getting a 20% discount for ording a third service!");
-				alert("Your total is $" + services);
-
-				console.log(
-					"You're getting a 20% discount for ording a third service!"
-				);
-				console.log("Your total is $" + services);
-
-				break;
-			case 4:
-				services = responseServices * (100 * 0.7);
-				alert("You're getting a 30% discount for ording a fourth service!");
-				alert("Your total is $" + services);
-
-				console.log(
-					"You're getting a 30% discount for ording a fourth service!"
-				);
-				console.log("Your total is $" + services);
-
-				break;
-		}
+//Service class to represet my services
+class Service {
+	constructor(name, description, price) {
+		this.name = name;
+		this.description = description;
+		this.price = price;
 	}
 }
 
-addServices();
+// create an array of services based on the Service class
+const SERVICE = [
+	new Service("UI/UX Design", "User-centered design solutions.", 3500),
+	new Service(
+		"Full Stack Web Development",
+		"End-to-end web development solutions.",
+		2000
+	),
+	new Service("3d Modeling", "High-quality 3D modeling services.", 1500),
+	new Service("Animation", "Creative animation services for businesses.", 2500),
+];
 
-//  event listener for button
-BTNSTART.addEventListener("click", addServices);
+// This function displays the services available to the user
+function displayServices() {
+	let servicesPrompt = "services available:\n";
+	// Loop through the services array and add the details for each item to the prompt
+	for (let index = 0; index < SERVICE.length; index++) {
+		servicesPrompt += `${index + 1}. ${SERVICE[index].name}: ${
+			SERVICE[index].description
+		} - starting at $${SERVICE[index].price} USD\n`;
+	}
+	// Display the prompt with all the services
+	alert(servicesPrompt);
+}
+
+// function to prompt the user for the service they want to add to thier order
+function selectService() {
+	const SELECTED_SERVICE = [];
+
+	// Prompt the user to add services to the order
+	let response = "";
+	do {
+		response = prompt(
+			"Enter the number of the service you would like to select (or type 'done' to finish):"
+		);
+		// Check if the user entered "done"
+		if (response !== null && response !== "" && response !== "done") {
+			// Get the service index from the user input
+			const serviceIndex = parseInt(response) - 1;
+			// Check if the service index is valid
+			if (
+				!isNaN(serviceIndex) &&
+				serviceIndex >= 0 &&
+				serviceIndex < SERVICE.length
+			) {
+				// Add the service to the order
+				SELECTED_SERVICE.push(SERVICE[serviceIndex]);
+			} else {
+				alert("Invalid selection");
+			}
+		}
+	} while (
+		// Continue prompting the user until they enter "done" or cancel the prompt
+		response !== null &&
+		response !== "" &&
+		response !== "done"
+	);
+
+	// Display the order summary
+	let orderPrompt = "Your order:\n";
+	const mapedServices = SELECTED_SERVICE.map(
+		(service) => `${service.name} - $${service.price} \n`
+	).join("");
+
+	// calculate the total price of the order
+	const total = SELECTED_SERVICE.reduce((acc, service) => {
+		return acc + service.price;
+	}, 0);
+
+	// check the number of services selected and display the appropriate message with the total price
+	switch (SELECTED_SERVICE.length) {
+		case 1:
+			orderPrompt += `You have selected ${SELECTED_SERVICE.length} service. \n \n ${mapedServices} \n your total is $${total}`;
+			break;
+		case 2:
+			orderPrompt += `You have selected ${
+				SELECTED_SERVICE.length
+			} services. \n \n ${mapedServices} for a total worth of $${total} \n\n You will receive a 10% discount.\n your total is $${
+				total - total * 0.1
+			}`;
+
+			break;
+		case 3:
+			orderPrompt += `You have selected ${
+				SELECTED_SERVICE.length
+			} services. \n \n ${mapedServices}  for a total worth of $${total}\n\n You will receive a 20% discount.\n your total is $${
+				total - total * 0.2
+			}`;
+
+			break;
+		case 4:
+			orderPrompt += `You have selected ${
+				SELECTED_SERVICE.length
+			} services. \n \n ${mapedServices} \n for a total worth of $${total}\n\n You will receive a 30% discount.\n your total is $${
+				total - total * 0.3
+			}`;
+
+			break;
+		default:
+			orderPrompt += "You have not selected any services.";
+	}
+
+	alert(orderPrompt);
+}
+
+// first we display the services available to the user
+displayServices();
+
+// then we prompt the user to select the services they want to add to their order
+selectService();
