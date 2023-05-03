@@ -609,6 +609,50 @@ header .logo-container {
     top: 110%;
   }
 }
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(197, 118, 240) rgb(161, 173, 230);
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgb(161, 173, 230), rgb(172, 197, 246));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background: linear-gradient(180deg, rgb(161, 173, 230), rgb(172, 197, 246));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #b8c0c2;
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgb(197, 118, 240), rgb(161, 173, 230));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgb(158, 26, 230), rgb(172, 197, 246));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: rgb(197, 118, 240);
+  transition: all 0.2s ease;
+}
+
 /* home page */
 .hero-section {
   flex-direction: column;
@@ -947,12 +991,213 @@ header .logo-container {
   justify-content: space-between;
 }
 
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-inline: calc(4rem - 1vw);
+  padding-block: 2rem;
+  border: 3px solid rgb(126, 21, 184);
+  border-radius: 1rem;
+  position: relative;
+}
+.quiz-container .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 2px solid rgb(126, 21, 184);
+  background: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 2em;
+  aspect-ratio: 1;
+  color: rgb(126, 21, 184);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.quiz-container .close:hover {
+  background: rgb(126, 21, 184);
+  color: rgb(255, 255, 255);
+  scale: 1.1;
+}
+.quiz-container button {
+  align-self: center;
+}
+.quiz-container div {
+  width: 100%;
+}
+.quiz-container div h3,
+.quiz-container div h4 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+.quiz-container div h3::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: rgb(126, 21, 184);
+  margin: 0.5em auto;
+  transition: width 0.5s ease;
+}
+.quiz-container div:hover h3::after {
+  width: 50%;
+}
+.quiz-container .form-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.quiz-container .form-title div {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quiz-container .form-title div p {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.quiz-container .form-title div span {
+  font-size: 1.5rem;
+}
+.quiz-container .range-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.quiz-container input[type=checkbox] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.quiz-container input[type=checkbox]:checked {
+  background-color: rgb(126, 21, 184);
+  border: none;
+}
+.quiz-container input[type=checkbox]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.05rem rgb(177, 72, 235);
+}
+.quiz-container input[type=range] {
+  width: 100%;
+  padding-inline: 5rem;
+  margin: 4.8px auto;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.quiz-container input[type=range]:focus {
+  outline: none;
+}
+.quiz-container input[type=range]::-webkit-slider-runnable-track {
+  background: rgb(158, 26, 230);
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+.quiz-container input[type=range]::-webkit-slider-thumb {
+  margin-top: -4.8px;
+  width: 18px;
+  height: 18px;
+  background: rgb(255, 255, 255);
+  border-radius: 36px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.quiz-container input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgb(177, 72, 235);
+}
+.quiz-container input[type=range]::-moz-range-track {
+  background: rgb(177, 72, 235);
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+.quiz-container input[type=range]::-moz-range-thumb {
+  width: 1px;
+  height: 18px;
+  background: rgb(177, 72, 235);
+  border: 0.6px solid #000000;
+  border-radius: 36px;
+  cursor: pointer;
+}
+.quiz-container input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 4.8px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+.quiz-container input[type=range]::-ms-fill-lower {
+  background: rgb(177, 72, 235);
+  border: 0;
+  border-radius: 50px;
+}
+.quiz-container input[type=range]::-ms-fill-upper {
+  background: rgb(177, 72, 235);
+  border: 0;
+  border-radius: 50px;
+}
+.quiz-container input[type=range]::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 0.6px solid #000000;
+  border-radius: 36px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+.quiz-container input[type=range]:focus::-ms-fill-lower {
+  background: rgb(177, 72, 235);
+}
+.quiz-container input[type=range]:focus::-ms-fill-upper {
+  background: rgb(177, 72, 235);
+}
+.quiz-container .total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
 @media (max-width: 768px) {
   .services-card .card {
     aspect-ratio: 1/1;
     text-align: center;
   }
 }
+.totalprice {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.line-through {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.discounted {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .body-container {
   min-height: 100vh;
   min-height: 100dvh;
@@ -993,6 +1238,9 @@ header .logo-container {
   }
   .wsg-400 {
     color: rgb(244, 245, 246) !important;
+  }
+  .wsg-050-bg {
+    background-color: rgb(8, 12, 30) !important;
   }
   .rb-200 {
     color: rgb(48, 110, 232) !important;
@@ -1068,6 +1316,18 @@ header .logo-container {
   }
   .work-logo {
     filter: invert(0);
+  }
+  *::-webkit-scrollbar-track {
+    background: rgb(12, 18, 45);
+  }
+  *::-webkit-scrollbar-track:hover {
+    background: rgb(16, 24, 60);
+  }
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgb(95, 16, 138), rgb(12, 18, 45));
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgb(158, 26, 230), rgb(16, 24, 60));
   }
 }
 
