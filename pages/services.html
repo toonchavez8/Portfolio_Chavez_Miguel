@@ -161,14 +161,45 @@
             <button class=" btn-glass-primary | btn text-capitalize fs-20 px-4 ev-400 " id="quizStart">Start
                 quote</button>
 
-            <form
-                class="quiz-container container-fluid flex-column d-flex justify-content-center align-items-center gap-4"
-                id="quizContainer">
+            <form class="quiz-container container  gap-4 my-4" id="quizContainer">
 
+                <div class="form-title">
+                    <h3>What services would you like to add to your qoute</h3>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="">
+                        <label class="form-check-label" for="">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="" checked>
+                        <label class="form-check-label" for="">
+                            Checked checkbox
+                        </label>
+                    </div>
+                </div>
+
+                <div class="">
+                    <!-- create slider -->
+                    <h3>Do you need a faster turn around time?</h3>
+
+                    <div class="range-slider w-100">
+                        <input class="range-slider__range" type="range" value="0" min="0" max="100">
+                        <span class="range-slider__value">0</span>
+                    </div>
+                </div>
+
+                <div class="total">
+                    <h4>total</h4>
+                    <p class="total">$0</p>
+                </div>
 
                 <button class="btn-glass-secondary | btn text-capitalize fs16 px-4 rb-400" id="sumbit">
                     submit
                 </button>
+
+                <button class="close" id="closeBtn">X</button>
             </form>
 
 
