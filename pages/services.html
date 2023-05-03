@@ -151,15 +151,25 @@
 
 
         <!-- interactvie quiz -->
-        <section class="container py-5">
+        <section class="container py-5 d-flex  flex-column align-items-center justify-content-center gap-2">
             <div class="text-center">
-                <h2 class="fs-48 fw-800 ff-inter text-capitalize ms-md-3 pe-md-3   ms-lg-5 pe-lg-5 ">Take the Quiz</h2>
-                <p class="rb-200 text-capitalize fw-400 fs-28 ps-0 ms-0 ps-lg-5 ms-lg-5 ms-md-3 ps-md-3 ">Find out what
-                    services
-                    fit your needs</p>
+                <h2 class="fs-48 fw-800 ff-inter text-capitalize ms-md-3 pe-md-3   ms-lg-5 pe-lg-5 ">Need to bundle?
+                </h2>
+                <p class="rb-200 text-capitalize fw-400 fs-28 ps-0 ms-0 ps-lg-5 ms-lg-5 ms-md-3 ps-md-3 ">see if your
+                    needs are eligble for a discount and get a quote</p>
             </div>
-            <button class=" btn-glass-secondary | btn text-capitalize fs-20 px-4 rb-400 " id="quizStart">Start
-                Question</button>
+            <button class=" btn-glass-primary | btn text-capitalize fs-20 px-4 ev-400 " id="quizStart">Start
+                quote</button>
+
+            <form
+                class="quiz-container container-fluid flex-column d-flex justify-content-center align-items-center gap-4"
+                id="quizContainer">
+
+
+                <button class="btn-glass-secondary | btn text-capitalize fs16 px-4 rb-400" id="sumbit">
+                    submit
+                </button>
+            </form>
 
 
         </section>
@@ -233,7 +243,7 @@
     </footer>
 
 
-    <script src="../js/quiz.js"></script>
+    <script src="../js/quiz.js" type="module"></script>
 </body>
 
 <!-- bootsrap script -->
