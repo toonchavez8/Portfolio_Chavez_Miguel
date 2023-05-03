@@ -6,6 +6,7 @@ export default class View {
 		this.totalPrice = document.getElementById("totalPrice");
 		this.discountedPrice = document.getElementById("discountedPrice");
 		this.discountMessage = document.getElementById("discountMessage");
+		this.turnAroundContainer = document.getElementById("turnAroundContainer");
 		this.checkBoxContainer = document.getElementById("checkBoxContainer");
 	}
 
@@ -84,7 +85,8 @@ export default class View {
 	}
 
 	#totalPrice(selectedService) {
-		// get the total price
+		// get the total price from local storage or set it to 0
+
 		const totalPrice = selectedService.reduce((total, service) => {
 			return total + service.price;
 		}, 0);
@@ -149,6 +151,27 @@ export default class View {
 		//	 check if checkbox exists
 		if (!this.checkBoxes) return;
 
+		// check if there is a selected service in local storage
+		if (localStorage.getItem("selectedServices")) {
+			// get the selected service from local storage
+			selectedService = JSON.parse(localStorage.getItem("selectedServices"));
+			// loop through the selected service
+			selectedService.forEach((service) => {
+				// get the checkbox with the value of the selected service
+				const checkbox = document.querySelector(
+					`input[value="${service.name}"]`
+				);
+				// check if checkbox exists
+				if (checkbox) {
+					// check the checkbox
+					checkbox.checked = true;
+				}
+
+				// update the total price
+				this.#totalPrice(selectedService);
+			});
+		}
+
 		// loop through the checkboxes
 		this.checkBoxes.forEach((checkbox) => {
 			// add event listener to each checkbox
@@ -159,11 +182,23 @@ export default class View {
 
 					selectedService.push(this.#findService(SERVICE, checkbox.value));
 
+					// store the selected service in local storage
+					localStorage.setItem(
+						"selectedServices",
+						JSON.stringify(selectedService)
+					);
+
 					// update the total price
 					this.#totalPrice(selectedService);
 				} else {
 					// remove the checked checkbox from the selectedService array
 					selectedService.splice(selectedService.indexOf(checkbox.value), 1);
+
+					// store the selected service in local storage
+					localStorage.setItem(
+						"selectedServices",
+						JSON.stringify(selectedService)
+					);
 
 					// update the total price
 					this.#totalPrice(selectedService);

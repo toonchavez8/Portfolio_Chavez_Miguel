@@ -1,3 +1,5 @@
+const emptySelectedServices = [];
+
 //Service class to represet my services and their properties and include a nested object for the turn around time that will updataded in the services array
 class Service {
 	constructor(name, description, price, min, max, isFlexible) {
@@ -49,8 +51,50 @@ const SERVICE = [
 	),
 ];
 
-console.log(SERVICE);
+// create a class to store the selected services and the storage key for state management
+export default class SelectedServices extends EventTarget {
+	constructor(key, services) {
+		super();
+		this.storageKey = key;
+		this.services = services;
+	}
 
-const selectedService = [];
+	// getter method to get the selected services from local storage
+	get selectedService() {
+		// get the selected services from local storage
+		const selectedService = JSON.parse(localStorage.getItem(this.storageKey));
+		if (selectedService !== null) {
+			// check if the selected services are valid
+			const valid = this.checkSelectedServices(selectedService);
+			if (valid) {
+				return selectedService;
+			} else {
+				// if the selected services are not valid, return an empty object
+				return emptySelectedServices;
+			}
+		} else {
+			return emptySelectedServices;
+		}
+
+		// dispatch an event
+	}
+
+	// method to check if the selected services are valid
+	checkSelectedServices(services) {
+		// check if the services are an array
+		if (!Array.isArray(services)) {
+			return false;
+		}
+		// check if the services are services of the company
+		for (const service of services) {
+			if (!this.services.includes(service)) {
+				return false;
+			}
+		}
+		// else return true
+		return true;
+	}
+}
+
 // export the service array
-export { SERVICE, selectedService };
+export { SERVICE, SelectedServices };
