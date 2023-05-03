@@ -6,4 +6,9 @@ function init() {
 	// model
 	// view
 	const VIEW = new View();
+
+	VIEW.render(SERVICE);
 }
+
+// call init function
+init();
