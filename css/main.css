@@ -609,6 +609,50 @@ header .logo-container {
     top: 110%;
   }
 }
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(197, 118, 240) rgb(161, 173, 230);
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgb(161, 173, 230), rgb(172, 197, 246));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background: linear-gradient(180deg, rgb(161, 173, 230), rgb(172, 197, 246));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #b8c0c2;
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgb(197, 118, 240), rgb(161, 173, 230));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgb(158, 26, 230), rgb(172, 197, 246));
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: rgb(197, 118, 240);
+  transition: all 0.2s ease;
+}
+
 /* home page */
 .hero-section {
   flex-direction: column;
@@ -1138,6 +1182,22 @@ header .logo-container {
     text-align: center;
   }
 }
+.totalprice {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.line-through {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.discounted {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .body-container {
   min-height: 100vh;
   min-height: 100dvh;
@@ -1178,6 +1238,9 @@ header .logo-container {
   }
   .wsg-400 {
     color: rgb(244, 245, 246) !important;
+  }
+  .wsg-050-bg {
+    background-color: rgb(8, 12, 30) !important;
   }
   .rb-200 {
     color: rgb(48, 110, 232) !important;
@@ -1253,6 +1316,18 @@ header .logo-container {
   }
   .work-logo {
     filter: invert(0);
+  }
+  *::-webkit-scrollbar-track {
+    background: rgb(12, 18, 45);
+  }
+  *::-webkit-scrollbar-track:hover {
+    background: rgb(16, 24, 60);
+  }
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgb(95, 16, 138), rgb(12, 18, 45));
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgb(158, 26, 230), rgb(16, 24, 60));
   }
 }
 

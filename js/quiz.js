@@ -7,7 +7,9 @@ function init() {
 	// view
 	const VIEW = new View();
 
-	VIEW.render(SERVICE);
+	VIEW.render(SERVICE, selectedService);
+
+	VIEW.getSelectedServices(selectedService, SERVICE);
 }
 
 // call init function

@@ -3,18 +3,20 @@ export default class View {
 		this.startQuizBtn = document.getElementById("quizStart");
 		this.quizContainer = document.getElementById("quizContainer");
 		this.quizCloseBtn = document.getElementById("quizClose");
+		this.totalPrice = document.getElementById("totalPrice");
+		this.discountedPrice = document.getElementById("discountedPrice");
+		this.discountMessage = document.getElementById("discountMessage");
 		this.checkBoxContainer = document.getElementById("checkBoxContainer");
-
-		// get all checkboxes
-		this.checkBoxes = document.querySelectorAll("input[type=checkbox]");
 	}
 
-	render(SERVICE) {
+	render(SERVICE, selectedService) {
 		this.#displayQuiz();
 
 		this.#closeQuiz();
 
 		this.#displayQuestions(SERVICE);
+
+		this.#totalPrice(selectedService);
 	}
 
 	// method to display the quiz
@@ -44,7 +46,7 @@ export default class View {
 	// method to display the service
 	#displayQuestions(sevices) {
 		// loop through the services
-		sevices.forEach((service) => {
+		sevices.map((service) => {
 			const input = document.createElement("input");
 			input.setAttribute("type", "checkbox");
 			input.setAttribute("id", service.id);
@@ -61,8 +63,14 @@ export default class View {
 			p.textContent = service.description;
 
 			const span = document.createElement("span");
+			span.classList.add("rb-200");
 
-			span.textContent = `$${service.price}.00 `;
+			const money = new Intl.NumberFormat("en-US", {
+				style: "currency",
+				currency: "USD",
+			}).format(service.price);
+
+			span.textContent = money;
 
 			const div = document.createElement("div");
 			div.classList.add("form-check");
@@ -73,5 +81,101 @@ export default class View {
 
 			this.checkBoxContainer.appendChild(div);
 		});
+	}
+
+	#totalPrice(selectedService) {
+		// get the total price
+		const totalPrice = selectedService.reduce((total, service) => {
+			return total + service.price;
+		}, 0);
+
+		// declare discount variable
+		let discount;
+
+		// set discount message
+		let discountMessage;
+		// switch statement to check the number of services selected
+		switch (selectedService.length) {
+			case 2:
+				discount = totalPrice * 0.1;
+				discountMessage = "For 2 services you're eligible for a 10% discount";
+				break;
+			case 3:
+				discount = totalPrice * 0.15;
+				discountMessage = "For 3 services you're eligible for a 15% discount";
+				break;
+			case 4:
+				discount = totalPrice * 0.2;
+				discountMessage = "For 4 services you're eligible for a 20% discount";
+				break;
+			default:
+				discount = 0;
+		}
+
+		// display the total price
+		const money = new Intl.NumberFormat("en-US", {
+			style: "currency",
+			currency: "USD",
+		}).format(totalPrice);
+
+		// display the discounted price
+		const discountedPrice = new Intl.NumberFormat("en-US", {
+			style: "currency",
+			currency: "USD",
+		}).format(totalPrice - discount);
+
+		// display the discount message
+		this.discountedPrice.textContent = discountedPrice;
+
+		if (selectedService.length >= 2) {
+			this.discountMessage.classList.remove("d-none");
+			this.discountedPrice.classList.remove("d-none");
+			this.totalPrice.classList.add("line-through");
+		} else {
+			this.discountMessage.classList.add("d-none");
+			this.discountedPrice.classList.add("d-none");
+			this.totalPrice.classList.remove("line-through");
+		}
+
+		// display the discounted message
+		this.discountMessage.textContent = discountMessage;
+
+		document.getElementById("totalPrice").textContent = money;
+	}
+	// method to get the selected services
+	getSelectedServices(selectedService, SERVICE) {
+		// get all checkboxes
+		this.checkBoxes = document.querySelectorAll("input[type=checkbox]");
+		//	 check if checkbox exists
+		if (!this.checkBoxes) return;
+
+		// loop through the checkboxes
+		this.checkBoxes.forEach((checkbox) => {
+			// add event listener to each checkbox
+			checkbox.addEventListener("change", () => {
+				// check if checkbox is checked
+				if (checkbox.checked) {
+					// push the checked checkbox to the selectedService array
+
+					selectedService.push(this.#findService(SERVICE, checkbox.value));
+
+					// update the total price
+					this.#totalPrice(selectedService);
+				} else {
+					// remove the checked checkbox from the selectedService array
+					selectedService.splice(selectedService.indexOf(checkbox.value), 1);
+
+					// update the total price
+					this.#totalPrice(selectedService);
+				}
+			});
+		});
+	}
+
+	#findService(SERVICE, checkboxValue) {
+		// find the service that matches the checkbox value
+		const service = SERVICE.find((service) => service.name === checkboxValue);
+		// return the service
+		return service;
 	}
 }

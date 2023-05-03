@@ -161,7 +161,7 @@
             <button class=" btn-glass-primary | btn text-capitalize fs-20 px-4 ev-400 " id="quizStart">Start
                 quote</button>
 
-            <form class="quiz-container container  gap-4 my-4 d-none" id="quizContainer">
+            <form class="quiz-container container  gap-4 my-4 d-none wsg-050-bg" id="quizContainer">
 
                 <div class="form-title" id="checkBoxContainer">
                     <h3>What services would you like to add to your qoute</h3>
@@ -179,8 +179,15 @@
                 </div>
 
                 <div class="total">
-                    <h4>total</h4>
-                    <p class="total">$0</p>
+                    <h4 class="text-uppercase">total</h4>
+                    <span class="fs-24 rb-600 d-none" id="discountMessage">
+                        discount message
+                    </span>
+                    <div class="d-flex justify-content-center align-items-center gap-4">
+
+                        <p class="totalprice ev-400 fs-32 " id="totalPrice">$0</p>
+                        <p class="discounted ev-400 fs-32 d-none" id="discountedPrice">$0</p>
+                    </div>
                 </div>
 
                 <button class="btn-glass-secondary | btn text-capitalize fs16 px-4 rb-400" id="sumbit">
