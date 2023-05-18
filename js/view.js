@@ -1,3 +1,9 @@
+import Swal from "sweetalert2/dist/sweetalert2.js";
+
+// emailjs init
+emailjs.init("bEU9CcH5OwpZRKVcA");
+
+// create a class for the view
 export default class View {
 	constructor() {
 		this.startQuizBtn = document.getElementById("quizStart");
@@ -8,6 +14,9 @@ export default class View {
 		this.discountMessage = document.getElementById("discountMessage");
 		this.turnAroundContainer = document.getElementById("turnAroundContainer");
 		this.checkBoxContainer = document.getElementById("checkBoxContainer");
+		this.emailContainer = document.getElementById("emailContainer");
+		this.emailInput = document.getElementById("emailInput");
+		this.emailHelp = document.getElementById("emailHelpId");
 	}
 
 	render(SERVICE, selectedService) {
@@ -18,6 +27,8 @@ export default class View {
 		this.#displayQuestions(SERVICE);
 
 		this.#totalPrice(selectedService);
+
+		this.#displayEmailInput();
 	}
 
 	// method to display the quiz
@@ -190,6 +201,9 @@ export default class View {
 
 					// update the total price
 					this.#totalPrice(selectedService);
+
+					// display the email input
+					this.#displayEmailInput(selectedService);
 				} else {
 					// remove the checked checkbox from the selectedService array
 					selectedService.splice(selectedService.indexOf(checkbox.value), 1);
@@ -202,6 +216,9 @@ export default class View {
 
 					// update the total price
 					this.#totalPrice(selectedService);
+
+					// display the email input
+					this.#displayEmailInput(selectedService);
 				}
 			});
 		});
@@ -212,5 +229,71 @@ export default class View {
 		const service = SERVICE.find((service) => service.name === checkboxValue);
 		// return the service
 		return service;
+	}
+
+	//method to display email input
+	#displayEmailInput(selectedService) {
+		// check if there is a selected service in local storage
+		if (localStorage.getItem("selectedServices")) {
+			// get the selected service from local storage
+			selectedService = JSON.parse(localStorage.getItem("selectedServices"));
+			// check if there is a selected service
+			if (selectedService.length > 0) {
+				// display the email input
+				this.emailContainer.classList.remove("d-none");
+
+				// send email
+				this.#sendEmail();
+			}
+
+			if (selectedService.length === 0) {
+				// hide the email input
+				this.emailContainer.classList.add("d-none");
+			}
+		}
+	}
+
+	// method to send email to the user using emailjs
+	#sendEmail() {
+		// add event listener to the email input
+		this.emailInput.addEventListener("keydown", (e) => {
+			//get value of the email input
+			const email = e.target.value;
+
+			// if email is valid set emailhelper to display none
+			if (this.#validateEmail(email)) {
+				this.emailHelp.classList.add("d-none");
+			}
+
+			// if email is not valid set emailhelper to display block
+			if (!this.#validateEmail(email)) {
+				this.emailHelp.classList.remove("d-none");
+			}
+
+			// if email is valid and enter key is pressed
+			if (this.#validateEmail(email) && e.keyCode === 13) {
+				//send email with selected services and display success message
+				emailjs
+					.send("toochavez.dev", "template_e6k9j4b", {
+						to_email: email,
+						selected_services: JSON.parse(
+							localStorage.getItem("selectedServices")
+						),
+					})
+					.then(() => {
+						this.emailHelp.classList.add("d-none");
+						this.emailInput.value = "";
+						Swal.fire("email sent!", "", "success");
+					});
+			}
+		});
+	}
+
+	// method to validate the email
+	#validateEmail(email) {
+		// regular expression to validate email
+		const re = /\S+@\S+\.\S+/;
+		// return the result of the test
+		return re.test(email);
 	}
 }

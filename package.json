@@ -45,6 +45,8 @@
     "nodemon": "^2.0.21"
   },
   "dependencies": {
-    "sass": "^1.59.3"
+    "@emailjs/browser": "^3.11.0",
+    "sass": "^1.59.3",
+    "sweetalert2": "^11.7.5"
   }
 }
