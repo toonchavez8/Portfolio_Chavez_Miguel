@@ -1,3 +1,4 @@
+// create a class for the view
 export default class View {
 	constructor() {
 		this.startQuizBtn = document.getElementById("quizStart");
@@ -8,6 +9,10 @@ export default class View {
 		this.discountMessage = document.getElementById("discountMessage");
 		this.turnAroundContainer = document.getElementById("turnAroundContainer");
 		this.checkBoxContainer = document.getElementById("checkBoxContainer");
+		this.emailContainer = document.getElementById("emailContainer");
+		this.emailInput = document.getElementById("emailInput");
+		this.emailHelp = document.getElementById("emailHelpId");
+		this.submitBtn = document.getElementById("sumbit");
 	}
 
 	render(SERVICE, selectedService) {
@@ -18,6 +23,8 @@ export default class View {
 		this.#displayQuestions(SERVICE);
 
 		this.#totalPrice(selectedService);
+
+		this.#displayEmailInput();
 	}
 
 	// method to display the quiz
@@ -190,6 +197,9 @@ export default class View {
 
 					// update the total price
 					this.#totalPrice(selectedService);
+
+					// display the email input
+					this.#displayEmailInput(selectedService);
 				} else {
 					// remove the checked checkbox from the selectedService array
 					selectedService.splice(selectedService.indexOf(checkbox.value), 1);
@@ -202,6 +212,9 @@ export default class View {
 
 					// update the total price
 					this.#totalPrice(selectedService);
+
+					// display the email input
+					this.#displayEmailInput(selectedService);
 				}
 			});
 		});
@@ -212,5 +225,137 @@ export default class View {
 		const service = SERVICE.find((service) => service.name === checkboxValue);
 		// return the service
 		return service;
+	}
+
+	//method to display email input
+	#displayEmailInput(selectedService) {
+		// check if there is a selected service in local storage
+		if (localStorage.getItem("selectedServices")) {
+			// get the selected service from local storage
+			selectedService = JSON.parse(localStorage.getItem("selectedServices"));
+			// check if there is a selected service
+			if (selectedService.length > 0) {
+				// display the email input
+				this.emailContainer.classList.remove("d-none");
+
+				// send email
+				this.#sendEmail(selectedService);
+			}
+
+			if (selectedService.length === 0) {
+				// hide the email input
+				this.emailContainer.classList.add("d-none");
+			}
+		}
+	}
+
+	// method to send email to the user using emailjs
+	#sendEmail() {
+		// check if email is valid
+		this.emailInput.addEventListener("keyup", (e) => {
+			// show email helper text
+			this.emailHelp.classList.remove("d-none");
+
+			// check if email is valid
+			if (this.#validateEmail(e.target.value)) {
+				// enable the submit button
+				this.submitBtn.disabled = false;
+
+				// change the helper text
+				this.emailHelp.textContent = "Email is valid";
+
+				// send email
+				this.#emailjs();
+			}
+
+			// if after 3 seconds the email is not valid
+			setTimeout(() => {
+				// check if email is valid
+				if (!this.#validateEmail(e.target.value)) {
+					// disable the submit button
+					this.submitBtn.disabled = true;
+
+					// change the helper text
+					this.emailHelp.textContent = "Enter a valid email, please!";
+				}
+			}, 3000);
+		});
+
+		this.submitBtn.disabled = true;
+	}
+
+	#emailjs() {
+		this.submitBtn.addEventListener("click", (e) => {
+			// prevent default behaviour
+			e.preventDefault();
+
+			// get selected services from local storage
+			const selectedService = JSON.parse(
+				localStorage.getItem("selectedServices")
+			);
+
+			// get the total price
+			const totalPrice = selectedService
+				.reduce((acc, service) => {
+					return acc + service.price;
+				}, 0)
+				.toFixed(2)
+				.toString();
+
+			// group the selected services into a string to be displayed in the email body
+
+			const services = selectedService
+				.map((service) => {
+					return `${service.name} - ${service.price} `;
+				})
+				.join("");
+
+			// get the discount
+			const discount = this.discountMessage.textContent;
+
+			let discountedPrice = this.discountedPrice.textContent;
+
+			if (discount === "") {
+				discountedPrice = "";
+			}
+			// add services to the email body
+			const emailBody = {
+				services: services,
+				totalPrice: totalPrice,
+				discount: discount,
+				discountedPrice: discountedPrice,
+			};
+
+			// send email
+			emailjs
+				.send("toochavez.dev", "template_e6k9j4b", emailBody)
+				.then((res) => {
+					console.log(res);
+					Swal.fire({
+						title: "Success!",
+						text: "Your email has been sent successfully!",
+						icon: "success",
+						confirmButtonText: "Ok",
+					});
+				})
+				.catch((err) => {
+					console.log(err);
+
+					Swal.fire({
+						title: "Error!",
+						text: "Something went wrong, please try again!",
+						icon: "error",
+						confirmButtonText: "Ok",
+					});
+				});
+		});
+	}
+
+	// method to validate the email
+	#validateEmail(email) {
+		// regular expression to validate email
+		const re = /\S+@\S+\.\S+/;
+		// return the result of the test
+		return re.test(email);
 	}
 }
