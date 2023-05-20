@@ -1,8 +1,3 @@
-import Swal from "sweetalert2/dist/sweetalert2.js";
-
-// emailjs init
-emailjs.init("bEU9CcH5OwpZRKVcA");
-
 // create a class for the view
 export default class View {
 	constructor() {
@@ -17,6 +12,7 @@ export default class View {
 		this.emailContainer = document.getElementById("emailContainer");
 		this.emailInput = document.getElementById("emailInput");
 		this.emailHelp = document.getElementById("emailHelpId");
+		this.submitBtn = document.getElementById("sumbit");
 	}
 
 	render(SERVICE, selectedService) {
@@ -243,7 +239,7 @@ export default class View {
 				this.emailContainer.classList.remove("d-none");
 
 				// send email
-				this.#sendEmail();
+				this.#sendEmail(selectedService);
 			}
 
 			if (selectedService.length === 0) {
@@ -255,37 +251,103 @@ export default class View {
 
 	// method to send email to the user using emailjs
 	#sendEmail() {
-		// add event listener to the email input
-		this.emailInput.addEventListener("keydown", (e) => {
-			//get value of the email input
-			const email = e.target.value;
+		// check if email is valid
+		this.emailInput.addEventListener("keyup", (e) => {
+			// show email helper text
+			this.emailHelp.classList.remove("d-none");
 
-			// if email is valid set emailhelper to display none
-			if (this.#validateEmail(email)) {
-				this.emailHelp.classList.add("d-none");
+			// check if email is valid
+			if (this.#validateEmail(e.target.value)) {
+				// enable the submit button
+				this.submitBtn.disabled = false;
+
+				// change the helper text
+				this.emailHelp.textContent = "Email is valid";
+
+				// send email
+				this.#emailjs();
 			}
 
-			// if email is not valid set emailhelper to display block
-			if (!this.#validateEmail(email)) {
-				this.emailHelp.classList.remove("d-none");
-			}
+			// if after 3 seconds the email is not valid
+			setTimeout(() => {
+				// check if email is valid
+				if (!this.#validateEmail(e.target.value)) {
+					// disable the submit button
+					this.submitBtn.disabled = true;
 
-			// if email is valid and enter key is pressed
-			if (this.#validateEmail(email) && e.keyCode === 13) {
-				//send email with selected services and display success message
-				emailjs
-					.send("toochavez.dev", "template_e6k9j4b", {
-						to_email: email,
-						selected_services: JSON.parse(
-							localStorage.getItem("selectedServices")
-						),
-					})
-					.then(() => {
-						this.emailHelp.classList.add("d-none");
-						this.emailInput.value = "";
-						Swal.fire("email sent!", "", "success");
+					// change the helper text
+					this.emailHelp.textContent = "Enter a valid email, please!";
+				}
+			}, 3000);
+		});
+
+		this.submitBtn.disabled = true;
+	}
+
+	#emailjs() {
+		this.submitBtn.addEventListener("click", (e) => {
+			// prevent default behaviour
+			e.preventDefault();
+
+			// get selected services from local storage
+			const selectedService = JSON.parse(
+				localStorage.getItem("selectedServices")
+			);
+
+			// get the total price
+			const totalPrice = selectedService
+				.reduce((acc, service) => {
+					return acc + service.price;
+				}, 0)
+				.toFixed(2)
+				.toString();
+
+			// group the selected services into a string to be displayed in the email body
+
+			const services = selectedService
+				.map((service) => {
+					return `${service.name} - ${service.price} `;
+				})
+				.join("");
+
+			// get the discount
+			const discount = this.discountMessage.textContent;
+
+			let discountedPrice = this.discountedPrice.textContent;
+
+			if (discount === "") {
+				discountedPrice = "";
+			}
+			// add services to the email body
+			const emailBody = {
+				services: services,
+				totalPrice: totalPrice,
+				discount: discount,
+				discountedPrice: discountedPrice,
+			};
+
+			// send email
+			emailjs
+				.send("toochavez.dev", "template_e6k9j4b", emailBody)
+				.then((res) => {
+					console.log(res);
+					Swal.fire({
+						title: "Success!",
+						text: "Your email has been sent successfully!",
+						icon: "success",
+						confirmButtonText: "Ok",
 					});
-			}
+				})
+				.catch((err) => {
+					console.log(err);
+
+					Swal.fire({
+						title: "Error!",
+						text: "Something went wrong, please try again!",
+						icon: "error",
+						confirmButtonText: "Ok",
+					});
+				});
 		});
 	}
 
