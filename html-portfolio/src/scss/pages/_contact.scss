@@ -1,0 +1,14 @@
+.whatsapp {
+	// media queries for the above
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(25%, -100%);
+	max-width: 5rem;
+	@media (max-width: 35rem) {
+		.whatsapp {
+			display: block;
+		}
+	}
+}

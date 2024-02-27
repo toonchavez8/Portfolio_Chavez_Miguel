@@ -1,0 +1,371 @@
+@use "../utilities/variables" as *;
+
+/* home page */
+
+// Hero Section Classes
+
+.hero-section {
+	flex-direction: column;
+
+	figure {
+		width: 100%;
+		height: 30rem;
+		canvas {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@media (max-width: 35rem) {
+		text-align: center;
+
+		figure {
+			display: none;
+		}
+
+		.hero-main {
+			margin-top: 1rem;
+
+			.btn-section {
+				gap: 0rem !important;
+
+				a {
+					margin: 0 0 !important;
+					button {
+						margin: 0 0 !important;
+						padding: 0.5rem 0.5rem;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+		.bg-element {
+			display: none;
+		}
+	}
+}
+
+#typeOnText::before {
+	content: "-";
+	font-style: normal;
+	color: $light---electric-violet--400;
+}
+#typeOnText::after {
+	content: "|";
+	font-style: normal;
+	animation: blink 0.7s infinite;
+	padding-left: 1rem;
+	color: $light---electric-violet--200;
+}
+
+.hero-subheading {
+	max-width: 50rem;
+}
+.cursor {
+	display: inline-block;
+	animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	from,
+	to {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.btn-glass-primary {
+	background: radial-gradient(
+		97.57% 210.75% at 0.9% 2.98%,
+		rgba(126, 50, 165, 0.2) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+
+	border: 2px solid;
+
+	border-image-source: linear-gradient(
+			114.55deg,
+			rgba(126, 50, 165, 0.9) 2.13%,
+			rgba(255, 255, 255, 0) 98.14%
+		),
+		radial-gradient(
+			97.09% 224.61% at 1.38% 96.94%,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(216, 216, 216, 0.54) 100%
+		);
+
+	backdrop-filter: blur(6px);
+
+	border-radius: 8px;
+}
+
+.btn-glass-secondary {
+	background: radial-gradient(
+		97.57% 210.75% at 0.9% 2.98%,
+		rgb(110, 151, 235, 0.2) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+
+	border: 2px solid;
+
+	backdrop-filter: blur(6px);
+
+	border-radius: 8px;
+}
+
+.bg-element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-style: italic;
+	transform: translate(-18%, -15%);
+	z-index: -1;
+
+	font-size: calc(20rem + 5vw);
+
+	border-image-source: linear-gradient(
+			114.55deg,
+			rgba(126, 50, 165, 0.9) 2.13%,
+			rgba(32, 5, 46, 0) 98.14%
+		),
+		radial-gradient(
+				97.09% 224.61% at 1.38% 96.94%,
+				rgba(216, 216, 216, 0) 0%,
+				rgba(216, 216, 216, 0.54) 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+		radial-gradient(
+				97.57% 210.75% at 0.9% 2.98%,
+				rgba(216, 216, 216, 0) 0%,
+				rgba(216, 216, 216, 0.05) 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+	/* Glass/BG Element 02 */
+
+	background: linear-gradient(
+		80deg,
+		rgba(48, 110, 232, 1) 0%,
+		rgba(131, 168, 241, 1) 27%,
+		rgba(214, 226, 250, 1) 61%,
+		rgba(29, 66, 139, 1) 100%
+	);
+
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: $grays--000-white;
+	-webkit-text-stroke: 0.375rem transparent;
+
+	opacity: 0.6;
+
+	animation: scroll 20s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translate(-30%, -15%);
+	}
+	100% {
+		transform: translate(0%, -15%);
+	}
+}
+
+.GlassHover {
+	width: 10em;
+	height: 12em;
+
+	bottom: 0;
+	left: 0;
+
+	border: 1px solid rgba(255, 255, 255, 0.42);
+
+	border-image-source: linear-gradient(
+			114.55deg,
+			rgba(126, 50, 165, 0.9) 2.13%,
+			rgba(255, 255, 255, 0) 98.14%
+		),
+		radial-gradient(
+			97.09% 224.61% at 1.38% 96.94%,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(216, 216, 216, 0.54) 100%
+		);
+
+	background: radial-gradient(
+			97.57% 210.75% at 0.9% 2.98%,
+			rgba(233, 233, 233, 0.4) 0%,
+			rgba(255, 255, 255, 0) 100%
+		)
+		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+	backdrop-filter: blur(21px);
+	/* Note: backdrop-filter has minimal browser support */
+
+	border-radius: 4px;
+}
+
+.Quotation {
+	position: relative;
+	isolation: isolate;
+
+	&::before {
+		content: open-quote;
+		position: absolute;
+		font-family: $ff-inter;
+		top: 0;
+		left: 0;
+		transform: translate(-40%, -35%);
+		font-size: 10rem;
+		color: $light---electric-violet--400;
+		z-index: -1;
+		opacity: 0.2;
+	}
+	&::after {
+		content: close-quote;
+		position: absolute;
+		font-family: $ff-inter;
+		bottom: 0;
+		right: 0;
+		transform: translate(40%, 65%);
+		font-size: 10rem;
+		color: $light---electric-violet--400;
+		z-index: -1;
+		opacity: 0.2;
+	}
+}
+
+.about-section {
+	flex-direction: column-reverse;
+
+	.my-img {
+		max-width: 450px;
+
+		margin: 0 auto;
+		padding: 3rem;
+
+		img {
+			border-radius: 0.5rem;
+			border: 1px solid $light---electric-violet--300;
+			min-width: 16rem;
+
+			background: linear-gradient(white, white) padding-box,
+				linear-gradient(to right, rgb(138, 16, 16) 0%, rgb(183, 107, 224) 100%)
+					border-box;
+			background-clip: content-box, border-box;
+		}
+	}
+}
+.Skewed-BG {
+	position: relative;
+	overflow-x: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -25%;
+		width: 150%;
+		height: 100%;
+
+		// linear gradient background
+		background: linear-gradient(
+			90deg,
+			rgba(161, 173, 230, 0.2) 0%,
+			$grays--000-white 90%
+		);
+
+		transform: skewY(-2deg);
+		transform-origin: top left;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 768px) {
+	.Skewed-BG {
+		background: linear-gradient(
+			90deg,
+			rgba(161, 173, 230, 0.2) 0%,
+			$grays--000-white 90%
+		);
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+	.Skewed-BG {
+		background: linear-gradient(
+			90deg,
+			$dark---valentino-purple--800 0%,
+			$dark---bunting-blue--900 90%
+		);
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.skill-p {
+	max-width: 60rem;
+}
+
+.card-mw {
+	max-width: 20rem !important;
+	width: fit-content !important;
+
+	.glass-card {
+		/* From https://css.glass */
+		background: rgba(255, 255, 255, 0.12);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+		transition: all 0.3s ease-in-out;
+		border: 1px solid rgba(255, 255, 255, 0.3); /* This is a fallback for older browsers */
+
+		&:hover {
+			transform: scale(1.02);
+		}
+
+		&:active {
+			transform: scale(0.98);
+		}
+
+		.img-box {
+			border-radius: 0.5rem;
+			overflow: hidden;
+
+			img {
+				transition: all 0.3s ease-in-out;
+				width: 100%;
+				aspect-ratio: 1/1;
+				object-fit: cover;
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+}
+
+.work-logo {
+	max-width: 150px;
+	filter: invert(1);
+	aspect-ratio: 1/1;
+	object-fit: contain;
+}
+
+.skills-badges {
+	> * {
+		transition: all 0.3s ease-in-out;
+		caret-color: transparent;
+	}
+
+	> *:hover {
+		transform: scale(1.05);
+		caret-color: transparent;
+	}
+}

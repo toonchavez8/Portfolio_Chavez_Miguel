@@ -1,0 +1,355 @@
+@use "variables" as *;
+
+/* utility classes */
+
+/* color classes */
+
+.c-white {
+	color: $grays--000-white !important;
+}
+
+.c-white-bg {
+	background-color: $grays--000-white !important;
+}
+
+/* color classes  */
+
+/* valentino-purple */
+
+.vp-900 {
+	color: $dark---valentino-purple--900 !important;
+}
+
+.vp-800 {
+	color: $dark---valentino-purple--800 !important;
+}
+
+.vp-700 {
+	color: $dark---valentino-purple--700 !important;
+}
+
+.vp-600 {
+	color: $dark---valentino-purple--600 !important;
+}
+
+.vp-500 {
+	color: $dark---valentino-purple--500 !important;
+}
+
+.vp-400 {
+	color: $dark---valentino-purple--400 !important;
+}
+
+.vp-300 {
+	color: $dark---valentino-purple--300 !important;
+}
+
+.vp-200 {
+	color: $dark---valentino-purple--200 !important;
+}
+
+.vp-100 {
+	color: $dark---valentino-purple--100 !important;
+}
+
+.vp-050 {
+	color: $dark---valentino-purple--050 !important;
+}
+
+/* wood-smoke-gray */
+
+.wsg-900 {
+	color: $grays--900-wood-smoke-gray !important;
+}
+
+.wsg-800 {
+	color: $grays--800-wood-smoke-gray !important;
+}
+
+.wsg-700 {
+	color: $grays--700-wood-smoke-gray !important;
+}
+
+.wsg-600 {
+	color: $grays--600-wood-smoke-gray !important;
+}
+
+.wsg-500 {
+	color: $grays--500-wood-smoke-gray !important;
+}
+
+.wsg-400 {
+	color: $grays--400-wood-smoke-gray !important;
+}
+
+.wsg-300 {
+	color: $grays--300-wood-smoke-gray !important;
+}
+
+.wsg-200 {
+	color: $grays--200-wood-smoke-gray !important;
+}
+
+.wsg-100 {
+	color: $grays--100-wood-smoke-gray !important;
+}
+
+.wsg-050 {
+	color: $grays--050-wood-smoke-gray !important;
+}
+
+/* royal-blue */
+
+.rb-900 {
+	color: $light---royal-blue--900 !important;
+}
+
+.rb-800 {
+	color: $light---royal-blue--800 !important;
+}
+
+.rb-700 {
+	color: $light---royal-blue--700 !important;
+}
+
+.rb-600 {
+	color: $light---royal-blue--600 !important;
+}
+
+.rb-500 {
+	color: $light---royal-blue--500 !important;
+}
+
+.rb-400 {
+	color: $light---royal-blue--400 !important;
+}
+
+.rb-300 {
+	color: $light---royal-blue--300 !important;
+}
+
+.rb-200 {
+	color: $light---royal-blue--200 !important;
+}
+
+.rb-100 {
+	color: $light---royal-blue--100 !important;
+}
+
+.rb-050 {
+	color: $light---royal-blue--050 !important;
+}
+
+/* electric-violet */
+
+.ev-900 {
+	color: $light---electric-violet--900 !important;
+}
+
+.ev-800 {
+	color: $light---electric-violet--800 !important;
+}
+
+.ev-700 {
+	color: $light---electric-violet--700 !important;
+}
+
+.ev-600 {
+	color: $light---electric-violet--600 !important;
+}
+
+.ev-500 {
+	color: $light---electric-violet--500 !important;
+}
+
+.ev-400 {
+	color: $light---electric-violet--400 !important;
+}
+
+.ev-300 {
+	color: $light---electric-violet--300 !important;
+}
+
+.ev-200 {
+	color: $light---electric-violet--200 !important;
+}
+
+.ev-100 {
+	color: $light---electric-violet--100 !important;
+}
+
+.ev-050 {
+	color: $light---electric-violet--050 !important;
+}
+
+/* background color classes */
+
+/* valentino-purple */
+
+.vp-900-bg {
+	background-color: $dark---valentino-purple--900 !important;
+}
+
+.vp-800-bg {
+	background-color: $dark---valentino-purple--800 !important;
+}
+
+.vp-700-bg {
+	background-color: $dark---valentino-purple--700 !important;
+}
+
+.vp-600-bg {
+	background-color: $dark---valentino-purple--600 !important;
+}
+
+.vp-500-bg {
+	background-color: $dark---valentino-purple--500 !important;
+}
+
+.vp-400-bg {
+	background-color: $dark---valentino-purple--400 !important;
+}
+
+.vp-300-bg {
+	background-color: $dark---valentino-purple--300 !important;
+}
+
+.vp-200-bg {
+	background-color: $dark---valentino-purple--200 !important;
+}
+
+.vp-100-bg {
+	background-color: $dark---valentino-purple--100 !important;
+}
+
+.vp-050-bg {
+	background-color: $dark---valentino-purple--050 !important;
+}
+
+/* wood-smoke-gray */
+
+.wsg-900-bg {
+	background-color: $grays--900-wood-smoke-gray !important;
+}
+
+.wsg-800-bg {
+	background-color: $grays--800-wood-smoke-gray !important;
+}
+
+.wsg-700-bg {
+	background-color: $grays--700-wood-smoke-gray !important;
+}
+
+.wsg-600-bg {
+	background-color: $grays--600-wood-smoke-gray !important;
+}
+
+.wsg-500-bg {
+	background-color: $grays--500-wood-smoke-gray !important;
+}
+
+.wsg-400-bg {
+	background-color: $grays--400-wood-smoke-gray !important;
+}
+
+.wsg-300-bg {
+	background-color: $grays--300-wood-smoke-gray !important;
+}
+
+.wsg-200-bg {
+	background-color: $grays--200-wood-smoke-gray !important;
+}
+
+.wsg-100-bg {
+	background-color: $grays--100-wood-smoke-gray !important;
+}
+
+.wsg-050-bg {
+	background-color: $grays--050-wood-smoke-gray !important;
+}
+
+/* royal-blue */
+
+.rb-900-bg {
+	background-color: $light---royal-blue--900 !important;
+}
+
+.rb-800-bg {
+	background-color: $light---royal-blue--800 !important;
+}
+
+.rb-700-bg {
+	background-color: $light---royal-blue--700 !important;
+}
+
+.rb-600-bg {
+	background-color: $light---royal-blue--600 !important;
+}
+
+.rb-500-bg {
+	background-color: $light---royal-blue--500 !important;
+}
+
+.rb-400-bg {
+	background-color: $light---royal-blue--400 !important;
+}
+
+.rb-300-bg {
+	background-color: $light---royal-blue--300 !important;
+}
+
+.rb-200-bg {
+	background-color: $light---royal-blue--200 !important;
+}
+
+.rb-100-bg {
+	background-color: $light---royal-blue--100 !important;
+}
+
+.rb-050-bg {
+	background-color: $light---royal-blue--050 !important;
+}
+
+/* electric-violet */
+
+.ev-900-bg {
+	background-color: $light---electric-violet--900 !important;
+}
+
+.ev-800-bg {
+	background-color: $light---electric-violet--800 !important;
+}
+
+.ev-700-bg {
+	background-color: $light---electric-violet--700 !important;
+}
+
+.ev-600-bg {
+	background-color: $light---electric-violet--600 !important;
+}
+
+.ev-500-bg {
+	background-color: $light---electric-violet--500 !important;
+}
+
+.ev-400-bg {
+	background-color: $light---electric-violet--400 !important;
+}
+
+.ev-300-bg {
+	background-color: $light---electric-violet--300 !important;
+}
+
+.ev-200-bg {
+	background-color: $light---electric-violet--200 !important;
+}
+
+.ev-100-bg {
+	background-color: $light---electric-violet--100 !important;
+}
+
+.ev-050-bg {
+	background-color: $light---electric-violet--050 !important;
+}
+
+/* end of color classes */

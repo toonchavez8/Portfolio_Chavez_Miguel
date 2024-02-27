@@ -1,0 +1,142 @@
+@use "../utilities/" as *;
+
+/* start of mixins for dark theme*/
+
+@mixin dark-theme {
+	/* Global color classes */
+	.c-white-bg {
+		background-color: $dark---bunting-blue--900 !important;
+	}
+
+	.c-white {
+		color: $grays--050-wood-smoke-gray !important;
+	}
+
+	.wsg-700 {
+		color: $grays--050-wood-smoke-gray !important;
+	}
+
+	.wsg-600 {
+		color: $grays--300-wood-smoke-gray !important;
+	}
+
+	.wsg-500 {
+		color: $grays--200-wood-smoke-gray !important;
+	}
+
+	.wsg-400 {
+		color: $grays--050-wood-smoke-gray !important;
+	}
+
+	.wsg-050-bg {
+		background-color: $dark---bunting-blue--800 !important;
+	}
+
+	.rb-200 {
+		color: $light---royal-blue--400 !important;
+	}
+
+	.ev-200 {
+		color: $light---electric-violet--400 !important;
+	}
+	// gnerial classes
+
+	// // header
+
+	.nav-link {
+		color: $grays--200-wood-smoke-gray;
+		transition: all 0.5s ease !important;
+	}
+
+	.nav-link:hover {
+		color: $light---royal-blue--400;
+		text-shadow: 0 0 0.625rem $light---royal-blue--400,
+			0 0 1.25rem $light---royal-blue--100;
+
+		box-shadow: 0 0.0625rem 0 $light---royal-blue--400;
+	}
+
+	.active {
+		transition: all 0.5s ease;
+	}
+
+	.active:hover {
+		text-shadow: 0 0 0.625rem $light---electric-violet--400,
+			0 0 1.25rem $light---electric-violet--400;
+		box-shadow: 0 0.0625rem 0 $light---electric-violet--400;
+	}
+
+	.bg-element {
+		-webkit-text-fill-color: $dark---bunting-blue--900;
+	}
+
+	.Skewed-BG {
+		&::before {
+			// linear gradient background
+			background: linear-gradient(
+				125deg,
+				$dark---valentino-purple--800 0%,
+				$dark---bunting-blue--900 80%
+			);
+		}
+	}
+
+	.card-mw {
+		.glass-card {
+			background: rgba(32, 34, 43, 0.5);
+		}
+	}
+
+	.line {
+		background: $dark---bunting-blue--700;
+	}
+
+	.work-exp {
+		.card {
+			background: $dark---bunting-blue--700;
+			transition: all 0.5s ease;
+
+			&:hover {
+				background: $dark---bunting-blue--500;
+			}
+		}
+	}
+
+	a {
+		color: $light---royal-blue--400;
+		transition: all 0.5s ease;
+
+		&:hover {
+			color: $light---electric-violet--400;
+		}
+	}
+
+	.built-with-img {
+		filter: invert(1);
+	}
+
+	.services-card {
+		display: flex;
+
+		.card {
+			background: $dark---bunting-blue--800;
+			border: 1px solid $dark---bunting-blue--700;
+			transition: all 0.5s ease;
+
+			&:hover {
+				background: $dark---bunting-blue--500;
+			}
+
+			.card-body {
+				.card-subtitle {
+					text-align: center;
+					transition: all 0.5s ease;
+
+					&:hover {
+						color: $light---electric-violet--400 !important;
+					}
+				}
+			}
+		}
+	}
+}
