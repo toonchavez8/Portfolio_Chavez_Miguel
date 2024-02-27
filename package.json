@@ -5,11 +5,14 @@
 	"main": "index.js",
 	"workspaces": [
 		"html-portfolio/**",
-		"nextjs-portfolio/**"
+		"nextjs-portfolio/**",
+		"packages/**"
 	],
 	"scripts": {
 		"build": "turbo build",
-		"dev": "turbo dev"
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\""
 	},
 	"author": "miguel chavez",
 	"keywords": [
@@ -20,7 +23,11 @@
 		"full stack"
 	],
 	"license": "ISC",
+	"packageManager": "npm@10.4.0",
 	"devDependencies": {
-		"turbo": "^1.12.4"
+		"@repo/eslint-config": "*",
+		"@repo/typescript-config": "*",
+		"prettier": "^3.1.1",
+		"turbo": "latest"
 	}
 }
