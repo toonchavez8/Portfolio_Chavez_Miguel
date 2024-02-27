@@ -15,3 +15,4 @@ jspm_packages/
 *.css.map
 *.sass.map
 *.scss.map
+*dist
