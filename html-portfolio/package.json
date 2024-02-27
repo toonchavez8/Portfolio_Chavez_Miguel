@@ -1,0 +1,51 @@
+{
+	"name": "toonchavez-portfolio",
+	"version": "1.0.0",
+	"description": "Portfolio project developed using HTML, CSS, and JavaScript, showcasing web design skills including layout, typography, and responsive design. Created as part of a web design course at CoderHouse with class ID 51270",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"sass": "sass --watch scss:css",
+		"sassbuild": "sass --no-source-map --style=compressed scss:css",
+		"dev": "nodemon -e scss,html  -x \"npm run sass\"",
+		"build": "npm run sassbuild"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/toonchavez8/22_CDHS-51270_Project-01_Portfolio.git"
+	},
+	"keywords": [
+		"HTML",
+		"CSS",
+		"Sass",
+		"JavaScript",
+		"web",
+		"design",
+		"responsive",
+		"design",
+		"typography",
+		"layout",
+		"portfolio",
+		"project",
+		"CoderHouse",
+		"web",
+		"design",
+		"course",
+		"class",
+		"project."
+	],
+	"author": "Miguel Chavez",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/toonchavez8/22_CDHS-51270_Project-01_Portfolio/issues"
+	},
+	"homepage": "https://github.com/toonchavez8/22_CDHS-51270_Project-01_Portfolio#readme",
+	"devDependencies": {
+		"node-sass": "^8.0.0",
+		"nodemon": "^2.0.21"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^3.11.0",
+		"sass": "^1.59.3"
+	}
+}
