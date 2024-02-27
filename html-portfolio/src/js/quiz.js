@@ -1,3 +1,8 @@
+// Import our custom CSS
+import "../scss/main.scss";
+
+// Import all of Bootstrap's JS
+import * as bootstrap from "bootstrap";
 // import the service data
 import { SERVICE, SelectedServices } from "./model.js";
 import View from "./view.js";

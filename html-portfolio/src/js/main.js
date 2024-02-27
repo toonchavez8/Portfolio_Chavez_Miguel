@@ -1,4 +1,9 @@
 import { Application } from "@splinetool/runtime";
+// Import our custom CSS
+import "../scss/main.scss";
+
+// Import all of Bootstrap's JS
+import * as bootstrap from "bootstrap";
 
 const canvas = document.getElementById("canvas3d");
 const app = new Application(canvas);

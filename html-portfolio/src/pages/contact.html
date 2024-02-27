@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toonchavez</title>
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js" type="module" defer></script>
 
     <!-- meta description of this  page -->
     <meta name="description" content="toonchavez is a freelance web developer, UI/UX designer, and digital artist.">
@@ -22,7 +18,7 @@
         MERN stack developer ">
 </head>
 
-<body class="body-container">
+<body class="body-container c-white-bg wsg-600 ">
     <header>
         <nav class=" navbar navbar-expand-lg align-content-center" aria-label="navigation">
             <div class="container-fluid ">
@@ -49,26 +45,70 @@
                             <a class="nav-link" href="./services.html">services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contact.html">contact</a>
+                            <a class="nav-link active ev-400 fw-400" aria-current="page"
+                                href="./contact.html">contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="">
 
-        <section class="container d-flex justify-content-center position-relative align-items-center h-100">
-            <h1 class="fs-48 text-center z-1 col-lg-8">
-                Heres where the individual projects page will be... but its not done yet
-                <span>sorry </span>
-            </h1>
-            <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_blnro6zs.json"
-                background="transparent" speed="1" loop autoplay
-                class="w-75 position-absolute top-50 start-50 translate-middle "></lottie-player>
-        </section>
+        <section class="container-fluid mt-5 mb-5">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12 ff-poppins">
+                        <h1 class="text-center me-5 pe-5  rb-400 ">Connect with Me</h1>
+                        <p class="text-center ms-5 ps-5 fs-20 rbSW-600">Let's Bring Your Vision to Life</p>
+                    </div>
+                </div>
+                <div class="container d-flex flex-column align-items-lg-center justify-content-lg-center ">
+                    <div class="row mt-5  position-relative">
+                        <h2 class=" fs-20 fw-200 rb-100 text-center">Feel free to reach out to me via email or WhatsApp.
+                        </h2>
+
+                        <a href="https://wa.me/523335996909" class=" whatsapp |  col-2  ">
+                            <img src="https://img.icons8.com/color/512/whatsapp.png" alt="WhatsApp icon"
+                                class="img-fluid">
+                        </a>
+
+                    </div>
+                    <div class="col-lg-6 ">
+                        <form action="mailto:toonchavez8@gmail.com" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject:</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" class="form-control"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class=" btn-glass-secondary | mt-4 align-self-center btn text-capitalize fs-20 py- 4px-4 rb-400 ">contact
+                                me</button></a>
+                        </form>
+                    </div>
+
+
+                </div>
+
+
 
     </main>
+
     <footer class="footer container-fluid py-3 ">
         <div class=" justify-content-between align-items-center   flex-sm-row col row  ">
             <div class=" col-md-6 mb-3 mb-md-0 text-center text-md-start  ">
@@ -117,7 +157,7 @@
 
 
 </body>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
 <!-- bootsrap script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
