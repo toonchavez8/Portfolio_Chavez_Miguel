@@ -1,4 +1,4 @@
-# Updating Portfolio for netlify
+# Updating Portfolio for netlify once again
 
 This GitHub repository contains a portfolio project created using only HTML, CSS, and JavaScript. It was developed as part of a web design course at CoderHouse, with class ID 51270. The project showcases a variety of web design skills, including layout, typography, and responsive design.
 
