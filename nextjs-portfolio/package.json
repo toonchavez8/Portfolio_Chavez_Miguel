@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builder.io/react-hydration-overlay": "^0.0.8",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.6",
     "geist": "^1.2.2",

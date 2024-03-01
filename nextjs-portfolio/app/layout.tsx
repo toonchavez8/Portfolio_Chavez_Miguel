@@ -15,9 +15,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-			<NavBar />
-			<body>{children}</body>
+		<html
+			lang="en"
+			className={`${GeistSans.variable} ${GeistMono.variable} relative`}
+		>
+			<body>
+				<NavBar />
+				{children}
+			</body>
 		</html>
 	);
 }
