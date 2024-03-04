@@ -1,9 +1,4 @@
 import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
-import colors from "tailwindcss/colors"; //
-const {
-	default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
 	content: [
@@ -19,18 +14,24 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [require("daisyui"), addVariablesForColors],
+	plugins: [require("daisyui")],
+	darkMode: "class",
+	daisyui: {
+		themes: [
+			{
+				mytheme: {
+					primary: "#192BC2",
+					secondary: "#16F4D0",
+					accent: "#0000ff",
+					neutral: "#050508",
+					"base-100": "#FBFBFF",
+					info: "#7E8D85",
+					success: "#22c55e",
+					warning: "#facc15",
+					error: "#e11d48",
+				},
+			},
+		],
+	},
 };
 export default config;
-
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
-	let allColors = flattenColorPalette(theme("colors"));
-	let newVars = Object.fromEntries(
-		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-	);
-
-	addBase({
-		":root": newVars,
-	});
-}
