@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { NavBar } from "./components/NavBar/NavBar";
+import { Footer } from "./components/Footer/Footer";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
 				<body className="bg-base-200 text-neutral dark:bg-neutral dark:text-base-100 min-h-screen  px-4 pt-4 relative antialiased">
 					<NavBar />
 					{children}
+					<Footer />
 				</body>
 			</Providers>
 		</html>
