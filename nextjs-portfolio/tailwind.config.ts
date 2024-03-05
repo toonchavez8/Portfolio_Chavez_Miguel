@@ -12,6 +12,21 @@ const config: Config = {
 				sans: ["var(--font-geist-sans)"],
 				mono: ["var(--font-geist-mono)"],
 			},
+			colors: {
+				asphalt: {
+					"50": "#fff3e6",
+					"100": "#ffe1bd",
+					"200": "#ffc17e",
+					"300": "#ff9435",
+					"400": "#ff6c00",
+					"500": "#ff5100",
+					"600": "#de3100",
+					"700": "#b01900",
+					"800": "#911002",
+					"900": "#7a0e09",
+					"950": "#0a0000",
+				},
+			},
 		},
 	},
 	plugins: [require("daisyui")],
@@ -20,9 +35,9 @@ const config: Config = {
 		themes: [
 			{
 				mytheme: {
-					primary: "#192BC2",
-					secondary: "#16F4D0",
-					accent: "#0000ff",
+					primary: "#ff5100",
+					secondary: "#b01900",
+					accent: "#ff6c00",
 					neutral: "#050508",
 					"base-100": "#FBFBFF",
 					info: "#7E8D85",
