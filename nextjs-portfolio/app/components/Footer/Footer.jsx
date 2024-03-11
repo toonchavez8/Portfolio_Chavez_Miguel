@@ -26,7 +26,7 @@ const footerLinks = [
 export const Footer = () => {
 	return (
 		<footer className="mx-auto font-bold text-2xl flex flex-col justify-center items-center border-t border-asphalt-500/50 dark:border-asphalt-500/15 py-4 w-full max-w-[67.5rem]">
-			<div className="flex  justify-center gap-2">
+			<div className="flex flex-wrap justify-center gap-2">
 				{footerLinks.map((link) => (
 					<a href={`${link.url}`} key={link.name}>
 						<code className="text-neutral dark:text-base-200 bg-transparent dark:border-base-300 dark:border-opacity-10 gap-2 badge  badge-neutral px-4 py-3 hover:bg-neutral hover:bg-opacity-25 dark:hover:bg-base-300 dark:hover:bg-opacity-10">

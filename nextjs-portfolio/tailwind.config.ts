@@ -7,6 +7,14 @@ const config: Config = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+		screens:{
+			"xs": "375px",
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1440px',
+		},
 		extend: {
 			fontFamily: {
 				sans: ["var(--font-geist-sans)"],
@@ -29,7 +37,7 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [require("daisyui")],
+	plugins: [require("daisyui"), require("@tailwindcss/typography")],
 	darkMode: "class",
 	daisyui: {
 		themes: [
