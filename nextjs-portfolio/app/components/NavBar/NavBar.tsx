@@ -4,7 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeSwitch from '../ThemeSwitch';
 
-const Links = ['now', 'projects', 'journel'];
+const Links = [
+    { name: 'now', href: '/now' },
+    { name: 'projects', href: '/projects' },
+    { name: 'journel', href: '/journel' }
+];
 
 export const NavBar = () => {
     const pathName = usePathname();
@@ -23,15 +27,15 @@ export const NavBar = () => {
             <nav className="relative flex  items-center justify-between">
                 <ul className=" flex  flex-wrap items-center gap-2  sm:gap-3 md:gap-4">
                     {Links.map((link) => (
-                        <Link href={link} key={link}>
+                        <Link href={link.href} key={link.name}>
                             <code
                                 className={`max-w-fit rounded-full border border-primary border-opacity-0 py-1 text-sm transition-all duration-200 ease-out  hover:border-opacity-75 hover:text-asphalt-600 dark:text-base-300 dark:hover:border-opacity-25 dark:hover:text-asphalt-100 hover:dark:text-base-100 md:px-4 md:text-base ${
-                                    path === link
+                                    path === link.name
                                         ? 'active text-asphalt-400 dark:text-asphalt-900'
                                         : ''
                                 }`}>
-                                {path === link ? '>' : '/'}
-                                {link}
+                                {path === link.name ? '>' : '/'}
+                                {link.name}
                             </code>
                         </Link>
                     ))}

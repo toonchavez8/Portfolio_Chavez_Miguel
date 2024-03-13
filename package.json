@@ -4,7 +4,7 @@
 	"description": "my portfolio, transitioning from HTML to Next.js",
 	"main": "index.js",
 	"workspaces": [
-		"html-portfolio/**",
+
 		"nextjs-portfolio/**",
 		"packages/**"
 	],
