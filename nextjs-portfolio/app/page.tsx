@@ -1,8 +1,8 @@
-import Hero from '@/ui/hero';
-import Projectsection from '@/ui/projectsection';
+import Hero from '@/app/ui/hero';
+import Projectsection from '@/app/ui/projectsection';
 export default function Home() {
     return (
-        <main className="relative mx-auto flex w-full max-w-[67.5rem] flex-col items-center gap-2 overflow-hidden p-4 md:gap-6 ">
+        <main className="relative mx-auto flex  w-11/12 flex-col items-center gap-2 overflow-hidden p-4 md:w-7/12 md:gap-6 ">
             <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
             <Projectsection title="Miguel Chavez" />
         </main>

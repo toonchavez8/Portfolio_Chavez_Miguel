@@ -17,12 +17,16 @@
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.6",
     "geist": "^1.2.2",
+    "gray-matter": "^4.0.3",
     "mini-svg-data-uri": "^1.4.4",
+    "moment": "^2.30.1",
     "next": "^14.2.0-canary.19",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {

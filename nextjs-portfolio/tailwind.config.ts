@@ -16,6 +16,13 @@ const config: Config = {
 			'2xl': '1440px',
 		},
 		extend: {
+			typography: {
+				DEFAULT: {
+				  css: {
+					maxWidth: '100ch', // add required value here
+				  }
+				}
+			  },
 			fontFamily: {
 				sans: ["var(--font-geist-sans)"],
 				mono: ["var(--font-geist-mono)"],

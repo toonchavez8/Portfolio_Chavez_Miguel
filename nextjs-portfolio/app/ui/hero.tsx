@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Lastupdatedbadge from '@/ui/ClientComponents/lastupdatedbadge';
+import Lastupdatedbadge from '@/app/ui/ClientComponents/lastupdatedbadge';
 
 interface HeroProps {
     title: string;
@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = (props: HeroProps) => {
     return (
-        <section className="relative mt-4  flex w-full flex-col items-end justify-start gap-2 rounded xs:items-start  md:gap-8 ">
+        <section className=" relative  mt-4 flex w-full flex-col items-end justify-start gap-2 rounded xs:items-start  md:gap-8 ">
             <div className="flex items-center justify-center gap-2 pe-4 md:gap-8 md:pe-8">
                 <Image
                     alt="profile image of miguel"
@@ -27,7 +27,7 @@ const Hero = (props: HeroProps) => {
             </div>
             <Lastupdatedbadge />
 
-            <article className=" prose mx-auto max-w-[848px]  text-neutral dark:text-base-100">
+            <article className="   prose mx-auto   flex-1  text-neutral dark:text-base-100">
                 <p>
                     Welcome to my little corner of the web. I'm very passionate about building and
                     designing things with simplicity in mind. I like being a knowledge sponge, from

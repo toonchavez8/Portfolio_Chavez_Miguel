@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
-import { NavBar } from './ui/NavBar/NavBar';
-import { Footer } from './ui/Footer/Footer';
-import { Providers } from './providers';
+import { NavBar } from '@/app/ui/NavBar/NavBar';
+import { Footer } from '@/app/ui/Footer/Footer';
+import { Providers } from '@/app/providers';
 
 export const metadata: Metadata = {
     title: {
@@ -22,10 +22,10 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${GeistSans.variable} ${GeistMono.variable} relative `}
+            className={`${GeistSans.variable} ${GeistMono.variable}  relative`}
             suppressHydrationWarning>
             <Providers>
-                <body className="relative min-h-screen bg-base-200 px-4 pt-4  text-neutral antialiased dark:bg-neutral dark:text-base-100">
+                <body className="relative  min-h-screen bg-base-200 px-4 pt-4  text-neutral antialiased  dark:bg-neutral dark:text-base-100 ">
                     <NavBar />
                     {children}
                     <Footer />
