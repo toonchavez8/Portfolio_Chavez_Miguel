@@ -15,12 +15,12 @@ export const NavBar = () => {
     const path = pathName.split('/')[1];
 
     return (
-        <header className=" container sticky inset-x-0 top-0 z-30 mx-auto flex w-11/12  items-center justify-between border-b border-asphalt-500/50 bg-opacity-25  px-4 filter backdrop-blur-sm dark:border-asphalt-500/15  dark:bg-neutral-900  dark:bg-opacity-10 md:w-7/12 ">
+        <header className=" container sticky inset-x-0 top-0 z-30 mx-auto flex w-11/12  items-center justify-between border-b border-primary/50 bg-opacity-25  px-4 filter backdrop-blur-sm dark:border-primary/15  dark:bg-neutral-900  dark:bg-opacity-10 md:w-7/12 ">
             <Link href="/">
-                <figure className="inset-8 hidden max-w-fit p-2 text-sm font-semibold capitalize duration-200 ease-out hover:border-opacity-100 hover:text-primary dark:text-asphalt-50 dark:hover:text-accent sm:block md:text-xl">
+                <figure className="inset-8 hidden max-w-fit p-2 text-sm font-semibold capitalize duration-200 ease-out hover:border-opacity-100 hover:text-primary dark:text-base-100 dark:hover:text-accent sm:block md:text-xl">
                     &lt;toonchavez /&gt;
                 </figure>
-                <figure className="inset-8 max-w-fit p-2 text-sm font-semibold capitalize duration-200 ease-out hover:border-opacity-100 hover:text-accent dark:text-asphalt-50 dark:hover:text-secondary sm:hidden md:text-xl">
+                <figure className="inset-8 max-w-fit p-2 text-sm font-semibold capitalize duration-200 ease-out hover:border-opacity-100 hover:text-accent dark:text-primary dark:hover:text-secondary sm:hidden md:text-xl">
                     &lt;t/&gt;
                 </figure>
             </Link>
@@ -29,9 +29,9 @@ export const NavBar = () => {
                     {Links.map((link) => (
                         <Link href={link.href} key={link.name}>
                             <code
-                                className={`max-w-fit rounded-full border border-primary border-opacity-0 py-1 text-sm transition-all duration-200 ease-out  hover:border-opacity-75 hover:text-asphalt-600 dark:text-base-300 dark:hover:border-opacity-25 dark:hover:text-asphalt-100 hover:dark:text-base-100 md:px-4 md:text-base ${
+                                className={`max-w-fit rounded-full border border-primary border-opacity-0 py-1 text-sm transition-all duration-200 ease-out  hover:border-opacity-75 hover:text-primary dark:text-base-300 dark:hover:border-opacity-25 dark:hover:text-base-100 hover:dark:text-base-100 md:px-4 md:text-base ${
                                     path === link.name
-                                        ? 'active text-asphalt-400 dark:text-asphalt-900'
+                                        ? 'active text-primary dark:text-primary'
                                         : ''
                                 }`}>
                                 {path === link.name ? '>' : '/'}

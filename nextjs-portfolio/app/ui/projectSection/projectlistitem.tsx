@@ -8,14 +8,14 @@ interface ProjectlistitemProps {
 
 const Projectlistitem = ({ category, projects }: ProjectlistitemProps) => {
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className=" prose flex flex-col items-center justify-center dark:prose-invert">
             <h3 className="code text-2xl font-bold">{category}</h3>
             <div className="">
                 {projects.map((project) => (
                     <Link
-                        href={`/${project.id}`}
+                        href={`/projects/${project.id}`}
                         key={project.id}
-                        className="text-neutral-900 transition duration-150 hover:text-amber-700">
+                        className=" flex transition duration-150 hover:text-primary ">
                         {project.name}
                     </Link>
                 ))}

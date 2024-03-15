@@ -25,7 +25,7 @@ const footerLinks = [
 
 export const Footer = () => {
     return (
-        <footer className="mx-auto flex w-full max-w-[67.5rem] flex-col items-center justify-center border-t border-asphalt-500/50 py-4 text-2xl font-bold dark:border-asphalt-500/15">
+        <footer className="mx-auto flex w-full max-w-[67.5rem] flex-col items-center justify-center border-t border-primary/50 py-4 text-2xl font-bold dark:border-primary/15">
             <div className="flex flex-wrap justify-center gap-2">
                 {footerLinks.map((link) => (
                     <a href={`${link.url}`} key={link.name}>

@@ -7,6 +7,7 @@ import Image from 'next/image';
 export default function ThemeSwitch() {
     const [mounted, setMounted] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();
+    console.log('🚀 ~ ThemeSwitch ~ resolvedTheme:', resolvedTheme);
 
     useEffect(() => setMounted(true), []);
 
