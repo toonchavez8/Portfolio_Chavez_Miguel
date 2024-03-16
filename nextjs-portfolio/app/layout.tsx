@@ -5,6 +5,7 @@ import './globals.css';
 import { NavBar } from '@/app/ui/NavBar/NavBar';
 import { Footer } from '@/app/ui/Footer/Footer';
 import { Providers } from '@/app/providers';
+import { DotBackgroundDemo } from '@/app/ui/Accentuily_ui/Background-Boxes';
 
 export const metadata: Metadata = {
     title: {
@@ -25,10 +26,11 @@ export default function RootLayout({
             className={`${GeistSans.variable} ${GeistMono.variable}  relative`}
             suppressHydrationWarning>
             <Providers>
-                <body className="relative  min-h-screen bg-base-200 px-4 pt-4  text-neutral antialiased  dark:bg-neutral dark:text-base-100 ">
+                <body className="dark:from-viridian-950  from-viridian-100 relative isolate min-h-screen bg-base-200 bg-gradient-to-tr to-base-300 px-4 pt-4  text-neutral antialiased dark:bg-neutral dark:bg-gradient-to-br dark:to-neutral dark:text-base-100">
                     <NavBar />
                     {children}
                     <Footer />
+                    <DotBackgroundDemo />
                 </body>
             </Providers>
         </html>

@@ -17,7 +17,6 @@ const Lastupdatedbadge = () => {
                 );
                 const data = await response.json();
                 const lastCommitDate = new Date(data.commit.author.date);
-                console.log(lastCommitDate);
                 const now = new Date();
                 const diffMs = now.getTime() - lastCommitDate.getTime();
                 const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
