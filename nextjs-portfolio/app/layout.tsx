@@ -26,7 +26,7 @@ export default function RootLayout({
             className={`${GeistSans.variable} ${GeistMono.variable}  relative`}
             suppressHydrationWarning>
             <Providers>
-                <body className="dark:from-viridian-950  from-viridian-100 relative isolate min-h-screen bg-base-200 bg-gradient-to-tr to-base-300 px-4 pt-4  text-neutral antialiased dark:bg-neutral dark:bg-gradient-to-br dark:to-neutral dark:text-base-100">
+                <body className="dark:from-viridian-950  from-viridian-100 relative isolate min-h-screen bg-base-200 bg-gradient-to-tr to-base-300 px-4 pt-4  text-neutral antialiased dark:bg-neutral dark:bg-gradient-to-br dark:to-neutral dark:text-base-100 group">
                     <NavBar />
                     {children}
                     <Footer />

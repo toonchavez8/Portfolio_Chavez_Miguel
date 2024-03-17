@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = (props: HeroProps) => {
     return (
-        <section className=" relative  mt-4 flex w-full flex-col items-end justify-start gap-2 rounded xs:items-start  md:gap-8 ">
+        <section className=" relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start  md:gap-8 ">
             <div className="flex items-center justify-center gap-2 pe-4 md:gap-8 md:pe-8">
                 <Image
                     alt="profile image of miguel"
