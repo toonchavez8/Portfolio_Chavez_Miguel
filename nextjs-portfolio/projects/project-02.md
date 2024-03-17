@@ -6,7 +6,7 @@ url: https://example.com/project2
 tags:
   - web
   - backend
-technologies:
+stack:
   - Node.js
   - Express
   - MongoDB

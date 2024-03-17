@@ -6,7 +6,7 @@ url: https://example.com/project3
 tags:
   - mobile
   - frontend
-technologies:
+stack:
   - React Native
   - TypeScript
 date: 2024-03-20
@@ -100,3 +100,10 @@ live: https://example.com/live/project3
 - **Encourage Exploration:** Provide additional resources for further exploration, such as official TypeScript documentation, online courses, and community forums.
 
 Remember to adapt the pacing based on your group's familiarity with programming concepts and their learning preferences. Enjoy teaching TypeScript!
+
+```jsx
+      <main className="p-4md:gap-6 relative mx-auto  flex w-11/12 flex-col items-center gap-2 overflow-hidden  md:w-10/12 lg:w-7/12 ">
+            <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
+            <Projectsection title="Projects" />
+        </main>
+```

@@ -5,8 +5,9 @@ export type ProjectItem ={
     image: string;
     url: string;
     tags: string[];
-    technologies: string[];
+    stack: string[];
     date: string;
+    stared: boolean;
     github: string;
     live: string;
 }

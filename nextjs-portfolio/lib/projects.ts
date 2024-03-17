@@ -4,8 +4,8 @@ import path from "path";
 import moment from "moment";
 import { remark } from "remark"
 import html from "remark-html"
-
 import type { ProjectItem } from "@/types";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 // Define the directory where project markdown files are located
 const projectsDirectory = path.join(process.cwd(), "projects");
@@ -34,7 +34,8 @@ const getSortedProjectsData = (): ProjectItem[] => {
             image: matterResult.data.image,
             url: matterResult.data.url,
             tags: matterResult.data.tags,
-            technologies: matterResult.data.technologies,
+            stack: matterResult.data.technologies,
+            stared: matterResult.data.stared,
             // Format the date using Moment.js
             date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
             github: matterResult.data.github,
@@ -82,7 +83,7 @@ export const getProjectData = async (id:string) => {
     const matterResult = matter(fileContents);
     const processedContent = await remark()
     .use(html)
-    .process(matterResult.content);
+    .process(matterResult.content)
 
     const projectHtml = processedContent.toString();
 
@@ -101,3 +102,5 @@ export const getProjectData = async (id:string) => {
     }
 
 }
+
+

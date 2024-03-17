@@ -6,7 +6,7 @@ url: https://example.com/project1
 tags:
   - web
   - frontend
-technologies:
+stack:
   - HTML
   - CSS
   - JavaScript
