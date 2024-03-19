@@ -24,6 +24,7 @@ const config: Config = {
 			typography: {
 				DEFAULT: {
 				  css: {
+					figure:false,
 					maxWidth: '100ch', // add required value here
 				  }
 				}

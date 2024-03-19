@@ -6,8 +6,6 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
-
-import html from "remark-html"
 import type { ProjectItem } from "@/types";
 import rehypePrettyCode from "rehype-pretty-code";
 
@@ -95,8 +93,7 @@ export const getProjectData = async (id:string) => {
             block: 'plaintext',
             inline: 'plaintext'
         },
-        theme:
-            'github-dark'})
+        })
     .use(rehypeStringify)
     .process(matterResult.content)
 

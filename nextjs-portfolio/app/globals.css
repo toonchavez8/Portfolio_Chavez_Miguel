@@ -18,26 +18,38 @@ body {
 }
 
 article > figure {
-    @apply relative max-w-full text-pretty;
+    @apply relative isolate mx-auto  w-11/12 md:max-w-prose;
 }
+
 article > figure > figcaption {
-    @apply absolute right-0 m-0 mr-2 rounded-sm bg-primary p-1 text-primary;
+    /* Your styles here */
+    @apply absolute left-24 z-10 -translate-y-1 bg-transparent text-base-100 opacity-40 dark:text-viridian-100 !important;
 }
 
 article > figure > pre {
-    @apply mockup-code  text-pretty;
+    @apply mockup-code whitespace-pre-wrap rounded-lg bg-base-300 p-4 dark:bg-neutral/50;
 }
 
-code[data-theme*=' '],
-code[data-theme*=' '] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
+code {
+    counter-reset: line;
 }
 
-@media (prefers-color-scheme: dark) {
-    code[data-theme*=' '],
-    code[data-theme*=' '] span {
-        color: var(--shiki-dark);
-        background-color: var(--shiki-dark-bg);
-    }
+pre > code > [data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+
+    /* Other styling */
+    display: inline-block;
+    width: 16px;
+    margin-right: 32px;
+    text-align: right;
+    color: gray;
+}
+
+pre > code[data-line-numbers-max-digits='2'] > [data-line]::before {
+    width: 32px;
+}
+
+pre > code[data-line-numbers-max-digits='3'] > [data-line]::before {
+    width: 48px;
 }

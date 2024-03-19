@@ -101,7 +101,7 @@ live: https://example.com/live/project3
 
 Remember to adapt the pacing based on your group's familiarity with programming concepts and their learning preferences. Enjoy teaching TypeScript!
 
-```tsx showLineNumbers title="App.tsx"
+```tsx showLineNumbers{1} title="App.tsx" {1-4}
 <main className="p-4md:gap-6 relative mx-auto  flex w-11/12 flex-col items-center gap-2 overflow-hidden  md:w-10/12 lg:w-7/12 ">
     <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
     <Projectsection title="Projects" />
