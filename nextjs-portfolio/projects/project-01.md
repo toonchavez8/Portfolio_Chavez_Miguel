@@ -13,6 +13,7 @@ stack:
 date: 2024-03-10
 github: https://github.com/example/project1
 live: https://example.com/live/project1
+stared: false
 ---
 
 # Project 1

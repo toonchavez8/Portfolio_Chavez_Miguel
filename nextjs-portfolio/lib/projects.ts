@@ -36,7 +36,7 @@ const getSortedProjectsData = (): ProjectItem[] => {
             image: matterResult.data.image,
             url: matterResult.data.url,
             tags: matterResult.data.tags,
-            stack: matterResult.data.technologies,
+            stack: matterResult.data.stack,
             stared: matterResult.data.stared,
             // Format the date using Moment.js
             date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
@@ -79,6 +79,18 @@ export const getCategoriesdProjectsData = (): Record<string, ProjectItem[]> => {
     return categorisedProjects;
 }
 
+export const getStarredProjectsData = (): ProjectItem[] => {
+    const sortedProjects = getSortedProjectsData();
+    const starredProjects: ProjectItem[] = [];
+
+    sortedProjects.forEach((project) => {
+        if (project.stared) {
+            starredProjects.push(project);
+        }
+    });
+    return starredProjects;
+};
+
 export const getProjectData = async (id:string) => {
     const fullPath = path.join(projectsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -106,7 +118,7 @@ export const getProjectData = async (id:string) => {
         image: matterResult.data.image,
         url: matterResult.data.url,
         tags: matterResult.data.tags,
-        technologies: matterResult.data.technologies,
+        stack: matterResult.data.stack,
         date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
         github: matterResult.data.github,
         live: matterResult.data.live,
