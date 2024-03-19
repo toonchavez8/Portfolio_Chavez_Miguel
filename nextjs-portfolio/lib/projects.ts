@@ -2,10 +2,14 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import moment from "moment";
-import { remark } from "remark"
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+
 import html from "remark-html"
 import type { ProjectItem } from "@/types";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import rehypePrettyCode from "rehype-pretty-code";
 
 // Define the directory where project markdown files are located
 const projectsDirectory = path.join(process.cwd(), "projects");
@@ -81,8 +85,19 @@ export const getProjectData = async (id:string) => {
     const fullPath = path.join(projectsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
-    const processedContent = await remark()
-    .use(html)
+    const processedContent = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypePrettyCode,{
+
+        keepBackground: false,
+        defaultLang: {
+            block: 'plaintext',
+            inline: 'plaintext'
+        },
+        theme:
+            'github-dark'})
+    .use(rehypeStringify)
     .process(matterResult.content)
 
     const projectHtml = processedContent.toString();

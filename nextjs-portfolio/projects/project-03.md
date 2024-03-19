@@ -35,7 +35,7 @@ live: https://example.com/live/project3
    - Understanding and using basic types: `number`, `string`, `boolean`.
    - Exploring type inference.
 
-#### **Session 2: Advanced Types and Functions (1 hour)**
+## **Session 2: Advanced Types and Functions (1 hour)**
 
 1. **Type Annotations and Declarations**
    - Explicitly declaring variable types.
@@ -54,7 +54,7 @@ live: https://example.com/live/project3
    - Optional and default parameters.
    - Arrow functions.
 
-#### **Session 3: Object-Oriented Programming (1 hour)**
+## **Session 3: Object-Oriented Programming (1 hour)**
 
 1. **Introduction to Objects in TypeScript**
    - Creating and using objects.
@@ -72,7 +72,7 @@ live: https://example.com/live/project3
    - Understanding public, private, and protected.
    - Using static properties and methods.
 
-#### **Session 4: Advanced Topics and Real-World Applications (1 hour)**
+## **Session 4: Advanced Topics and Real-World Applications (1 hour)**
 
 1. **Generics**
    - Introduction to generics and their use cases.
@@ -101,9 +101,9 @@ live: https://example.com/live/project3
 
 Remember to adapt the pacing based on your group's familiarity with programming concepts and their learning preferences. Enjoy teaching TypeScript!
 
-```jsx
-      <main className="p-4md:gap-6 relative mx-auto  flex w-11/12 flex-col items-center gap-2 overflow-hidden  md:w-10/12 lg:w-7/12 ">
-            <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
-            <Projectsection title="Projects" />
-        </main>
+```tsx showLineNumbers title="App.tsx"
+<main className="p-4md:gap-6 relative mx-auto  flex w-11/12 flex-col items-center gap-2 overflow-hidden  md:w-10/12 lg:w-7/12 ">
+    <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
+    <Projectsection title="Projects" />
+</main>
 ```

@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
-}
-
 @layer utilities {
     .text-balance {
         text-wrap: balance;
@@ -31,6 +17,27 @@ body {
     @apply border border-red-700;
 }
 
-article > pre {
-    @apply mockup-code;
+article > figure {
+    @apply relative max-w-full text-pretty;
+}
+article > figure > figcaption {
+    @apply absolute right-0 m-0 mr-2 rounded-sm bg-primary p-1 text-primary;
+}
+
+article > figure > pre {
+    @apply mockup-code  text-pretty;
+}
+
+code[data-theme*=' '],
+code[data-theme*=' '] span {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    code[data-theme*=' '],
+    code[data-theme*=' '] span {
+        color: var(--shiki-dark);
+        background-color: var(--shiki-dark-bg);
+    }
 }
