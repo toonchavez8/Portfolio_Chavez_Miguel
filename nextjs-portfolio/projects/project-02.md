@@ -1,7 +1,7 @@
 ---
 name: Project 2
 description: Example description for Project 2
-image: project2.jpg
+image: https://picsum.photos/seed/picsum/200/300
 url: https://example.com/project2
 tags:
   - web

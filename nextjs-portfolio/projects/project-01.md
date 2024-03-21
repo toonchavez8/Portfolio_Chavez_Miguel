@@ -1,7 +1,7 @@
 ---
 name: Project 1
 description: Example description for Project 1
-image: project1.jpg
+image: https://picsum.photos/200/300?grayscale
 url: https://example.com/project1
 tags:
   - web

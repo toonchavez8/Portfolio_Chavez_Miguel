@@ -12,15 +12,14 @@ const Projectsection = (props: ProjectProps) => {
     console.log(projects);
 
     return (
-        <section className="w-full">
-            <h2 className="text-2xl font-bold">{props.title}</h2>
+        <section className="flex w-full flex-col justify-center gap-4 px-2 md:gap-6 md:px-4">
+            <h2 className="font-mono text-lg  opacity-60 ">
+                <span className="animate-pulse">&#47;&#47; </span>
+                {props.title}
+            </h2>
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
                 {projects.map((project) => (
-                    <Projectlistitem
-                        key={project.id} // Assuming 'id' is a unique identifier for each project
-                        stack={project.stack[0]}
-                        projects={[project]} // Wrap 'project' in an array to match 'Projectlistitem' prop type
-                    />
+                    <Projectlistitem key={project.id} stack={project.stack} project={project} />
                 ))}
             </div>
         </section>

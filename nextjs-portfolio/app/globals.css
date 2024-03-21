@@ -27,7 +27,7 @@ article > figure > figcaption {
 }
 
 article > figure > pre {
-    @apply mockup-code whitespace-pre-wrap rounded-lg bg-base-300 p-4 dark:bg-neutral/50;
+    @apply mockup-code whitespace-pre-wrap rounded-lg bg-base-300 p-4 saturate-150 dark:bg-neutral/50;
 }
 
 code {

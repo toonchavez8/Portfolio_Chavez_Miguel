@@ -1,7 +1,7 @@
 ---
 name: Project 3
 description: Example description for Project 3
-image: project3.jpg
+image: https://picsum.photos/id/237/200/300
 url: https://example.com/project3
 tags:
   - mobile
