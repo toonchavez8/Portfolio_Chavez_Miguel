@@ -6,7 +6,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
     const projectData = await getProjectData(params.slug);
 
     return (
-        <main className="font-neutral mx-auto flex w-11/12 flex-col items-center gap-8 pt-4 dark:text-base-100 md:w-7/12">
+        <main className="font-neutral mx-auto flex  flex-col items-center gap-8 pt-4 dark:text-base-100 ">
             <aside className="flex w-full justify-between">
                 <Link href="/" className="mb-8 flex items-center justify-center">
                     <MdArrowBackIosNew className="mr-2" />

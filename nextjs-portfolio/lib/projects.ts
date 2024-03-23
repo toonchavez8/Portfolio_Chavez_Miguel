@@ -127,4 +127,40 @@ export const getProjectData = async (id:string) => {
 
 }
 
+export const filterProjectsByStack = (stackId: string): ProjectItem[] => {
+    const sortedProjects = getSortedProjectsData();
 
+    // Decode stackId to handle special characters or URL encoded characters
+    const decodedStackId = stackId ? decodeURIComponent(stackId) : '';
+
+    // Convert stack to lowercase for case-insensitive comparison
+    const lowercaseStack = decodedStackId.toLowerCase();
+
+    // Use filter method for readability and immutability
+    const filteredProjects = sortedProjects.filter((project) => {
+        const lowercaseProjectStack = project.stack.map((item) => item.toLowerCase());
+        return lowercaseProjectStack.includes(lowercaseStack);
+    });
+
+    return filteredProjects;
+};
+
+
+export const getAllStacks = (): string[] => {
+    const sortedProjects = getSortedProjectsData();
+    const uniqueStacksSet: Set<string> = new Set();
+
+    // Iterate over each project and extract its stacks
+    sortedProjects.forEach((project) => {
+        // Iterate over each stack of the project
+        project.stack.forEach((stack) => {
+            // Add the stack to the Set
+            uniqueStacksSet.add(stack.toLowerCase()); // Convert to lowercase for case-insensitive comparison
+        });
+    });
+
+    // Convert the Set back to an array
+    const uniqueStacksArray: string[] = Array.from(uniqueStacksSet);
+
+    return uniqueStacksArray;
+};

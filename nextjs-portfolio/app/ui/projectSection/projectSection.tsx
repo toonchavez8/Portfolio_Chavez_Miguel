@@ -9,7 +9,6 @@ interface ProjectProps {
 
 const Projectsection = (props: ProjectProps) => {
     const projects = getStarredProjectsData();
-    console.log(projects);
 
     return (
         <section className="flex w-full flex-col justify-center gap-4 px-2 md:gap-6 md:px-4">
@@ -17,7 +16,7 @@ const Projectsection = (props: ProjectProps) => {
                 <span className="animate-pulse">&#47;&#47; </span>
                 {props.title}
             </h2>
-            <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="grid w-full grid-cols-1 gap-4 ">
                 {projects.map((project) => (
                     <Projectlistitem key={project.id} stack={project.stack} project={project} />
                 ))}
