@@ -16,7 +16,10 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
         event.stopPropagation();
     };
     return (
-        <Link href={`/projects/${project.id}`} key={project.id} className=" ">
+        <Link
+            href={`/projects/${project.id}`}
+            key={project.id}
+            aria-label={`to project ${project.name}`}>
             <article className=" relative flex  flex-row items-center justify-around rounded-lg border border-neutral/25 bg-opacity-10 p-2 antialiased   backdrop-blur transition hover:border-viridian-600  hover:bg-viridian-50 hover:bg-opacity-25 dark:border-shark-700 dark:bg-opacity-5 dark:hover:bg-accent/10 ">
                 <Image
                     src={project.image}
@@ -36,9 +39,10 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
                             {stack.map((stack) => (
                                 <Link
                                     href={'/projects/stack/' + stack}
-                                    className="badge badge-primary badge-outline badge-sm font-mono text-sm font-semibold"
-                                    key={stack}>
-                                    &bull; {stack}
+                                    className="badge badge-primary badge-outline badge-sm font-mono text-sm font-semibold hover:scale-110 hover:text-primary hover:dark:text-base-100"
+                                    key={stack}
+                                    aria-label={`to stack ${stack}`}>
+                                    {stack}
                                 </Link>
                             ))}
                         </div>

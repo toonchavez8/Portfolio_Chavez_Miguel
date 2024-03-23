@@ -28,6 +28,8 @@ const getSortedProjectsData = (): ProjectItem[] => {
         // Parse the front matter and content from the markdown file
         const matterResult = matter(fileContents);
 
+        const lowercaseStack = matterResult.data.stack.map((item: string) => item.toLowerCase());
+
         // Assemble the project data object
         const projectData: ProjectItem = {
             id,
@@ -36,7 +38,7 @@ const getSortedProjectsData = (): ProjectItem[] => {
             image: matterResult.data.image,
             url: matterResult.data.url,
             tags: matterResult.data.tags,
-            stack: matterResult.data.stack,
+            stack: lowercaseStack,
             stared: matterResult.data.stared,
             // Format the date using Moment.js
             date: moment(matterResult.data.date).format("MMMM DD, YYYY"),

@@ -13,7 +13,9 @@ const Projectsection = (props: ProjectProps) => {
     return (
         <section className="flex w-full flex-col justify-center gap-4 px-2 md:gap-6 md:px-4">
             <h2 className="font-mono text-lg  opacity-60 ">
-                <span className="animate-pulse">&#47;&#47; </span>
+                <span className=" animate-pulse" aria-hidden="true">
+                    &#47;&#47;{' '}
+                </span>
                 {props.title}
             </h2>
             <div className="grid w-full grid-cols-1 gap-4 ">
