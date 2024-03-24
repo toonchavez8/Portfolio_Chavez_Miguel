@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import './globals.css';
-import { NavBar } from '@/app/ui/NavBar/NavBar';
-import { Footer } from '@/app/ui/Footer/Footer';
+import { NavBar } from '@/ui/NavBar/NavBar';
+import { Footer } from '@/ui/Footer/Footer';
 import { Providers } from '@/app/providers';
-import { DotBackgroundDemo } from '@/app/ui/Accentuily_ui/Background-Boxes';
+import { DotBackgroundDemo } from '@/ui/Accentuily_ui/Background-Boxes';
 
 export const metadata: Metadata = {
     title: {
