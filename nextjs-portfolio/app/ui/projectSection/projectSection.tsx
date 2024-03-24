@@ -2,6 +2,7 @@ import { getStarredProjectsData } from '@/lib/projects';
 
 import React from 'react';
 import Projectlistitem from './projectlistitem';
+import Sectiontitles from '../atomic/sectiontitles';
 
 interface ProjectProps {
     title: string;
@@ -12,12 +13,7 @@ const Projectsection = (props: ProjectProps) => {
 
     return (
         <section className="flex w-full flex-col justify-center gap-4 px-2 md:gap-6 md:px-4">
-            <h2 className="font-mono text-lg  opacity-60 ">
-                <span className=" animate-pulse" aria-hidden="true">
-                    &#47;&#47;{' '}
-                </span>
-                {props.title}
-            </h2>
+            <Sectiontitles title={props.title} />
             <div className="grid w-full grid-cols-1 gap-4 ">
                 {projects.map((project) => (
                     <Projectlistitem key={project.id} stack={project.stack} project={project} />

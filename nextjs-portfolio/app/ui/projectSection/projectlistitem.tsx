@@ -20,7 +20,7 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
             href={`/projects/${project.id}`}
             key={project.id}
             aria-label={`to project ${project.name}`}>
-            <article className=" relative flex  flex-row items-center justify-around rounded-lg border border-neutral/25 bg-opacity-10 p-2 antialiased   backdrop-blur transition hover:border-viridian-600  hover:bg-viridian-50 hover:bg-opacity-25 dark:border-shark-700 dark:bg-opacity-5 dark:hover:bg-accent/10 ">
+            <article className=" relative flex  flex-row items-center justify-around rounded-lg border border-neutral/25 bg-opacity-10 p-2 antialiased backdrop-blur-sm transition hover:border-viridian-600  hover:bg-viridian-400/5  dark:border-shark-700/50 dark:bg-opacity-5 hover:dark:border-shark-500/75 dark:hover:bg-viridian-950/10 ">
                 <Image
                     src={project.image}
                     alt={project.name}

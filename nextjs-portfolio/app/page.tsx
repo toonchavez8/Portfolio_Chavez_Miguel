@@ -1,5 +1,6 @@
 import Hero from '@/app/ui/hero';
 import Projectsection from '@/app/ui/projectSection/projectSection';
+import Educationsection from '@/app/ui/education/educationsection';
 export default function Home() {
     return (
         <main
@@ -7,6 +8,7 @@ export default function Home() {
             id="main">
             <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
             <Projectsection title="Projects" />
+            <Educationsection title="Education" />
         </main>
     );
 }
