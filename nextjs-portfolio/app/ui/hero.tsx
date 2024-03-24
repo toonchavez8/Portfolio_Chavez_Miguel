@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Lastupdatedbadge from '@/ui/ClientComponents/lastupdatedbadge';
+import Lastupdatedbadge from '@/app/ui/ClientComponents/lastupdatedbadge';
 
 interface HeroProps {
     title: string;

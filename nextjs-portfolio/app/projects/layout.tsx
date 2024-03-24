@@ -1,5 +1,5 @@
 import React from 'react';
-import Projectstacks from '@/ui/projectstack';
+import Projectstacks from '@/app/ui/projectstack';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
     return (

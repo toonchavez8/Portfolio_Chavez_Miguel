@@ -5,7 +5,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/ui/atomic/accordion';
+} from '@/app/ui/atomic/accordion';
 
 interface EducationProps {
     title: string;

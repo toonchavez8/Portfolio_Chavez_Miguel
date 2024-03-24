@@ -1,6 +1,6 @@
-import Hero from '@/ui/hero';
-import Projectsection from '@/ui/projectSection/projectSection';
-import Educationsection from '@/ui/education/educationsection';
+import Hero from '@/app/ui/hero';
+import Projectsection from '@/app/ui/projectSection/projectSection';
+import Educationsection from '@/app/ui/education/educationsection';
 export default function Home() {
     return (
         <main
