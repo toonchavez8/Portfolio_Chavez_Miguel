@@ -43,18 +43,6 @@ const Project = async ({ params }: { params: { slug: string } }) => {
                 dangerouslySetInnerHTML={{ __html: projectData.content }}
                 className="  prose w-full dark:prose-invert prose-figcaption:text-white"
             />
-
-            <div className="flex w-full justify-start  text-base">
-                {projectData.links.map((link) => (
-                    <a
-                        key={link.name}
-                        href={link.url}
-                        className="text-base-500 flex items-center gap-2 hover:text-base-100">
-                        <Slash />
-                        {link.name}
-                    </a>
-                ))}
-            </div>
         </main>
     );
 };
