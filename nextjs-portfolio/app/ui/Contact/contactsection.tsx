@@ -37,21 +37,16 @@ const Contactsection = () => {
             <Separator className="animation-pulse w-0 opacity-50 transition-all ease-in-out group-hover:w-full" />
             <div className="flex  flex-wrap  items-center justify-center gap-4 text-sm md:gap-6">
                 {socialLinks.map((link) => (
-                    <>
-                        <Link
-                            href={`${link.url}`}
-                            key={link.name}
-                            aria-label={`to ${link.text}'s ${link.name} page`}>
-                            <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700 border-opacity-0 p-2 px-4 hover:border-primary/50 dark:hover:border-primary">
-                                {link.icon}
-                                <span className="hidden md:block">{link.name}</span>
-                            </code>
-                        </Link>
-                        <Separator
-                            orientation="vertical"
-                            className="h-5 w-px bg-neutral/20 dark:bg-shark-700"
-                        />
-                    </>
+                    <Link
+                        href={`${link.url}`}
+                        key={link.name}
+                        aria-label={`to ${link.text}'s ${link.name} page`}
+                        className="  border-r border-shark-500 pe-3 dark:border-shark-700">
+                        <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700 border-opacity-0 p-2 px-4 hover:border-primary/50 dark:hover:border-primary">
+                            {link.icon}
+                            <span className="hidden md:block">{link.name}</span>
+                        </code>
+                    </Link>
                 ))}
                 <Link href="mailto:toonchavez8@gmail.com" aria-label="send me an email">
                     <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700 border-opacity-0 p-2 hover:border-primary/50 dark:hover:border-primary">
