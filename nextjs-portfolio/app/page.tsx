@@ -1,6 +1,7 @@
 import Hero from '@/app/ui/hero';
 import Projectsection from '@/app/ui/projectSection/projectSection';
 import Educationsection from '@/app/ui/education/educationsection';
+import Contactsection from '@/app/ui/Contact/contactsection';
 export default function Home() {
     return (
         <main
@@ -9,6 +10,7 @@ export default function Home() {
             <Hero title="Miguel Chavez" sub="Full Stack Dev, Motion Designer and a bit more" />
             <Projectsection title="Projects" />
             <Educationsection title="Education" />
+            <Contactsection />
         </main>
     );
 }
