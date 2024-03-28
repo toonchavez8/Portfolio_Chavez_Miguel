@@ -1,6 +1,5 @@
 import { SiAboutdotme } from 'react-icons/si';
 import { GoBook } from 'react-icons/go';
-import { FaLinkedin } from 'react-icons/fa6';
 import Link from 'next/link';
 import LocationTime from './locationtime';
 
