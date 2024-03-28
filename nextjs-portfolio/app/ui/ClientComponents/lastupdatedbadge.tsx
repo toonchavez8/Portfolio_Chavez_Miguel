@@ -22,14 +22,14 @@ const Lastupdatedbadge = () => {
                 const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
                 if (diffDays > 7) {
                     // If more than a week ago, display in terms of weeks
-                    const diffWeeks = Math.floor(diffDays / 5);
+                    const diffWeeks = Math.floor(diffDays / 7);
                     setLastUpdated(`${diffWeeks} week${diffWeeks > 1 ? 's' : ''} ago`);
                 } else if (diffDays > 0) {
                     // If less than a week ago but more than a day, display the number of days ago
                     setLastUpdated(`${diffDays} day${diffDays > 1 ? 's' : ''} ago`);
                 } else {
                     // If updated today, show 'Updated now'
-                    setLastUpdated('Updated now');
+                    setLastUpdated('today');
                 }
             } catch (error) {
                 console.error('Error fetching last commit:', error);
