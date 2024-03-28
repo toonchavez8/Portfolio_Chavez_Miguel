@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { NavBar } from '@/app/ui/NavBar/NavBar';
 import { Footer } from '@/app/ui/Footer/Footer';
@@ -39,7 +38,6 @@ export default function RootLayout({
                     {children}
                     <Footer />
                     <DotBackgroundDemo />
-                    <SpeedInsights />
                 </body>
             </Providers>
         </html>
