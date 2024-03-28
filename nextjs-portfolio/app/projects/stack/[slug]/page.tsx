@@ -12,7 +12,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
                         No projects found for{' '}
                         <span
                             className="
-                            text-primary
+                            text-primary-500
                         dark:text-neutral-content">
                             {params.slug}
                         </span>
@@ -22,6 +22,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
         );
     }
 
+    // Here is a reference snippet of code from nextjs-portfolio/app/projects/[slug]/page.tsx:
     return (
         <main id="main" className="focus:outline-neutral-content">
             <section>
