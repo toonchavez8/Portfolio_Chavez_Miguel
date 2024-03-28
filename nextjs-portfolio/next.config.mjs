@@ -9,6 +9,16 @@ const nextConfig = {
     // Optionally, add any other Next.js config below
     experimental: {
         ppr: true
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'picsum.photos',
+                port: '',
+                pathname: '/**'
+            }
+        ]
     }
 };
 

@@ -34,7 +34,7 @@ export default function RootLayout({
             className={`${GeistSans.variable} ${GeistMono.variable}  relative`}
             suppressHydrationWarning>
             <Providers>
-                <body className="group  relative isolate min-h-screen bg-base-200 bg-gradient-to-tr from-viridian-100 to-base-300 px-4 pt-4  text-neutral antialiased dark:bg-neutral dark:bg-gradient-to-br dark:from-viridian-950 dark:to-neutral dark:text-base-100">
+                <body className=" group relative isolate min-h-screen bg-base-200 px-4  pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100 ">
                     <NavBar />
                     {children}
                     <Footer />

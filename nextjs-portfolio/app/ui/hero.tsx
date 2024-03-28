@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = (props: HeroProps) => {
     return (
-        <section className=" relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start  md:gap-8 ">
+        <section className=" relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start md:mt-8  md:gap-8 ">
             <div className="flex items-center justify-center gap-2 pe-4 md:gap-8 md:pe-8">
                 <Image
                     alt="profile image of miguel"
@@ -19,7 +19,7 @@ const Hero = (props: HeroProps) => {
                     className="hidden rounded-full xs:block"
                 />
                 <div className="flex flex-col items-start justify-start gap-1">
-                    <h1 className="  text-lg font-bold md:text-3xl"> {props.title} </h1>
+                    <h1 className="  font-mono text-lg font-bold md:text-3xl"> {props.title} </h1>
                     <p className="bg-gradient-to-r from-neutral to-neutral/50 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl">
                         {props.sub}
                     </p>
