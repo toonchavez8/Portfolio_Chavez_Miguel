@@ -40,7 +40,7 @@
 	},
 	"homepage": "https://github.com/toonchavez8/22_CDHS-51270_Project-01_Portfolio#readme",
 	"devDependencies": {
-		"node-sass": "^8.0.0",
+	
 		"nodemon": "^2.0.21",
 		"sass": "^1.71.1"
 	},
