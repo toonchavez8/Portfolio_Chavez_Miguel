@@ -76,13 +76,11 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-
-
 .debug {
     @apply border border-red-700;
 }
 
-article > p> img {
+article > p > img {
     @apply rounded-lg;
 }
 

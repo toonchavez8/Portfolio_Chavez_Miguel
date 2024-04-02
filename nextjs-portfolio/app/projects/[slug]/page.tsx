@@ -42,7 +42,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
                 <div className="flex gap-2  md:flex-col md:gap-4">
                     <p className=" font-thin">{projectData.date}</p>
                     <p className=" flex  items-center gap-1 font-thin md:gap-3">
-                        <IoReaderOutline className="" />
+                        <IoReaderOutline />
                         {projectData.readingTime}
                     </p>
                 </div>
