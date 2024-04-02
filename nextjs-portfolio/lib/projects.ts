@@ -8,6 +8,7 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import type { ProjectItem } from "@/types";
 import rehypePrettyCode from "rehype-pretty-code";
+import readingDuration from 'reading-duration';
 
 // Define the directory where project markdown files are located
 const projectsDirectory = path.join(process.cwd(), "projects");
@@ -27,6 +28,8 @@ const getSortedProjectsData = (): ProjectItem[] => {
         const fileContents = fs.readFileSync(fullPath, "utf8");
         // Parse the front matter and content from the markdown file
         const matterResult = matter(fileContents);
+        const readingTime = readingDuration(matterResult.content);
+        console.log("🚀 ~ allProjectsData ~ readingTime:", readingTime)
 
         const lowercaseStack = matterResult.data.stack.map((item: string) => item.toLowerCase());
 
@@ -42,9 +45,11 @@ const getSortedProjectsData = (): ProjectItem[] => {
             stared: matterResult.data.stared,
             // Format the date using Moment.js
             date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
+            readingTime: readingTime,
             github: matterResult.data.github,
             live: matterResult.data.live,
         };
+
 
         // Return the project data object
         return projectData;
@@ -122,6 +127,10 @@ export const getProjectData = async (id:string) => {
         tags: matterResult.data.tags,
         stack: matterResult.data.stack,
         date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
+        stared: matterResult.data.stared,
+        readingTime: readingDuration(matterResult.content ,{
+            emoji:false
+        }),
         github: matterResult.data.github,
         live: matterResult.data.live,
         content: projectHtml,

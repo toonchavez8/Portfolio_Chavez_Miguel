@@ -10,4 +10,5 @@ export type ProjectItem ={
     stared: boolean;
     github: string;
     live: string;
+    readingTime: string;
 }

@@ -82,6 +82,10 @@ body {
     @apply border border-red-700;
 }
 
+article > p> img {
+    @apply rounded-lg;
+}
+
 article > figure {
     @apply relative isolate mx-auto  w-11/12 md:max-w-prose;
 }

@@ -2,9 +2,10 @@ import React from 'react';
 
 const page = () => {
     return (
-        <main id="main" className="prose mx-auto flex w-11/12 flex-col dark:prose-invert md:w-7/12">
+        <main id="main" className="mx-auto flex w-11/12 flex-col md:w-7/12">
             <section>
-                <h1> Now</h1>
+                <h1>Now</h1>
+
                 <p>
                     Lets pertend were friends and we havent seen each other in 5 years, what would
                     we say? Thats what this page is <span className="font-bold">"about"</span>{' '}
