@@ -4,6 +4,8 @@ import { filterProjectsByStack } from '@/lib/projects';
 const page = async ({ params }: { params: { slug: string } }) => {
     const filteredProjects = filterProjectsByStack(params.slug);
 
+    const urlSlug = params.slug.replace(/%20/g, ' ');
+
     if (filteredProjects.length === 0) {
         return (
             <main id="main" className="focus:outline-neutral-content">
@@ -14,7 +16,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
                             className="
                             text-primary-500
                         dark:text-neutral-content">
-                            {params.slug}
+                            {urlSlug}
                         </span>
                     </h1>
                 </section>
@@ -26,7 +28,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
     return (
         <main id="main" className="focus:outline-neutral-content">
             <section>
-                <h1 className="text-4xl font-bold">{params.slug}</h1>
+                <h1 className="text-4xl font-bold capitalize">{urlSlug}</h1>
             </section>
 
             <section className="grid w-full grid-cols-1 gap-4 ">

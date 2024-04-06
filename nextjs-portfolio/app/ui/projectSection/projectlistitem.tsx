@@ -27,6 +27,9 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
                     width={100}
                     height={100}
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    priority={false}
+                    placeholder="blur"
+                    blurDataURL={project.image}
                     loading="lazy"
                     className="hidden aspect-square rounded-lg object-cover md:block md:rounded-lg"
                 />

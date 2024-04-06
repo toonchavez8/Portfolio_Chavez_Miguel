@@ -10,7 +10,7 @@ stack:
   - Node.js
   - Express
   - MongoDB
-date: 2024-03-15
+date: 03-15-2024
 github: https://github.com/example/project2
 live: https://example.com/live/project2
 stared: true
