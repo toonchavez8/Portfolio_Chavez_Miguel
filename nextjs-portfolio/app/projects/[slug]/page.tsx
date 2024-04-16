@@ -10,6 +10,10 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator
 } from '@/app/ui/atomic/breadcrumb';
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+import LiveHoverButton from '@/app/ui/atomic/livehover';
+import { TbLivePhoto } from 'react-icons/tb';
 
 const Project = async ({ params }: { params: { slug: string } }) => {
     const projectData = await getProjectData(params.slug);
@@ -51,6 +55,21 @@ const Project = async ({ params }: { params: { slug: string } }) => {
                 dangerouslySetInnerHTML={{ __html: projectData.content }}
                 className="  prose w-full dark:prose-invert prose-figcaption:text-white"
             />
+            <div className="  flex w-full  flex-wrap items-center justify-center gap-4">
+                <Link
+                    href={projectData.live}
+                    className="  badge badge-secondary  btn-sm flex gap-2 rounded-full bg-opacity-30 py-0 font-mono filter backdrop-blur-xl transition duration-150 hover:scale-105 hover:animate-pulse  hover:bg-opacity-80 hover:text-base-100"
+                    target="_blank">
+                    <TbLivePhoto className="animate-pulse text-viridian-500 saturate-150 motion-safe:animate-spin" />{' '}
+                    <span className="hidden xs:block">live</span>
+                </Link>
+                <Link
+                    href={projectData.github}
+                    className=" badge badge-primary badge-outline btn-sm z-10 flex gap-2 rounded-full py-0 font-mono  duration-150 dark:badge-outline hover:bg-inherit hover:bg-opacity-80 hover:text-viridian-500 dark:hover:text-viridian-300"
+                    target="_blank">
+                    <FaGithub /> <span className="hidden xs:block">repo</span>
+                </Link>
+            </div>
         </main>
     );
 };

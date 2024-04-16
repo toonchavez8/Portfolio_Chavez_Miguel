@@ -1,7 +1,7 @@
 ---
-name: Interactive rating component - FEM
-description: Example description for Project 1
-image: https://res.cloudinary.com/duzeqpmgg/image/upload/v1712004000/toonchavez_Dev/projects/01-rating-component-vercel-app_vii8df.png
+name: Interactive rating component
+description: FrontEnd Mentor interactive rating component
+image: https://res.cloudinary.com/duzeqpmgg/image/upload/v1713281977/toonchavez_Dev/projects/interactive-rating-component_othen5.png
 url: https://example.com/project1
 tags:
   - web
@@ -10,19 +10,20 @@ stack:
   - HTML
   - SCSS
   - JavaScript
-date: 06-01-2020
+date: 06-01-2022
 github: https://github.com/toonchavez8/01_RatingComponent
 live: https://01-rating-component.vercel.app/
 stared: true
 readingTime: 0
 ---
 
-
 # Interactive rating component
+
+![BlogCover](https://res.cloudinary.com/duzeqpmgg/image/upload/v1713281977/toonchavez_Dev/projects/interactive-rating-component_othen5.png)
 
 This is one of the first projects I did outside of the course I was enrolled in at the time, and it's a fairly simple rating component.
 
-Heres an image of the final result:
+Here's an image of the final result:
 
 ![Interactive rating component](https://res.cloudinary.com/duzeqpmgg/image/upload/v1712004000/toonchavez_Dev/projects/01-rating-component-vercel-app_vii8df.png)
 
@@ -39,7 +40,8 @@ Here are some code snippets I particularly liked from this project:
 #### HTML
 
 ```html title="index.html"
-<div class="lottie"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" class="lottie"></script>
+  <div class="lottie">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" class="lottie"></script>
     <lottie-player src="/images/illustration-thank-you.json"
     background="#0"
     speed="1"
@@ -52,7 +54,7 @@ Here are some code snippets I particularly liked from this project:
 
 ```
 
-I have a background in motion design and animation so everytime i can use animations I like, it's a nice way to add some life to a design.
+I have a background in motion design and animation so everytime i can use animations I make i will definitly try, it's a nice way to add some life to a design.
 
 #### SCSS
 
@@ -81,9 +83,9 @@ function handleRatings(event) {
 }
 ```
 
-Something that didnt really click until i worked on this component was managing functions to handle other logic, this to me at the moment was very clean how on click i called the function that would actually handle the logic.
+Something that didnt really click until i worked on this component was managing functions to handle other logic, this to me at the moment was very clean how `onclick` i called the function that would actually handle the logic.
 
-Its a fun simple solution that looking back still holds up.
+Its a fun simple solution that looking back still holds up for me.
 
 ### What I Learned
 
@@ -93,6 +95,4 @@ Through working on this project, I learned:
 - Improved my understanding of flexbox layout for positioning elements.
 - Enhanced my ability to implement designs from external sources.
 
-Feel free to suggest any other additions or changes!
-
-This provides a more detailed overview of your project, including specific code snippets and a section highlighting what you learned from the experience.
+## Links to live and repo
