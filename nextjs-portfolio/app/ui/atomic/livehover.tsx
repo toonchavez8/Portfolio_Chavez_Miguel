@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { HoverCardContent, HoverCardTrigger, HoverCard } from '@/app/ui/atomic/hovercard';
 import { TbLivePhoto } from 'react-icons/tb';
@@ -13,7 +14,7 @@ interface LiveHoverButtonProps {
 const LiveHoverButton: React.FC<LiveHoverButtonProps> = ({ live, image, name, handleClick }) => {
     return (
         <HoverCard>
-            <HoverCardTrigger>
+            <HoverCardTrigger asChild>
                 <Link
                     href={live}
                     className="  badge badge-secondary  btn-sm flex gap-2 rounded-full bg-opacity-30 py-0 font-mono filter backdrop-blur-xl transition duration-150 hover:scale-105 hover:animate-pulse  hover:bg-opacity-80 hover:text-base-100"

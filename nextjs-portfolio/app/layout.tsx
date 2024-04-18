@@ -28,18 +28,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={`${GeistSans.variable} ${GeistMono.variable}  relative`}
-            suppressHydrationWarning>
-            <Providers>
-                <body className=" group relative isolate min-h-screen bg-base-200 px-4  pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100 ">
+        <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}  relative`}>
+            <body
+                className=" group relative isolate min-h-screen bg-base-200 px-4  pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100 "
+                suppressHydrationWarning>
+                <Providers>
                     <NavBar />
                     {children}
                     <Footer />
                     <DotBackgroundDemo />
-                </body>
-            </Providers>
+                </Providers>
+            </body>
         </html>
     );
 }
