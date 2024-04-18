@@ -36,12 +36,12 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
                 loading="lazy"
                 className="hidden aspect-square rounded-lg object-cover md:block md:rounded-lg"
             />
-            <div className=" flex  w-full flex-col items-start justify-start gap-1  px-4 ">
+            <div className="  flex w-full flex-col items-start justify-start gap-1 px-4 ">
                 <div className=" flex w-full items-center justify-between">
                     <p className=" hidden font-mono  text-xs font-extralight opacity-60 md:block md:text-sm ">
                         {project.date}
                     </p>
-                    <div className="hidden flex-wrap items-center justify-center gap-2 md:flex ">
+                    <div className="z-10 hidden flex-wrap items-center justify-center gap-2 md:flex ">
                         {stack.map((stack) => (
                             <Link
                                 href={'/projects/stack/' + stack}
