@@ -95,7 +95,9 @@ export const getStarredProjectsData = (): ProjectItem[] => {
     });
     return starredProjects;
 };
-
+export const getAllProjects = (): ProjectItem[] => {
+    return getSortedProjectsData();
+};
 export const getProjectData = async (id: string) => {
     const fullPath = path.join(projectsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
