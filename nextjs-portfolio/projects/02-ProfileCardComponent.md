@@ -12,7 +12,7 @@ stack:
 date: 06-08-2022
 github: https://github.com/toonchavez8/02_ProfileCardComponent
 live: http://02-profile-card-component.vercel.app/
-stared: true
+stared: false
 readingTime: 0
 ---
 
