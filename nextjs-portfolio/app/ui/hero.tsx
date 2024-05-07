@@ -19,8 +19,11 @@ const Hero = (props: HeroProps) => {
                     className="hidden rounded-full xs:block"
                 />
                 <div className="flex flex-col items-start justify-start gap-1">
-                    <h1 className="  font-mono text-lg font-bold md:text-3xl"> {props.title} </h1>
-                    <p className="bg-gradient-to-r from-neutral to-neutral/50 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl">
+                    <h1 className=" bg-gradient-to-t from-shark-500 to-shark-900 bg-clip-text text-lg font-bold text-transparent  dark:from-shark-100 dark:to-shark-50 md:text-3xl ">
+                        {' '}
+                        {props.title}{' '}
+                    </h1>
+                    <p className="bg-gradient-to-r from-shark-950 to-shark-600 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl">
                         {props.sub}
                     </p>
                 </div>

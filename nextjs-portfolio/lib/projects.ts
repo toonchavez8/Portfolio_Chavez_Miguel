@@ -1,16 +1,17 @@
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import moment from "moment";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import type { ProjectItem } from "@/types";
-import rehypePrettyCode from "rehype-pretty-code";
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+import moment from 'moment';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+import type { ProjectItem } from '@/types';
+import rehypePrettyCode from 'rehype-pretty-code';
+import readingDuration from 'reading-duration';
 
 // Define the directory where project markdown files are located
-const projectsDirectory = path.join(process.cwd(), "projects");
+const projectsDirectory = path.join(process.cwd(), 'projects');
 
 // Function to retrieve and sort project data from markdown files
 const getSortedProjectsData = (): ProjectItem[] => {
@@ -20,13 +21,14 @@ const getSortedProjectsData = (): ProjectItem[] => {
     // Map each file to its corresponding project data
     const allProjectsData = fileNames.map((fileName) => {
         // Extract the project ID from the file name
-        const id = fileName.replace(/\.md$/, "");
+        const id = fileName.replace(/\.md$/, '');
         // Get the full path to the markdown file
         const fullPath = path.join(projectsDirectory, fileName);
         // Read the content of the markdown file
-        const fileContents = fs.readFileSync(fullPath, "utf8");
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
         // Parse the front matter and content from the markdown file
         const matterResult = matter(fileContents);
+        const readingTime = readingDuration(matterResult.content);
 
         const lowercaseStack = matterResult.data.stack.map((item: string) => item.toLowerCase());
 
@@ -41,9 +43,10 @@ const getSortedProjectsData = (): ProjectItem[] => {
             stack: lowercaseStack,
             stared: matterResult.data.stared,
             // Format the date using Moment.js
-            date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
+            date: moment(matterResult.data.date).format('MMMM DD, YYYY'),
+            readingTime: readingTime,
             github: matterResult.data.github,
-            live: matterResult.data.live,
+            live: matterResult.data.live
         };
 
         // Return the project data object
@@ -52,7 +55,7 @@ const getSortedProjectsData = (): ProjectItem[] => {
 
     // Sort the projects by date in ascending order
     return allProjectsData.sort((a, b) => {
-        const format = "DD-MM-YYYY";
+        const format = 'MM-DD-YYYY';
         const dateOne = moment(a.date, format);
         const dateTwo = moment(b.date, format);
         if (dateOne.isBefore(dateTwo)) {
@@ -79,7 +82,7 @@ export const getCategoriesdProjectsData = (): Record<string, ProjectItem[]> => {
         });
     });
     return categorisedProjects;
-}
+};
 
 export const getStarredProjectsData = (): ProjectItem[] => {
     const sortedProjects = getSortedProjectsData();
@@ -92,26 +95,31 @@ export const getStarredProjectsData = (): ProjectItem[] => {
     });
     return starredProjects;
 };
-
-export const getProjectData = async (id:string) => {
+export const getAllProjects = (): ProjectItem[] => {
+    return getSortedProjectsData();
+};
+export const getProjectData = async (id: string) => {
     const fullPath = path.join(projectsDirectory, `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
     const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypePrettyCode,{
-
-        keepBackground: false,
-        defaultLang: {
-            block: 'plaintext',
-            inline: 'plaintext'
-        },
+        .use(remarkParse)
+        .use(remarkRehype)
+        .use(rehypePrettyCode, {
+            keepBackground: false,
+            defaultLang: {
+                block: 'plaintext',
+                inline: 'plaintext'
+            }
         })
-    .use(rehypeStringify)
-    .process(matterResult.content)
+        .use(rehypeStringify)
+        .process(matterResult.content);
 
     const projectHtml = processedContent.toString();
+
+    const date: string = moment(matterResult.data.date, 'MM-DD-YYYY').format('LL');
+
+    console.log('🚀 ~ getProjectData ~ date:', date);
 
     return {
         id,
@@ -121,13 +129,16 @@ export const getProjectData = async (id:string) => {
         url: matterResult.data.url,
         tags: matterResult.data.tags,
         stack: matterResult.data.stack,
-        date: moment(matterResult.data.date).format("MMMM DD, YYYY"),
+        date: date,
+        stared: matterResult.data.stared,
+        readingTime: readingDuration(matterResult.content, {
+            emoji: false
+        }),
         github: matterResult.data.github,
         live: matterResult.data.live,
-        content: projectHtml,
-    }
-
-}
+        content: projectHtml
+    };
+};
 
 export const filterProjectsByStack = (stackId: string): ProjectItem[] => {
     const sortedProjects = getSortedProjectsData();
@@ -146,7 +157,6 @@ export const filterProjectsByStack = (stackId: string): ProjectItem[] => {
 
     return filteredProjects;
 };
-
 
 export const getAllStacks = (): string[] => {
     const sortedProjects = getSortedProjectsData();

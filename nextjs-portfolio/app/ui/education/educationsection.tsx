@@ -26,15 +26,27 @@ const Educationsection = (props: EducationProps) => {
                         </span>
                     </AccordionTrigger>
                     <AccordionContent className="prose dark:prose-invert">
-                        <p>
-                            Completed a comprehensive program that covered the fundamentals and best
-                            practices of web development, JavaScript, React, and backend programming
-                            with node.
-                        </p>
-                        <p>
-                            Created and deployed my own SPA app using React with Vite, using
-                            Firebase as de DB
-                        </p>
+                        <ul>
+                            <li>
+                                Completed a comprehensive program that covered the fundamentals and
+                                best practices of web development, JavaScript, React, and backend
+                                programming with node.
+                            </li>
+                            <li>
+                                During the Web Development stage I learned how to build a multi-page
+                                portfolio with JS logic to handle form submission and mail
+                                confirmation.
+                            </li>
+                            <li>
+                                With react along with react router, i built an eccomerce website
+                                that allows users to search for products and add them to their cart,
+                                and send a confirmation email order with their reqeust,
+                            </li>
+                            <li>
+                                During 6 month backend stage i build a backend centric eccom with
+                                node.js, express, and mongodb and handlebars to handel the views.
+                            </li>
+                        </ul>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -47,15 +59,13 @@ const Educationsection = (props: EducationProps) => {
                         </span>
                     </AccordionTrigger>
                     <AccordionContent className="prose dark:prose-invert">
-                        <p>
-                            Completed a comprehensive program that covered the fundamentals and best
-                            practices of web development, JavaScript, React, and backend programming
-                            with node.
-                        </p>
-                        <p>
-                            Created and deployed my own SPA app using React with Vite, using
-                            Firebase as de DB
-                        </p>
+                        <ul>
+                            <li>
+                                Granted a scholership along with over 2500 others with whome only 50
+                                finalists were able to complete the course and i ranked 12th.
+                            </li>
+                            <li>learned html, css, js and react along with node</li>
+                        </ul>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -68,15 +78,12 @@ const Educationsection = (props: EducationProps) => {
                         </span>
                     </AccordionTrigger>
                     <AccordionContent className="prose dark:prose-invert">
-                        <p>
-                            Completed a comprehensive program that covered the fundamentals and best
-                            practices of web development, JavaScript, React, and backend programming
-                            with node.
-                        </p>
-                        <p>
-                            Created and deployed my own SPA app using React with Vite, using
-                            Firebase as de DB
-                        </p>
+                        <ul>
+                            <li>
+                                learned fundamentals of user reasarch and based on the results of
+                                the reseach craft ui
+                            </li>
+                        </ul>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem

@@ -10,7 +10,6 @@ interface ActivestacklinksProps {
 
 const Activestacklinks: React.FC<ActivestacklinksProps> = ({ stacks }) => {
     const pathname = usePathname();
-    console.log('🚀 ~ Activestacklinks ~ pathname:', pathname);
 
     const isActiveLink = (stack: string) => {
         return pathname.includes('/projects/stack/' + encodeURIComponent(stack));
