@@ -1,7 +1,7 @@
 ---
 name: Central Studio Eccomerce
 description:  Studio rental space rental site  
-image: https://res.cloudinary.com/duzeqpmgg/image/upload/v1713281977/toonchavez_Dev/projects/interactive-rating-component_othen5.png
+image: https://res.cloudinary.com/duzeqpmgg/image/upload/v1715361390/toonchavez_Dev/projects/centra-estudio-eccom_h735cn.png
 url: https://example.com/project1
 tags:
   - web
