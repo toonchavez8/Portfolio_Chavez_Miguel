@@ -1,7 +1,7 @@
 ---
 name: Classflow Hub
 description: FrontEnd Mentor interactive rating component
-image: https://res.cloudinary.com/duzeqpmgg/image/upload/v1713281977/toonchavez_Dev/projects/interactive-rating-component_othen5.png
+image: https://res.cloudinary.com/duzeqpmgg/image/upload/v1715361391/toonchavez_Dev/projects/class-flow-hub_klpspo.png
 url: https://example.com/project1
 tags:
   - web
