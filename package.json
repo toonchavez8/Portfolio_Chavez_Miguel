@@ -29,5 +29,11 @@
 		"@repo/typescript-config": "*",
 		"prettier": "^3.1.1",
 		"turbo": "^1.12.5"
+	},
+	"dependencies": {
+		"@tabler/icons-react": "^3.3.0",
+		"clsx": "^2.1.1",
+		"framer-motion": "^11.1.9",
+		"tailwind-merge": "^2.3.0"
 	}
 }
