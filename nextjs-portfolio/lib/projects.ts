@@ -68,20 +68,20 @@ const getSortedProjectsData = (): ProjectItem[] => {
     });
 };
 
-export const getCategoriesdProjectsData = (): Record<string, ProjectItem[]> => {
+export const getCategorizedProjectsData = (): Record<string, ProjectItem[]> => {
     const sortedProjects = getSortedProjectsData();
-    const categorisedProjects: Record<string, ProjectItem[]> = {};
+    const categorizedProjects: Record<string, ProjectItem[]> = {};
 
     sortedProjects.forEach((project) => {
         project.tags.forEach((tag) => {
-            if (categorisedProjects[tag]) {
-                categorisedProjects[tag].push(project);
+            if (categorizedProjects[tag]) {
+                categorizedProjects[tag].push(project);
             } else {
-                categorisedProjects[tag] = [project];
+                categorizedProjects[tag] = [project];
             }
         });
     });
-    return categorisedProjects;
+    return categorizedProjects;
 };
 
 export const getStarredProjectsData = (): ProjectItem[] => {
