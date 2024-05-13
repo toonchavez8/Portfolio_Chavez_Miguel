@@ -1,9 +1,4 @@
-import {
-    IconClipboardCopy,
-    IconFileBroken,
-    IconSignature,
-    IconTableColumn
-} from '@tabler/icons-react';
+import { IconFileBroken, IconSignature, IconTableColumn, IconNotebook } from '@tabler/icons-react';
 import { BentoGrid, BentoGridItem } from '@/app/ui/Accentuily_ui/Bento-Grid';
 
 export function NowSection() {
@@ -23,19 +18,20 @@ export function NowSection() {
     );
 }
 const Skeleton = () => (
-    <div className="debug flex h-full min-h-[6rem] w-full flex-1 rounded-xl  border border-transparent bg-neutral-100  bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:border-white/[0.2] dark:bg-black dark:bg-dot-white/[0.2]"></div>
+    <div className=" \ flex h-full min-h-[6rem] w-full flex-1  rounded-xl border border-primary  bg-neutral-100 bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:border-white/[0.2] dark:bg-black dark:bg-dot-white/[0.2] "></div>
 );
 const items = [
     {
-        title: 'The Dawn of Innovation',
-        description: 'Explore the birth of groundbreaking ideas and inventions.',
+        title: 'What im learning now',
+        description:
+            "I'm learning Python, data structures, and algorithms through Stanford's 'Learn to Code' mini-course and FreeCodeCamp",
         header: <Skeleton />,
         className: 'md:col-span-2',
-        icon: <IconClipboardCopy className="h-4 w-4 text-primary " />
+        icon: <IconNotebook className="h-4 w-4 text-primary " />
     },
     {
-        title: 'The Digital Revolution',
-        description: 'Dive into the transformative power of technology.',
+        title: 'What im reading?',
+        description: 'Dune.',
         header: <Skeleton />,
         className: 'md:col-span-1',
         icon: <IconFileBroken className="h-4 w-4 text-primary" />

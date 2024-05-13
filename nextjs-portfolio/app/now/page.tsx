@@ -5,12 +5,10 @@ import Sectiontitles from '../ui/atomic/sectiontitles';
 const page = () => {
     return (
         <main id="main" className=" mx-auto flex w-11/12 flex-col md:w-7/12">
-            <section className="prose flex flex-col gap-4 dark:prose-invert">
+            <section className="prose my-3 flex flex-col gap-4 dark:prose-invert ">
                 <Sectiontitles title="What I'm up to now" />
-                <p>
-                    consider me a friend who you haven't seen in a long time, this is what i would
-                    say
-                </p>
+                <p className="mb-0">Think of what you’d tell a friend you hadn’t seen in a year?</p>
+                <p className="mt-0">Thats what this seccion awnsers!</p>
                 <NowSection />
             </section>
         </main>
