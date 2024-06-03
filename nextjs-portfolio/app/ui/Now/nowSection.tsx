@@ -1,5 +1,12 @@
-import { IconFileBroken, IconSignature, IconTableColumn, IconNotebook } from '@tabler/icons-react';
+import {
+    IconFileBroken,
+    IconSignature,
+    IconTableColumn,
+    IconNotebook,
+    IconComet
+} from '@tabler/icons-react';
 import { BentoGrid, BentoGridItem } from '@/app/ui/Accentuily_ui/Bento-Grid';
+import { Meteors } from '@/app/ui/Accentuily_ui/metor';
 
 export function NowSection() {
     return (
@@ -33,7 +40,7 @@ const items = [
             "I'm learning Python, data structures, and algorithms through Stanford's 'Learn to Code' mini-course and FreeCodeCamp",
         header: (
             <Skeleton>
-                <figure className=" flex aspect-square w-2/3 flex-col items-start justify-around  py-1 transition-all duration-500 group-hover/bento:animate-pulse">
+                <figure className=" flex aspect-square h-full w-2/3 flex-col items-start justify-around  py-1 transition-all duration-500 group-hover/bento:animate-pulse">
                     <div className="h-4 w-4   rounded-full bg-primary transition-all duration-150 group-hover/bento:w-full" />
                     <div className="h-4 w-4   rounded-full bg-accent transition-all duration-150 group-hover/bento:w-2/3" />
                     <div className="h-4 w-4   rounded-full bg-primary transition-all duration-150 group-hover/bento:w-4/5" />
@@ -62,16 +69,20 @@ const items = [
         icon: <IconFileBroken className="h-4 w-4 text-primary" />
     },
     {
-        title: 'The Art of Design',
-        description: 'Discover the beauty of thoughtful and functional design.',
-        header: <Skeleton />,
+        title: 'What im aiming for?',
+        description: 'Im looking for freelance work in tech, building stuff.',
+        header: (
+            <Skeleton>
+                <Meteors className="bg-red-700 hover:bg-viridian-600 dark:hover:bg-viridian-500" />
+            </Skeleton>
+        ),
         className: 'md:col-span-1',
-        icon: <IconSignature className="h-4 w-4 text-primary" />
+        icon: <IconComet className="h-4 w-4 text-primary" />
     },
     {
-        title: 'The Power of Communication',
+        title: 'What im doing',
         description: 'Understand the impact of effective communication in our lives.',
-        header: <Skeleton />,
+        header: <Skeleton></Skeleton>,
         className: 'md:col-span-2',
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />
     }

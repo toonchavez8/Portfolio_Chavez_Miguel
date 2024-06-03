@@ -1,4 +1,3 @@
-import React from 'react';
 import { NowSection } from '@/app/ui/Now/nowSection';
 import Sectiontitles from '../ui/atomic/sectiontitles';
 
