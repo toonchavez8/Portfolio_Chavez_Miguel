@@ -56,11 +56,11 @@ const items = [
         description: 'Dune.',
         header: (
             <Skeleton>
-                <figure className="  debug flex h-full w-full max-w-fit flex-col  items-center justify-center py-1 transition-all  duration-500 group-hover/bento:-rotate-6 group-hover/bento:scale-110">
+                <figure className=" mx-auto flex h-full w-full max-w-fit flex-col items-center  justify-center  py-1 transition-all  duration-500 group-hover/bento:-rotate-6 group-hover/bento:scale-110">
                     <img
                         src="https://assets.literal.club/4/ckikds6gf01560zhfha1gtsvm.jpg?size=600"
                         alt="dune book cover"
-                        className="rounded-sm"
+                        className=" h-full rounded-sm"
                     />
                 </figure>
             </Skeleton>
@@ -81,7 +81,18 @@ const items = [
     },
     {
         title: 'What im doing',
-        description: 'Understand the impact of effective communication in our lives.',
+        description: (
+            <ul className="">
+                <li>Im live streaming some mini code projects</li>
+                <li>Preping for a Harry Potter themed DND game</li>
+                <li className="group/list">
+                    Bingeing one piece{' '}
+                    <span className="hidden text-sm text-primary transition-all ease-out group-hover/list:block ">
+                        Oh gawd what am i doing??
+                    </span>
+                </li>
+            </ul>
+        ),
         header: <Skeleton></Skeleton>,
         className: 'md:col-span-2',
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />
