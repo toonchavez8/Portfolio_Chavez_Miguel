@@ -9,7 +9,7 @@ stack:
   - Vite
   - Tailwind
   - React
-date: 12-10-2023
+date: 2023-12-10
 github: https://github.com/toonchavez8/class-flow-hub
 live: https://classflowhub.netlify.app/
 stared: true

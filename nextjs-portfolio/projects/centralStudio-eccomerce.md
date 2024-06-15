@@ -10,7 +10,7 @@ stack:
   - Vite
   - Tailwind
   - React
-date: 12-12-2023
+date: 2023-12-12
 github: https://github.com/toonchavez8/ChavezMiguel-Cntrl_Stdio-ecom
 live: https://centralestudio.netlify.app/
 stared: true

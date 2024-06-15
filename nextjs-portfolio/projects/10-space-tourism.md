@@ -10,7 +10,7 @@ stack:
   - HTML
   - SCSS
   - JavaScript
-date: 12-28-2022
+date: 2022-12-28
 github: https://github.com/toonchavez8/10_Space_Tourism_Multi-Page_Site
 live: http://10-space-tourism-multi-page-site.vercel.app/
 stared: true

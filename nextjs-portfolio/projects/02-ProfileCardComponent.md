@@ -9,7 +9,7 @@ tags:
 stack:
   - HTML
   - SCSS
-date: 06-08-2022
+date: 2022-06-08
 github: https://github.com/toonchavez8/02_ProfileCardComponent
 live: http://02-profile-card-component.vercel.app/
 stared: false
