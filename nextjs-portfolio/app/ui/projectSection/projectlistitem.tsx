@@ -16,7 +16,7 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
         event.stopPropagation();
     };
     return (
-        <article className=" relative   isolate flex flex-row items-center justify-around rounded-lg border border-neutral/25 bg-opacity-10 p-2 antialiased backdrop-blur-sm  transition  hover:border-viridian-600 hover:bg-viridian-400/5 dark:border-shark-700/50 dark:bg-opacity-5 hover:dark:border-shark-500/75 dark:hover:bg-viridian-950/10">
+        <article className=" relative  isolate flex flex-row items-center justify-around rounded-lg border border-neutral/25 bg-opacity-10 p-2 antialiased backdrop-blur-sm  transition  hover:border-viridian-600 hover:bg-viridian-400/5 dark:border-shark-700/50 dark:bg-opacity-5 hover:dark:border-shark-500/75 dark:hover:bg-viridian-950/10">
             <Link
                 href={`/projects/${project.id}`}
                 key={project.id}

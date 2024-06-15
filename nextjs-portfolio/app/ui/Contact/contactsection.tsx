@@ -35,7 +35,7 @@ const socialLinks = [
 
 const Contactsection = () => {
     return (
-        <section className="     mb-10 flex w-full flex-col  justify-center gap-4 px-2 md:gap-6 md:px-4">
+        <section className="     group/section mb-10 flex w-full  flex-col justify-center gap-4 px-2 md:gap-6 md:px-4">
             <Sectiontitles title="Contact" />
             <p className="normal-case">
                 Feel free to contact me on any of the social media links below or by email.

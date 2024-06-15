@@ -7,25 +7,23 @@ const page = (props: any): JSX.Element => {
 
     if (allProjects.length === 0) {
         return (
-            <main id="main" className="focus:outline-neutral-content">
-                <section>
-                    <h1 className="text-4xl font-bold">No projects found</h1>
-                </section>
-            </main>
+            <section>
+                <h1 className="text-4xl font-bold">No projects found</h1>
+            </section>
         );
     }
     return (
-        <main id="main" className="focus:outline-neutral-content">
-            <section>
+        <section className="  flex flex-col gap-4 overflow-visible  py-2 focus:outline-neutral-content md:py-6">
+            <div>
                 <h1 className="text-4xl font-bold capitalize">All my projects</h1>
-            </section>
+            </div>
 
-            <section className="grid w-full grid-cols-1 gap-4 ">
+            <div className="grid w-full grid-cols-1 gap-4 ">
                 {allProjects.map((project) => (
                     <Projectlistitem key={project.id} stack={project.stack} project={project} />
                 ))}
-            </section>
-        </main>
+            </div>
+        </section>
     );
 };
 

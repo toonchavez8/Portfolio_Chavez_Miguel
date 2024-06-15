@@ -10,7 +10,7 @@ stack:
   - HTML
   - SCSS
   - JavaScript
-date: 06-01-2022
+date: 2022-06-01
 github: https://github.com/toonchavez8/01_RatingComponent
 live: https://01-rating-component.vercel.app/
 stared: false

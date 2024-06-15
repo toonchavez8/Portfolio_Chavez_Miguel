@@ -9,7 +9,7 @@ tags:
 stack:
     - Html
     - Scss
-date: 07-05-2022
+date: 2022-07-05
 github: https://github.com/toonchavez8/03_Bedu_Frontend_Fase01_Work
 live: https://bedu-matcha-miguelchavez.netlify.app/
 stared: true
