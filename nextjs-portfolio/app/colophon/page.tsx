@@ -43,6 +43,11 @@ const toolsILike = [
         name: 'Hero Icons',
         url: 'https://heroicons.com/',
         description: 'A set of icons that I use for my projects'
+    },
+    {
+        name: 'Figma',
+        url: 'https://www.figma.com/',
+        description: 'A design tool that I use to create my designs'
     }
 ];
 
@@ -68,14 +73,17 @@ const Colophon = () => {
             <section className="flex flex-col gap-2 ">
                 <Sectiontitles title={'Stack'} />
                 <p>My personal list of tools that I use:</p>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                     {toolsILike.map((tool) => (
                         <Link
                             href={tool.url}
                             key={tool.name}
-                            className="  badge badge-outline  hover:text-primary">
+                            className="  badge badge-outline text-primary opacity-75 hover:text-viridian-500 hover:opacity-100 ">
+                            {' '}
                             {tool.name}{' '}
-                            <span className="ml-2 text-xs text-gray-500 ">{tool.description}</span>
+                            <span className="hover ml-2 text-xs text-gray-500 hover:text-viridian-800 hover:opacity-100">
+                                {tool.description}
+                            </span>
                         </Link>
                     ))}
                 </div>
