@@ -35,13 +35,13 @@ const socialLinks = [
 
 const Contactsection = () => {
     return (
-        <section className="     group/section mb-10 flex w-full  flex-col justify-center gap-4 px-2 md:gap-6 md:px-4">
+        <section className="     group/section mb-10 flex w-full  flex-col justify-center gap-4 py-2 md:gap-6 md:px-4">
             <Sectiontitles title="Contact" />
             <p className="normal-case">
                 Feel free to contact me on any of the social media links below or by email.
             </p>
             <Separator className=" w-full animate-pulse opacity-50 transition-all  ease-in-out" />
-            <div className="flex  flex-wrap  items-center justify-center gap-4 text-sm md:gap-6">
+            <div className="flex  flex-wrap  items-center justify-center gap-2 text-sm sm:gap-4 md:gap-6">
                 {socialLinks.map((link) => (
                     <Link
                         href={`${link.url}`}
