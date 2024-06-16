@@ -1,6 +1,0 @@
-[build]
-  command = "cd html-portfolio && npm install && npm run build"
-  functions = "netlify/functions"
-  publish = "html-portfolio/dist"
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF html-portfolio/"
-
