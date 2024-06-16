@@ -82,21 +82,23 @@ body {
     @apply border border-red-700;
 }
 
+
+
 article > p > img {
     @apply rounded-lg;
 }
 
 article > figure {
-    @apply relative isolate mx-auto  w-11/12 md:max-w-prose;
+    @apply relative isolate mx-auto   md:max-w-prose;
 }
 
 article > figure > figcaption {
     /* Your styles here */
-    @apply absolute left-24 z-10 -translate-y-1 bg-transparent text-base-100 opacity-40 dark:text-viridian-100 !important;
+    @apply absolute left-24 z-10 -translate-y-1 bg-transparent text-base-100 opacity-40 dark:text-viridian-100 w-full !important;
 }
 
 article > figure > pre {
-    @apply mockup-code whitespace-pre-wrap rounded-lg bg-base-300 p-4 saturate-150 dark:bg-neutral/50;
+    @apply mockup-code whitespace-pre-wrap rounded-lg bg-base-300 p-4 saturate-150 dark:bg-neutral/50 w-full;
 }
 
 code {
