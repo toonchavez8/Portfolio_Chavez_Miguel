@@ -36,7 +36,7 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
                 placeholder="blur"
                 blurDataURL={project.image}
                 loading="lazy"
-                className="hidden aspect-square rounded-lg object-cover md:block md:rounded-lg"
+                className="hidden aspect-video h-full w-full max-w-32 rounded-lg object-cover md:block md:rounded-lg"
             />
             <div className="   flex w-full flex-col items-start justify-start gap-1 px-4">
                 <div className=" flex w-full items-center justify-between">
