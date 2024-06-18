@@ -2,7 +2,7 @@ import React from 'react';
 
 const page = () => {
     return (
-        <main className="mx-auto flex w-11/12 flex-col md:w-7/12">
+        <main className=" mx-auto flex w-11/12 flex-col md:w-10/12 lg:w-7/12" id="main">
             <div className="hero my-auto  ">
                 <div className=" hero-content flex text-center">
                     <div className="flex max-w-md animate-pulse flex-col items-center justify-center opacity-70">

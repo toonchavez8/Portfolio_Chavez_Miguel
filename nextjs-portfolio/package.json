@@ -42,6 +42,7 @@
         "shiki": "^1.2.0",
         "tailwind-merge": "^2.3.0",
         "tailwindcss-animate": "^1.0.7",
+        "@tailwindcss/container-queries": "^0.1.1",
         "unified": "^11.0.4"
     },
     "devDependencies": {

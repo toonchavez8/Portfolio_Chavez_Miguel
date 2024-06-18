@@ -55,7 +55,7 @@ const Colophon = () => {
     return (
         <main
             id="main"
-            className="mx-auto flex w-11/12 flex-col  gap-2 pt-4  md:w-7/12 md:gap-6 md:pt-8">
+            className="mx-auto flex w-11/12 flex-col  gap-2 pt-4  md:w-10/12 md:gap-6 md:pt-8 lg:w-7/12">
             <section className="group/section flex flex-col gap-2 md:gap-4">
                 <Sectiontitles title={'Built with'} />
                 <p>

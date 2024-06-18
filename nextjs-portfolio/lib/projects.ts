@@ -118,9 +118,6 @@ export const getProjectData = async (id: string) => {
     const projectHtml = processedContent.toString();
 
     const date = moment.utc(matterResult.data.date, 'YYYY-MM-DD').format('LL');
-    console.log('🚀 ~ getProjectData ~ matterResult.data.date:', matterResult.data.date);
-
-    console.log('🚀 ~ getProjectData ~ date:', date);
 
     return {
         id,

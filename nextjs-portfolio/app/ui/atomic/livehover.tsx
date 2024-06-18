@@ -25,7 +25,7 @@ const LiveHoverButton: React.FC<LiveHoverButtonProps> = ({ live, image, name, ha
                 </Link>
             </HoverCardTrigger>
             <HoverCardContent
-                className="  border-shark-200 bg-base-200 dark:border-shark-600 dark:bg-neutral "
+                className=" hidden border-shark-200 bg-base-200 dark:border-shark-600 dark:bg-neutral md:block "
                 side="top">
                 <img
                     src={image}

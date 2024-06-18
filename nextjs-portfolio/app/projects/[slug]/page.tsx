@@ -12,7 +12,6 @@ import {
 } from '@/app/ui/atomic/breadcrumb';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import LiveHoverButton from '@/app/ui/atomic/livehover';
 import { TbLivePhoto } from 'react-icons/tb';
 
 const Project = async ({ params }: { params: { slug: string } }) => {
@@ -20,9 +19,9 @@ const Project = async ({ params }: { params: { slug: string } }) => {
 
     return (
         <main
-            className="font-neutral mx-auto flex  flex-col items-center gap-8 pt-4 dark:text-base-100"
+            className="font-neutral  mx-auto flex flex-col items-center gap-8 pt-4 dark:text-base-100"
             id="main">
-            <aside className="relative flex w-full flex-wrap  justify-between text-base">
+            <aside className="  relative flex w-full  flex-wrap justify-between gap-2 text-base">
                 <Breadcrumb className="">
                     <BreadcrumbList className="flex flex-wrap">
                         <BreadcrumbItem>
@@ -52,6 +51,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
                 </div>
             </aside>
             <article
+                id="articleContent"
                 dangerouslySetInnerHTML={{ __html: projectData.content }}
                 className="  prose w-full dark:prose-invert prose-figcaption:text-white"
             />
