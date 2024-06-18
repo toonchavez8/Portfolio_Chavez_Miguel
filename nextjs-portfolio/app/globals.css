@@ -120,3 +120,7 @@ pre > code[data-line-numbers-max-digits='2'] > [data-line]::before {
 pre > code[data-line-numbers-max-digits='3'] > [data-line]::before {
     width: 48px;
 }
+
+main {
+    @apply transition-all duration-200 ease-out;
+}

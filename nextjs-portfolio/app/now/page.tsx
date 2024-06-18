@@ -3,7 +3,7 @@ import Sectiontitles from '../ui/atomic/sectiontitles';
 
 const page = () => {
     return (
-        <main id="main" className=" mx-auto flex w-11/12 flex-col md:w-7/12">
+        <main id="main" className="  mx-auto flex w-11/12 flex-col md:w-10/12 lg:w-7/12">
             <section className="prose my-3 flex flex-col gap-4 dark:prose-invert ">
                 <Sectiontitles title="What I'm up to now" />
                 <NowSection />
