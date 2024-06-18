@@ -121,6 +121,7 @@ pre > code[data-line-numbers-max-digits='3'] > [data-line]::before {
     width: 48px;
 }
 
-main {
+main,
+#project-item {
     @apply transition-all duration-200 ease-out;
 }
