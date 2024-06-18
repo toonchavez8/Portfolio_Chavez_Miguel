@@ -5,6 +5,7 @@ import { NavBar } from '@/app/ui/NavBar/NavBar';
 import { Footer } from '@/app/ui/Footer/Footer';
 import { Providers } from '@/app/providers';
 import { DotBackgroundDemo } from '@/app/ui/Accentuily_ui/Background-Boxes';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
     title: {
@@ -37,6 +38,7 @@ export default function RootLayout({
                     {children}
                     <Footer />
                     <DotBackgroundDemo />
+                    <Analytics />
                 </Providers>
             </body>
         </html>
