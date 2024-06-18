@@ -4,6 +4,7 @@ import './globals.css';
 import { NavBar } from '@/app/ui/NavBar/NavBar';
 import { Footer } from '@/app/ui/Footer/Footer';
 import { Providers } from '@/app/providers';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { DotBackgroundDemo } from '@/app/ui/Accentuily_ui/Background-Boxes';
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
                     <NavBar />
                     {children}
                     <Footer />
+                    <SpeedInsights />
                     <DotBackgroundDemo />
                 </Providers>
             </body>

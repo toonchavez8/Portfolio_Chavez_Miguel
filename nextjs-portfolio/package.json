@@ -18,7 +18,9 @@
         "@radix-ui/react-separator": "^1.0.3",
         "@radix-ui/react-slot": "^1.0.2",
         "@tabler/icons-react": "^3.3.0",
+        "@tailwindcss/container-queries": "^0.1.1",
         "@types/mdx": "^2.0.11",
+        "@vercel/speed-insights": "^1.0.12",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "framer-motion": "^11.1.9",
@@ -42,7 +44,6 @@
         "shiki": "^1.2.0",
         "tailwind-merge": "^2.3.0",
         "tailwindcss-animate": "^1.0.7",
-        "@tailwindcss/container-queries": "^0.1.1",
         "unified": "^11.0.4"
     },
     "devDependencies": {
