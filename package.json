@@ -30,7 +30,5 @@
 		"prettier": "^3.1.1",
 		"turbo": "^1.12.5"
 	},
-	"dependencies": {
-		"@tailwindcss/container-queries": "^0.1.1"
-	}
+	"dependencies": {}
 }
