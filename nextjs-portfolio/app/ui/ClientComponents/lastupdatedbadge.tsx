@@ -44,7 +44,7 @@ const Lastupdatedbadge = () => {
     return (
         <Link
             href={'https://github.com/toonchavez8/Portfolio_Chavez_Miguel'}
-            className="ease  right-0 mr-3 mt-1 flex items-center justify-center gap-1 rounded-full border border-neutral px-4 font-mono text-xs opacity-50 transition-all hover:scale-105 hover:bg-neutral hover:text-base-100 hover:opacity-100 dark:border-base-300 xs:absolute sm:absolute md:mt-3">
+            className="ease  right-0 mr-3 mt-1 flex items-center justify-center gap-1 rounded-full border border-neutral px-4 font-mono text-xs opacity-50 transition-all hover:scale-105 hover:bg-neutral hover:text-base-100 hover:opacity-100 dark:border-base-300  sm:absolute md:mt-3">
             <FiGitCommit />
             <span className="hidden sm:block">last updated</span>
             {fetching ? <LoadingSkeleton /> : <time dateTime={lastUpdated}>{lastUpdated}</time>}

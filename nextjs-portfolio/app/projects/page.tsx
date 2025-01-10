@@ -13,7 +13,7 @@ const page = (props: any): JSX.Element => {
         );
     }
     return (
-        <section className="flex  flex-col gap-4 overflow-visible py-2  focus:outline-neutral-content md:gap-6 md:py-6">
+        <section className="flex  flex-col gap-4 overflow-visible py-2  focus:outline-neutral-content md:gap-6 md:py-6 ">
             <div>
                 <h1 className="text-4xl font-bold capitalize">All my projects</h1>
             </div>
