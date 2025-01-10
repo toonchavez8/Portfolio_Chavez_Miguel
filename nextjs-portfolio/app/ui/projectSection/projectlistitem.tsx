@@ -78,6 +78,7 @@ const Projectlistitem = ({ stack, project }: ProjectlistitemProps) => {
                     image={project.image}
                     name={project.name}
                     handleClick={handleButtonClick}
+            
                 />
             </div>
         </article>

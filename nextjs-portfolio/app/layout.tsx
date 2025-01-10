@@ -32,7 +32,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}  relative`}>
             <body
-                className="  group relative isolate min-h-screen bg-base-200 px-4 pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100"
+                className="  group relative isolate min-h-screen bg-base-200 px-4 pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100  "
                 suppressHydrationWarning>
                 <Providers>
                     <NavBar />

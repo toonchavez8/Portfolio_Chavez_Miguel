@@ -12,6 +12,8 @@ interface LiveHoverButtonProps {
 }
 
 const LiveHoverButton: React.FC<LiveHoverButtonProps> = ({ live, image, name, handleClick }) => {
+
+
     return (
         <HoverCard>
             <HoverCardTrigger asChild>
@@ -25,8 +27,8 @@ const LiveHoverButton: React.FC<LiveHoverButtonProps> = ({ live, image, name, ha
                 </Link>
             </HoverCardTrigger>
             <HoverCardContent
-                className=" hidden border-shark-200 bg-base-200 dark:border-shark-600 dark:bg-neutral md:block "
-                side="top">
+                className=" hidden border-shark-200 bg-base-200 dark:border-shark-600 dark:bg-neutral md:block  ms-8 "
+                side="right">
                 <img
                     src={image}
                     alt={name}
