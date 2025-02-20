@@ -19,6 +19,50 @@ const Educationsection = (props: EducationProps) => {
                 <AccordionItem
                     value="item-1"
                     className=" m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75">
+                    <span className="badge badge-outline mt-1 font-mono opacity-25 group-hover:opacity-100   ">
+                        currently enrolled
+                    </span>
+                    <AccordionTrigger className="">
+                        Master's Degree in Software Engineering and Computer Systems, UNIR{' '}
+                        <span className="ml-auto mr-4 hidden font-mono font-light opacity-50 md:block md:text-sm">
+                            Feb 2025 - EXP Apr 2027
+                        </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="prose  dark:prose-invert">
+                        <ul>
+                            <li>
+                                Agile Methodologies & Software Quality – I will learn about Agile
+                                frameworks, Lean principles, and software quality improvement
+                                techniques to develop flexible, maintainable systems.
+                            </li>
+                            <li>
+                                Software Project Management – I will gain expertise in planning,
+                                executing, monitoring, and closing software projects while mastering
+                                leadership, decision-making, and risk management.
+                            </li>
+                            <li>
+                                Cybersecurity & Secure Software Development – I will study secure
+                                coding practices, threat mitigation, and cybersecurity auditing to
+                                ensure robust and resilient applications
+                            </li>
+                            <li>
+                                Cloud Computing & DevOps – I will engage in system administration,
+                                virtualization, and cloud infrastructure management while
+                                integrating DevOps methodologies for continuous integration and
+                                deployment.
+                            </li>
+                            <li>
+                                Software Development Platforms & Architecture – I will explore
+                                development environments such as Java, .NET, and mobile platforms
+                                while working with distributed services and event-driven
+                                architectures.
+                            </li>
+                        </ul>
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem
+                    value="item-2"
+                    className=" m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75">
                     <AccordionTrigger className="">
                         Full Stack Development, CoderHouse{' '}
                         <span className="ml-auto mr-4 hidden font-mono font-light opacity-50 md:block md:text-sm">
@@ -50,7 +94,7 @@ const Educationsection = (props: EducationProps) => {
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                    value="item-2"
+                    value="item-3"
                     className=" m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75">
                     <AccordionTrigger className="">
                         Web Development Full Stack JavaScript, Bedu{''}
@@ -69,7 +113,7 @@ const Educationsection = (props: EducationProps) => {
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                    value="item-3"
+                    value="item-4"
                     className=" m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75">
                     <AccordionTrigger className="">
                         UI/UX BootCamp, Bedu{' '}
@@ -87,7 +131,7 @@ const Educationsection = (props: EducationProps) => {
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                    value="item-4"
+                    value="item-5"
                     className=" m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75">
                     <AccordionTrigger className="">
                         Degree in film and animation, Uniat{' '}

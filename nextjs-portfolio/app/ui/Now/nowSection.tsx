@@ -30,8 +30,7 @@ const Skeleton = ({
 const items = [
     {
         title: 'What im learning now',
-        description:
-            "I'm learning Python, data structures, and algorithms through Stanford's 'Learn to Code' mini-course and FreeCodeCamp",
+        description: "Im starting my master's degree in  Software Engineering",
         header: (
             <Skeleton>
                 <figure className=" flex aspect-square h-full w-2/3 flex-col items-start justify-around  py-1 transition-all duration-500 group-hover/bento:animate-pulse">
@@ -47,13 +46,13 @@ const items = [
     },
     {
         title: 'What im reading?',
-        description: 'Dune.',
+        description: 'The throne of glass series.',
         header: (
             <Skeleton>
                 <figure className=" mx-auto flex h-full w-full max-w-fit flex-col items-center  justify-center  py-1 transition-all  duration-500 group-hover/bento:-rotate-6 group-hover/bento:scale-110">
                     <img
-                        src="https://assets.literal.club/4/ckikds6gf01560zhfha1gtsvm.jpg?size=600"
-                        alt="dune book cover"
+                        src="https://assets.literal.club/cover/5/ckrpanjhs215701euwfweygxvq.jpg?size=600"
+                        alt="the throne of glass book cover"
                         className=" h-full rounded-sm"
                     />
                 </figure>
@@ -64,7 +63,7 @@ const items = [
     },
     {
         title: 'What im aiming for?',
-        description: 'Im looking for freelance work in tech, building stuff.',
+        description: 'Starting a family with my incredible wife.',
         header: (
             <Skeleton>
                 <Meteors className="bg-red-700 hover:bg-viridian-600 dark:hover:bg-viridian-500" />
@@ -77,10 +76,10 @@ const items = [
         title: 'What im doing',
         description: (
             <ul className="">
-                <li>Im live streaming some mini code projects</li>
-                <li>Preping for a Harry Potter themed DND game</li>
+                <li>Im getting really into making pizza and the science of neopolitin style</li>
+                <li>Nearly complete in my Wizarding world homebrew dnd</li>
                 <li className="group/list">
-                    Bingeing one piece{' '}
+                    Still Bingeing one piece{' '}
                     <span className="hidden text-sm text-primary transition-all ease-out group-hover/list:block ">
                         Oh gawd what am i doing??
                     </span>
