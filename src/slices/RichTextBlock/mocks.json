@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"rich_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Mollit ea adipisicing ut officia culpa veniam eiusmod exercitation sint."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
