@@ -2,16 +2,10 @@
   "format": "page",
   "id": "homepage",
   "label": "homepage",
-  "repeatable": true,
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "UID"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

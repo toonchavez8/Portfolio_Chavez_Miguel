@@ -1,0 +1,7 @@
+{
+  "/journel/page": "app/journel/page.js",
+  "/page": "app/page.js",
+  "/now/page": "app/now/page.js",
+  "/about/page": "app/about/page.js",
+  "/projects/page": "app/projects/page.js"
+}

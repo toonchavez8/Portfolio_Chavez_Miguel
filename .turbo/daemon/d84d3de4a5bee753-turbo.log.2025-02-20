@@ -1,0 +1,152 @@
+2025-02-20T03:08:26.230381Z  WARN daemon_server: turborepo_lib::commands::daemon: daemon already running
+2025-02-20T03:08:36.290835Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\next-env.d.ts")}
+2025-02-20T03:08:36.290928Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:08:36.789306Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\.next")}
+2025-02-20T03:08:36.789333Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:08:37.256233Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:08:37.257351Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\.next")}
+2025-02-20T03:08:37.257382Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:08:37.257501Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:08:37.996525Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\.next")}
+2025-02-20T03:08:37.996563Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:08:37.996635Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:08:38.089372Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\.next")}
+2025-02-20T03:08:38.089405Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:08:38.089487Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:12:44.707435Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:12:44.712065Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:12:56.486271Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:12:56.486312Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:15:24.893327Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:15:24.893365Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:15:29.685036Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:15:29.685063Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:15:29.796876Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:16:45.798791Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:16:45.798837Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:17:19.189070Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:17:19.189121Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:18:21.493637Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:18:21.493665Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:28:13.390518Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:28:13.390629Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:28:22.396315Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:28:22.396435Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:28:35.497033Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:28:35.497382Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:28:50.187870Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:28:50.187902Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:29:01.292628Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:29:01.292666Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:29:18.806177Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:29:18.806257Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:30:38.489289Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:30:38.489345Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:30:49.686906Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:30:49.686971Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:30:53.787355Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:30:53.787516Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:31:01.582385Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:31:01.583331Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:31:22.589227Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:31:22.589466Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:32:07.285681Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:32:07.285720Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:32:25.404105Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:32:25.404152Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:32:37.386579Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:32:37.386656Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:32:37.776419Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:32:37.776459Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:32:37.776558Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:32:49.885796Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:32:49.885847Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:32:59.193450Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:32:59.199799Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:05.185136Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:05.185216Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:10.497299Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:10.497338Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:22.895112Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:22.895144Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:30.088231Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:30.088268Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:36.991336Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:36.991359Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:37.218249Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:37.218277Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:37.218388Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:33:42.695877Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:42.695976Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:33:59.595386Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:33:59.595423Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:11.794125Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:11.794156Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:21.590522Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:21.590564Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:33.792917Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:33.792946Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:37.383963Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:37.384073Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:42.582722Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:42.582759Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:43.065206Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:43.065254Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:34:43.065547Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:34:55.894270Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:34:55.894313Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:35:07.799292Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:35:07.799415Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:35:14.486433Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:35:14.486574Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:36:04.384452Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:36:04.384494Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:36:43.286298Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:36:43.286403Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:36:50.284218Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:36:50.284322Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:37:06.287449Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:37:06.287496Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:38:00.902286Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:38:00.902424Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:38:24.094590Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:38:24.094640Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:42:22.685900Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:42:22.686255Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:42:32.386603Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:42:32.386639Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:42:49.783638Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:42:49.783666Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:42:49.933446Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:42:49.933469Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:42:49.933555Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:44:26.488290Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:44:26.488379Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:45:27.099774Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:45:27.099817Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:46:01.687679Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:46:01.687753Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:46:34.296486Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:46:34.296530Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:46:37.182482Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\Now\\nowSection.tsx")}
+2025-02-20T03:46:37.182514Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:46:37.277782Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:48:33.879868Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\about\\page.tsx")}
+2025-02-20T03:48:33.879916Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:52:03.292471Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\about\\page.tsx")}
+2025-02-20T03:52:03.292827Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:53:11.694095Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\about\\page.tsx")}
+2025-02-20T03:53:11.694191Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:53:15.383566Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\.next")}
+2025-02-20T03:53:15.383627Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:53:15.384111Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2025-02-20T03:53:19.295438Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\about\\page.tsx")}
+2025-02-20T03:53:19.295468Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:57:05.488330Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:57:05.488380Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:57:26.194178Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\ui\\education\\educationsection.tsx")}
+2025-02-20T03:57:26.194406Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:57:35.589295Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\about\\page.tsx")}
+2025-02-20T03:57:35.589339Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
+2025-02-20T03:57:48.896869Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("nextjs-portfolio\\app\\about\\page.tsx")}
+2025-02-20T03:57:48.897429Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("nextjs-portfolio"), path: AnchoredSystemPathBuf("nextjs-portfolio") }}))
