@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { createClient } from "@/prismicio";
-import { type SettingsDocument } from "@/../prismicio-types";
+
+import NavBar from "@/componets/Navbar";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -24,6 +23,7 @@ export default async function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
+				<NavBar />
 				{children}
 			</body>
 		</html>

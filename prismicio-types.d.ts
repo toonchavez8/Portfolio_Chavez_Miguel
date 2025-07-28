@@ -486,28 +486,6 @@ interface SettingsDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Primary Color field in *Settings*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.primary_color
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/fields/color
-   */
-  primary_color: prismic.ColorField;
-
-  /**
-   * Secondary Color field in *Settings*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.secondary_color
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/fields/color
-   */
-  secondary_color: prismic.ColorField;
-
-  /**
    * Navigation field in *Settings*
    *
    * - **Field Type**: Group

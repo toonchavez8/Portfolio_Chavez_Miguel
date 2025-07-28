@@ -20,20 +20,6 @@
           "placeholder": ""
         }
       },
-      "primary_color": {
-        "type": "Color",
-        "config": {
-          "label": "Primary Color",
-          "placeholder": ""
-        }
-      },
-      "secondary_color": {
-        "type": "Color",
-        "config": {
-          "label": "Secondary Color",
-          "placeholder": ""
-        }
-      },
       "navigation": {
         "type": "Group",
         "config": {
