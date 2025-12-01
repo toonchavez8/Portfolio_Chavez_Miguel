@@ -84,7 +84,7 @@ interface HomepageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice>; /**
    * Meta Title field in *homepage*
    *
    * - **Field Type**: Text
@@ -92,7 +92,7 @@ interface HomepageDocumentData {
    * - **API ID Path**: homepage.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -149,7 +149,7 @@ interface JournelDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<JournelDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<JournelDocumentDataSlicesSlice>; /**
    * Meta Title field in *journel*
    *
    * - **Field Type**: Text
@@ -157,7 +157,7 @@ interface JournelDocumentData {
    * - **API ID Path**: journel.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -214,7 +214,7 @@ interface JournelEntryDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<JournelEntryDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<JournelEntryDocumentDataSlicesSlice>; /**
    * Meta Title field in *Journel Entry*
    *
    * - **Field Type**: Text
@@ -222,7 +222,7 @@ interface JournelEntryDocumentData {
    * - **API ID Path**: journel_entry.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -264,6 +264,71 @@ export type JournelEntryDocument<Lang extends string = string> =
     Lang
   >;
 
+type NowPageDocumentDataSlicesSlice = BentoBoxSlice;
+
+/**
+ * Content for now page documents
+ */
+interface NowPageDocumentData {
+  /**
+   * Slice Zone field in *now page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: now_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<NowPageDocumentDataSlicesSlice>; /**
+   * Meta Title field in *now page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: now_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *now page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: now_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *now page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: now_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * now page document from Prismic
+ *
+ * - **API ID**: `now_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NowPageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<NowPageDocumentData>,
+    "now_page",
+    Lang
+  >;
+
 type ProjectDocumentDataSlicesSlice = RichTextBlockSlice;
 
 /**
@@ -279,7 +344,7 @@ interface ProjectDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<ProjectDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<ProjectDocumentDataSlicesSlice>; /**
    * Meta Title field in *project*
    *
    * - **Field Type**: Text
@@ -287,7 +352,7 @@ interface ProjectDocumentData {
    * - **API ID Path**: project.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -344,7 +409,7 @@ interface ProjectsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<ProjectsDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<ProjectsDocumentDataSlicesSlice>; /**
    * Meta Title field in *Projects Catalog*
    *
    * - **Field Type**: Text
@@ -352,7 +417,7 @@ interface ProjectsDocumentData {
    * - **API ID Path**: projects.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -528,9 +593,122 @@ export type AllDocumentTypes =
   | HomepageDocument
   | JournelDocument
   | JournelEntryDocument
+  | NowPageDocument
   | ProjectDocument
   | ProjectsDocument
   | SettingsDocument;
+
+/**
+ * Item in *BentoBox → Default → Primary → Bento Section*
+ */
+export interface BentoBoxSliceDefaultPrimaryBentoSectionItem {
+  /**
+   * bento img field in *BentoBox → Default → Primary → Bento Section*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.bento_section[].bento_img
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  bento_img: prismic.ImageField<never>;
+
+  /**
+   * Bento header field in *BentoBox → Default → Primary → Bento Section*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.bento_section[].bento_header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  bento_header: prismic.KeyTextField;
+
+  /**
+   * Bento Body field in *BentoBox → Default → Primary → Bento Section*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.bento_section[].bento_body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bento_body: prismic.RichTextField;
+
+  /**
+   * Bento Icon field in *BentoBox → Default → Primary → Bento Section*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.bento_section[].bento_icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  bento_icon: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *BentoBox → Default → Primary*
+ */
+export interface BentoBoxSliceDefaultPrimary {
+  /**
+   * Sectiontittle field in *BentoBox → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: // What i'm doing?
+   * - **API ID Path**: bento_box.default.primary.sectiontittle
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  sectiontittle: prismic.KeyTextField;
+
+  /**
+   * Bento Section field in *BentoBox → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.bento_section[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  bento_section: prismic.GroupField<
+    Simplify<BentoBoxSliceDefaultPrimaryBentoSectionItem>
+  >;
+
+  /**
+   * Updated Date field in *BentoBox → Default → Primary*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.updated_date
+   * - **Documentation**: https://prismic.io/docs/fields/timestamp
+   */
+  updated_date: prismic.TimestampField;
+}
+
+/**
+ * Default variation for BentoBox Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BentoBoxSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BentoBoxSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BentoBox*
+ */
+type BentoBoxSliceVariation = BentoBoxSliceDefault;
+
+/**
+ * BentoBox Shared Slice
+ *
+ * - **API ID**: `bento_box`
+ * - **Description**: BentoBox
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BentoBoxSlice = prismic.SharedSlice<
+  "bento_box",
+  BentoBoxSliceVariation
+>;
 
 /**
  * Primary content in *RichTextBlock → Default → Primary*
@@ -607,6 +785,9 @@ declare module "@prismicio/client" {
       JournelEntryDocument,
       JournelEntryDocumentData,
       JournelEntryDocumentDataSlicesSlice,
+      NowPageDocument,
+      NowPageDocumentData,
+      NowPageDocumentDataSlicesSlice,
       ProjectDocument,
       ProjectDocumentData,
       ProjectDocumentDataSlicesSlice,
@@ -618,6 +799,11 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationItem,
       SettingsDocumentDataFooterItem,
       AllDocumentTypes,
+      BentoBoxSlice,
+      BentoBoxSliceDefaultPrimaryBentoSectionItem,
+      BentoBoxSliceDefaultPrimary,
+      BentoBoxSliceVariation,
+      BentoBoxSliceDefault,
       RichTextBlockSlice,
       RichTextBlockSliceDefaultPrimary,
       RichTextBlockSliceVariation,

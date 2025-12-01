@@ -3,5 +3,6 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  bento_box: dynamic(() => import("./BentoBox")),
   rich_text_block: dynamic(() => import("./RichTextBlock")),
 };
