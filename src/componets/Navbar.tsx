@@ -58,7 +58,7 @@ export const NavBar = () => {
 				setNavLinks([
 					{ name: "now", href: "/now" },
 					{ name: "projects", href: "/projects" },
-					{ name: "journel", href: "/journel" },
+					{ name: "journal", href: "/journal" },
 				]);
 			} finally {
 				setLoading(false);

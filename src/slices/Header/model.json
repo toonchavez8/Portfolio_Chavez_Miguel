@@ -1,0 +1,47 @@
+{
+  "id": "header",
+  "type": "SharedSlice",
+  "name": "Header",
+  "description": "Header",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "position": {
+          "type": "Text",
+          "config": {
+            "label": "Position",
+            "placeholder": "Fullstack dev"
+          }
+        },
+        "last_updated": {
+          "type": "Timestamp",
+          "config": {
+            "label": "Last updated",
+            "placeholder": ""
+          }
+        },
+        "header_body": {
+          "type": "Text",
+          "config": {
+            "label": "header body",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

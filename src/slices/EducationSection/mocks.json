@@ -1,0 +1,61 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"sectiontittle": {
+				"__TYPE__": "FieldContent",
+				"value": "shells",
+				"type": "Text"
+			},
+			"schools_dropdown": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"school_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "well",
+									"type": "Text"
+								}
+							],
+							[
+								"date_range",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2013-01-22"
+								}
+							],
+							[
+								"currently_enrolled",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"school_body",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Cupidatat commodo tempor in amet."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

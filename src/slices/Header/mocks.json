@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "percent",
+				"type": "Text"
+			},
+			"last_updated": {
+				"__TYPE__": "FieldContent",
+				"type": "Timestamp",
+				"value": "2024-06-20T17:14:15Z"
+			},
+			"position": {
+				"__TYPE__": "FieldContent",
+				"value": "paper",
+				"type": "Text"
+			},
+			"header_body": {
+				"__TYPE__": "FieldContent",
+				"value": "industry",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

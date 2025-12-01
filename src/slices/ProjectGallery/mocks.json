@@ -1,0 +1,117 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"sectiontittle": {
+				"__TYPE__": "FieldContent",
+				"value": "tower",
+				"type": "Text"
+			},
+			"project_byte": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"project_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+										"width": 8640,
+										"height": 8640
+									},
+									"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+									"width": 8640,
+									"height": 8640,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "fire",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"project_date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2013-11-18"
+								}
+							],
+							[
+								"project_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "gave",
+									"type": "Text"
+								}
+							],
+							[
+								"project_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "tongue",
+									"type": "Text"
+								}
+							],
+							[
+								"project_tags",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "magnet",
+									"type": "Text"
+								}
+							],
+							[
+								"live_link",
+								{
+									"key": "5fc760b0-eb29-41b0-95bb-e1b79c295d9f",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com",
+										"text": "younger"
+									}
+								}
+							],
+							[
+								"repo_link",
+								{
+									"key": "3c67baf6-43ae-4219-894a-f8910bfc018e",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "case"
+									}
+								}
+							],
+							[
+								"project_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "76be7e35-81e2-4865-b621-203a5e06024f",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

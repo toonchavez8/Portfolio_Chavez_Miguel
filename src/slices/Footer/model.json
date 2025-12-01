@@ -1,0 +1,43 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "location": {
+          "type": "Text",
+          "config": {
+            "label": "Location",
+            "placeholder": ""
+          }
+        },
+        "location_geo": {
+          "type": "GeoPoint",
+          "config": {
+            "label": "Location Geo"
+          }
+        },
+        "footer_link": {
+          "type": "Link",
+          "config": {
+            "label": "Footer Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
