@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
+import { PrismicNextImage } from "@prismicio/next";
+import Lastupdatedbadge from "@/componets/Atomic/LastupdatedIcon";
 
 /**
  * Props for `Header`.
@@ -14,20 +16,19 @@ export type HeaderProps = SliceComponentProps<Content.HeaderSlice>;
 const Header: FC<HeaderProps> = ({ slice }) => {
 	return (
 		<section
-			className="bg-black relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start md:mt-8  md:gap-8 "
+			className=" relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start md:mt-8 prose-base  "
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
 		>
-			<div className="flex items-center justify-center gap-2 pe-4 md:gap-8 md:pe-8">
-				<Image
-					alt="profile image of miguel"
-					src="/miguel.jpg"
-					sizes="100vw"
+			<div className="flex items-center justify-center gap-2 pe-4 md:gap-8 md:pe-8 not-prose">
+				<PrismicNextImage
+					field={slice.primary.profile_image}
+					className="hidden rounded-full md:block"
 					width={64}
 					height={64}
-					className="hidden rounded-full xs:block"
 				/>
-				<div className="flex flex-col items-start justify-start gap-1 text-white">
+				<div className="flex flex-col items-start justify-start gap-1 text-white debug">
+					<Lastupdatedbadge />
 					<h1 className=" bg-gradient-to-t from-shark-500 to-shark-900 bg-clip-text text-lg font-bold text-transparent  dark:from-shark-100 dark:to-shark-50 md:text-3xl ">
 						{slice.primary.name}
 					</h1>
@@ -36,6 +37,8 @@ const Header: FC<HeaderProps> = ({ slice }) => {
 					</p>
 				</div>
 			</div>
+
+			<PrismicRichText field={slice.primary.header_body} />
 		</section>
 	);
 };

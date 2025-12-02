@@ -34,10 +34,20 @@
           }
         },
         "header_body": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
-            "label": "header body",
-            "placeholder": ""
+            "label": "Header Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,strong,em,list-item,o-list-item,rtl"
+          }
+        },
+        "profile_image": {
+          "type": "Image",
+          "config": {
+            "label": "Profile Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

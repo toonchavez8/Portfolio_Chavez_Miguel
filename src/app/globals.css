@@ -1,3 +1,4 @@
+@plugin "@tailwindcss/typography";
 @import "tailwindcss";
 
 @theme {
@@ -30,4 +31,8 @@ body,
 html,
 section {
 	background-color: black !important;
+}
+
+.debug {
+	@apply border-1 border-red-600;
 }

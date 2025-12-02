@@ -1249,14 +1249,24 @@ export interface HeaderSliceDefaultPrimary {
   last_updated: prismic.TimestampField;
 
   /**
-   * header body field in *Header → Default → Primary*
+   * Header Body field in *Header → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: header.default.primary.header_body
-   * - **Documentation**: https://prismic.io/docs/fields/text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  header_body: prismic.KeyTextField;
+  header_body: prismic.RichTextField;
+
+  /**
+   * Profile Image field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.profile_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  profile_image: prismic.ImageField<never>;
 }
 
 /**
