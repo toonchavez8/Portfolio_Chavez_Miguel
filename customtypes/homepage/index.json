@@ -11,6 +11,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "education_section": {
+              "type": "SharedSlice"
+            },
+            "project_gallery": {
+              "type": "SharedSlice"
+            },
+            "contact_section": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            },
             "rich_text_block": {
               "type": "SharedSlice"
             }

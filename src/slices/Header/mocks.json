@@ -5,8 +5,8 @@
 		"primary": {
 			"name": {
 				"__TYPE__": "FieldContent",
-				"value": "percent",
-				"type": "Text"
+				"type": "Text",
+				"value": "Miguel Chavez"
 			},
 			"last_updated": {
 				"__TYPE__": "FieldContent",
@@ -15,13 +15,13 @@
 			},
 			"position": {
 				"__TYPE__": "FieldContent",
-				"value": "paper",
-				"type": "Text"
+				"type": "Text",
+				"value": "Full Stack Dev, Motion Designer and a bit more"
 			},
 			"header_body": {
 				"__TYPE__": "FieldContent",
-				"value": "industry",
-				"type": "Text"
+				"type": "Text",
+				"value": "Welcome to my little corner of the web. I'm very passionate about building and designing things with simplicity in mind. I like being a knowledge sponge, from jumping off the deep end into a topic I'm thoroughly passionate about or just wading in the shallow end to satisfy my curiosity on random tidbits of general knowledge and refining my skillset.\nOn the off chance I'm not working i enjoy cooking, traveling , painting and video games!"
 			}
 		},
 		"items": []

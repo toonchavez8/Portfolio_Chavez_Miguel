@@ -1,21 +1,20 @@
 import {
-  SliceSimulator,
-  SliceSimulatorParams,
-  getSlices,
+	SliceSimulator,
+	SliceSimulatorParams,
+	getSlices,
 } from "@slicemachine/adapter-next/simulator";
 import { SliceZone } from "@prismicio/react";
-
-import { components } from "../../slices";
+import { components } from "@/slices";
 
 export default async function SliceSimulatorPage({
-  searchParams,
+	searchParams,
 }: SliceSimulatorParams) {
-  const { state } = await searchParams;
-  const slices = getSlices(state);
+	const { state } = await searchParams;
+	const slices = getSlices(state);
 
-  return (
-    <SliceSimulator>
-      <SliceZone slices={slices} components={components} />
-    </SliceSimulator>
-  );
+	return (
+		<SliceSimulator>
+			<SliceZone slices={slices} components={components} />
+		</SliceSimulator>
+	);
 }

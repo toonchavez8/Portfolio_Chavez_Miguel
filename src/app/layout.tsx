@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
 import "./globals.css";
 
 import NavBar from "@/componets/Navbar";
@@ -23,6 +25,7 @@ export default async function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-black bg-white dark:text-white text-black`}
 			>
+				<PrismicPreview repositoryName={repositoryName} />
 				<NavBar />
 				{children}
 			</body>

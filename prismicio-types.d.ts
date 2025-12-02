@@ -199,7 +199,12 @@ export type ColophoneDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = RichTextBlockSlice;
+type HomepageDocumentDataSlicesSlice =
+  | EducationSectionSlice
+  | ProjectGallerySlice
+  | ContactSectionSlice
+  | HeaderSlice
+  | RichTextBlockSlice;
 
 /**
  * Content for homepage documents
