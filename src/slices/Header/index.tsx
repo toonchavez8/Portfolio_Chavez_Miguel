@@ -27,7 +27,7 @@ const Header: FC<HeaderProps> = ({ slice }) => {
 					height={64}
 				/>
 				<div className="flex flex-col items-start justify-start gap-1 text-white debug">
-					<Lastupdatedbadge />
+					<Lastupdatedbadge lastUpdated={slice.primary.last_updated} />
 					<h1 className=" bg-gradient-to-t from-shark-500 to-shark-900 bg-clip-text text-lg font-bold text-transparent  dark:from-shark-100 dark:to-shark-50 md:text-3xl ">
 						{slice.primary.name}
 					</h1>
@@ -43,8 +43,3 @@ const Header: FC<HeaderProps> = ({ slice }) => {
 };
 
 export default Header;
-
-//
-// 			{slice.primary.header_body}
-// {slice.primary.last_updated}
-//
