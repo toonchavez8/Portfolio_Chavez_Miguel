@@ -27,12 +27,6 @@
 	--color-viridian-950: #03301f;
 }
 
-body,
-html,
-section {
-	background-color: black !important;
-}
-
 .debug {
 	@apply border-1 border-red-600;
 }

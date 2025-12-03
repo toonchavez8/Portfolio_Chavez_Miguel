@@ -4,6 +4,8 @@ import { repositoryName } from "@/prismicio";
 import "./globals.css";
 
 import NavBar from "@/componets/Navbar";
+import { BackGroundSquares } from "@/componets/Atomic/BackGround";
+import { Providers } from "./Utils/providers";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -21,13 +23,17 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="relative">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-black bg-white dark:text-white text-black`}
+				className={`${geistSans.variable} ${geistMono.variable} group relative isolate min-h-screen bg-base-200 px-4 pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100`}
 			>
-				<PrismicPreview repositoryName={repositoryName} />
-				<NavBar />
-				{children}
+				<Providers>
+					<PrismicPreview repositoryName={repositoryName} />
+					<NavBar />
+					{children}
+
+					<BackGroundSquares />
+				</Providers>
 			</body>
 		</html>
 	);
