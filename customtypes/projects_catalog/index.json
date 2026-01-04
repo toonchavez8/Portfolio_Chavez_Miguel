@@ -1,7 +1,7 @@
 {
   "format": "page",
-  "id": "about_me",
-  "label": "About me",
+  "id": "projects_catalog",
+  "label": "Projects Catalog",
   "repeatable": false,
   "status": true,
   "json": {
@@ -11,7 +11,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "rich_text_block": {
+            "project_gallery": {
               "type": "SharedSlice"
             }
           }

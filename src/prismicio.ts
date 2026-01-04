@@ -19,12 +19,20 @@ export const repositoryName =
  */
 
 const routes: Route[] = [
-	// Examples:
-	{ type: "homepage", uid: "homepage", path: "/" },
-	{ type: "projects", path: "/projects" },
-	{ type: "project", path: "/projects/:uid" },
-	{ type: "journel", path: "/journel" },
+	// Static pages
+	{ type: "homepage", path: "/" },
+	{ type: "now_page", path: "/now" },
+	{ type: "about_me", path: "/about-me" },
+	{ type: "colophone", path: "/colophon" },
+	{ type: "settings", path: "/settings" },
+	
+	// Journal
+	{ type: "journel_catalog", path: "/journel" },
 	{ type: "journel_entry", path: "/journel/:uid" },
+	
+	// Projects
+	{ type: "projects_catalog", path: "/projects" },
+	{ type: "project", path: "/projects/:uid" },
 ];
 
 /**

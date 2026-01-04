@@ -177,8 +177,7 @@
 									"key": "ba16df4e-b80d-4539-b5bc-7d08c75600a3",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "speedtest.com",
-										"target": "_blank",
+										"url": "https://tailwindcss.com/docs/responsive-design",
 										"text": "Live"
 									}
 								}
@@ -190,8 +189,7 @@
 									"key": "8b3063e9-d31f-40cf-a99d-cf31d4d5eb4e",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "speedtest.com",
-										"target": "_blank",
+										"url": "https://tailwindcss.com/docs/responsive-design",
 										"text": "Repo"
 									}
 								}
