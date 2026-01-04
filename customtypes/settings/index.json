@@ -1,87 +1,87 @@
 {
-  "format": "custom",
-  "id": "settings",
-  "label": "Settings",
-  "repeatable": false,
-  "status": true,
-  "json": {
-    "Main": {
-      "site_name": {
-        "type": "Text",
-        "config": {
-          "label": "Site Name",
-          "placeholder": "toonchavez"
-        }
-      },
-      "meta_description": {
-        "type": "Text",
-        "config": {
-          "label": "Meta Description",
-          "placeholder": ""
-        }
-      },
-      "navigation": {
-        "type": "Group",
-        "config": {
-          "label": "Navigation",
-          "repeat": false,
-          "fields": {
-            "nav_link": {
-              "type": "Link",
-              "config": {
-                "label": "nav Link",
-                "placeholder": "",
-                "select": null,
-                "allowTargetBlank": true,
-                "allowText": true,
-                "repeat": true
-              }
-            },
-            "themeswtich": {
-              "type": "Boolean",
-              "config": {
-                "label": "ThemeSwtich",
-                "placeholder_false": "false",
-                "placeholder_true": "true",
-                "default_value": false
-              }
-            }
-          }
-        }
-      },
-      "footer": {
-        "type": "Group",
-        "config": {
-          "label": "footer",
-          "repeat": false,
-          "fields": {
-            "date_time": {
-              "type": "Timestamp",
-              "config": {
-                "label": "date time",
-                "placeholder": ""
-              }
-            },
-            "location": {
-              "type": "GeoPoint",
-              "config": {
-                "label": "location"
-              }
-            },
-            "footer_link": {
-              "type": "Link",
-              "config": {
-                "label": "footer link",
-                "placeholder": "",
-                "select": null,
-                "allowTargetBlank": true,
-                "allowText": true,
-                "repeat": true
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	"format": "custom",
+	"id": "settings",
+	"label": "Settings",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"site_name": {
+				"type": "Text",
+				"config": {
+					"label": "Site Name",
+					"placeholder": "toonchavez"
+				}
+			},
+			"meta_description": {
+				"type": "Text",
+				"config": {
+					"label": "Meta Description",
+					"placeholder": ""
+				}
+			},
+			"navigation": {
+				"type": "Group",
+				"config": {
+					"label": "Navigation",
+					"repeat": false,
+					"fields": {
+						"nav_link": {
+							"type": "Link",
+							"config": {
+								"label": "nav Link",
+								"placeholder": "",
+								"select": null,
+								"allowTargetBlank": true,
+								"allowText": true,
+								"repeat": true
+							}
+						},
+						"themeswtich": {
+							"type": "Boolean",
+							"config": {
+								"label": "ThemeSwtich",
+								"placeholder_false": "false",
+								"placeholder_true": "true",
+								"default_value": false
+							}
+						}
+					}
+				}
+			},
+			"footer": {
+				"type": "Group",
+				"config": {
+					"label": "footer",
+					"repeat": false,
+					"fields": {
+						"date_time": {
+							"type": "Timestamp",
+							"config": {
+								"label": "date time",
+								"placeholder": ""
+							}
+						},
+						"location": {
+							"type": "GeoPoint",
+							"config": {
+								"label": "location"
+							}
+						},
+						"footer_link": {
+							"type": "Link",
+							"config": {
+								"label": "footer link",
+								"placeholder": "",
+								"select": null,
+								"allowTargetBlank": true,
+								"allowText": true,
+								"repeat": true
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

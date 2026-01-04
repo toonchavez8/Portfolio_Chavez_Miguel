@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import type { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
+import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
+import type { FC } from "react";
 import Lastupdatedbadge from "@/componets/Atomic/LastupdatedIcon";
 
 /**

@@ -1,11 +1,11 @@
+import { PrismicPreview } from "@prismicio/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import "./globals.css";
 
-import NavBar from "@/componets/Navbar";
 import { BackGroundSquares } from "@/componets/Atomic/BackGround";
+import NavBar from "@/componets/Navbar";
 import { Providers } from "./Utils/providers";
 
 const geistSans = Geist({
@@ -23,8 +23,16 @@ export const metadata: Metadata = {
 		icon: [
 			{ url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
 			{ url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-			{ url: "/favicons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-			{ url: "/favicons/android-chrome-256x256.png", sizes: "256x256", type: "image/png" },
+			{
+				url: "/favicons/android-chrome-192x192.png",
+				sizes: "192x192",
+				type: "image/png",
+			},
+			{
+				url: "/favicons/android-chrome-256x256.png",
+				sizes: "256x256",
+				type: "image/png",
+			},
 		],
 		apple: [
 			{

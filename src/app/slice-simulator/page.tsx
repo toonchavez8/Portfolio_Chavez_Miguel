@@ -1,9 +1,9 @@
-import {
-	SliceSimulator,
-	SliceSimulatorParams,
-	getSlices,
-} from "@slicemachine/adapter-next/simulator";
 import { SliceZone } from "@prismicio/react";
+import {
+	getSlices,
+	SliceSimulator,
+	type SliceSimulatorParams,
+} from "@slicemachine/adapter-next/simulator";
 import { components } from "@/slices";
 
 export default async function SliceSimulatorPage({
@@ -13,7 +13,7 @@ export default async function SliceSimulatorPage({
 	const slices = getSlices(state);
 
 	return (
-		<SliceSimulator>
+		<SliceSimulator className="bg-black!">
 			<SliceZone slices={slices} components={components} />
 		</SliceSimulator>
 	);

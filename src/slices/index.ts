@@ -3,12 +3,12 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  bento_box: dynamic(() => import("./BentoBox")),
-  blog_section: dynamic(() => import("./BlogSection")),
-  contact_section: dynamic(() => import("./ContactSection")),
-  education_section: dynamic(() => import("./EducationSection")),
-  footer: dynamic(() => import("./Footer")),
-  header: dynamic(() => import("./Header")),
-  project_gallery: dynamic(() => import("./ProjectGallery")),
-  rich_text_block: dynamic(() => import("./RichTextBlock")),
+	bento_box: dynamic(() => import("./BentoBox")),
+	blog_section: dynamic(() => import("./BlogSection")),
+	contact_section: dynamic(() => import("./ContactSection")),
+	education_section: dynamic(() => import("./EducationSection")),
+	footer: dynamic(() => import("./Footer")),
+	header: dynamic(() => import("./Header")),
+	project_gallery: dynamic(() => import("./ProjectGallery")),
+	rich_text_block: dynamic(() => import("./RichTextBlock")),
 };

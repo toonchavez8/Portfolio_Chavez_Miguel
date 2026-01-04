@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import type { Content } from "@prismicio/client";
+import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
+import type { FC } from "react";
 
 /**
  * Props for `RichTextBlock`.

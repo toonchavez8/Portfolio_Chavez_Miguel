@@ -1,7 +1,7 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiGitCommit } from "react-icons/fi";
-import Link from "next/link";
 
 const LoadingSkeleton = () => (
 	<>
@@ -33,7 +33,7 @@ const normalizePrismicDate = (iso: string | null | undefined) =>
 // Helper to pick the newer timestamp (returns the ISO string of the newer date)
 const pickNewestTimestamp = (
 	prismicISO?: string | null,
-	githubISO?: string | null
+	githubISO?: string | null,
 ) => {
 	const prismicTime = prismicISO
 		? new Date(prismicISO).getTime()
@@ -80,14 +80,14 @@ const Lastupdatedbadge = ({
 		const fetchLastCommit = async () => {
 			try {
 				const response = await fetch(
-					"https://api.github.com/repos/toonchavez8/Portfolio_Chavez_Miguel/commits/main"
+					"https://api.github.com/repos/toonchavez8/Portfolio_Chavez_Miguel/commits/main",
 				);
 				const data = await response.json();
 				const githubISO: string | undefined = data?.commit?.author?.date;
 
 				// Normalize Prismic date and pick the newer one
 				const normalizedPrismicISO = normalizePrismicDate(
-					prismicLastUpdated ?? undefined
+					prismicLastUpdated ?? undefined,
 				);
 				const newestISO = pickNewestTimestamp(normalizedPrismicISO, githubISO);
 

@@ -108,6 +108,96 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"project_image",
+								{
+									"__TYPE__": "ImageContent",
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1577234231282-d5017c6ac8b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw4fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3Njc0MjQ0MzB8MA&ixlib=rb-4.1.0&q=85",
+									"alt": "sliced grapefruits",
+									"origin": {
+										"id": "I_GMMiniWYQ",
+										"url": "https://images.unsplash.com/photo-1577234231282-d5017c6ac8b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw4fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3Njc0MjQ0MzB8MA&ixlib=rb-4.1.0&q=85",
+										"width": 3024,
+										"height": 4032
+									},
+									"width": 3024,
+									"height": 4032,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"thumbnails": {}
+								}
+							],
+							[
+								"project_date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2026-01-22"
+								}
+							],
+							[
+								"project_name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "test"
+								}
+							],
+							[
+								"project_description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "asdsadsads"
+								}
+							],
+							[
+								"project_tags",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "cookie,cutter"
+								}
+							],
+							[
+								"live_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "ba16df4e-b80d-4539-b5bc-7d08c75600a3",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "speedtest.com",
+										"target": "_blank",
+										"text": "Live"
+									}
+								}
+							],
+							[
+								"repo_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "8b3063e9-d31f-40cf-a99d-cf31d4d5eb4e",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "speedtest.com",
+										"target": "_blank",
+										"text": "Repo"
+									}
+								}
+							]
+						],
+						"key": "36991f14-6d91-4356-9e5d-aedf127af9b5"
 					}
 				]
 			}

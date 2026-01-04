@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { createClient } from "../prismicio";
 import ThemeSwitch from "@/componets/Atomic/ThemeSwitch";
+import { createClient } from "../prismicio";
 
 interface NavLink {
 	name: string;

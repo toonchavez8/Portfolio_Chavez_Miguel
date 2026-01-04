@@ -25,8 +25,12 @@
 	--color-viridian-800: #126945;
 	--color-viridian-900: #11563a;
 	--color-viridian-950: #03301f;
+
+	  --breakpoint-xs: 30rem;
+
+
 }
 
 .debug {
-	@apply border-1 border-red-600;
+	@apply border border-red-600;
 }
