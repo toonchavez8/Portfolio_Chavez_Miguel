@@ -1,36 +1,36 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"location": {
-				"__TYPE__": "FieldContent",
-				"value": "land",
-				"type": "Text"
-			},
-			"location_geo": {
-				"position": {
-					"lat": 48.8583736,
-					"lng": 2.2922926
-				},
-				"__TYPE__": "GeoPointContent"
-			},
-			"footer_link": {
-				"__TYPE__": "RepeatableContent",
-				"type": "Link",
-				"value": [
-					{
-						"__TYPE__": "LinkContent",
-						"key": "9f2d4a09-0464-4d8d-a4b2-5407c95a8823",
-						"value": {
-							"__TYPE__": "ExternalLink",
-							"url": "http://twitter.com",
-							"text": "none"
-						}
-					}
-				]
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "location": {
+        "__TYPE__": "FieldContent",
+        "value": "land",
+        "type": "Text"
+      },
+      "location_geo": {
+        "position": {
+          "lat": 48.8583736,
+          "lng": 2.2922926
+        },
+        "__TYPE__": "GeoPointContent"
+      },
+      "footer_link": {
+        "__TYPE__": "RepeatableContent",
+        "type": "Link",
+        "value": [
+          {
+            "__TYPE__": "LinkContent",
+            "key": "9f2d4a09-0464-4d8d-a4b2-5407c95a8823",
+            "value": {
+              "__TYPE__": "ExternalLink",
+              "url": "http://twitter.com",
+              "text": "none"
+            }
+          }
+        ]
+      }
+    },
+    "items": []
+  }
 ]

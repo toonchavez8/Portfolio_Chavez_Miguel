@@ -1,46 +1,46 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"sectiontittle": {
-				"__TYPE__": "FieldContent",
-				"value": "pool",
-				"type": "Text"
-			},
-			"social_media_links": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"social_media_link",
-								{
-									"key": "00842842-6b00-49be-8152-5141e513721c",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io",
-										"text": "studied"
-									}
-								}
-							]
-						]
-					}
-				]
-			},
-			"section_body": {
-				"__TYPE__": "FieldContent",
-				"value": "old",
-				"type": "Text"
-			},
-			"email": {
-				"__TYPE__": "FieldContent",
-				"value": "round",
-				"type": "Text"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "sectiontittle": {
+        "__TYPE__": "FieldContent",
+        "value": "pool",
+        "type": "Text"
+      },
+      "social_media_links": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "social_media_link",
+                {
+                  "key": "00842842-6b00-49be-8152-5141e513721c",
+                  "__TYPE__": "LinkContent",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://prismic.io",
+                    "text": "studied"
+                  }
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "section_body": {
+        "__TYPE__": "FieldContent",
+        "value": "old",
+        "type": "Text"
+      },
+      "email": {
+        "__TYPE__": "FieldContent",
+        "value": "round",
+        "type": "Text"
+      }
+    },
+    "items": []
+  }
 ]

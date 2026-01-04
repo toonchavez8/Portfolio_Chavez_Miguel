@@ -1,66 +1,66 @@
 {
-	"id": "blog_section",
-	"type": "SharedSlice",
-	"name": "BlogSection",
-	"description": "BlogSection",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"sectiontittle": {
-					"type": "Text",
-					"config": {
-						"label": "Sectiontittle",
-						"placeholder": ""
-					}
-				},
-				"blog_section": {
-					"type": "Group",
-					"config": {
-						"label": "Blog section",
-						"repeat": true,
-						"fields": {
-							"blog_tittle": {
-								"type": "Text",
-								"config": {
-									"label": "Blog tittle",
-									"placeholder": ""
-								}
-							},
-							"blog_description": {
-								"type": "Text",
-								"config": {
-									"label": "Blog Description",
-									"placeholder": ""
-								}
-							},
-							"blog_image": {
-								"type": "Image",
-								"config": {
-									"label": "blog image",
-									"constraint": {},
-									"thumbnails": []
-								}
-							},
-							"blog_date": {
-								"type": "Link",
-								"config": {
-									"label": "Blog date",
-									"placeholder": "",
-									"select": "media",
-									"allowText": true
-								}
-							}
-						}
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "blog_section",
+  "type": "SharedSlice",
+  "name": "BlogSection",
+  "description": "BlogSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sectiontittle": {
+          "type": "Text",
+          "config": {
+            "label": "Sectiontittle",
+            "placeholder": ""
+          }
+        },
+        "blog_section": {
+          "type": "Group",
+          "config": {
+            "label": "Blog section",
+            "repeat": true,
+            "fields": {
+              "blog_tittle": {
+                "type": "Text",
+                "config": {
+                  "label": "Blog tittle",
+                  "placeholder": ""
+                }
+              },
+              "blog_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Blog Description",
+                  "placeholder": ""
+                }
+              },
+              "blog_image": {
+                "type": "Image",
+                "config": {
+                  "label": "blog image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "blog_date": {
+                "type": "Link",
+                "config": {
+                  "label": "Blog date",
+                  "placeholder": "",
+                  "select": "media",
+                  "allowText": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }

@@ -1,74 +1,74 @@
 {
-	"id": "bento_box",
-	"type": "SharedSlice",
-	"name": "BentoBox",
-	"description": "BentoBox",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"sectiontittle": {
-					"type": "Text",
-					"config": {
-						"label": "Sectiontittle",
-						"placeholder": "// What i'm doing?"
-					}
-				},
-				"bento_section": {
-					"type": "Group",
-					"config": {
-						"label": "Bento Section",
-						"repeat": true,
-						"fields": {
-							"bento_img": {
-								"type": "Image",
-								"config": {
-									"label": "bento img",
-									"constraint": {},
-									"thumbnails": []
-								}
-							},
-							"bento_header": {
-								"type": "Text",
-								"config": {
-									"label": "Bento header",
-									"placeholder": ""
-								}
-							},
-							"bento_body": {
-								"type": "StructuredText",
-								"config": {
-									"label": "Bento Body",
-									"placeholder": "",
-									"allowTargetBlank": true,
-									"multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-								}
-							},
-							"bento_icon": {
-								"type": "Image",
-								"config": {
-									"label": "Bento Icon",
-									"constraint": {},
-									"thumbnails": []
-								}
-							}
-						}
-					}
-				},
-				"updated_date": {
-					"type": "Timestamp",
-					"config": {
-						"label": "Updated Date",
-						"placeholder": ""
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "bento_box",
+  "type": "SharedSlice",
+  "name": "BentoBox",
+  "description": "BentoBox",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sectiontittle": {
+          "type": "Text",
+          "config": {
+            "label": "Sectiontittle",
+            "placeholder": "// What i'm doing?"
+          }
+        },
+        "bento_section": {
+          "type": "Group",
+          "config": {
+            "label": "Bento Section",
+            "repeat": true,
+            "fields": {
+              "bento_img": {
+                "type": "Image",
+                "config": {
+                  "label": "bento img",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "bento_header": {
+                "type": "Text",
+                "config": {
+                  "label": "Bento header",
+                  "placeholder": ""
+                }
+              },
+              "bento_body": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Bento Body",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "bento_icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Bento Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "updated_date": {
+          "type": "Timestamp",
+          "config": {
+            "label": "Updated Date",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }

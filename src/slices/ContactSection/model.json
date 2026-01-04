@@ -1,60 +1,60 @@
 {
-	"id": "contact_section",
-	"type": "SharedSlice",
-	"name": "ContactSection",
-	"description": "ContactSection",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"sectiontittle": {
-					"type": "Text",
-					"config": {
-						"label": "Sectiontittle",
-						"placeholder": ""
-					}
-				},
-				"section_body": {
-					"type": "Text",
-					"config": {
-						"label": "Section Body",
-						"placeholder": ""
-					}
-				},
-				"social_media_links": {
-					"type": "Group",
-					"config": {
-						"label": "Social Media Links",
-						"repeat": true,
-						"fields": {
-							"social_media_link": {
-								"type": "Link",
-								"config": {
-									"label": "Social Media Link",
-									"placeholder": "",
-									"select": null,
-									"allowTargetBlank": true,
-									"allowText": true,
-									"repeat": false
-								}
-							}
-						}
-					}
-				},
-				"email": {
-					"type": "Text",
-					"config": {
-						"label": "Email",
-						"placeholder": ""
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "contact_section",
+  "type": "SharedSlice",
+  "name": "ContactSection",
+  "description": "ContactSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sectiontittle": {
+          "type": "Text",
+          "config": {
+            "label": "Sectiontittle",
+            "placeholder": ""
+          }
+        },
+        "section_body": {
+          "type": "Text",
+          "config": {
+            "label": "Section Body",
+            "placeholder": ""
+          }
+        },
+        "social_media_links": {
+          "type": "Group",
+          "config": {
+            "label": "Social Media Links",
+            "repeat": true,
+            "fields": {
+              "social_media_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Social Media Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }

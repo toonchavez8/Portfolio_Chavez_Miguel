@@ -1,14 +1,14 @@
-import { type Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import { asImageSrc } from '@prismicio/client'
 import { SliceZone } from '@prismicio/react'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
 import { createClient } from '@/prismicio'
 import { components } from '@/slices'
 
 type Params = { uid: string }
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: Readonly<{ params: Params }>) {
   const client = createClient()
   const page = await client
     .getByUID('project', params.uid)

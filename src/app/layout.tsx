@@ -5,9 +5,9 @@ import { repositoryName } from '@/prismicio'
 import './globals.css'
 
 import { BackGroundSquares } from '@/componets/Atomic/BackGround'
+import Footer from '@/componets/Footer'
 import NavBar from '@/componets/NavbarServer'
 import { Providers } from './Utils/providers'
-import Footer from '@/componets/Footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

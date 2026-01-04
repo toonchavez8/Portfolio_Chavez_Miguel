@@ -1,67 +1,67 @@
 {
-	"id": "education_section",
-	"type": "SharedSlice",
-	"name": "EducationSection",
-	"description": "EducationSection",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"sectiontittle": {
-					"type": "Text",
-					"config": {
-						"label": "Sectiontittle",
-						"placeholder": ""
-					}
-				},
-				"schools_dropdown": {
-					"type": "Group",
-					"config": {
-						"label": "Schools Dropdown",
-						"repeat": true,
-						"fields": {
-							"school_name": {
-								"type": "Text",
-								"config": {
-									"label": "School Name",
-									"placeholder": ""
-								}
-							},
-							"date_range": {
-								"type": "Date",
-								"config": {
-									"label": "Date Range",
-									"placeholder": ""
-								}
-							},
-							"currently_enrolled": {
-								"type": "Boolean",
-								"config": {
-									"label": "Currently Enrolled",
-									"placeholder_false": "false",
-									"placeholder_true": "true",
-									"default_value": false
-								}
-							},
-							"school_body": {
-								"type": "StructuredText",
-								"config": {
-									"label": "School Body",
-									"placeholder": "",
-									"allowTargetBlank": true,
-									"multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,image"
-								}
-							}
-						}
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "education_section",
+  "type": "SharedSlice",
+  "name": "EducationSection",
+  "description": "EducationSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sectiontittle": {
+          "type": "Text",
+          "config": {
+            "label": "Sectiontittle",
+            "placeholder": ""
+          }
+        },
+        "schools_dropdown": {
+          "type": "Group",
+          "config": {
+            "label": "Schools Dropdown",
+            "repeat": true,
+            "fields": {
+              "school_name": {
+                "type": "Text",
+                "config": {
+                  "label": "School Name",
+                  "placeholder": ""
+                }
+              },
+              "date_range": {
+                "type": "Date",
+                "config": {
+                  "label": "Date Range",
+                  "placeholder": ""
+                }
+              },
+              "currently_enrolled": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Currently Enrolled",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "school_body": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "School Body",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,image"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }

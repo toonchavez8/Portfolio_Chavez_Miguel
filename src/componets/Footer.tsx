@@ -1,6 +1,6 @@
+import type { LinkField } from '@prismicio/client'
 import { createClient } from '../prismicio'
 import FooterClient from './FooterClient'
-import type { LinkField } from '@prismicio/client'
 
 interface FooterLocation {
   latitude: number
@@ -15,7 +15,7 @@ export const Footer = async () => {
     const client = createClient()
     const settings = await client.getSingle('settings')
 
-// Extract footer data - footer is a GroupField array (even with repeat: false)
+    // Extract footer data - footer is a GroupField array (even with repeat: false)
     if (settings.data.footer && settings.data.footer.length > 0) {
       const footerData = settings.data.footer[0] // Access first item
 
@@ -27,7 +27,7 @@ export const Footer = async () => {
         }
       }
 
-   // Extract footer links
+      // Extract footer links
       if (footerData?.footer_link) {
         footerLinks = footerData.footer_link.filter(
           (link) => link.link_type !== 'Any',

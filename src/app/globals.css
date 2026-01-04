@@ -1,36 +1,32 @@
-@plugin "@tailwindcss/typography";
 @import "tailwindcss";
 
 @theme {
-	--color-shark-50: #f6f7f7;
-	--color-shark-100: #e2e5e3;
-	--color-shark-200: #c5cac7;
-	--color-shark-300: #a0a8a5;
-	--color-shark-400: #7c8581;
-	--color-shark-500: #616b67;
-	--color-shark-600: #4d5452;
-	--color-shark-700: #3f4643;
-	--color-shark-800: #353a37;
-	--color-shark-900: #2f3231;
-	--color-shark-950: #1d201f;
+  --color-shark-50: #f6f7f7;
+  --color-shark-100: #e2e5e3;
+  --color-shark-200: #c5cac7;
+  --color-shark-300: #a0a8a5;
+  --color-shark-400: #7c8581;
+  --color-shark-500: #616b67;
+  --color-shark-600: #4d5452;
+  --color-shark-700: #3f4643;
+  --color-shark-800: #353a37;
+  --color-shark-900: #2f3231;
+  --color-shark-950: #1d201f;
 
-	--color-viridian-50: #effef7;
-	--color-viridian-100: #dafeef;
-	--color-viridian-200: #b8fadd;
-	--color-viridian-300: #81f4c3;
-	--color-viridian-400: #43e5a0;
-	--color-viridian-500: #1acd81;
-	--color-viridian-600: #0fa968;
-	--color-viridian-700: #108554;
-	--color-viridian-800: #126945;
-	--color-viridian-900: #11563a;
-	--color-viridian-950: #03301f;
-
-	  --breakpoint-xs: 30rem;
-
-
+  --color-viridian-50: #effef7;
+  --color-viridian-100: #dafeef;
+  --color-viridian-200: #b8fadd;
+  --color-viridian-300: #81f4c3;
+  --color-viridian-400: #43e5a0;
+  --color-viridian-500: #1acd81;
+  --color-viridian-600: #0fa968;
+  --color-viridian-700: #108554;
+  --color-viridian-800: #126945;
+  --color-viridian-900: #11563a;
+  --color-viridian-950: #03301f;
+  --breakpoint-xs: 30rem;
 }
 
 .debug {
-	@apply border border-red-600;
+  @apply border border-red-600;
 }
