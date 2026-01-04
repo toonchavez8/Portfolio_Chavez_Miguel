@@ -23,7 +23,7 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="relative">
+		<html lang="en" className="relative" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} group relative isolate min-h-screen bg-base-200 px-4 pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100`}
 			>
