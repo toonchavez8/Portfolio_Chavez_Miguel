@@ -45,7 +45,7 @@ export default async function RootLayout({
 	return (
 		<html lang="en" className="relative" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} group relative isolate min-h-screen bg-base-200 px-4 pt-4 text-neutral antialiased filter dark:bg-neutral dark:text-base-100`}
+				className={`${geistSans.variable} ${geistMono.variable} group relative isolate min-h-screen bg-neutral-100 text-neutral-900 antialiased filter dark:bg-neutral-950 dark:text-neutral-50`}
 			>
 				<Providers>
 					<PrismicPreview repositoryName={repositoryName} />
