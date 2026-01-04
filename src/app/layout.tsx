@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
@@ -16,6 +17,25 @@ const geistMono = Geist_Mono({
 	variable: "--font-geist-mono",
 	subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+	icons: {
+		icon: [
+			{ url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+			{ url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+			{ url: "/favicons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+			{ url: "/favicons/android-chrome-256x256.png", sizes: "256x256", type: "image/png" },
+		],
+		apple: [
+			{
+				url: "/favicons/apple-touch-icon.png",
+				sizes: "180x180",
+				type: "image/png",
+			},
+		],
+	},
+	manifest: "/favicons/site.webmanifest",
+};
 
 export default async function RootLayout({
 	children,
