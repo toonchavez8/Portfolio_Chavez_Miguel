@@ -99,8 +99,8 @@
 							[
 								"project_link",
 								{
-									"__TYPE__": "LinkContent",
 									"key": "76be7e35-81e2-4865-b621-203a5e06024f",
+									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "DocumentLink",
 										"id": "mock_document_id"
