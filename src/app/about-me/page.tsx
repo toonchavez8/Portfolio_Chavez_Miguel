@@ -5,12 +5,20 @@ import { notFound } from 'next/navigation'
 
 import { createClient } from '@/prismicio'
 import { components } from '@/slices'
+import SectionTitle from '@/componets/Atomic/SectionTitle'
 
 export default async function Page() {
   const client = createClient()
   const page = await client.getSingle('about_me').catch(() => notFound())
 
-  return <SliceZone slices={page.data.slices} components={components} />
+  return (
+    <main className="relative mx-auto flex w-11/12  flex-col   justify-items-start p-4 md:w-10/12 md:gap-8   lg:w-7/12 ">
+      <SectionTitle title={'About me'} />
+      <SliceZone slices={page.data.slices} components={components} />
+      <SliceZone slices={page.data.slices} components={components} />
+      <SliceZone slices={page.data.slices} components={components} />
+    </main>
+  )
 }
 
 export async function generateMetadata(): Promise<Metadata> {

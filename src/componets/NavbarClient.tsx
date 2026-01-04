@@ -19,7 +19,7 @@ export const NavbarClient = ({ siteName, navLinks }: NavbarClientProps) => {
   const path = pathName.split('/')[1]
 
   return (
-    <header className="sticky inset-x-0 top-0 z-30 mx-auto flex w-11/12 items-center justify-between border-b border-neutral-600/50 bg-transparent bg-opacity-25 px-4 filter dark:border-neutral-300/15 md:w-10/12 lg:w-7/12">
+    <header className="sticky inset-x-0 top-0 z-30 mx-auto flex w-11/12 items-center justify-between border-b border-neutral-600/50 bg-transparent bg-opacity-25 px-4 filter dark:border-neutral-300/15 backdrop-blur-xs md:w-10/12 lg:w-7/12">
       <Link href="/" aria-label="go to home page">
         <figure className="inset-8 hidden max-w-fit p-2 text-sm font-semibold capitalize duration-200 ease-out hover:border-opacity-100 hover:text-neutral-500 dark:text-base-100 dark:hover:text-accent sm:block md:text-xl">
           &lt;{siteName} /&gt;
