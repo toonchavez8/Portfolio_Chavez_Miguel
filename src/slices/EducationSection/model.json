@@ -32,11 +32,18 @@
                   "placeholder": ""
                 }
               },
-              "date_range": {
+              "start_date": {
                 "type": "Date",
                 "config": {
-                  "label": "Date Range",
+                  "label": "Start Date",
                   "placeholder": ""
+                }
+              },
+              "end_date": {
+                "type": "Date",
+                "config": {
+                  "label": "End Date",
+                  "placeholder": "End Date"
                 }
               },
               "currently_enrolled": {

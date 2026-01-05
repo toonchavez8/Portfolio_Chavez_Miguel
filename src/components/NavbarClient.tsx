@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import ThemeSwitch from '@/componets/Atomic/ThemeSwitch'
+import ThemeSwitch from '@/components/Atomic/ThemeSwitch'
 
 interface NavLink {
   name: string

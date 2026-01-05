@@ -1,8 +1,8 @@
 import { asDate, type Content } from '@prismicio/client'
 import type { SliceComponentProps } from '@prismicio/react'
 import type { FC } from 'react'
-import SectionTitle from '@/componets/Atomic/SectionTitle'
-import Projectlistitem from '@/componets/ProjectSection/Projectlistitem'
+import SectionTitle from '@/components/Atomic/SectionTitle'
+import Projectlistitem from '@/components/ProjectSection/Projectlistitem'
 
 /**
  * Props for `ProjectGallery`.

@@ -8,11 +8,12 @@ import { components } from '@/slices'
 
 type Params = { uid: string }
 
-export default async function Page({ params }: Readonly<{ params: Params }>) {
+export default async function Page({
+  params,
+}: Readonly<{ params: Promise<Params> }>) {
+  const { uid } = await params
   const client = createClient()
-  const page = await client
-    .getByUID('project', params.uid)
-    .catch(() => notFound())
+  const page = await client.getByUID('project', uid).catch(() => notFound())
 
   return (
     <main className="relative mx-auto flex w-11/12 flex-col items-center p-4 md:w-10/12 md:gap-8 lg:w-7/12">
@@ -26,15 +27,14 @@ export default async function Page({ params }: Readonly<{ params: Params }>) {
 export async function generateMetadata({
   params,
 }: {
-  params: Params
+  params: Promise<Params>
 }): Promise<Metadata> {
+  const { uid } = await params
   const client = createClient()
-  const page = await client
-    .getByUID('project', params.uid)
-    .catch(() => notFound())
+  const page = await client.getByUID('project', uid).catch(() => notFound())
 
   return {
-    title: page.data.meta_title || page.uid,
+    title: page.data.meta_title || uid,
     description: page.data.meta_description,
     openGraph: {
       images: [{ url: asImageSrc(page.data.meta_image) ?? '' }],

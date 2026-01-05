@@ -16,7 +16,7 @@ const Projectlistitem: FC<ProjectListItemProps> = ({
   formattedDate,
   index,
 }) => {
-  const tags: string[] = (project.project_tags || '')
+  const tags = (project.project_tags || '')
     .split(',')
     .map((tag) => tag.trim())
     .filter(Boolean)

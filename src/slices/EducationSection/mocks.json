@@ -1,61 +1,111 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "sectiontittle": {
-        "__TYPE__": "FieldContent",
-        "value": "shells",
-        "type": "Text"
-      },
-      "schools_dropdown": {
-        "__TYPE__": "GroupContentType",
-        "value": [
-          {
-            "__TYPE__": "GroupItemContent",
-            "value": [
-              [
-                "school_name",
-                {
-                  "__TYPE__": "FieldContent",
-                  "value": "well",
-                  "type": "Text"
-                }
-              ],
-              [
-                "date_range",
-                {
-                  "__TYPE__": "FieldContent",
-                  "type": "Date",
-                  "value": "2013-01-22"
-                }
-              ],
-              [
-                "currently_enrolled",
-                {
-                  "__TYPE__": "BooleanContent",
-                  "value": false
-                }
-              ],
-              [
-                "school_body",
-                {
-                  "__TYPE__": "StructuredTextContent",
-                  "value": [
-                    {
-                      "type": "paragraph",
-                      "content": {
-                        "text": "Cupidatat commodo tempor in amet."
-                      }
-                    }
-                  ]
-                }
-              ]
-            ]
-          }
-        ]
-      }
-    },
-    "items": []
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"schools_dropdown": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"date_range",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2013-01-31"
+								}
+							],
+							[
+								"currently_enrolled",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"school_body",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Agile Methodologies & Software Quality – I will learn about Agile frameworks, Lean principles, and software quality improvement techniques to develop flexible, maintainable systems.",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Software Project Management – I will gain expertise in planning, executing, monitoring, and closing software projects while mastering leadership, decision-making, and risk management.",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Cybersecurity & Secure Software Development – I will study secure coding practices, threat mitigation, and cybersecurity auditing to ensure robust and resilient applications",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Cloud Computing & DevOps – I will engage in system administration, virtualization, and cloud infrastructure management while integrating DevOps methodologies for continuous integration and deployment.",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Software Development Platforms & Architecture – I will explore development environments such as Java, .NET, and mobile platforms while working with distributed services and event-driven architectures.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"school_name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Master's Degree in Software Engineering and Computer Systems, UNIR"
+								}
+							],
+							[
+								"start_date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2025-02-01"
+								}
+							],
+							[
+								"end_date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2027-04-01"
+								}
+							]
+						]
+					}
+				]
+			},
+			"sectiontittle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Education"
+			}
+		},
+		"items": []
+	}
 ]

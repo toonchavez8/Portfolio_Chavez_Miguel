@@ -4,9 +4,9 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { repositoryName } from '@/prismicio'
 import './globals.css'
 
-import { BackGroundSquares } from '@/componets/Atomic/BackGround'
-import Footer from '@/componets/Footer'
-import NavBar from '@/componets/NavbarServer'
+import { BackGroundSquares } from '@/components/Atomic/BackGround'
+import Footer from '@/components/Footer'
+import NavBar from '@/components/NavbarServer'
 import { Providers } from './Utils/providers'
 
 const geistSans = Geist({
