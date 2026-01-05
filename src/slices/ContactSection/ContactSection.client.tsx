@@ -39,8 +39,8 @@ export default function ContactSectionClient({
   }
 
   return (
-    <nav aria-label="social links" className="not-prose">
-      <div className="flex flex-wrap items-center justify-start gap-2 text-sm sm:gap-3 md:gap-4 lg:gap-6">
+    <nav aria-label="social links" className="">
+      <div className="flex flex-wrap items-center justify-center gap-2 text-sm md:text-base sm:gap-3 md:gap-4 lg:gap-6">
         {socials.map((s) => {
           const { Icon, label, isEmail } = getSocialInfo(s.url)
           const isMail = s.url.startsWith('mailto:') || s.url.includes('@')
@@ -48,7 +48,7 @@ export default function ContactSectionClient({
             socials.indexOf(s) === socials.length - 1 && !primaryEmailCodes
           const separatorClass = isLastItem
             ? ''
-            : 'border-r border-shark-500/60 pe-2 sm:pe-3 dark:border-shark-700/60'
+            : 'border-r border-shark-500/60 pe-2 sm:pe-3 dark:border-shark-700/60 '
 
           const content = (
             <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-shark-600/50 hover:scale-105 dark:hover:border-shark-600/50">
