@@ -30,3 +30,7 @@
 .debug {
   @apply border border-red-600;
 }
+
+html {
+  scrollbar-gutter: stable both-edges;
+}

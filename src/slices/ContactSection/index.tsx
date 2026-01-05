@@ -1,6 +1,9 @@
 import type { Content } from '@prismicio/client'
+import { isFilled } from '@prismicio/client'
 import type { SliceComponentProps } from '@prismicio/react'
 import type { FC } from 'react'
+import SectionTitle from '@/components/Atomic/SectionTitle'
+import ContactSectionClient from './ContactSection.client'
 
 /**
  * Props for `ContactSection`.
@@ -8,23 +11,46 @@ import type { FC } from 'react'
 export type ContactSectionProps =
   SliceComponentProps<Content.ContactSectionSlice>
 
-/**
- * Component for "ContactSection" Slices.
- */
+export type SocialItem = {
+  url: string
+}
+
 const ContactSection: FC<ContactSectionProps> = ({ slice }) => {
+  const socials: SocialItem[] =
+    slice.primary.social_media_links
+      ?.map((item) => {
+        const field = item.social_media_link
+        if (!isFilled.link(field)) return null
+
+        const url = field.url || ''
+        if (!url) return null
+        return { url }
+      })
+      .filter((s): s is SocialItem => s !== null) ?? []
+
+  const primaryEmailCodes: readonly number[] | undefined =
+    slice.primary.email && typeof slice.primary.email === 'string'
+      ? Array.from(slice.primary.email).map((c) => c.codePointAt(0) ?? 0)
+      : undefined
+
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="mt-6"
     >
-      Placeholder component for contact_section (variation: {slice.variation})
-      slices.
-      <br />
-      <strong>You can edit this slice directly in your code editor.</strong>
-      {/**
-       * 💡 Use the Prismic MCP server with your code editor
-       * 📚 Docs: https://prismic.io/docs/ai#code-with-prismics-mcp-server
-       */}
+      {slice.primary.sectiontittle && (
+        <SectionTitle title={slice.primary.sectiontittle} />
+      )}
+
+      <p className="my-6 text-white/80 border-b pb-6 border-white/25">
+        {slice.primary.section_body}
+      </p>
+
+      <ContactSectionClient
+        socials={socials}
+        primaryEmailCodes={primaryEmailCodes}
+      />
     </section>
   )
 }

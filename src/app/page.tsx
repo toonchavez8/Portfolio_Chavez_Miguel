@@ -11,7 +11,7 @@ export default async function Page() {
   const page = await client.getSingle('homepage').catch(() => notFound())
 
   return (
-    <main className="relative mx-auto flex w-11/12  flex-col items-center   p-4 md:w-10/12 md:gap-8   lg:w-7/12 debug">
+    <main className="relative mx-auto flex w-11/12  flex-col items-center   p-4 md:w-10/12 md:gap-8   lg:w-7/12 ">
       <SliceZone slices={page.data.slices} components={components} />
     </main>
   )
