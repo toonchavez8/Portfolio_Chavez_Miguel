@@ -28,10 +28,10 @@ const Header: FC<HeaderProps> = ({ slice }) => {
         />
         <div className="flex flex-col items-start justify-start gap-1 text-white debug">
           <Lastupdatedbadge lastUpdated={slice.primary.last_updated} />
-          <h1 className=" bg-gradient-to-t from-shark-500 to-shark-900 bg-clip-text text-lg font-bold text-transparent  dark:from-shark-100 dark:to-shark-50 md:text-3xl ">
+          <h1 className=" bg-linear-to-t from-shark-500 to-shark-900 bg-clip-text text-lg font-bold text-transparent  dark:from-shark-100 dark:to-shark-50 md:text-3xl ">
             {slice.primary.name}
           </h1>
-          <p className="bg-gradient-to-l from-shark-600 to-shark-300 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl">
+          <p className="bg-linear-to-l from-shark-600 to-shark-300 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl">
             {slice.primary.position}
           </p>
         </div>
