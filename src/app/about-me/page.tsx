@@ -2,10 +2,9 @@ import { asImageSrc } from '@prismicio/client'
 import { SliceZone } from '@prismicio/react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-
+import SectionTitle from '@/components/Atomic/SectionTitle'
 import { createClient } from '@/prismicio'
 import { components } from '@/slices'
-import SectionTitle from '@/components/Atomic/SectionTitle'
 
 export default async function Page() {
   const client = createClient()

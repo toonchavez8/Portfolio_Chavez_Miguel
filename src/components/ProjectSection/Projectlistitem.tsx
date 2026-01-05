@@ -1,6 +1,6 @@
 'use client'
 
-import type { Content } from '@prismicio/client'
+import { type Content, isFilled } from '@prismicio/client'
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next'
 import type { FC } from 'react'
 import { FaGithub } from 'react-icons/fa'
@@ -73,7 +73,7 @@ const Projectlistitem: FC<ProjectListItemProps> = ({
       </div>
 
       <div className="@md:max-w-32 flex max-w-50 w-full flex-wrap-reverse items-center justify-center gap-4 ">
-        {project.repo_link?.url && (
+        {isFilled.link(project.repo_link) && (
           <PrismicNextLink
             field={project.repo_link}
             className="z-10 flex items-center gap-2  rounded-full border border-shark-600/70 bg-transparent px-3 py-1 font-mono text-sm duration-150 hover:border-viridian-700/70 hover:bg-inherit hover:bg-opacity-80 hover:text-viridian-500 dark:border-shark-400-400/50 dark:hover:text-viridian-300 max-w-20 "
@@ -83,7 +83,7 @@ const Projectlistitem: FC<ProjectListItemProps> = ({
             <span className="hidden xs:block">repo</span>
           </PrismicNextLink>
         )}{' '}
-        {project.live_link?.url && (
+        {isFilled.link(project.live_link) && (
           <PrismicNextLink
             field={project.live_link}
             className="z-10 flex items-center gap-2 rounded-full border border-viridian-600/70 bg-viridian-500/10 px-3 py-2 xs:py-1 font-mono text-sm text-viridian-700 transition hover:bg-viridian-500/20 dark:border-viridian-400/70 dark:text-viridian-200 max-w-20 "

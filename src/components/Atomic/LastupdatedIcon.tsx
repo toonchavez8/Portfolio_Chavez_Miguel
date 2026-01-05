@@ -119,7 +119,7 @@ const Lastupdatedbadge = ({
     fetchLastCommit()
   }, [prismicLastUpdated])
 
-  let displayContent: JSX.Element
+  let displayContent: React.ReactNode
 
   if (fetching) {
     displayContent = <LoadingSkeleton />

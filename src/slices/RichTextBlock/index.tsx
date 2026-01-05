@@ -1,9 +1,9 @@
-import type { Content, RTImageNode } from '@prismicio/client'
+import type { Content } from '@prismicio/client'
+import { PrismicNextImage, PrismicNextLink } from '@prismicio/next'
 import type { JSXMapSerializer, SliceComponentProps } from '@prismicio/react'
 import { PrismicRichText } from '@prismicio/react'
-import { PrismicNextImage, PrismicNextLink } from '@prismicio/next'
 import type { FC } from 'react'
-import { CodeBlock } from '@/componets/CodeBlock'
+import { CodeBlock } from '@/components/CodeBlock'
 
 /**
  * Props for `RichTextBlock`.
@@ -94,7 +94,7 @@ const components: JSXMapSerializer = {
     <ol className="my-6 ml-6 list-decimal [&>li]:mt-2">{children}</ol>
   ),
   image: ({ node }) => {
-    const imageNode = node as RTImageNode
+    const imageNode = node
     return (
       <figure className="my-8">
         <PrismicNextImage

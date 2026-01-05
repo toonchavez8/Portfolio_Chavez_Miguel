@@ -1,14 +1,17 @@
 'use client'
 
-import { codeToHtml } from 'shiki'
 import { useEffect, useState } from 'react'
+import { codeToHtml } from 'shiki'
 
 interface CodeBlockProps {
   code: string
   language?: string
 }
 
-export function CodeBlock({ code, language = 'typescript' }: CodeBlockProps) {
+export function CodeBlock({
+  code,
+  language = 'typescript',
+}: Readonly<CodeBlockProps>) {
   const [html, setHtml] = useState<string>('')
   const [loading, setLoading] = useState(true)
 
@@ -20,9 +23,12 @@ export function CodeBlock({ code, language = 'typescript' }: CodeBlockProps) {
           theme: 'github-dark',
         })
         setHtml(highlighted)
-      } catch (error) {
-        // Fallback if language not supported
-        console.warn(`Language "${language}" not supported, using plaintext`)
+      } catch (err) {
+        // Fallback if language not supported - include error in log for diagnostics
+        console.warn(
+          `Language "${language}" not supported, using plaintext`,
+          err,
+        )
         const fallback = await codeToHtml(code, {
           lang: 'plaintext',
           theme: 'github-dark',
@@ -49,6 +55,7 @@ export function CodeBlock({ code, language = 'typescript' }: CodeBlockProps) {
   return (
     <div
       className="shiki-wrapper mb-4 mt-6 overflow-x-auto rounded-lg border border-shark-200 dark:border-shark-800 [&_pre]:m-0!  [&_pre]:p-4"
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: Shiki generates safe HTML for syntax highlighting
       dangerouslySetInnerHTML={{ __html: html }}
     />
   )

@@ -60,9 +60,9 @@ export const FooterClient = ({ location, footerLinks }: FooterClientProps) => {
         <div className="flex flex-wrap justify-center gap-2">
           {footerLinks
             .filter((link) => isFilled.link(link))
-            .map((link) => (
+            .map((link, index) => (
               <PrismicNextLink
-                key={'url' in link ? link.url : undefined}
+                key={link.text ?? `footer-link-${index}`}
                 field={link}
                 className="flex flex-row-reverse items-center gap-2 rounded-full border border-shark-600/70 bg-transparent px-4 py-2 font-mono text-sm text-shark-700 transition hover:bg-shark-600/25 dark:border-shark-300/10 dark:text-shark-200 dark:hover:bg-shark-300/10"
               />

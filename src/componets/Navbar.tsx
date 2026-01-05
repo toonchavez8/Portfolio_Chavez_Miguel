@@ -1,6 +1,6 @@
-import { isFilled } from '@prismicio/client'
+import { type FilledLinkToWebField, isFilled } from '@prismicio/client'
+import NavbarClient from '../components/NavbarClient'
 import { createClient } from '../prismicio'
-import NavbarClient from './NavbarClient'
 
 interface NavLink {
   name: string
@@ -13,6 +13,7 @@ export const NavBar = async () => {
     { name: 'now', href: '/now' },
     { name: 'projects', href: '/projects' },
     { name: 'journel', href: '/journel' },
+    { name: 'about me', href: '/about-me' },
   ]
 
   try {
@@ -24,7 +25,8 @@ export const NavBar = async () => {
       siteName = settings.data.site_name
     }
 
-    // Extract navigation links - navigation is a GroupField
+    // Extract navigation links
+    // navigation is a GroupField - check if it has content and access nav_link
     const navigation = settings.data.navigation
     if (
       navigation &&
@@ -33,10 +35,13 @@ export const NavBar = async () => {
       Array.isArray(navigation.nav_link)
     ) {
       const links: NavLink[] = navigation.nav_link
-        .filter((link) => isFilled.link(link) && link.text)
+        .filter(
+          (link): link is FilledLinkToWebField & { text?: string } =>
+            isFilled.link(link) && !!link.text,
+        )
         .map((link) => ({
           name: (link.text || '').toLowerCase(),
-          href: 'url' in link ? (link.url as string) : '',
+          href: link.url,
         }))
 
       if (links.length > 0) {

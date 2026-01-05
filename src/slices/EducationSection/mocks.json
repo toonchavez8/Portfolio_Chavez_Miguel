@@ -25,6 +25,30 @@
                 }
               ],
               [
+                "school_name",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Master's Degree in Software Engineering and Computer Systems, UNIR"
+                }
+              ],
+              [
+                "start_date",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Date",
+                  "value": "2025-02-01"
+                }
+              ],
+              [
+                "end_date",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Date",
+                  "value": "2027-04-01"
+                }
+              ],
+              [
                 "school_body",
                 {
                   "__TYPE__": "StructuredTextContent",
@@ -71,13 +95,65 @@
                     }
                   ]
                 }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "currently_enrolled",
+                {
+                  "__TYPE__": "BooleanContent",
+                  "value": false
+                }
               ],
               [
                 "school_name",
                 {
                   "__TYPE__": "FieldContent",
                   "type": "Text",
-                  "value": "Master's Degree in Software Engineering and Computer Systems, UNIR"
+                  "value": "Full Stack Development, CoderHouse"
+                }
+              ],
+              [
+                "school_body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "Completed a comprehensive program that covered the fundamentals and best practices of web development, JavaScript, React, and backend programming with node.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "During the Web Development stage I learned how to build a multi-page portfolio with JS logic to handle form submission and mail confirmation.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "With react along with react router, i built an eccomerce website that allows users to search for products and add them to their cart, and send a confirmation email order with their reqeust,",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "During 6 month backend stage i build a backend centric eccom with node.js, express, and mongodb and handlebars to handel the views.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
                 }
               ],
               [
@@ -85,7 +161,7 @@
                 {
                   "__TYPE__": "FieldContent",
                   "type": "Date",
-                  "value": "2025-02-01"
+                  "value": "2022-12-15"
                 }
               ],
               [
@@ -93,10 +169,11 @@
                 {
                   "__TYPE__": "FieldContent",
                   "type": "Date",
-                  "value": "2027-04-01"
+                  "value": "2024-01-10"
                 }
               ]
-            ]
+            ],
+            "key": "ee6160ae-02e6-452f-9964-52aca855c663"
           }
         ]
       },

@@ -1,9 +1,8 @@
-import SectionTitle from '@/components/Atomic/SectionTitle'
 import type { Content } from '@prismicio/client'
-import type { JSXMapSerializer } from '@prismicio/react'
+import type { JSXMapSerializer, SliceComponentProps } from '@prismicio/react'
 import { PrismicRichText } from '@prismicio/react'
-import type { SliceComponentProps } from '@prismicio/react'
 import type { FC } from 'react'
+import SectionTitle from '@/components/Atomic/SectionTitle'
 import {
   Accordion,
   AccordionContent,
@@ -55,7 +54,7 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
       <Accordion type="single" collapsible>
         {slice.primary.schools_dropdown?.map((item, index) => (
           <AccordionItem
-            key={`school-${index}`}
+            key={item.school_name || `school-${index}`}
             value={`item-${index}`}
             className="m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75"
           >
