@@ -28,7 +28,7 @@ const Projectlistitem: FC<ProjectListItemProps> = ({
   return (
     <article
       key={project.project_name || index}
-      className="@container relative isolate flex flex-row items-center justify-around gap-2 rounded-lg border border-shark-700/25 bg-opacity-10 p-2 antialiased backdrop-blur-sm transition hover:border-viridian-600 hover:bg-viridian-400/5 dark:border-shark-700/50 dark:bg-opacity-5 hover:dark:border-shark-500/75 dark:hover:bg-viridian-950/10"
+      className="@container relative isolate flex flex-row items-center justify-around gap-2 rounded-lg border border-shark-700/25 bg-opacity-10 p-2 antialiased backdrop-blur-lg transition hover:border-viridian-600 hover:bg-viridian-400/5 dark:border-shark-700/50 dark:bg-opacity-5 hover:dark:border-shark-500/75 dark:hover:bg-viridian-950/10 "
     >
       {project.project_link?.link_type !== 'Any' && (
         <PrismicNextLink
@@ -40,12 +40,12 @@ const Projectlistitem: FC<ProjectListItemProps> = ({
 
       <PrismicNextImage
         field={project.project_image}
-        className="hidden aspect-video h-full w-full max-w-32 rounded-lg object-cover md:block"
+        className="hidden aspect-video h-full w-full max-w-32 rounded-lg object-cover md:block "
       />
 
       <div className="flex w-full flex-col items-start justify-start gap-1 px-4">
         <div className="flex w-full items-center justify-between">
-          <p className="hidden font-mono text-xs font-extralight opacity-60 xs:block xs:text-sm debug">
+          <p className="hidden font-mono text-xs font-extralight opacity-60 xs:block xs:text-sm ">
             {formattedDate}
           </p>
           <button

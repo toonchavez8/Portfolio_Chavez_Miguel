@@ -5,6 +5,7 @@ import { repositoryName } from '@/prismicio'
 import './globals.css'
 
 import { BackGroundSquares } from '@/components/Atomic/BackGround'
+import { MouseFollowBlob } from '@/components/Atomic/MouseFollowBlob'
 import Footer from '@/components/Footer'
 import NavBar from '@/components/NavbarServer'
 import { Providers } from './Utils/providers'
@@ -62,6 +63,7 @@ export default async function RootLayout({
           {children}
           <Footer />
           <BackGroundSquares />
+          <MouseFollowBlob />
         </Providers>
       </body>
     </html>

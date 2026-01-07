@@ -56,10 +56,10 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
           <AccordionItem
             key={item.school_name || `school-${index}`}
             value={`item-${index}`}
-            className="m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75"
+            className="m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75 group/school"
           >
             {item.currently_enrolled && (
-              <span className="border rounded-full px-2 mt-1 font-mono text-xs opacity-25 group-hover:opacity-100">
+              <span className="border rounded-full px-2 mt-1 font-mono text-xs opacity-25  group-hover/school:opacity-100 transition-all group-hover/school:animate-pulse group-hover/school:border-viridian-500">
                 currently enrolled
               </span>
             )}
