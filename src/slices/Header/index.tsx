@@ -15,7 +15,7 @@ export type HeaderProps = SliceComponentProps<Content.HeaderSlice>
 const Header: FC<HeaderProps> = ({ slice }) => {
   return (
     <section
-      className=" relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start md:mt-8 prose-base  "
+      className=" relative  mt-4 flex w-full flex-col items-start justify-start gap-2 rounded xs:items-start md:mt-8 prose-base group/header "
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -31,7 +31,7 @@ const Header: FC<HeaderProps> = ({ slice }) => {
           <h1 className=" bg-linear-to-t from-shark-500 to-shark-900 bg-clip-text text-lg font-bold text-transparent  dark:from-shark-100 dark:to-shark-50 md:text-3xl ">
             {slice.primary.name}
           </h1>
-          <p className="bg-linear-to-l from-shark-600 to-shark-300 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl">
+          <p className="bg-linear-to-l from-viridian-500 to-shark-600 dark:from-viridian-700 dark:to-shark-300 bg-clip-text text-base  font-thin text-transparent dark:from-base-300 dark:to-base-100/50 md:text-xl ">
             {slice.primary.position}
           </p>
         </div>

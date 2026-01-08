@@ -31,9 +31,9 @@ function getMaskStyle(mask: BGMaskType): React.CSSProperties {
     case 'fade-edges':
       return {
         maskImage:
-          'radial-gradient(ellipse at center, rgba(0,0,0,1), rgba(0,0,0,0))',
+          'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%,  rgba(0,0,0,0.15) 65%, rgba(0,0,0,0) 100%)',
         WebkitMaskImage:
-          'radial-gradient(ellipse at center, rgba(0,0,0,1), rgba(0,0,0,0))',
+          'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%,  rgba(0,0,0,0.15) 65%, rgba(0,0,0,0) 100%)',
       }
     case 'fade-center':
       return {
@@ -104,6 +104,12 @@ function geBgImage(variant: BGVariantType, fill: string, size: number) {
       return undefined
   }
 }
+function getEdgeOverlay(e?: 'dark' | 'light' | 'none') {
+  if (!e || e === 'none') return undefined
+  if (e === 'dark')
+    return `radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.5) 100%)`
+  return `radial-gradient(ellipse at center, rgba(255,255,255,0) 45%, rgba(255,255,255,0.35) 100%)`
+}
 
 const BGPattern = ({
   variant = 'grid',
@@ -116,13 +122,6 @@ const BGPattern = ({
 }: BGPatternProps) => {
   const bgSize = `${size}px ${size}px`
   const patternImage = geBgImage(variant, fill, size)
-
-  function getEdgeOverlay(e?: 'dark' | 'light' | 'none') {
-    if (!e || e === 'none') return undefined
-    if (e === 'dark')
-      return `radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.5) 100%)`
-    return `radial-gradient(ellipse at center, rgba(255,255,255,0) 45%, rgba(255,255,255,0.35) 100%)`
-  }
 
   const edgeOverlay = getEdgeOverlay((props as any).edge)
   const backgroundImage = edgeOverlay

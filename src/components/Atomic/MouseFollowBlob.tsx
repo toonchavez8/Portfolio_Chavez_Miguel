@@ -19,7 +19,7 @@ export function MouseFollowBlob() {
 
   return (
     <div
-      className="pointer-events-none fixed z-0 size-100 rounded-full bg-viridian-300 opacity-5 blur-3xl aspect-square transition-transform duration-200 ease-out dark:bg-viridian-700"
+      className="pointer-events-none fixed z-0 size-125 rounded-full bg-viridian-400 opacity-15 dark:opacity-5  blur-3xl aspect-square transition-transform duration-200 ease-out dark:bg-viridian-700 "
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
