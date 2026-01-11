@@ -64,7 +64,7 @@ export default async function RootLayout({
           <Footer />
           <BackGroundSquares />
           <span
-            className=" opacity-20  before:absolute before:top-0 before:left-0 before:w-full
+            className=" opacity-20 -z-98 before:absolute before:top-0 before:left-0 before:w-full
           before:h-full before:content-[''] before:opacity-[0.2] dark:before:opacity-[0.08] before:-z-10 before:pointer-events-none
           motion-safe:before:bg-[url('https://www.ui-layouts.com/noise.gif')]"
           />

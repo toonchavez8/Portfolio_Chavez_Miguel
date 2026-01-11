@@ -80,7 +80,6 @@ function getMaskStyle(mask: BGMaskType): React.CSSProperties {
         WebkitMaskImage:
           'linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0))',
       }
-    case 'none':
     default:
       return {}
   }
@@ -123,7 +122,7 @@ const BGPattern = ({
   const bgSize = `${size}px ${size}px`
   const patternImage = geBgImage(variant, fill, size)
 
-  const edgeOverlay = getEdgeOverlay((props as any).edge)
+  const edgeOverlay = getEdgeOverlay(props.edge)
   const backgroundImage = edgeOverlay
     ? `${edgeOverlay}, ${patternImage}`
     : patternImage

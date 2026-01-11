@@ -1,52 +1,46 @@
-import { asDate, type Content } from '@prismicio/client'
+// src/slices/ProjectGallery/index.tsx
+import type { Content } from '@prismicio/client'
 import type { SliceComponentProps } from '@prismicio/react'
 import type { FC } from 'react'
-import SectionTitle from '@/components/Atomic/SectionTitle'
-import Projectlistitem from '@/components/ProjectSection/Projectlistitem'
+import { ProjectGallery as ProjectGalleryComponent } from '@/components/ProjectGallery/ProjectGallery'
+
+// Context type for filtering
+interface SliceContext {
+  showFeaturedOnly?: boolean
+}
+
+export type ProjectGallerySliceProps = SliceComponentProps<
+  Content.ProjectGallerySlice,
+  SliceContext
+>
 
 /**
- * Props for `ProjectGallery`.
+ * ProjectGallery Slice Component
+ * Wraps the reusable ProjectGallery component for Prismic SliceZone
+ * Supports filtering for featured projects via context
  */
-export type ProjectGalleryProps =
-  SliceComponentProps<Content.ProjectGallerySlice>
+const ProjectGallerySlice: FC<ProjectGallerySliceProps> = ({
+  slice,
+  context,
+}) => {
+  const allProjects = slice.primary.project_byte ?? []
 
-/**
- * Component for "ProjectGallery" Slices.
- */
-const ProjectGallery: FC<ProjectGalleryProps> = ({ slice }) => {
-  const projects = slice.primary.project_byte ?? []
+  // Filter for featured projects if context specifies
+  const projects = context?.showFeaturedOnly
+    ? allProjects.filter((item) => item.featured === true)
+    : allProjects
 
   return (
-    <section
+    <div
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="group/section  flex w-full flex-col justify-center gap-4 py-2 md:gap-6 lg:px-4"
     >
-      {slice.primary.sectiontittle && (
-        <SectionTitle title={slice.primary.sectiontittle} />
-      )}
-
-      <div className="grid w-full grid-cols-1 gap-4">
-        {projects.map((item, index) => {
-          const date = asDate(item.project_date)
-          const formattedDate = date?.toLocaleDateString('en-US', {
-            month: 'long',
-            day: '2-digit',
-            year: 'numeric',
-          })
-
-          return (
-            <Projectlistitem
-              key={item.project_name || index}
-              project={item}
-              formattedDate={formattedDate}
-              index={index}
-            />
-          )
-        })}
-      </div>
-    </section>
+      <ProjectGalleryComponent
+        projects={projects}
+        title={slice.primary.sectiontittle ?? undefined}
+      />
+    </div>
   )
 }
 
-export default ProjectGallery
+export default ProjectGallerySlice

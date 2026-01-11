@@ -1,83 +1,83 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"sectiontittle": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Contact"
-			},
-			"social_media_links": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"social_media_link",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "00842842-6b00-49be-8152-5141e513721c",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://www.instagram.com/toonchavez/",
-										"target": "_blank",
-										"text": "studied"
-									}
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"social_media_link",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "0f02f30f-2f3b-4a9e-92ce-e23da12b7163",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://www.linkedin.com/in/toonchavez8/",
-										"target": "_blank"
-									}
-								}
-							]
-						],
-						"key": "7b4d1f89-45bc-45a0-b323-2a24643e84cb"
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"social_media_link",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "01f0b533-7571-4567-a618-fe73fa05608a",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://github.com/toonchavez8",
-										"target": "_blank"
-									}
-								}
-							]
-						],
-						"key": "44ffa5f7-9ac9-4ba6-a4bc-a271c32cb400"
-					}
-				]
-			},
-			"section_body": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Feel free to contact me on any of the social media links below or by email."
-			},
-			"email": {
-				"__TYPE__": "FieldContent",
-				"value": "round",
-				"type": "Text"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "sectiontittle": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Contact"
+      },
+      "social_media_links": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "social_media_link",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "00842842-6b00-49be-8152-5141e513721c",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://www.instagram.com/toonchavez/",
+                    "target": "_blank",
+                    "text": "studied"
+                  }
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "social_media_link",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "0f02f30f-2f3b-4a9e-92ce-e23da12b7163",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://www.linkedin.com/in/toonchavez8/",
+                    "target": "_blank"
+                  }
+                }
+              ]
+            ],
+            "key": "7b4d1f89-45bc-45a0-b323-2a24643e84cb"
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "social_media_link",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "01f0b533-7571-4567-a618-fe73fa05608a",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://github.com/toonchavez8",
+                    "target": "_blank"
+                  }
+                }
+              ]
+            ],
+            "key": "44ffa5f7-9ac9-4ba6-a4bc-a271c32cb400"
+          }
+        ]
+      },
+      "section_body": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Feel free to contact me on any of the social media links below or by email."
+      },
+      "email": {
+        "__TYPE__": "FieldContent",
+        "value": "round",
+        "type": "Text"
+      }
+    },
+    "items": []
+  }
 ]

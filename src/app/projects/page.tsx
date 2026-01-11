@@ -1,20 +1,18 @@
 import { asImageSrc } from '@prismicio/client'
-import { SliceZone } from '@prismicio/react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-
+// src/app/projects/page.tsx
+import { ProjectGallery } from '@/components/ProjectGallery/ProjectGallery'
+import { getAllProjectBytes } from '@/lib/projects'
 import { createClient } from '@/prismicio'
-import { components } from '@/slices'
 
-export default async function Page() {
-  const client = createClient()
-  const page = await client
-    .getSingle('projects_catalog')
-    .catch(() => notFound())
+export default async function ProjectsPage() {
+  // Get all project bytes
+  const allProjects = await getAllProjectBytes()
 
   return (
-    <main className="relative mx-auto flex w-11/12 flex-col items-center p-4 md:w-10/12 md:gap-8 lg:w-7/12">
-      <SliceZone slices={page.data.slices} components={components} />
+    <main>
+      <ProjectGallery projects={allProjects} title="All Projects" />
     </main>
   )
 }

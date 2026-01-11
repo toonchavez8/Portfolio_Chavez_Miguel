@@ -89,7 +89,18 @@
                   "label": "Project Link",
                   "select": "document",
                   "repeat": false,
-                  "customtypes": ["project"]
+                  "customtypes": [
+                    "project"
+                  ]
+                }
+              },
+              "featured": {
+                "type": "Boolean",
+                "config": {
+                  "label": "featured",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
                 }
               }
             }
