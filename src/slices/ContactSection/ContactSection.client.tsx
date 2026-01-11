@@ -51,7 +51,7 @@ export default function ContactSectionClient({
             : 'border-r border-shark-500/60 pe-2 sm:pe-3 dark:border-shark-700/60 '
 
           const content = (
-            <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-shark-600/50 hover:scale-105 dark:hover:border-shark-600/50">
+            <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
               <Icon className="h-4 w-4" />
               <span className="hidden sm:block">{label}</span>
             </code>
@@ -66,7 +66,7 @@ export default function ContactSectionClient({
                   type="button"
                   className="group"
                 >
-                  <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4hover:border-shark-600/50 hover:scale-105 ">
+                  <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
                     <FiMail className="h-4 w-4" />
                     <span className="hidden sm:block">Email</span>
                   </code>
@@ -97,7 +97,7 @@ export default function ContactSectionClient({
               aria-label="Send email"
               className="group"
             >
-              <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-shark-600/50 hover:scale-105 ">
+              <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
                 <FiMail className="h-4 w-4" />
                 <span className="hidden sm:block">Email</span>
               </code>

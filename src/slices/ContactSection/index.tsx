@@ -37,13 +37,13 @@ const ContactSection: FC<ContactSectionProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="mt-6  w-full mb-8 p-4"
+      className="mt-6  w-full mb-8 p-4 group/section "
     >
       {slice.primary.sectiontittle && (
         <SectionTitle title={slice.primary.sectiontittle} />
       )}
 
-      <p className="my-6 text-white/80 border-b pb-6 border-white/25">
+      <p className="my-6 text-shark-700 dark:text-shark-300 border-b pb-6 border-white/25">
         {slice.primary.section_body}
       </p>
 

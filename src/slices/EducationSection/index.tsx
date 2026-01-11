@@ -56,7 +56,7 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
           <AccordionItem
             key={item.school_name || `school-${index}`}
             value={`item-${index}`}
-            className="m-0 border-neutral border-opacity-25 dark:border-shark-700 dark:border-opacity-75 group/school"
+            className="m-0 border-b border-shark-500/50 dark:border-shark-300/50 hover:border-viridian-500/75 dark:hover:border-shark-300/75   group/school transition-all ease-out duration-200"
           >
             {item.currently_enrolled && (
               <span className="border rounded-full px-2 mt-1 font-mono text-xs opacity-25  group-hover/school:opacity-100 transition-all group-hover/school:animate-pulse group-hover/school:border-viridian-500">
@@ -65,7 +65,7 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
             )}
             <AccordionTrigger className="text-left">
               <span className="flex w-full items-start justify-between gap-4">
-                <span className="flex-1">{item.school_name}</span>
+                <span className="flex-1 ">{item.school_name}</span>
                 <span className="ml-auto mr-4 hidden font-mono text-sm font-light opacity-50 md:block">
                   {formatDate(item.start_date)} -{' '}
                   {item.currently_enrolled
@@ -74,7 +74,7 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
                 </span>
               </span>
             </AccordionTrigger>
-            <AccordionContent className="prose-sm dark:prose-invert">
+            <AccordionContent className="prose-sm dark:prose-invert ">
               <PrismicRichText
                 field={item.school_body}
                 components={richTextComponents}
