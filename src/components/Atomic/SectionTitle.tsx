@@ -3,7 +3,7 @@ interface SectionTitleProps {
 }
 
 const SectionTitle = ({ title }: SectionTitleProps) => (
-  <h2 className="font-mono text-lg opacity-60 transition-colors duration-150 group-hover/section:text-viridian-600 dark:group-hover/section:text-viridian-500">
+  <h2 className="font-mono text-lg opacity-60 transition-colors duration-150 group-hover/section:text-viridian-600 dark:group-hover/section:text-viridian-500 self-start ">
     <span className="animate-pulse" aria-hidden="true">
       &#47;&#47;{' '}
     </span>

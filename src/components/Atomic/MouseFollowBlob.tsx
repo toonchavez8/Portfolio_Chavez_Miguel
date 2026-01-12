@@ -19,11 +19,14 @@ export function MouseFollowBlob() {
 
   return (
     <div
-      className="pointer-events-none fixed z-0 size-125 rounded-full bg-viridian-400 opacity-10 dark:opacity-2  blur-3xl aspect-square transition-transform duration-200 ease-out dark:bg-viridian-700 "
+      className="pointer-events-none fixed -z-70 size-200 rounded-full aspect-square transition-transform duration-200 ease-out opacity-10   "
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         transform: 'translate(-50%, -50%)',
+        background:
+          'radial-gradient(circle at center, rgba(47,143,122,1) 0%, rgba(47,143,122,0.35) 35%, rgba(47,143,122,0.02) 65%, rgba(0,0,0,0) 100%)',
+        pointerEvents: 'none',
       }}
     />
   )

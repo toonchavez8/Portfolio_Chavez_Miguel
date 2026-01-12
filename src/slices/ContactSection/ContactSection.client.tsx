@@ -64,7 +64,7 @@ export default function ContactSectionClient({
                   onClick={handleEmailClick}
                   aria-label="Send email"
                   type="button"
-                  className="group"
+                  className="group "
                 >
                   <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
                     <FiMail className="h-4 w-4" />
@@ -95,7 +95,7 @@ export default function ContactSectionClient({
               onClick={handleEmailClick}
               type="button"
               aria-label="Send email"
-              className="group"
+              className="group cursor-pointer"
             >
               <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
                 <FiMail className="h-4 w-4" />

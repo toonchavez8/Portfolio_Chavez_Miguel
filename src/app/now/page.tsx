@@ -10,7 +10,11 @@ export default async function Page() {
   const client = createClient()
   const page = await client.getSingle('now_page').catch(() => notFound())
 
-  return <SliceZone slices={page.data.slices} components={components} />
+  return (
+    <main className="relative mx-auto flex  w-full max-w-11/12 flex-col items-center p-4 md:max-w-10/12 md:gap-8 lg:max-w-7/12">
+      <SliceZone slices={page.data.slices} components={components} />
+    </main>
+  )
 }
 
 export async function generateMetadata(): Promise<Metadata> {

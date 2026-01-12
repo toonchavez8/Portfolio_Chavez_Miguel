@@ -11,7 +11,7 @@ export default async function ProjectsPage() {
   const allProjects = await getAllProjectBytes()
 
   return (
-    <main>
+    <main className="relative mx-auto flex  w-full max-w-11/12 flex-col items-center p-4 md:max-w-10/12 md:gap-8 lg:max-w-7/12">
       <ProjectGallery projects={allProjects} title="All Projects" />
     </main>
   )

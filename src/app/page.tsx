@@ -8,6 +8,12 @@ import { getFeaturedProjectBytes } from '@/lib/projects'
 import { createClient } from '@/prismicio'
 import { components } from '@/slices'
 
+// Slices that should appear BEFORE the ProjectGallery
+const HEADER_SLICES = ['header']
+
+// Slices that should appear AFTER the ProjectGallery
+const FOOTER_SLICES = ['education_section', 'contact_section']
+
 export default async function Page() {
   const client = createClient()
   const page = await client.getSingle('homepage').catch(() => notFound())
@@ -15,17 +21,25 @@ export default async function Page() {
   // Fetch featured projects from projects_catalog (source of truth)
   const featuredProjects = await getFeaturedProjectBytes()
 
-  // Filter out ProjectGallery slice - we'll render it manually with featured projects
-  const slicesWithoutProjectGallery = page.data.slices.filter(
-    (slice) => slice.slice_type !== 'project_gallery',
+  // Split slices into sections for controlled ordering
+  const headerSlices = page.data.slices.filter((slice) =>
+    HEADER_SLICES.includes(slice.slice_type),
+  )
+
+  const footerSlices = page.data.slices.filter((slice) =>
+    FOOTER_SLICES.includes(slice.slice_type),
   )
 
   return (
-    <main className="relative mx-auto flex w-11/12  flex-col items-center   p-4 md:w-10/12 md:gap-8   lg:w-7/12 ">
-      <SliceZone slices={slicesWithoutProjectGallery} components={components} />
-      <div className="-order-1 w-full">
-        <ProjectGallery projects={featuredProjects} title="Featured Work" />
-      </div>
+    <main className="relative mx-auto flex  w-full max-w-11/12 flex-col items-center p-4 md:max-w-10/12 md:gap-8 lg:max-w-7/12">
+      {/* Header section */}
+      <SliceZone slices={headerSlices} components={components} />
+
+      {/* Featured Projects Gallery */}
+      <ProjectGallery projects={featuredProjects} title="Featured Work" />
+
+      {/* Education & Contact sections */}
+      <SliceZone slices={footerSlices} components={components} />
     </main>
   )
 }
