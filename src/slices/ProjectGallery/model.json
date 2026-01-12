@@ -89,9 +89,7 @@
                   "label": "Project Link",
                   "select": "document",
                   "repeat": false,
-                  "customtypes": [
-                    "project"
-                  ]
+                  "customtypes": ["project"]
                 }
               },
               "featured": {
