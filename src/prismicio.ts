@@ -35,13 +35,6 @@ const routes: Route[] = [
   { type: 'project', path: '/projects/:uid' },
 ]
 
-// Next.js fetch options for caching (cast needed due to Prismic client type limitations)
-const fetchOptions = (
-  process.env.NODE_ENV === 'production'
-    ? { next: { tags: ['prismic'] }, cache: 'force-cache' }
-    : { next: { revalidate: 5 } }
-) as ClientConfig['fetchOptions']
-
 /**
  * Creates a Prismic client for the project's repository. The client is used to
  * query content from the Prismic API.
@@ -51,7 +44,10 @@ const fetchOptions = (
 export const createClient = (config: ClientConfig = {}) => {
   const client = baseCreateClient(repositoryName, {
     routes,
-    fetchOptions,
+    fetchOptions:
+      process.env.NODE_ENV === 'production'
+        ? { next: { tags: ['prismic'] }, cache: 'force-cache' }
+        : { next: { revalidate: 5 } },
     ...config,
   })
 

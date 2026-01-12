@@ -56,6 +56,11 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} group relative isolate min-h-screen grid grid-rows-[auto_1fr_auto] bg-neutral-100 text-neutral-900 antialiased filter dark:bg-neutral-950 dark:text-neutral-50`}
       >
+        <script
+          async
+          defer
+          src="https://static.cdn.prismic.io/prismic.js?new=true&repo=toonchavez-dev"
+        ></script>
         <Providers>
           <PrismicPreview repositoryName={repositoryName} />
           <NavBar />

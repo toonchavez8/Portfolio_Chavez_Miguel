@@ -1,14 +1,21 @@
 {
   "format": "page",
   "id": "colophone",
+  "label": "colophone",
+  "repeatable": false,
+  "status": true,
   "json": {
     "Main": {
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "rich_text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -38,8 +45,5 @@
         "type": "Image"
       }
     }
-  },
-  "label": "colophone",
-  "repeatable": false,
-  "status": true
+  }
 }

@@ -134,7 +134,7 @@ export type AboutMeDocument<Lang extends string = string> =
     Lang
   >;
 
-type ColophoneDocumentDataSlicesSlice = never;
+type ColophoneDocumentDataSlicesSlice = RichTextBlockSlice;
 
 /**
  * Content for colophone documents
