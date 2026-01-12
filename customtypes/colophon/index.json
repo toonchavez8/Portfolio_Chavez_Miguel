@@ -1,7 +1,7 @@
 {
   "format": "page",
-  "id": "colophone",
-  "label": "colophone",
+  "id": "colophon",
+  "label": "colophon",
   "repeatable": false,
   "status": true,
   "json": {

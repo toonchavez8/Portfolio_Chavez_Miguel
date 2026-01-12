@@ -134,49 +134,49 @@ export type AboutMeDocument<Lang extends string = string> =
     Lang
   >;
 
-type ColophoneDocumentDataSlicesSlice = RichTextBlockSlice;
+type ColophonDocumentDataSlicesSlice = RichTextBlockSlice;
 
 /**
- * Content for colophone documents
+ * Content for colophon documents
  */
-interface ColophoneDocumentData {
+interface ColophonDocumentData {
   /**
-   * Slice Zone field in *colophone*
+   * Slice Zone field in *colophon*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: colophone.slices[]
+   * - **API ID Path**: colophon.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<ColophoneDocumentDataSlicesSlice>; /**
-   * Meta Title field in *colophone*
+  slices: prismic.SliceZone<ColophonDocumentDataSlicesSlice>; /**
+   * Meta Title field in *colophon*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: colophone.meta_title
+   * - **API ID Path**: colophon.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *colophone*
+   * Meta Description field in *colophon*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: colophone.meta_description
+   * - **API ID Path**: colophon.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *colophone*
+   * Meta Image field in *colophon*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: colophone.meta_image
+   * - **API ID Path**: colophon.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
@@ -184,18 +184,18 @@ interface ColophoneDocumentData {
 }
 
 /**
- * colophone document from Prismic
+ * colophon document from Prismic
  *
- * - **API ID**: `colophone`
+ * - **API ID**: `colophon`
  * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/content-modeling
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ColophoneDocument<Lang extends string = string> =
+export type ColophonDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
-    Simplify<ColophoneDocumentData>,
-    "colophone",
+    Simplify<ColophonDocumentData>,
+    "colophon",
     Lang
   >;
 
@@ -726,7 +726,7 @@ export type SettingsDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AboutMeDocument
-  | ColophoneDocument
+  | ColophonDocument
   | HomepageDocument
   | JournelCatalogDocument
   | JournelEntryDocument
@@ -1540,9 +1540,9 @@ declare module "@prismicio/client" {
       AboutMeDocument,
       AboutMeDocumentData,
       AboutMeDocumentDataSlicesSlice,
-      ColophoneDocument,
-      ColophoneDocumentData,
-      ColophoneDocumentDataSlicesSlice,
+      ColophonDocument,
+      ColophonDocumentData,
+      ColophonDocumentDataSlicesSlice,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,

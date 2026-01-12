@@ -23,7 +23,7 @@ const routes: Route[] = [
   { type: 'homepage', path: '/' },
   { type: 'now_page', path: '/now' },
   { type: 'about_me', path: '/about-me' },
-  { type: 'colophone', path: '/colophon' },
+  { type: 'colophon', path: '/colophon' },
   { type: 'settings', path: '/settings' },
 
   // Journal
