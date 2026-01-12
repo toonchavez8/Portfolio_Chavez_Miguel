@@ -659,6 +659,8 @@ export interface SettingsDocumentDataFooterItem {
   >;
 }
 
+type SettingsDocumentDataSlicesSlice = never;
+
 /**
  * Content for Settings documents
  */
@@ -706,6 +708,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
   footer: prismic.GroupField<Simplify<SettingsDocumentDataFooterItem>>;
+
+  /**
+   * `slices` field in *Settings*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<SettingsDocumentDataSlicesSlice>;
 }
 
 /**
@@ -1565,6 +1578,7 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       SettingsDocumentDataFooterItem,
+      SettingsDocumentDataSlicesSlice,
       AllDocumentTypes,
       BentoBoxSlice,
       BentoBoxSliceDefaultPrimaryBentoSectionItem,
