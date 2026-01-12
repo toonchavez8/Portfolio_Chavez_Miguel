@@ -6,8 +6,8 @@ import StacksFilter from '@/components/ProjectGallery/Stacksfilter'
 import type { ProjectByteItem } from '@/lib/projects'
 
 interface ProjectPageClientProps {
-  projects: ProjectByteItem[]
-  tags: string[]
+  readonly projects: ProjectByteItem[]
+  readonly tags: string[]
 }
 
 export function ProjectsPageClient({ projects, tags }: ProjectPageClientProps) {
