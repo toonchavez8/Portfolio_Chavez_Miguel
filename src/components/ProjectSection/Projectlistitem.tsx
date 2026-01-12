@@ -4,6 +4,7 @@ import { type Content, isFilled } from '@prismicio/client'
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next'
 import type { FC } from 'react'
 import { FaGithub } from 'react-icons/fa'
+import { TagLink } from '../ProjectGallery/TagLink'
 
 export interface ProjectListItemProps {
   project: Content.ProjectGallerySliceDefaultPrimaryProjectByteItem
@@ -48,19 +49,12 @@ const Projectlistitem: FC<ProjectListItemProps> = ({
           <p className="hidden font-mono text-xs font-extralight opacity-60 xs:block xs:text-sm ">
             {formattedDate}
           </p>
-          <button
-            className="@md:flex z-10 hidden flex-wrap items-center justify-center gap-2 cursor-pointer"
-            type="button"
-          >
+
+          <div className="@md:flex z-10 hidden flex-wrap items-center justify-center gap-2">
             {tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-shark-700/70 bg-viridian-50 transition-all ease-in px-2 py-0.5 text-xs font-mono font-semibold hover:text-viridian-500 text-viridian-700 hover:scale-110  hover:border-viridian-400  dark:hover:border-viridian-800 dark:hover:text-viridian-600 dark:border-shark-400/50 dark:bg-shark-950/50 dark:text-shark-100/50"
-              >
-                {tag}
-              </span>
+              <TagLink key={tag} tag={tag} />
             ))}
-          </button>
+          </div>
         </div>
 
         <h3 className="@md:text-2xl w-full font-mono font-bold text-viridian-700 dark:text-viridian-100">

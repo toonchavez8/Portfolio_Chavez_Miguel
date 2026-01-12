@@ -9,25 +9,25 @@ import { createClient } from '@/prismicio'
 import { components } from '@/slices'
 
 // Slices that should appear BEFORE the ProjectGallery
-const HEADER_SLICES = ['header']
+const HEADER_SLICES = new Set(['header'])
 
 // Slices that should appear AFTER the ProjectGallery
-const FOOTER_SLICES = ['education_section', 'contact_section']
+const FOOTER_SLICES = new Set(['education_section', 'contact_section'])
 
 export default async function Page() {
   const client = createClient()
   const page = await client.getSingle('homepage').catch(() => notFound())
 
-  // Fetch featured projects from projects_catalog (source of truth)
+  // Fetch featured projects from projects_catalog
   const featuredProjects = await getFeaturedProjectBytes()
 
   // Split slices into sections for controlled ordering
   const headerSlices = page.data.slices.filter((slice) =>
-    HEADER_SLICES.includes(slice.slice_type),
+    HEADER_SLICES.has(slice.slice_type),
   )
 
   const footerSlices = page.data.slices.filter((slice) =>
-    FOOTER_SLICES.includes(slice.slice_type),
+    FOOTER_SLICES.has(slice.slice_type),
   )
 
   return (

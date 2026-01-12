@@ -3,7 +3,7 @@ import { asDate } from '@prismicio/client'
 import type { FC } from 'react'
 import SectionTitle from '@/components/Atomic/SectionTitle'
 import Projectlistitem from '@/components/ProjectSection/Projectlistitem'
-import type { ProjectByteItem } from '@/lib/projects'
+import { filterProjectsByTag, type ProjectByteItem } from '@/lib/projects'
 
 export interface ProjectGalleryProps {
   /** Array of project bytes to display */
@@ -12,6 +12,9 @@ export interface ProjectGalleryProps {
   title?: string
   /** Optional className for styling */
   className?: string
+
+  //**optional Active tag filter */
+  activeTag?: string | null
 }
 
 /**
@@ -22,7 +25,11 @@ export const ProjectGallery: FC<ProjectGalleryProps> = ({
   projects,
   title,
   className,
+  activeTag,
 }) => {
+  // Filter projects if an active tag is provided
+  const displayedProjects = filterProjectsByTag(projects, activeTag ?? null)
+
   return (
     <section
       className={`group/section flex w-full flex-col justify-center gap-4 py-2 md:gap-6 lg:px-4 ${className ?? ''}`}
@@ -30,25 +37,31 @@ export const ProjectGallery: FC<ProjectGalleryProps> = ({
       {title && <SectionTitle title={title} />}
 
       <div className="grid w-full grid-cols-1 gap-4">
-        {projects.map((item, index) => {
-          const formattedDate = asDate(item.project_date)?.toLocaleDateString(
-            'en-US',
-            {
-              month: 'long',
-              day: '2-digit',
-              year: 'numeric',
-            },
-          )
+        {displayedProjects.length === 0 ? (
+          <p className="py-8 text-center font-mono text-shark-500">
+            No projects found with tag "{activeTag}"
+          </p>
+        ) : (
+          displayedProjects.map((item, index) => {
+            const formattedDate = asDate(item.project_date)?.toLocaleDateString(
+              'en-US',
+              {
+                month: 'long',
+                day: '2-digit',
+                year: 'numeric',
+              },
+            )
 
-          return (
-            <Projectlistitem
-              key={item.project_name || index}
-              project={item}
-              formattedDate={formattedDate}
-              index={index}
-            />
-          )
-        })}
+            return (
+              <Projectlistitem
+                key={item.project_name || index}
+                project={item}
+                formattedDate={formattedDate}
+                index={index}
+              />
+            )
+          })
+        )}
       </div>
     </section>
   )

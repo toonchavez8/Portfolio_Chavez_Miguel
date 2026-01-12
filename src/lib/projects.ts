@@ -1,5 +1,4 @@
 import type { Content } from '@prismicio/client'
-import * as prismic from '@prismicio/client'
 import { createClient } from '@/prismicio'
 
 // Export the project_byte item type from the slice
@@ -48,7 +47,6 @@ export async function getFeaturedProjectBytes(): Promise<ProjectByteItem[]> {
 
 /**
  * Alternative: Get project bytes with filter option
- * Use this if you need both lists on the same page
  */
 export async function getProjectBytesWithFilter(
   filter?: 'all' | 'featured',
@@ -76,4 +74,62 @@ export async function getProjectByUID(
   } catch {
     return null
   }
+}
+
+/**
+ * extract tags from project bytes
+ * tags are stored as CSV in project_tags field
+ */
+export function extractTagsFromProject(projects: ProjectByteItem[]): string[] {
+  const tagSet = new Set<string>()
+
+  for (const project of projects) {
+    if (project.project_tags) {
+      const tags = project.project_tags
+        .split(',')
+        .map((tag) => tag.trim().toLowerCase())
+        .filter(Boolean)
+
+      for (const tag of tags) {
+        tagSet.add(tag)
+      }
+    }
+  }
+
+  return Array.from(tagSet).sort((a, b) =>
+    a.localeCompare(b, 'es', { sensitivity: 'base' }),
+  )
+}
+
+/**
+ * Filter project by specific tag
+ * return all project if tag is null or empty
+ */
+export function filterProjectsByTag(
+  projects: ProjectByteItem[],
+  tag: string | null,
+): ProjectByteItem[] {
+  if (!tag) return projects
+
+  const normalizedTag = tag.toLowerCase().trim()
+
+  return projects.filter((projects) => {
+    if (!projects.project_tags) return false
+
+    const projectTags = projects.project_tags
+      .split(',')
+      .map((tag) => tag.trim().toLowerCase())
+
+    return projectTags.includes(normalizedTag)
+  })
+}
+
+/**
+ * fetches all unique tags from the project gallery
+ * server side function for inicial page load
+ */
+export async function getAllProjectTags(): Promise<string[]> {
+  const allBytes = await getAllProjectBytes()
+
+  return extractTagsFromProject(allBytes)
 }
