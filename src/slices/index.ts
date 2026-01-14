@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 
 export const components = {
-  bento_box: dynamic(() => import('./BentoBox')),
+  bento_box: dynamic(() => import('./NowFeed')),
   blog_section: dynamic(() => import('./BlogSection')),
   contact_section: dynamic(() => import('./ContactSection')),
   education_section: dynamic(() => import('./EducationSection')),

@@ -62,7 +62,7 @@ export const FooterClient = ({ location, footerLinks }: FooterClientProps) => {
         <div className="flex flex-wrap justify-center gap-2">
           {footerLinks
             .filter((link) => isFilled.link(link))
-            .map((link) => {
+            .map((link, index) => {
               const href = 'url' in link && link.url ? link.url : ''
               let linkName = ''
               try {
@@ -79,7 +79,7 @@ export const FooterClient = ({ location, footerLinks }: FooterClientProps) => {
 
               return (
                 <Link
-                  key={'url' in link ? link.url : undefined}
+                  key={link.url || index}
                   href={href}
                   target={href.startsWith('http') ? '_blank' : undefined}
                   rel={

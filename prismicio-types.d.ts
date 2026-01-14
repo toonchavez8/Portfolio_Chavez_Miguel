@@ -749,11 +749,11 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
- * Item in *BentoBox → Default → Primary → Bento Section*
+ * Item in *NowFeed → Default → Primary → Bento Section*
  */
 export interface BentoBoxSliceDefaultPrimaryBentoSectionItem {
   /**
-   * bento img field in *BentoBox → Default → Primary → Bento Section*
+   * bento img field in *NowFeed → Default → Primary → Bento Section*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -763,7 +763,7 @@ export interface BentoBoxSliceDefaultPrimaryBentoSectionItem {
   bento_img: prismic.ImageField<never>;
 
   /**
-   * Bento header field in *BentoBox → Default → Primary → Bento Section*
+   * Bento header field in *NowFeed → Default → Primary → Bento Section*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -773,7 +773,7 @@ export interface BentoBoxSliceDefaultPrimaryBentoSectionItem {
   bento_header: prismic.KeyTextField;
 
   /**
-   * Bento Body field in *BentoBox → Default → Primary → Bento Section*
+   * Bento Body field in *NowFeed → Default → Primary → Bento Section*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -783,22 +783,60 @@ export interface BentoBoxSliceDefaultPrimaryBentoSectionItem {
   bento_body: prismic.RichTextField;
 
   /**
-   * Bento Icon field in *BentoBox → Default → Primary → Bento Section*
+   * Now Link field in *NowFeed → Default → Primary → Bento Section*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: bento_box.default.primary.bento_section[].bento_icon
-   * - **Documentation**: https://prismic.io/docs/fields/image
+   * - **API ID Path**: bento_box.default.primary.bento_section[].now_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  bento_icon: prismic.ImageField<never>;
+  now_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * NowUpdate field in *NowFeed → Default → Primary → Bento Section*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento_box.default.primary.bento_section[].nowupdate
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  nowupdate: prismic.DateField;
+
+  /**
+   * Bento Icon field in *NowFeed → Default → Primary → Bento Section*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: Select
+   * - **Default Value**: General
+   * - **API ID Path**: bento_box.default.primary.bento_section[].bento_icon
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  bento_icon: prismic.SelectField<
+    | "General"
+    | "Dev"
+    | "Life"
+    | "Love"
+    | "Cooking"
+    | "DND"
+    | "Reading"
+    | "Writing"
+    | "Family",
+    "filled"
+  >;
 }
 
 /**
- * Primary content in *BentoBox → Default → Primary*
+ * Primary content in *NowFeed → Default → Primary*
  */
 export interface BentoBoxSliceDefaultPrimary {
   /**
-   * Sectiontittle field in *BentoBox → Default → Primary*
+   * Sectiontittle field in *NowFeed → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: // What i'm doing?
@@ -808,7 +846,7 @@ export interface BentoBoxSliceDefaultPrimary {
   sectiontittle: prismic.KeyTextField;
 
   /**
-   * Bento Section field in *BentoBox → Default → Primary*
+   * Bento Section field in *NowFeed → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -820,18 +858,18 @@ export interface BentoBoxSliceDefaultPrimary {
   >;
 
   /**
-   * Updated Date field in *BentoBox → Default → Primary*
+   * Updated Date field in *NowFeed → Default → Primary*
    *
-   * - **Field Type**: Timestamp
+   * - **Field Type**: Date
    * - **Placeholder**: *None*
    * - **API ID Path**: bento_box.default.primary.updated_date
-   * - **Documentation**: https://prismic.io/docs/fields/timestamp
+   * - **Documentation**: https://prismic.io/docs/fields/date
    */
-  updated_date: prismic.TimestampField;
+  updated_date: prismic.DateField;
 }
 
 /**
- * Default variation for BentoBox Slice
+ * Default variation for NowFeed Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -844,12 +882,12 @@ export type BentoBoxSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *BentoBox*
+ * Slice variation for *NowFeed*
  */
 type BentoBoxSliceVariation = BentoBoxSliceDefault;
 
 /**
- * BentoBox Shared Slice
+ * NowFeed Shared Slice
  *
  * - **API ID**: `bento_box`
  * - **Description**: BentoBox

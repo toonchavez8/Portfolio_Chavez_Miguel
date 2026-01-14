@@ -1,7 +1,7 @@
 {
   "id": "bento_box",
   "type": "SharedSlice",
-  "name": "BentoBox",
+  "name": "NowFeed",
   "description": "BentoBox",
   "variations": [
     {
@@ -49,19 +49,48 @@
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               },
+              "now_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Now Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "nowupdate": {
+                "type": "Date",
+                "config": {
+                  "label": "NowUpdate",
+                  "placeholder": ""
+                }
+              },
               "bento_icon": {
-                "type": "Image",
+                "type": "Select",
                 "config": {
                   "label": "Bento Icon",
-                  "constraint": {},
-                  "thumbnails": []
+                  "placeholder": "Select",
+                  "options": [
+                    "General",
+                    "Dev",
+                    "Life",
+                    "Love",
+                    "Cooking",
+                    "DND",
+                    "Reading",
+                    "Writing",
+                    "Family"
+                  ],
+                  "default_value": "General"
                 }
               }
             }
           }
         },
         "updated_date": {
-          "type": "Timestamp",
+          "type": "Date",
           "config": {
             "label": "Updated Date",
             "placeholder": ""
