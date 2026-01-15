@@ -826,7 +826,8 @@ export interface BentoBoxSliceDefaultPrimaryBentoSectionItem {
     | "DND"
     | "Reading"
     | "Writing"
-    | "Family",
+    | "Family"
+    | "Learning",
     "filled"
   >;
 }

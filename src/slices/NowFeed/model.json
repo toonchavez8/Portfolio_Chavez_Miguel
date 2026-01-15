@@ -81,7 +81,8 @@
                     "DND",
                     "Reading",
                     "Writing",
-                    "Family"
+                    "Family",
+                    "Learning"
                   ],
                   "default_value": "General"
                 }

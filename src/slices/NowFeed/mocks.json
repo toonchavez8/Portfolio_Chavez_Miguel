@@ -1,259 +1,259 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"sectiontittle": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "What I'm up to now"
-			},
-			"bento_section": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"bento_img",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-										"width": 5616,
-										"height": 3744
-									},
-									"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-									"width": 5616,
-									"height": 3744,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"alt": "separate",
-									"credits": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"bento_header",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "What im learning now"
-								}
-							],
-							[
-								"bento_body",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Im starting my master's degree in Software Engineering",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "\n",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							],
-							[
-								"now_link",
-								{
-									"key": "9c3e4eda-86c9-4d15-8776-8b8e869cd8c5",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io",
-										"text": "disease"
-									}
-								}
-							],
-							[
-								"bento_icon",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "Cooking",
-									"type": "Select"
-								}
-							],
-							[
-								"nowupdate",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Date",
-									"value": "2026-01-13"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"bento_icon",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "Dev"
-								}
-							],
-							[
-								"bento_img",
-								{
-									"__TYPE__": "ImageContent",
-									"provider": "imgix",
-									"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjgyODQ5NzV8MA&ixlib=rb-4.1.0&q=85",
-									"alt": "orange fruits under blue sky during daytime",
-									"origin": {
-										"id": "eaOjEz8746k",
-										"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjgyODQ5NzV8MA&ixlib=rb-4.1.0&q=85",
-										"width": 5688,
-										"height": 3792
-									},
-									"width": 5688,
-									"height": 3792,
-									"edit": {
-										"background": "transparent",
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										}
-									},
-									"thumbnails": {}
-								}
-							],
-							[
-								"bento_header",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Test"
-								}
-							],
-							[
-								"bento_body",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "list-item",
-											"content": {
-												"text": "tst",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "list-item",
-											"content": {
-												"text": "test",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "list-item",
-											"content": {
-												"text": "tst",
-												"spans": []
-											},
-											"direction": "ltr"
-										},
-										{
-											"type": "list-item",
-											"content": {
-												"text": "",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							],
-							[
-								"nowupdate",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Date",
-									"value": "2026-01-22"
-								}
-							]
-						],
-						"key": "ae4031c6-25e3-42e0-a48e-7e571513db0e"
-					}
-				]
-			},
-			"updated_date": {
-				"__TYPE__": "FieldContent",
-				"type": "Date",
-				"value": "2016-09-18"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "sectiontittle": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "What I'm up to now"
+      },
+      "bento_section": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "bento_img",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+                    "width": 5616,
+                    "height": 3744
+                  },
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+                  "width": 5616,
+                  "height": 3744,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "alt": "separate",
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "bento_header",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "What im learning now"
+                }
+              ],
+              [
+                "bento_body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Im starting my master's degree in Software Engineering",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "\n",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ],
+              [
+                "now_link",
+                {
+                  "key": "9c3e4eda-86c9-4d15-8776-8b8e869cd8c5",
+                  "__TYPE__": "LinkContent",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://prismic.io",
+                    "text": "disease"
+                  }
+                }
+              ],
+              [
+                "bento_icon",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "General",
+                  "type": "Select"
+                }
+              ],
+              [
+                "nowupdate",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Date",
+                  "value": "2026-01-13"
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "bento_icon",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "General",
+                  "type": "Select"
+                }
+              ],
+              [
+                "bento_img",
+                {
+                  "provider": "imgix",
+                  "url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjgyODQ5NzV8MA&ixlib=rb-4.1.0&q=85",
+                  "alt": "orange fruits under blue sky during daytime",
+                  "origin": {
+                    "id": "eaOjEz8746k",
+                    "url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjgyODQ5NzV8MA&ixlib=rb-4.1.0&q=85",
+                    "width": 5688,
+                    "height": 3792
+                  },
+                  "width": 5688,
+                  "height": 3792,
+                  "edit": {
+                    "background": "transparent",
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    }
+                  },
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "bento_header",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Test"
+                }
+              ],
+              [
+                "bento_body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "tst",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "test",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "tst",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ],
+              [
+                "nowupdate",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Date",
+                  "value": "2026-01-22"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "updated_date": {
+        "__TYPE__": "FieldContent",
+        "type": "Date",
+        "value": "2016-09-18"
+      }
+    },
+    "items": []
+  }
 ]
