@@ -399,6 +399,71 @@ export type JournelEntryDocument<Lang extends string = string> =
     Lang
   >;
 
+type NowEntriesDocumentDataSlicesSlice = RichTextBlockSlice;
+
+/**
+ * Content for Now Entries documents
+ */
+interface NowEntriesDocumentData {
+  /**
+   * Slice Zone field in *Now Entries*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: now_entries.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<NowEntriesDocumentDataSlicesSlice>; /**
+   * Meta Title field in *Now Entries*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: now_entries.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Now Entries*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: now_entries.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Now Entries*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: now_entries.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Now Entries document from Prismic
+ *
+ * - **API ID**: `now_entries`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NowEntriesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<NowEntriesDocumentData>,
+    "now_entries",
+    Lang
+  >;
+
 type NowPageDocumentDataSlicesSlice = BentoBoxSlice;
 
 /**
@@ -743,6 +808,7 @@ export type AllDocumentTypes =
   | HomepageDocument
   | JournelCatalogDocument
   | JournelEntryDocument
+  | NowEntriesDocument
   | NowPageDocument
   | ProjectDocument
   | ProjectsCatalogDocument
@@ -934,16 +1000,6 @@ export interface BlogSectionSliceDefaultPrimaryBlogSectionItem {
   blog_image: prismic.ImageField<never>;
 
   /**
-   * Blog link field in *BlogSection → Default → Primary → Blog section*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_section.default.primary.blog_section[].blog_link
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
-   */
-  blog_link: prismic.LinkToMediaField<prismic.FieldState, never>;
-
-  /**
    * posted field in *BlogSection → Default → Primary → Blog section*
    *
    * - **Field Type**: Date
@@ -952,6 +1008,22 @@ export interface BlogSectionSliceDefaultPrimaryBlogSectionItem {
    * - **Documentation**: https://prismic.io/docs/fields/date
    */
   posted: prismic.DateField;
+
+  /**
+   * Blog link field in *BlogSection → Default → Primary → Blog section*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.default.primary.blog_section[].blog_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  blog_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**
@@ -1614,6 +1686,9 @@ declare module "@prismicio/client" {
       JournelEntryDocument,
       JournelEntryDocumentData,
       JournelEntryDocumentDataSlicesSlice,
+      NowEntriesDocument,
+      NowEntriesDocumentData,
+      NowEntriesDocumentDataSlicesSlice,
       NowPageDocument,
       NowPageDocumentData,
       NowPageDocumentDataSlicesSlice,

@@ -52,27 +52,23 @@
 								}
 							],
 							[
-								"blog_link",
-								{
-									"key": "0e82c176-c4dd-48d6-9fa9-ca558cb2b815",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "FileLink",
-										"id": "mock_Media_link",
-										"kind": "file",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"text": "arrange"
-									}
-								}
-							],
-							[
 								"posted",
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Date",
 									"value": "2023-04-28"
+								}
+							],
+							[
+								"blog_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "80e96b1f-38a1-4b6b-91f4-32bd8195e3ae",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "think"
+									}
 								}
 							]
 						]

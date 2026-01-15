@@ -32,8 +32,8 @@ const BlogSection: FC<BlogSectionProps> = ({ slice }) => {
             hover:border-viridian-400/40
           "
         >
-          <p className="text-lg font-medium text-white">Working on my blogs</p>
-          <p className="mt-2 text-sm text-white/60">
+          <p className="text-lg font-medium ">Working on my blogs</p>
+          <p className="mt-2 text-sm">
             Thoughts are brewing. Words are loading…
           </p>
         </div>
@@ -42,7 +42,7 @@ const BlogSection: FC<BlogSectionProps> = ({ slice }) => {
       {/* Grid */}
       {hasPosts && (
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {slice.primary.blog_section.map((item, i) => (
+          {slice.primary.blog_section.map((item) => (
             <PrismicNextLink
               key={item.blog_tittle}
               field={item.blog_link}

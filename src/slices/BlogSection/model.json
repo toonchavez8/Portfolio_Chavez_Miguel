@@ -47,20 +47,22 @@
                   "thumbnails": []
                 }
               },
-              "blog_link": {
-                "type": "Link",
-                "config": {
-                  "label": "Blog link",
-                  "placeholder": "",
-                  "select": "media",
-                  "allowText": true
-                }
-              },
               "posted": {
                 "type": "Date",
                 "config": {
                   "label": "posted",
                   "placeholder": ""
+                }
+              },
+              "blog_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Blog link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
                 }
               }
             }

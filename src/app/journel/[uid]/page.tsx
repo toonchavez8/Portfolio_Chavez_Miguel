@@ -8,10 +8,16 @@ import { components } from '@/slices'
 
 type Params = { uid: string }
 
-export default async function Page({ params }: Readonly<{ params: Params }>) {
+export default async function Page({
+  params,
+}: Readonly<{
+  params: Promise<Params>
+}>) {
+  const { uid } = await params
+
   const client = createClient()
   const page = await client
-    .getByUID('journel_entry', params.uid)
+    .getByUID('journel_entry', uid)
     .catch(() => notFound())
 
   return (
@@ -24,11 +30,13 @@ export default async function Page({ params }: Readonly<{ params: Params }>) {
 export async function generateMetadata({
   params,
 }: {
-  params: Params
+  params: Promise<Params>
 }): Promise<Metadata> {
+  const { uid } = await params
+
   const client = createClient()
   const page = await client
-    .getByUID('journel_entry', params.uid)
+    .getByUID('journel_entry', uid)
     .catch(() => notFound())
 
   return {
