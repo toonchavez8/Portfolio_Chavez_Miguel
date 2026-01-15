@@ -47,13 +47,20 @@
                   "thumbnails": []
                 }
               },
-              "blog_date": {
+              "blog_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Blog date",
+                  "label": "Blog link",
                   "placeholder": "",
                   "select": "media",
                   "allowText": true
+                }
+              },
+              "posted": {
+                "type": "Date",
+                "config": {
+                  "label": "posted",
+                  "placeholder": ""
                 }
               }
             }

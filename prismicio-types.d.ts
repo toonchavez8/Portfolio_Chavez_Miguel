@@ -934,14 +934,24 @@ export interface BlogSectionSliceDefaultPrimaryBlogSectionItem {
   blog_image: prismic.ImageField<never>;
 
   /**
-   * Blog date field in *BlogSection → Default → Primary → Blog section*
+   * Blog link field in *BlogSection → Default → Primary → Blog section*
    *
    * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
-   * - **API ID Path**: blog_section.default.primary.blog_section[].blog_date
+   * - **API ID Path**: blog_section.default.primary.blog_section[].blog_link
    * - **Documentation**: https://prismic.io/docs/fields/link-to-media
    */
-  blog_date: prismic.LinkToMediaField<prismic.FieldState, never>;
+  blog_link: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+  /**
+   * posted field in *BlogSection → Default → Primary → Blog section*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_section.default.primary.blog_section[].posted
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  posted: prismic.DateField;
 }
 
 /**
