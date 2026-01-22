@@ -1,34 +1,51 @@
 {
-	"name": "toonchavez-dev-portfolio",
-	"version": "2.0.0",
-	"description": "my portfolio, transitioning from HTML to Next.js",
-	"main": "index.js",
-	"workspaces": [
-		"nextjs-portfolio/**",
-		"packages/**"
-	],
-	"scripts": {
-		"build": "turbo build",
-		"dev": "turbo dev",
-		"lint": "turbo lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"clean": "turbo run clean && rm -rf node_modules && rm -rf.turbo && rm -rf package-lock.json"
-	},
-	"author": "miguel chavez",
-	"keywords": [
-		"portfolio",
-		"website",
-		"HTML",
-		"Next.js",
-		"full stack"
-	],
-	"license": "ISC",
-	"packageManager": "npm@10.4.0",
-	"devDependencies": {
-		"@repo/eslint-config": "*",
-		"@repo/typescript-config": "*",
-		"prettier": "^3.1.1",
-		"turbo": "^1.12.5"
-	},
-	"dependencies": {}
+  "name": "toonchavez-dev",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
+    "next:dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "slicemachine": "start-slicemachine",
+    "clean": "rm -rf node_modules .next package-lock.json"
+  },
+  "dependencies": {
+    "@prismicio/client": "^7.21.2",
+    "@prismicio/next": "^2.0.2",
+    "@prismicio/react": "^3.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.1",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-icons": "^5.5.0",
+    "shiki": "^3.20.0",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@heroicons/react": "^2.2.0",
+    "@slicemachine/adapter-next": "^0.3.92",
+    "@slicemachine/manager": "^0.26.5",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
+    "slice-machine-ui": "^2.20.5",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5"
+  }
 }

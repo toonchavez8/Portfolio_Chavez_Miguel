@@ -1,0 +1,86 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"blog_section": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"blog_tittle",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "decide",
+									"type": "Text"
+								}
+							],
+							[
+								"blog_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "house",
+									"type": "Text"
+								}
+							],
+							[
+								"blog_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+										"width": 3212,
+										"height": 3880
+									},
+									"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+									"width": 3212,
+									"height": 3880,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "character",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"posted",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2023-04-28"
+								}
+							],
+							[
+								"blog_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "80e96b1f-38a1-4b6b-91f4-32bd8195e3ae",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "think"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"sectiontittle": {
+				"__TYPE__": "FieldContent",
+				"value": "wheel",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
