@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { repositoryName } from '@/prismicio'
 import './globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { BackGroundSquares } from '@/components/Atomic/BackGround'
 import Footer from '@/components/Footer'
 import NavBar from '@/components/NavbarServer'
@@ -63,6 +65,8 @@ export default async function RootLayout({
         ></script>
         <Providers>
           <PrismicPreview repositoryName={repositoryName} />
+          <SpeedInsights />
+          <Analytics />
           <NavBar />
           {children}
           <Footer />
