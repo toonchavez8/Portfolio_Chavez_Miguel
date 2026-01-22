@@ -1,0 +1,111 @@
+{
+  "id": "project_gallery",
+  "type": "SharedSlice",
+  "name": "ProjectGallery",
+  "description": "ProjectGallery",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sectiontittle": {
+          "type": "Text",
+          "config": {
+            "label": "Sectiontittle",
+            "placeholder": ""
+          }
+        },
+        "project_byte": {
+          "type": "Group",
+          "config": {
+            "label": "Project Byte",
+            "repeat": true,
+            "fields": {
+              "project_image": {
+                "type": "Image",
+                "config": {
+                  "label": "project image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "project_date": {
+                "type": "Date",
+                "config": {
+                  "label": "project date",
+                  "placeholder": ""
+                }
+              },
+              "project_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Project Name",
+                  "placeholder": ""
+                }
+              },
+              "project_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Project Description",
+                  "placeholder": ""
+                }
+              },
+              "project_tags": {
+                "type": "Text",
+                "config": {
+                  "label": "Project Tags",
+                  "placeholder": ""
+                }
+              },
+              "live_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Live link",
+                  "placeholder": "Link to live site",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "repo_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Repo Link",
+                  "placeholder": "Link to repo",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "project_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Project Link",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": ["project"]
+                }
+              },
+              "featured": {
+                "type": "Boolean",
+                "config": {
+                  "label": "featured",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
