@@ -81,15 +81,21 @@ export default function HeaderBody({ field }: HeaderBodyProps) {
   });
 
   useEffect(() => {
-    const mediaQuery = globalThis.matchMedia(
-      "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+    const hoverQuery = globalThis.matchMedia("(hover: hover) and (pointer: fine)");
+    const reducedMotionQuery = globalThis.matchMedia(
+      "(prefers-reduced-motion: reduce)",
     );
 
-    const syncCapability = () => setCanHoverPreview(mediaQuery.matches);
+    const syncCapability = () =>
+      setCanHoverPreview(hoverQuery.matches && !reducedMotionQuery.matches);
     syncCapability();
 
-    mediaQuery.addEventListener("change", syncCapability);
-    return () => mediaQuery.removeEventListener("change", syncCapability);
+    hoverQuery.addEventListener("change", syncCapability);
+    reducedMotionQuery.addEventListener("change", syncCapability);
+    return () => {
+      hoverQuery.removeEventListener("change", syncCapability);
+      reducedMotionQuery.removeEventListener("change", syncCapability);
+    };
   }, []);
 
   const handlePreviewEnter = useEffectEvent((event: Event) => {
@@ -154,6 +160,16 @@ export default function HeaderBody({ field }: HeaderBodyProps) {
 
   const showPreview = (element: HTMLElement) => {
     if (!canHoverPreview) return;
+    gsap.killTweensOf(element);
+    gsap.fromTo(
+      element,
+      { backgroundPosition: "0% 50%" },
+      {
+        backgroundPosition: "100% 50%",
+        duration: 0.65,
+        ease: "power2.out",
+      },
+    );
     setPosition(getPreviewPosition(element.getBoundingClientRect()));
     setIsPreviewVisible(true);
   };
@@ -178,7 +194,7 @@ export default function HeaderBody({ field }: HeaderBodyProps) {
     ),
     preformatted: ({ node }) => (
       <pre
-        className="max-w-full cursor-default overflow-x-auto whitespace-pre-wrap break-words text-sm leading-7 text-shark-700 dark:text-shark-200"
+        className="max-w-full cursor-default overflow-x-auto whitespace-pre-wrap break-words bg-linear-to-r from-transparent via-viridian-500/10 to-transparent bg-[length:220%_100%] bg-[position:0%_50%] text-sm leading-7 text-shark-700 dark:text-shark-200"
         onMouseEnter={(event) => showPreview(event.currentTarget)}
         onMouseLeave={hidePreview}
       >
@@ -199,7 +215,7 @@ export default function HeaderBody({ field }: HeaderBodyProps) {
       {canHoverPreview && (
         <div
           ref={previewRef}
-          className="pointer-events-none fixed z-50 hidden overflow-hidden rounded-2xl border border-viridian-500/20 bg-neutral-950/95 shadow-2xl shadow-black/35 backdrop-blur-md lg:block"
+          className="pointer-events-none fixed z-50 overflow-hidden rounded-2xl border border-viridian-500/20 bg-neutral-950/95 shadow-2xl shadow-black/35 backdrop-blur-md"
           style={{
             width: PREVIEW_WIDTH,
             height: PREVIEW_HEIGHT,
@@ -207,6 +223,7 @@ export default function HeaderBody({ field }: HeaderBodyProps) {
             top: position.top,
             transformOrigin: position.transformOrigin,
             opacity: 0,
+            willChange: "transform, opacity",
           }}
         >
           <div className="flex items-center justify-between border-b border-white/10 px-4 py-2 text-[11px] font-mono text-neutral-300">
