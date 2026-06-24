@@ -1,37 +1,38 @@
 import { asDate, type Content } from '@prismicio/client'
+import {
+  BookOpen,
+  Code2,
+  Dices,
+  GraduationCap,
+  Heart,
+  Leaf,
+  Newspaper,
+  PenLine,
+  Soup,
+  Users,
+} from 'lucide-react'
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next'
 import { PrismicRichText, type SliceComponentProps } from '@prismicio/react'
 import { type FC, Suspense } from 'react'
-import {
-  FaBook,
-  FaCode,
-  FaDice,
-  FaHeart,
-  FaLeaf,
-  FaNewspaper,
-  FaPenFancy,
-  FaSchool,
-  FaUsers,
-  FaUtensils,
-} from 'react-icons/fa'
-import type { IconType } from 'react-icons/lib'
 import FeedSkeleton from '@/components/Atomic/FeedSkeleton'
 import ImageSkeleton from '@/components/Atomic/ImageSkeleton'
 import SectionTitle from '@/components/Atomic/SectionTitle'
 
 export type BentoBoxProps = SliceComponentProps<Content.BentoBoxSlice>
 
-const ICON_MAP: Record<string, IconType> = {
-  General: FaNewspaper,
-  Dev: FaCode,
-  Life: FaLeaf,
-  Love: FaHeart,
-  Cooking: FaUtensils,
-  DND: FaDice,
-  Reading: FaBook,
-  Writing: FaPenFancy,
-  Family: FaUsers,
-  Learning: FaSchool,
+type IconComponent = typeof Newspaper
+
+const ICON_MAP: Record<string, IconComponent> = {
+  General: Newspaper,
+  Dev: Code2,
+  Life: Leaf,
+  Love: Heart,
+  Cooking: Soup,
+  DND: Dices,
+  Reading: BookOpen,
+  Writing: PenLine,
+  Family: Users,
+  Learning: GraduationCap,
 }
 
 const BentoBox: FC<BentoBoxProps> = ({ slice }) => {
@@ -116,7 +117,11 @@ const BentoBox: FC<BentoBoxProps> = ({ slice }) => {
                       <h3 className="text-xl font-semibold text-viridian-800 dark:text-shark-100">
                         <div className="flex items-center gap-3">
                           {Icon && (
-                            <Icon className="text-xl text-viridian-600 dark:text-viridian-400" />
+                            <Icon
+                              className="text-viridian-600 dark:text-viridian-400"
+                              size={18}
+                              strokeWidth={1.75}
+                            />
                           )}
                           <span>{item.bento_header}</span>
                         </div>

@@ -2,15 +2,14 @@
   "id": "header",
   "type": "SharedSlice",
   "name": "Header",
-  "description": "Header",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/header/default/7ae12339f1e2be1ebe0f4927bab20c206c5bc884.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "name": {
           "type": "Text",
@@ -38,8 +37,8 @@
           "config": {
             "label": "Header Body",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,strong,em,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,strong,em,list-item,o-list-item,rtl",
+            "allowTargetBlank": true
           }
         },
         "profile_image": {
@@ -53,5 +52,6 @@
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "Header"
 }

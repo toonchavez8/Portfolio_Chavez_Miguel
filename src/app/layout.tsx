@@ -9,6 +9,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { BackGroundSquares } from '@/components/Atomic/BackGround'
 import Footer from '@/components/Footer'
 import NavBar from '@/components/NavbarServer'
+import { SITE_NAME, SITE_URL } from '@/lib/site'
 import { Providers } from './Utils/providers'
 
 const geistSans = Geist({
@@ -21,7 +22,29 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL,
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    url: SITE_URL,
+    title: SITE_NAME,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_NAME,
+  },
   icons: {
     icon: [
       { url: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -56,7 +79,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="relative" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} group relative isolate min-h-screen grid grid-rows-[auto_1fr_auto] bg-neutral-100 text-neutral-900 antialiased filter dark:bg-neutral-950 dark:text-neutral-50`}
+        className={`${geistSans.variable} ${geistMono.variable} group relative isolate grid min-h-[100dvh] grid-rows-[auto_1fr_auto] bg-neutral-100 text-neutral-900 antialiased filter dark:bg-neutral-950 dark:text-neutral-50`}
       >
         <script
           async
@@ -64,6 +87,11 @@ export default async function RootLayout({
           src="https://static.cdn.prismic.io/prismic.js?new=true&repo=toonchavez-dev"
         ></script>
         <Providers>
+          <script
+            type="application/ld+json"
+          >
+            {JSON.stringify(websiteSchema)}
+          </script>
           <PrismicPreview repositoryName={repositoryName} />
           <SpeedInsights />
           <Analytics />

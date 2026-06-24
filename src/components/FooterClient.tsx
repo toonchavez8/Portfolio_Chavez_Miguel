@@ -4,6 +4,7 @@ import { isFilled, type LinkField } from '@prismicio/client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { normalizeInternalPath } from '@/lib/site'
 
 interface FooterClientProps {
   location?: {
@@ -41,8 +42,30 @@ export const FooterClient = ({ location, footerLinks }: FooterClientProps) => {
     ? `https://www.google.com/maps?q=${location.latitude},${location.longitude}`
     : 'https://maps.app.goo.gl/TEPjUeHgX8zCpFnB9' // Fallback to default
 
+  const getHrefDetails = (href: string) => {
+    if (!href) return { href: '', label: '' }
+
+    if (href.startsWith('http')) {
+      try {
+        const url = new URL(href)
+        return {
+          href,
+          label: url.pathname.split('/')[1] || url.hostname.replace('www.', ''),
+        }
+      } catch {
+        return { href, label: href }
+      }
+    }
+
+    const normalizedHref = normalizeInternalPath(href)
+    return {
+      href: normalizedHref,
+      label: normalizedHref.split('/')[1] || '',
+    }
+  }
+
   return (
-    <footer className="mx-auto flex w-11/12 flex-col items-center justify-center border-t border-shark-700/50 px-2 py-4 text-2xl font-bold dark:border-shark-300/15 md:w-10/12 md:px-6 lg:w-7/12">
+    <footer className="mx-auto flex w-full max-w-6xl min-w-0 flex-col items-center justify-center border-t border-shark-700/50 px-4 py-6 text-2xl font-bold dark:border-shark-300/15 sm:px-6 lg:px-8">
       <div className="flex w-full flex-col items-center justify-between gap-2 md:flex-row md:gap-8">
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
           <Link
@@ -64,26 +87,19 @@ export const FooterClient = ({ location, footerLinks }: FooterClientProps) => {
             .filter((link) => isFilled.link(link))
             .map((link, index) => {
               const href = 'url' in link && link.url ? link.url : ''
-              let linkName = ''
-              try {
-                // Resolve relative or absolute URLs
-                const u =
-                  globalThis.window === undefined
-                    ? new URL(href, 'http://localhost')
-                    : new URL(href, globalThis.location.origin)
-                linkName = u.pathname.split('/')[1]
-              } catch {
-                linkName = href.split('/')[1] || ''
-              }
+              const { href: resolvedHref, label } = getHrefDetails(href)
+              const linkName = label
               const isActive = linkName === path
 
               return (
                 <Link
                   key={link.url || index}
-                  href={href}
-                  target={href.startsWith('http') ? '_blank' : undefined}
+                  href={resolvedHref}
+                  target={resolvedHref.startsWith('http') ? '_blank' : undefined}
                   rel={
-                    href.startsWith('http') ? 'noopener noreferrer' : undefined
+                    resolvedHref.startsWith('http')
+                      ? 'noopener noreferrer'
+                      : undefined
                   }
                   className={`flex flex-row-reverse items-center gap-2 rounded-full border border-shark-600/70 bg-transparent px-4 py-2 font-mono text-sm transition dark:border-shark-300/10 dark:hover:bg-shark-300/10 ${
                     isActive
@@ -98,7 +114,7 @@ export const FooterClient = ({ location, footerLinks }: FooterClientProps) => {
             })}
         </div>
       </div>
-      <p className="tracking-widest">...</p>
+      <p className="tracking-[0.3em]">...</p>
     </footer>
   )
 }

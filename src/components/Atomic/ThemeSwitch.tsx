@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
+import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-import { FiMoon, FiSun } from 'react-icons/fi'
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
@@ -34,7 +34,7 @@ export default function ThemeSwitch() {
         className="ml-3 text-neutral-400 hover:text-neutral-100 transition-colors"
         onClick={() => setTheme('light')}
       >
-        <FiSun size={18} />
+        <Sun size={18} strokeWidth={1.75} />
       </button>
     )
   }
@@ -47,7 +47,7 @@ export default function ThemeSwitch() {
         className="ml-3 text-neutral-600 hover:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-50 transition-colors"
         onClick={() => setTheme('dark')}
       >
-        <FiMoon size={18} />
+        <Moon size={18} strokeWidth={1.75} />
       </button>
     )
   }

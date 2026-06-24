@@ -2,27 +2,27 @@
   "id": "rich_text_block",
   "type": "SharedSlice",
   "name": "RichTextBlock",
-  "description": "RichTextBlock",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/rich_text_block/default/1282ebdf99c42261c03a2a3b6cb0c18e8b2a62f9.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "rich_text": {
           "type": "StructuredText",
           "config": {
             "label": "rich text",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+            "allowTargetBlank": true
           }
         }
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "RichTextBlock"
 }

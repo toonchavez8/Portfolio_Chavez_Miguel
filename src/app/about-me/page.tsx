@@ -1,8 +1,8 @@
-import { asImageSrc } from '@prismicio/client'
 import { SliceZone } from '@prismicio/react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import SectionTitle from '@/components/Atomic/SectionTitle'
+import { buildPageMetadata } from '@/lib/site'
 import { createClient } from '@/prismicio'
 import { components } from '@/slices'
 
@@ -11,7 +11,10 @@ export default async function Page() {
   const page = await client.getSingle('about_me').catch(() => notFound())
 
   return (
-    <main className="relative mx-auto flex  w-full max-w-11/12 flex-col items-center p-4 md:max-w-10/12 md:gap-8 lg:max-w-7/12">
+    <main
+      id="main"
+      className="relative mx-auto flex w-full max-w-6xl min-w-0 flex-col items-center gap-8 px-4 py-4 sm:px-6 lg:px-8"
+    >
       <SectionTitle title={'About me'} />
       <SliceZone slices={page.data.slices} components={components} />
     </main>
@@ -22,11 +25,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
   const page = await client.getSingle('about_me').catch(() => notFound())
 
-  return {
+  return buildPageMetadata({
     title: page.data.meta_title,
     description: page.data.meta_description,
-    openGraph: {
-      images: [{ url: asImageSrc(page.data.meta_image) ?? '' }],
-    },
-  }
+    image: page.data.meta_image,
+    path: page.url,
+    fallbackTitle: 'About me',
+    fallbackDescription:
+      'About Miguel Chavez, his background, and the path behind the work on toonchavez.dev.',
+  })
 }
