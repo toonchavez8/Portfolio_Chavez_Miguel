@@ -1,10 +1,10 @@
-import { asImageSrc } from '@prismicio/client'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 // src/app/projects/page.tsx
 
 import { Suspense } from 'react'
+import { buildPageMetadata } from '@/lib/site'
 import { extractTagsFromProject, getAllProjectBytes } from '@/lib/projects'
 import { createClient } from '@/prismicio'
 import { ProjectsPageClient } from './ProjectsPageClient'
@@ -15,7 +15,10 @@ export default async function ProjectsPage() {
   const tags = extractTagsFromProject(allProjects)
 
   return (
-    <main className="relative mx-auto flex  w-full max-w-11/12 flex-row items-start p-4 md:max-w-10/12 md:gap-4 lg:max-w-7/12 ">
+    <main
+      id="main"
+      className="relative mx-auto grid w-full max-w-6xl min-w-0 gap-8 px-4 py-4 sm:px-6 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)] lg:px-8"
+    >
       <Suspense fallback={<div>Loading...</div>}>
         <ProjectsPageClient projects={allProjects} tags={tags} />
       </Suspense>
@@ -29,11 +32,13 @@ export async function generateMetadata(): Promise<Metadata> {
     .getSingle('projects_catalog')
     .catch(() => notFound())
 
-  return {
-    title: page.data.meta_title || 'Projects catalog',
-    description: page.data.meta_description || 'Explore my projects',
-    openGraph: {
-      images: [{ url: asImageSrc(page.data.meta_image) ?? '' }],
-    },
-  }
+  return buildPageMetadata({
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+    image: page.data.meta_image,
+    path: page.url,
+    fallbackTitle: 'Projects',
+    fallbackDescription:
+      'Selected work, case studies, and shipped experiments from Miguel Chavez.',
+  })
 }

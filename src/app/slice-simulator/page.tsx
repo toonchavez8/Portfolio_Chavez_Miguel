@@ -1,9 +1,9 @@
-import { SliceZone } from '@prismicio/react'
 import {
   getSlices,
   SliceSimulator,
   type SliceSimulatorParams,
-} from '@slicemachine/adapter-next/simulator'
+} from '@prismicio/next'
+import { SliceZone } from '@prismicio/react'
 import { components } from '@/slices'
 
 export default async function SliceSimulatorPage({

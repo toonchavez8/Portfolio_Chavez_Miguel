@@ -1,0 +1,17 @@
+
+> toonchavez-dev@0.1.0 next:dev
+> next dev --port 3001
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.10.30.58:3001
+✓ Ready in 415ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          23348
+- Dir:          C:\Users\Dev\repos\toonchavez8\Portfolio_Chavez_Miguel
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 23348 /F to stop it.
+[?25h

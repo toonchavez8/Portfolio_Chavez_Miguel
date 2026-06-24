@@ -43,14 +43,14 @@ export const StacksFilter: FC<StacksFilterProps> = ({ tags, className }) => {
   }, [router])
 
   return (
-    <div className={`flex flex-col gap-3 ${className ?? ''}`}>
+    <aside className={`flex min-w-0 flex-col gap-3 ${className ?? ''}`}>
       <div className="flex items-center justify-between">
         <p className="font-mono text-sm text-shark-600 dark:text-shark-400">
           &#47;&#47; {tags.length} Stacks
         </p>
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-wrap gap-2 lg:flex-col">
         {tags.map((tag) => {
           const isActive = activeTag === tag
 
@@ -77,13 +77,13 @@ export const StacksFilter: FC<StacksFilterProps> = ({ tags, className }) => {
           <button
             type="button"
             onClick={handleClearFilter}
-            className="font-mono text-xs text-viridian-600 hover:text-viridian-500 dark:text-viridian-400"
+            className="font-mono text-xs text-viridian-600 hover:text-viridian-500 dark:text-viridian-400 lg:text-left"
           >
             Clear filter
           </button>
         )}
       </div>
-    </div>
+    </aside>
   )
 }
 

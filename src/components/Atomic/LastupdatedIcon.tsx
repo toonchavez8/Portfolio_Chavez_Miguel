@@ -1,7 +1,7 @@
 'use client'
+import { GitCommitHorizontal } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FiGitCommit } from 'react-icons/fi'
 
 const LoadingSkeleton = () => (
   <>
@@ -135,7 +135,7 @@ const Lastupdatedbadge = ({
       target="_blank"
       className="ease  right-0 mr-3 mt-1 flex items-center justify-center gap-1 rounded-full border dark:border-shark-400 px-4 font-mono text-xs opacity-50 transition-all hover:scale-105 dark:hover:bg-viridian-500/25 dark:text-shark-200  dark:hover:text-shark-100 hover:opacity-100 border-shark-800 text-shark-700 hover:text-shark-900 hover:bg-viridian-300/25 sm:absolute md:mt-3"
     >
-      <FiGitCommit />
+      <GitCommitHorizontal size={14} strokeWidth={1.75} />
       <span className="hidden sm:block">updated</span>
       {displayContent}
     </Link>

@@ -1,27 +1,31 @@
 'use client'
 
-import type { FC, MouseEvent } from 'react'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitch } from 'react-icons/fa'
-import { FiMail } from 'react-icons/fi'
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  Twitch,
+} from 'lucide-react'
+import type { MouseEvent } from 'react'
 
 export type SocialItem = {
   url: string
 }
 
-type IconComponent = FC<{ className?: string }>
+type IconComponent = typeof Github
 
 const getSocialInfo = (
   url: string,
 ): { Icon: IconComponent; label: string; isEmail?: boolean } => {
   const u = (url || '').toLowerCase()
-  if (u.includes('github.com')) return { Icon: FaGithub, label: 'github' }
-  if (u.includes('instagram.com'))
-    return { Icon: FaInstagram, label: 'instagram' }
-  if (u.includes('linkedin.com')) return { Icon: FaLinkedin, label: 'linkedin' }
-  if (u.includes('twitch.tv')) return { Icon: FaTwitch, label: 'twitch' }
+  if (u.includes('github.com')) return { Icon: Github, label: 'github' }
+  if (u.includes('instagram.com')) return { Icon: Instagram, label: 'instagram' }
+  if (u.includes('linkedin.com')) return { Icon: Linkedin, label: 'linkedin' }
+  if (u.includes('twitch.tv')) return { Icon: Twitch, label: 'twitch' }
   if (u.startsWith('mailto:') || u.includes('@'))
-    return { Icon: FiMail, label: 'Email', isEmail: true }
-  return { Icon: FaGithub, label: url }
+    return { Icon: Mail, label: 'Email', isEmail: true }
+  return { Icon: Github, label: url }
 }
 
 export default function ContactSectionClient({
@@ -39,36 +43,31 @@ export default function ContactSectionClient({
   }
 
   return (
-    <nav aria-label="social links" className="">
-      <div className="flex flex-wrap items-center justify-center gap-2 text-sm md:text-base sm:gap-3 md:gap-4 lg:gap-6">
-        {socials.map((s) => {
+    <nav aria-label="social links">
+      <div className="flex flex-wrap items-center justify-start gap-3 text-sm sm:gap-4 md:text-base">
+        {socials.map((s, index) => {
           const { Icon, label, isEmail } = getSocialInfo(s.url)
           const isMail = s.url.startsWith('mailto:') || s.url.includes('@')
-          const isLastItem =
-            socials.indexOf(s) === socials.length - 1 && !primaryEmailCodes
-          const separatorClass = isLastItem
-            ? ''
-            : 'border-r border-shark-500/60 pe-2 sm:pe-3 dark:border-shark-700/60 '
 
           const content = (
-            <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
-              <Icon className="h-4 w-4" />
-              <span className="hidden sm:block">{label}</span>
+            <code className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-shark-700/20 px-3 py-2 transition-all duration-300 ease-in-out hover:border-viridian-600/50 hover:bg-viridian-200/25 dark:border-shark-700/50 dark:hover:border-viridian-700/50 dark:hover:bg-viridian-800/10">
+              <Icon className="h-4 w-4 shrink-0" strokeWidth={1.75} />
+              <span>{label}</span>
             </code>
           )
 
           if (isMail || isEmail) {
             return (
-              <div key={`email-${s.url}`} className={separatorClass}>
+              <div key={`email-${s.url}-${index}`}>
                 <button
                   onClick={handleEmailClick}
                   aria-label="Send email"
                   type="button"
-                  className="group "
+                  className="group"
                 >
-                  <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
-                    <FiMail className="h-4 w-4" />
-                    <span className="hidden sm:block">Email</span>
+                  <code className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-shark-700/20 px-3 py-2 transition-all duration-300 ease-in-out hover:border-viridian-600/50 hover:bg-viridian-200/25 dark:border-shark-700/50 dark:hover:border-viridian-700/50 dark:hover:bg-viridian-800/10">
+                    <Mail className="h-4 w-4 shrink-0" strokeWidth={1.75} />
+                    <span>Email</span>
                   </code>
                 </button>
               </div>
@@ -76,7 +75,7 @@ export default function ContactSectionClient({
           }
 
           return (
-            <div key={s.url} className={separatorClass}>
+            <div key={s.url}>
               <a
                 href={s.url}
                 target="_blank"
@@ -97,9 +96,9 @@ export default function ContactSectionClient({
               aria-label="Send email"
               className="group cursor-pointer"
             >
-              <code className="flex flex-row items-center justify-center gap-2 rounded-full border border-shark-700/0 transition-all duration-300 ease-in-out p-2 px-3 sm:px-4 hover:border-viridian-600/50 hover:scale-105 dark:hover:border-viridian-700/50 hover:bg-viridian-200/25 dark:hover:bg-viridian-800/10 backdrop-blur-xs">
-                <FiMail className="h-4 w-4" />
-                <span className="hidden sm:block">Email</span>
+              <code className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-shark-700/20 px-3 py-2 transition-all duration-300 ease-in-out hover:border-viridian-600/50 hover:bg-viridian-200/25 dark:border-shark-700/50 dark:hover:border-viridian-700/50 dark:hover:bg-viridian-800/10">
+                <Mail className="h-4 w-4 shrink-0" strokeWidth={1.75} />
+                <span>Email</span>
               </code>
             </button>
           </div>
