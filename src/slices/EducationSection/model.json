@@ -2,15 +2,14 @@
   "id": "education_section",
   "type": "SharedSlice",
   "name": "EducationSection",
-  "description": "EducationSection",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/education_section/default/549dbe95a753326db6398ccc6dfdd13bdf3b209d.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "sectiontittle": {
           "type": "Text",
@@ -50,9 +49,9 @@
                 "type": "Boolean",
                 "config": {
                   "label": "Currently Enrolled",
-                  "placeholder_false": "false",
+                  "default_value": false,
                   "placeholder_true": "true",
-                  "default_value": false
+                  "placeholder_false": "false"
                 }
               },
               "school_body": {
@@ -60,8 +59,8 @@
                 "config": {
                   "label": "School Body",
                   "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,image"
+                  "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,image",
+                  "allowTargetBlank": true
                 }
               }
             }
@@ -70,5 +69,6 @@
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "EducationSection"
 }

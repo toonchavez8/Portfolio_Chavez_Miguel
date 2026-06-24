@@ -2,15 +2,14 @@
   "id": "blog_section",
   "type": "SharedSlice",
   "name": "BlogSection",
-  "description": "BlogSection",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/blog_section/default/f789194ba16743789765bf8ec070135a9ae52efb.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "sectiontittle": {
           "type": "Text",
@@ -71,5 +70,6 @@
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "BlogSection"
 }

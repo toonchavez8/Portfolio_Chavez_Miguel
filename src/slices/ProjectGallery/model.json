@@ -2,15 +2,14 @@
   "id": "project_gallery",
   "type": "SharedSlice",
   "name": "ProjectGallery",
-  "description": "ProjectGallery",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/project_gallery/default/f43ccae07b0f57dce8ac1b9f216dfc356af04f39.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "sectiontittle": {
           "type": "Text",
@@ -88,17 +87,19 @@
                 "config": {
                   "label": "Project Link",
                   "select": "document",
-                  "repeat": false,
-                  "customtypes": ["project"]
+                  "customtypes": [
+                    "project"
+                  ],
+                  "repeat": false
                 }
               },
               "featured": {
                 "type": "Boolean",
                 "config": {
                   "label": "featured",
-                  "placeholder_false": "false",
+                  "default_value": false,
                   "placeholder_true": "true",
-                  "default_value": false
+                  "placeholder_false": "false"
                 }
               }
             }
@@ -107,5 +108,6 @@
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "ProjectGallery"
 }

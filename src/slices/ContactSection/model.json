@@ -2,15 +2,14 @@
   "id": "contact_section",
   "type": "SharedSlice",
   "name": "ContactSection",
-  "description": "ContactSection",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/contact_section/default/0727cabab421f417471671673deb3c33419050ab.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "sectiontittle": {
           "type": "Text",
@@ -56,5 +55,6 @@
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "ContactSection"
 }

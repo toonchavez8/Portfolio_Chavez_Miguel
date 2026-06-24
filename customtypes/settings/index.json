@@ -1,9 +1,7 @@
 {
-  "format": "custom",
   "id": "settings",
   "label": "Settings",
   "repeatable": false,
-  "status": true,
   "json": {
     "Main": {
       "site_name": {
@@ -41,9 +39,9 @@
               "type": "Boolean",
               "config": {
                 "label": "ThemeSwtich",
-                "placeholder_false": "false",
+                "default_value": false,
                 "placeholder_true": "true",
-                "default_value": false
+                "placeholder_false": "false"
               }
             }
           }
@@ -84,8 +82,13 @@
       },
       "slices": {
         "type": "Slices",
-        "fieldset": "Slice Zone"
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
       }
     }
-  }
+  },
+  "status": true,
+  "format": "custom"
 }

@@ -2,15 +2,14 @@
   "id": "bento_box",
   "type": "SharedSlice",
   "name": "NowFeed",
-  "description": "BentoBox",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default",
+      "imageUrl": "https://images.prismic.io/toonchavez-dev/shared-slices/bento_box/default/25b0c035e6212456555d2129440ac46e807b4416.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
       "primary": {
         "sectiontittle": {
           "type": "Text",
@@ -45,8 +44,8 @@
                 "config": {
                   "label": "Bento Body",
                   "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                  "allowTargetBlank": true
                 }
               },
               "now_link": {
@@ -72,6 +71,7 @@
                 "config": {
                   "label": "Bento Icon",
                   "placeholder": "Select",
+                  "default_value": "General",
                   "options": [
                     "General",
                     "Dev",
@@ -83,8 +83,7 @@
                     "Writing",
                     "Family",
                     "Learning"
-                  ],
-                  "default_value": "General"
+                  ]
                 }
               }
             }
@@ -100,5 +99,6 @@
       },
       "items": {}
     }
-  ]
+  ],
+  "description": "BentoBox"
 }

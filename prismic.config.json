@@ -1,0 +1,44 @@
+{
+  "repositoryName": "toonchavez-dev",
+  "libraries": [
+    "./src/slices"
+  ],
+  "routes": [
+    {
+      "type": "about_me",
+      "path": "/about-me"
+    },
+    {
+      "type": "colophon",
+      "path": "/colophon"
+    },
+    {
+      "type": "homepage",
+      "path": "/"
+    },
+    {
+      "type": "journel_catalog",
+      "path": "/journel"
+    },
+    {
+      "type": "journel_entry",
+      "path": "/journel/:uid"
+    },
+    {
+      "type": "now_entries",
+      "path": "/now/:uid"
+    },
+    {
+      "type": "now_page",
+      "path": "/now"
+    },
+    {
+      "type": "project",
+      "path": "/projects/:uid"
+    },
+    {
+      "type": "projects_catalog",
+      "path": "/projects"
+    }
+  ]
+}
