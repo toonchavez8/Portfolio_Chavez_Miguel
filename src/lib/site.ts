@@ -39,6 +39,7 @@ type BuildPageMetadataArgs = {
   fallbackDescription: string
   fallbackTitle: string
   path?: string | null
+  rssPath?: string | null
   title?: string | null
   image?: ImageFieldImage | null
 }
@@ -48,6 +49,7 @@ export const buildPageMetadata = ({
   fallbackDescription,
   fallbackTitle,
   path,
+  rssPath,
   title,
   image,
 }: BuildPageMetadataArgs): Metadata => {
@@ -55,13 +57,20 @@ export const buildPageMetadata = ({
   const resolvedDescription = description || fallbackDescription
   const canonicalUrl = toAbsoluteUrl(path)
   const imageUrl = asImageSrc(image) ?? undefined
+  const alternates: Metadata['alternates'] = {
+    canonical: canonicalUrl,
+  }
+
+  if (rssPath) {
+    alternates.types = {
+      'application/rss+xml': toAbsoluteUrl(rssPath),
+    }
+  }
 
   return {
     title: resolvedTitle,
     description: resolvedDescription,
-    alternates: {
-      canonical: canonicalUrl,
-    },
+    alternates,
     openGraph: {
       type: 'website',
       siteName: SITE_NAME,

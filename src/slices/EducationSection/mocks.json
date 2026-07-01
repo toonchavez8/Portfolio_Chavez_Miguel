@@ -184,5 +184,82 @@
       }
     },
     "items": []
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "workExperience",
+    "primary": {
+      "schools_dropdown": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "currently_enrolled",
+                {
+                  "__TYPE__": "BooleanContent",
+                  "value": true
+                }
+              ],
+              [
+                "school_name",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Frontend Developer, Example Studio"
+                }
+              ],
+              [
+                "start_date",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Date",
+                  "value": "2024-03-01"
+                }
+              ],
+              [
+                "end_date",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Date",
+                  "value": "2026-12-01"
+                }
+              ],
+              [
+                "school_body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "Built and maintained responsive marketing and portfolio experiences with Next.js and Prismic.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "list-item",
+                      "content": {
+                        "text": "Partnered with design and content teams to ship CMS-driven pages and reusable slice components.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "sectiontittle": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Work Experience"
+      }
+    },
+    "items": []
   }
 ]

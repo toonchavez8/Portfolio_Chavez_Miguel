@@ -36,6 +36,8 @@ const richTextComponents: JSXMapSerializer = {
  * Component for "EducationSection" Slices.
  */
 const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
+  const isWorkExperience = slice.variation === 'workExperience'
+
   const formatDate = (date: string | null | undefined): string => {
     if (!date) return ''
     return new Date(date).toLocaleDateString('en-US', {
@@ -44,13 +46,33 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
     })
   }
 
+  const getActiveLabel = () => {
+    return isWorkExperience ? 'current position' : 'currently enrolled'
+  }
+
+  const getEndDateLabel = (
+    isActive: boolean | null | undefined,
+    endDate: string | null | undefined,
+  ) => {
+    if (!isActive) {
+      return formatDate(endDate)
+    }
+
+    return isWorkExperience ? 'Present' : `EXP ${formatDate(endDate)}`
+  }
+
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="group/section flex w-full flex-col justify-center gap-4 py-2 md:gap-6 md:px-4"
     >
-      <SectionTitle title={slice.primary.sectiontittle || 'Education'} />
+      <SectionTitle
+        title={
+          slice.primary.sectiontittle ||
+          (isWorkExperience ? 'Work Experience' : 'Education')
+        }
+      />
       <Accordion type="single" collapsible>
         {slice.primary.schools_dropdown?.map((item, index) => (
           <AccordionItem
@@ -60,7 +82,7 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
           >
             {item.currently_enrolled && (
               <span className="border rounded-full px-2 mt-1 font-mono text-xs opacity-25  group-hover/school:opacity-100 transition-all group-hover/school:animate-pulse group-hover/school:border-viridian-500">
-                currently enrolled
+                {getActiveLabel()}
               </span>
             )}
             <AccordionTrigger className="text-left">
@@ -68,9 +90,7 @@ const EducationSection: FC<EducationSectionProps> = ({ slice }) => {
                 <span className="flex-1 ">{item.school_name}</span>
                 <span className="ml-auto mr-4 hidden font-mono text-sm font-light opacity-50 md:block">
                   {formatDate(item.start_date)} -{' '}
-                  {item.currently_enrolled
-                    ? `EXP ${formatDate(item.end_date)}`
-                    : formatDate(item.end_date)}
+                  {getEndDateLabel(item.currently_enrolled, item.end_date)}
                 </span>
               </span>
             </AccordionTrigger>
