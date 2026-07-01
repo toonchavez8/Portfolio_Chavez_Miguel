@@ -68,6 +68,65 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "workExperience",
+      "name": "Work Experience",
+      "description": "Work Experience",
+      "docURL": "",
+      "imageUrl": "",
+      "version": "",
+      "primary": {
+        "sectiontittle": {
+          "type": "Text",
+          "config": {
+            "label": "Sectiontittle"
+          }
+        },
+        "schools_dropdown": {
+          "type": "Group",
+          "config": {
+            "label": "Work Experience Dropdown",
+            "fields": {
+              "school_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Position / Company"
+                }
+              },
+              "start_date": {
+                "type": "Date",
+                "config": {
+                  "label": "Start Date"
+                }
+              },
+              "end_date": {
+                "type": "Date",
+                "config": {
+                  "label": "End Date",
+                  "placeholder": "End Date"
+                }
+              },
+              "currently_enrolled": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Current Position",
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "school_body": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Work Body",
+                  "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,image",
+                  "allowTargetBlank": true
+                }
+              }
+            }
+          }
+        }
+      }
     }
   ],
   "description": "EducationSection"

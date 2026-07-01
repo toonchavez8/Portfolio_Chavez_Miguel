@@ -29,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: page.data.meta_description,
     image: page.data.meta_image,
     path: page.url,
+    rssPath: '/journel/feed.xml',
     fallbackTitle: 'Journel',
     fallbackDescription:
       'Journal entries, notes, and reflections from Miguel Chavez.',

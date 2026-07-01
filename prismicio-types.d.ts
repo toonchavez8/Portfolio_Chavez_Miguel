@@ -1089,6 +1089,61 @@ export interface EducationSectionSliceDefaultPrimarySchoolsDropdownItem {
 }
 
 /**
+ * Item in *EducationSection → Work Experience → Primary → Work Experience Dropdown*
+ */
+export interface EducationSectionSliceWorkExperiencePrimarySchoolsDropdownItem {
+	/**
+	 * Position / Company field in *EducationSection → Work Experience → Primary → Work Experience Dropdown*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: education_section.workExperience.primary.schools_dropdown[].school_name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	school_name: prismic.KeyTextField;
+	
+	/**
+	 * Start Date field in *EducationSection → Work Experience → Primary → Work Experience Dropdown*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: education_section.workExperience.primary.schools_dropdown[].start_date
+	 * - **Documentation**: https://prismic.io/docs/fields/date
+	 */
+	start_date: prismic.DateField;
+	
+	/**
+	 * End Date field in *EducationSection → Work Experience → Primary → Work Experience Dropdown*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: End Date
+	 * - **API ID Path**: education_section.workExperience.primary.schools_dropdown[].end_date
+	 * - **Documentation**: https://prismic.io/docs/fields/date
+	 */
+	end_date: prismic.DateField;
+	
+	/**
+	 * Current Position field in *EducationSection → Work Experience → Primary → Work Experience Dropdown*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: education_section.workExperience.primary.schools_dropdown[].currently_enrolled
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	currently_enrolled: prismic.BooleanField;
+	
+	/**
+	 * Work Body field in *EducationSection → Work Experience → Primary → Work Experience Dropdown*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: education_section.workExperience.primary.schools_dropdown[].school_body
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	school_body: prismic.RichTextField;
+}
+
+/**
  * Primary content in *EducationSection → Default → Primary*
  */
 export interface EducationSectionSliceDefaultPrimary {
@@ -1123,9 +1178,43 @@ export interface EducationSectionSliceDefaultPrimary {
 export type EducationSectionSliceDefault = prismic.SharedSliceVariation<"default", Simplify<EducationSectionSliceDefaultPrimary>, never>;
 
 /**
+ * Primary content in *EducationSection → Work Experience → Primary*
+ */
+export interface EducationSectionSliceWorkExperiencePrimary {
+	/**
+	 * Sectiontittle field in *EducationSection → Work Experience → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: education_section.workExperience.primary.sectiontittle
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	sectiontittle: prismic.KeyTextField;
+	
+	/**
+	 * Work Experience Dropdown field in *EducationSection → Work Experience → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: education_section.workExperience.primary.schools_dropdown[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	schools_dropdown: prismic.GroupField<Simplify<EducationSectionSliceWorkExperiencePrimarySchoolsDropdownItem>>;
+}
+
+/**
+ * Work Experience variation for EducationSection Slice
+ *
+ * - **API ID**: `workExperience`
+ * - **Description**: Work Experience
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type EducationSectionSliceWorkExperience = prismic.SharedSliceVariation<"workExperience", Simplify<EducationSectionSliceWorkExperiencePrimary>, never>;
+
+/**
  * Slice variation for *EducationSection*
  */
-type EducationSectionSliceVariation = EducationSectionSliceDefault
+type EducationSectionSliceVariation = EducationSectionSliceDefault | EducationSectionSliceWorkExperience
 
 /**
  * EducationSection Shared Slice
@@ -1520,8 +1609,11 @@ declare module "@prismicio/client" {
 			EducationSectionSlice,
 			EducationSectionSliceDefaultPrimarySchoolsDropdownItem,
 			EducationSectionSliceDefaultPrimary,
+			EducationSectionSliceWorkExperiencePrimarySchoolsDropdownItem,
+			EducationSectionSliceWorkExperiencePrimary,
 			EducationSectionSliceVariation,
 			EducationSectionSliceDefault,
+			EducationSectionSliceWorkExperience,
 			FooterSlice,
 			FooterSliceDefaultPrimary,
 			FooterSliceVariation,
